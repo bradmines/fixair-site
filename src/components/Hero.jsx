@@ -87,9 +87,9 @@ export default function Hero() {
             <div className="grid grid-cols-2 gap-6">
               {[
                 { value: '20+', label: 'Years Experience' },
-                { value: '1000+', label: 'Happy Customers' },
-                { value: '6', label: 'Niagara Communities' },
-                { value: '100%', label: 'Satisfaction Goal' },
+                { value: '6', label: 'Communities Served' },
+                { value: '5.0★', label: 'Google Rating' },
+                { value: 'Licensed', label: '& Insured in ON' },
               ].map(s => (
                 <div key={s.label} className="text-center p-4 bg-white/10 rounded-xl">
                   <div className="text-3xl font-extrabold text-brand-orange">{s.value}</div>

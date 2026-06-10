@@ -67,7 +67,7 @@ export default function About() {
                 { icon: '🏆', title: 'Licensed Technician', desc: 'Fully licensed and insured in Ontario' },
                 { icon: '🔧', title: 'All Major Brands', desc: 'Lennox, Carrier, Trane, Daikin & more' },
                 { icon: '📞', title: 'Personal Service', desc: 'You talk to Tom, not a call centre' },
-                { icon: '✅', title: '100% Satisfaction', desc: 'Work guaranteed — no questions asked' },
+                { icon: '✅', title: 'Proud of Every Job', desc: 'Tom stands behind his work on every install and repair' },
               ].map(f => (
                 <div key={f.title} className="flex items-start gap-3 bg-gray-50 rounded-xl p-4">
                   <span className="text-2xl">{f.icon}</span>

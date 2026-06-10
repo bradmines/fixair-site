@@ -23,7 +23,7 @@ const services = [
     ),
     title: 'Air Conditioners',
     description: 'Central AC installation and repair. Stay cool through Niagara summers with an efficient, whisper-quiet system sized for your home.',
-    image: 'https://images.unsplash.com/photo-1631545806609-3c92438c97c8?w=600&q=75',
+    image: 'https://images.unsplash.com/photo-1566917064245-1c6bff30dbf1?w=600&q=75',
   },
   {
     icon: (
