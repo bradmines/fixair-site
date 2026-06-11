@@ -3,7 +3,6 @@ import Hero from './components/Hero'
 import Services from './components/Services'
 import About from './components/About'
 import WhyChoose from './components/WhyChoose'
-import Financing from './components/Financing'
 import Testimonials from './components/Testimonials'
 import ServiceArea from './components/ServiceArea'
 import Contact from './components/Contact'
@@ -19,7 +18,6 @@ export default function App() {
         <Services />
         <About />
         <WhyChoose />
-        <Financing />
         <Testimonials />
         <ServiceArea />
         <Contact />
