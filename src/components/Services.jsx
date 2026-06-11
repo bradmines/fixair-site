@@ -2,32 +2,26 @@ const services = [
   {
     title: 'Furnaces',
     image: '/service-furnaces.jpg',
-    href: '#contact',
   },
   {
     title: 'Air Conditioners',
     image: '/service-ac.jpg',
-    href: '#contact',
   },
   {
     title: 'Ductless Systems',
     image: '/service-ductless.jpg',
-    href: '#contact',
   },
   {
     title: 'Hot Water Heaters',
     image: '/service-water-heaters.jpg',
-    href: '#contact',
   },
   {
     title: 'Boilers',
     image: '/service-boilers.jpg',
-    href: '#contact',
   },
   {
     title: 'Air Ducts',
     image: '/service-air-ducts.jpg',
-    href: '#contact',
   },
 ]
 
@@ -49,7 +43,7 @@ export default function Services() {
           {services.map(s => (
             <a
               key={s.title}
-              href={s.href}
+              href="#contact"
               className="group block bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
               <div className="overflow-hidden">
