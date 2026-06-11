@@ -22,10 +22,10 @@ export default function Financing() {
 
               <ul className="mt-6 space-y-2.5">
                 {[
-                  'Quick online application — decisions in minutes',
+                  'Spread the cost of a new system over time',
                   'Flexible terms to fit your monthly budget',
                   'Available on furnaces, AC, ductless & more',
-                  'Ask Tom about current rates and options',
+                  'Ask Tom for details on current options',
                 ].map(item => (
                   <li key={item} className="flex items-start gap-2.5 text-blue-100 text-sm">
                     <svg className="w-4 h-4 text-brand-orange flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
@@ -59,21 +59,23 @@ export default function Financing() {
                   </svg>
                 </div>
                 <div className="text-2xl font-extrabold">Flexible Plans</div>
-                <div className="text-blue-200 text-sm mt-1 mb-6">Powered by FinanceIt</div>
+                <div className="text-blue-200 text-sm mt-1 mb-6">Payment options through FinanceIt</div>
                 <div className="space-y-3">
                   {[
-                    { label: 'New Furnace', from: 'from ~$59/mo' },
-                    { label: 'Central AC', from: 'from ~$49/mo' },
-                    { label: 'Ductless System', from: 'from ~$69/mo' },
-                  ].map(p => (
-                    <div key={p.label} className="flex items-center justify-between bg-white/10 rounded-xl px-4 py-2.5 text-sm">
-                      <span className="font-medium">{p.label}</span>
-                      <span className="text-brand-orange font-bold">{p.from}</span>
+                    'New Furnace',
+                    'Central Air Conditioner',
+                    'Ductless Mini-Split',
+                  ].map(label => (
+                    <div key={label} className="flex items-center gap-3 bg-white/10 rounded-xl px-4 py-2.5 text-sm">
+                      <svg className="w-4 h-4 text-brand-orange flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                      </svg>
+                      <span className="font-medium">{label}</span>
                     </div>
                   ))}
                 </div>
-                <p className="text-blue-300 text-[11px] mt-4">
-                  Estimates only. Actual rates vary — ask Tom for details.
+                <p className="text-blue-300 text-[11px] mt-5 leading-relaxed">
+                  Contact Tom for details on available terms and rates.
                 </p>
               </div>
             </div>
