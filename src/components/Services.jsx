@@ -41,29 +41,31 @@ export default function Services() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map(s => (
-            <a
+            <div
               key={s.title}
-              href="#contact"
-              className="group block bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden"
             >
               <div className="overflow-hidden">
                 <img
                   src={s.image}
                   alt={`FixAIR ${s.title} — Niagara Region HVAC`}
-                  className="w-full h-auto block group-hover:scale-[1.02] transition-transform duration-500"
+                  className="w-full h-auto block"
                   loading="lazy"
                 />
               </div>
               <div className="px-5 py-4 flex items-center justify-between">
                 <span className="font-bold text-brand-blue">{s.title}</span>
-                <span className="inline-flex items-center gap-1 text-brand-orange text-sm font-semibold group-hover:gap-2 transition-all">
+                <a
+                  href="#contact"
+                  className="inline-flex items-center gap-1 text-brand-orange text-sm font-semibold hover:gap-2 transition-all"
+                >
                   Get a quote
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                   </svg>
-                </span>
+                </a>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>
