@@ -43,15 +43,15 @@ export default function Hero() {
               </svg>
               Call Tom Now
             </a>
-            <a href="#contact" className="btn-secondary text-base px-8 py-4 border-white/40 bg-white/10 text-white hover:bg-white/20">
-              Request a Quote
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            <a href="mailto:fixairheatandcool@gmail.com" className="btn-secondary text-base px-8 py-4 border-white/40 bg-white/10 text-white hover:bg-white/20">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
               </svg>
+              Email Tom
             </a>
           </div>
 
-          {/* Trust badges */}
+          {/* Trust badges + social */}
           <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-blue-100 text-sm font-medium">
             <div className="flex items-center gap-2">
               <svg className="w-5 h-5 text-brand-orange" fill="currentColor" viewBox="0 0 20 20">
@@ -72,40 +72,41 @@ export default function Hero() {
               Local & Family-Run
             </div>
 
-            {/* Divider */}
-            <div className="w-px h-5 bg-white/20 hidden sm:block" />
-
-            {/* Social links */}
-            <a
-              href="https://www.facebook.com/fixairheatandcool"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="FixAIR on Facebook"
-              className="flex items-center gap-2 text-blue-100 hover:text-white transition-colors group"
-            >
-              <span className="w-7 h-7 bg-white/10 group-hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors">
-                <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
-                </svg>
-              </span>
-              Facebook
-            </a>
-            <a
-              href="https://www.instagram.com/fixairheatandcool"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="FixAIR on Instagram"
-              className="flex items-center gap-2 text-blue-100 hover:text-white transition-colors group"
-            >
-              <span className="w-7 h-7 bg-white/10 group-hover:bg-pink-600 rounded-lg flex items-center justify-center transition-colors">
-                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                  <circle cx="12" cy="12" r="4"/>
-                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
-                </svg>
-              </span>
-              Instagram
-            </a>
+            {/* Divider + social callout */}
+            <div className="w-full sm:w-auto flex items-center gap-3 mt-1 sm:mt-0">
+              <div className="w-px h-5 bg-white/20 hidden sm:block" />
+              <span className="text-white/50 text-xs font-normal">or message us on</span>
+              <a
+                href="https://www.facebook.com/fixairheatandcool"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="FixAIR on Facebook"
+                className="flex items-center gap-1.5 text-blue-100 hover:text-white transition-colors group"
+              >
+                <span className="w-7 h-7 bg-white/10 group-hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors">
+                  <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                  </svg>
+                </span>
+                Facebook
+              </a>
+              <a
+                href="https://www.instagram.com/fixairheatandcool"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="FixAIR on Instagram"
+                className="flex items-center gap-1.5 text-blue-100 hover:text-white transition-colors group"
+              >
+                <span className="w-7 h-7 bg-white/10 group-hover:bg-pink-600 rounded-lg flex items-center justify-center transition-colors">
+                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <circle cx="12" cy="12" r="4"/>
+                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                  </svg>
+                </span>
+                Instagram
+              </a>
+            </div>
           </div>
         </div>
 
