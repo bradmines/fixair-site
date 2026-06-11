@@ -8,9 +8,9 @@ export default function About() {
             {/* Main photo placeholder */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/5] max-w-md mx-auto lg:mx-0">
               <img
-                src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&q=80"
-                alt="Tom — FixAIR HVAC technician"
-                className="w-full h-full object-cover"
+                src="/tom.avif"
+                alt="Tom Guitard — Owner and lead technician at FixAIR Heating & Air Conditioning"
+                className="w-full h-full object-cover object-top"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-blue/50 via-transparent to-transparent" />
