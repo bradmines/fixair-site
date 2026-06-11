@@ -60,8 +60,34 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* CTA phone */}
-          <div className="flex items-center gap-3">
+          {/* CTA phone + socials */}
+          <div className="flex items-center gap-2">
+            {/* Social icons — desktop only */}
+            <a
+              href="https://www.facebook.com/fixairheatandcool"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="FixAIR on Facebook"
+              className="hidden lg:flex w-9 h-9 items-center justify-center rounded-lg text-gray-400 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+            >
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+              </svg>
+            </a>
+            <a
+              href="https://www.instagram.com/fixairheatandcool"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="FixAIR on Instagram"
+              className="hidden lg:flex w-9 h-9 items-center justify-center rounded-lg text-gray-400 hover:text-pink-600 hover:bg-pink-50 transition-colors"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+            <div className="hidden lg:block w-px h-6 bg-gray-200 mx-1" />
             <a
               href={PHONE_HREF}
               className="hidden sm:inline-flex items-center gap-2 bg-brand-orange text-white text-sm font-bold px-5 py-2.5 rounded-lg shadow hover:bg-brand-orange-dark transition-colors"
