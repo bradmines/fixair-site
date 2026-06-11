@@ -30,21 +30,12 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3 flex-shrink-0">
-            <div className="w-10 h-10 bg-brand-blue rounded-lg flex items-center justify-center shadow">
-              <svg viewBox="0 0 40 40" className="w-7 h-7 text-white" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M8 32 Q8 20 20 8 Q32 20 32 32" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M14 32 Q14 22 20 16 Q26 22 26 32" strokeLinecap="round" strokeLinejoin="round"/>
-                <line x1="20" y1="24" x2="20" y2="32" strokeLinecap="round"/>
-              </svg>
-            </div>
-            <div className="leading-tight">
-              <span className="text-xl font-extrabold text-brand-blue tracking-tight">Fix</span>
-              <span className="text-xl font-extrabold text-brand-orange tracking-tight">AIR</span>
-              <div className="text-[10px] font-semibold text-gray-500 uppercase tracking-wider -mt-0.5">
-                Heating & Air Conditioning
-              </div>
-            </div>
+          <a href="#" className="flex-shrink-0">
+            <img
+              src="/fixair-logo.avif"
+              alt="FixAIR Heating & Air Conditioning"
+              className="h-10 md:h-12 w-auto"
+            />
           </a>
 
           {/* Desktop nav */}
