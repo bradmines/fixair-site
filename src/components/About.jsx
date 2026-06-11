@@ -1,71 +1,62 @@
 export default function About() {
   return (
-    <section id="about" className="py-20 md:py-28 bg-slate-50 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+    <section id="about" className="overflow-hidden">
+      <div className="grid lg:grid-cols-2 min-h-[700px] lg:min-h-[780px]">
 
-          {/* ── Photo column ── */}
-          <div className="relative flex justify-center lg:justify-start">
+        {/* ── Full-bleed photo ── */}
+        <div className="relative min-h-[420px] lg:min-h-0">
+          <img
+            src="/tom.avif"
+            alt="Tom Guitard — Owner and lead technician, FixAIR Heating & Air Conditioning"
+            className="absolute inset-0 w-full h-full object-cover object-top"
+            loading="lazy"
+          />
 
-            {/* Decorative background square */}
-            <div className="absolute top-6 left-6 w-full max-w-sm h-full bg-brand-blue/8 rounded-3xl -z-0 hidden sm:block" />
+          {/* Gradient: bottom fade for name plate */}
+          <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-brand-blue/90 to-transparent" />
 
-            {/* Photo card */}
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl w-full max-w-sm z-10">
-              <img
-                src="/tom.avif"
-                alt="Tom Guitard — Owner and lead technician, FixAIR Heating & Air Conditioning"
-                className="w-full h-auto object-cover object-top block"
-                loading="lazy"
-              />
+          {/* Right-edge fade so photo blends into text column on desktop */}
+          <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-slate-50 to-transparent hidden lg:block" />
 
-              {/* Gradient fade at bottom */}
-              <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-brand-blue/80 to-transparent" />
-
-              {/* Name plate */}
-              <div className="absolute bottom-5 left-5 right-5 text-white">
-                <div className="text-xl font-extrabold leading-tight">Tom Guitard</div>
-                <div className="text-sm text-blue-200 mt-0.5 font-medium">Owner &amp; Lead Technician</div>
-              </div>
-            </div>
-
-            {/* 20+ badge */}
-            <div className="absolute -bottom-4 -right-2 sm:right-4 z-20 bg-brand-orange text-white rounded-2xl shadow-xl px-4 py-3 text-center">
-              <div className="text-3xl font-extrabold leading-none">20+</div>
-              <div className="text-[11px] font-semibold mt-0.5 uppercase tracking-wide">Years<br/>Niagara</div>
-            </div>
-
-            {/* Pull quote from a real customer */}
-            <div className="absolute -top-5 -right-2 sm:-right-6 z-20 hidden md:block max-w-[220px] bg-white rounded-2xl shadow-lg border border-gray-100 p-4">
-              <div className="text-brand-orange text-3xl font-serif leading-none mb-1">"</div>
-              <p className="text-xs text-gray-600 leading-relaxed italic">
-                His meticulous workmanship is top notch.
-              </p>
-              <p className="text-[11px] font-bold text-brand-blue mt-2">— Sandy, Niagara Region</p>
-            </div>
+          {/* Name plate */}
+          <div className="absolute bottom-6 left-6 right-6 lg:right-16 text-white">
+            <div className="text-2xl font-extrabold leading-tight">Tom Guitard</div>
+            <div className="text-sm text-blue-200 mt-0.5 font-medium">Owner &amp; Lead Technician · 20+ Years</div>
           </div>
 
-          {/* ── Text column ── */}
-          <div>
+          {/* Floating pull quote — desktop only */}
+          <div className="absolute top-8 right-0 lg:-right-6 z-20 hidden lg:block w-52 bg-white rounded-l-2xl lg:rounded-2xl shadow-xl border border-gray-100 p-4">
+            <div className="text-brand-orange text-3xl font-serif leading-none">"</div>
+            <p className="text-xs text-gray-600 leading-relaxed italic mt-1">
+              His meticulous workmanship is top notch.
+            </p>
+            <p className="text-[11px] font-bold text-brand-blue mt-2">— Sandy, Niagara Region</p>
+          </div>
+        </div>
+
+        {/* ── Text column ── */}
+        <div className="bg-slate-50 flex flex-col justify-center px-8 py-14 lg:px-14 lg:py-20">
+          <div className="max-w-lg">
             <div className="inline-block bg-brand-blue/10 text-brand-blue text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-5">
               Meet Tom
             </div>
 
-            <h2 className="section-heading text-left">
-              First-Rate Workmanship,<br />
+            <h2 className="text-3xl md:text-4xl font-extrabold text-brand-blue leading-tight">
+              First-Rate Workmanship,{' '}
               <span className="text-brand-orange">Every Single Job</span>
             </h2>
 
-            <div className="mt-6 space-y-4 text-gray-600 leading-relaxed">
+            <div className="mt-6 space-y-4 text-gray-600 leading-relaxed text-[15px]">
               <p>
-                Hi, I'm Tom — the owner, technician, and the person who answers the phone when you call FixAIR.
-                I've been working on heating and cooling systems across the Niagara Region for over two decades,
-                and I built this company on a simple belief: every customer deserves the same care I'd give my own home.
+                Hi, I'm Tom — the owner, technician, and the person who answers the phone
+                when you call FixAIR. I've been working on heating and cooling systems across
+                the Niagara Region for over two decades, and I built this company on a simple
+                belief: every customer deserves the same care I'd give my own home.
               </p>
               <p>
-                No overselling. No upsells you don't need. Just honest assessments, quality parts, and workmanship
-                I'm proud to stand behind. Whether it's a quick repair or a full system install, I show up on time,
-                do the job right, and leave your home cleaner than I found it.
+                No overselling. No upsells you don't need. Just honest assessments, quality
+                parts, and workmanship I'm proud to stand behind. I show up on time, do the
+                job right, and leave your home cleaner than I found it.
               </p>
             </div>
 
@@ -133,8 +124,8 @@ export default function About() {
               </a>
             </div>
           </div>
-
         </div>
+
       </div>
     </section>
   )
