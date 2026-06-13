@@ -35,8 +35,8 @@ export default function Services() {
           </div>
           <h2 className="section-heading">Residential HVAC Services — That's Our Specialty</h2>
           <p className="section-sub">
-            Tom works exclusively on homes — not commercial buildings. From furnaces to ductless mini-splits,
-            every job gets the focused expertise of a dedicated residential specialist.
+            From furnaces to ductless mini-splits, Tom brings the focused expertise of a dedicated
+            residential specialist to every job — installed right the first time.
           </p>
         </div>
 
