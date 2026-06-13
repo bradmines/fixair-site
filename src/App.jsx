@@ -1,6 +1,7 @@
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Services from './components/Services'
+import Financing from './components/Financing'
 import About from './components/About'
 import WhyChoose from './components/WhyChoose'
 import Testimonials from './components/Testimonials'
@@ -16,6 +17,7 @@ export default function App() {
       <main>
         <Hero />
         <Services />
+        <Financing />
         <About />
         <WhyChoose />
         <Testimonials />

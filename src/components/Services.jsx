@@ -1,15 +1,15 @@
 const services = [
   {
     title: 'Furnaces',
-    image: '/service-furnaces.jpg',
+    image: '/furnace.jpg',
   },
   {
     title: 'Air Conditioners',
-    image: '/service-ac.jpg',
+    image: '/bba10316-206d-4aa1-8472-e8d1e2aecfc0.jpg',
   },
   {
     title: 'Ductless Systems',
-    image: '/service-ductless.jpg',
+    image: '/grok-image-e842f194-4cb0-4e62-8fd9-3b808d7a71b5.jpg',
   },
   {
     title: 'Hot Water Heaters',
@@ -17,11 +17,11 @@ const services = [
   },
   {
     title: 'Boilers',
-    image: '/service-boilers.jpg',
+    image: '/boilerwall.jpg',
   },
   {
     title: 'Air Ducts',
-    image: '/service-air-ducts.jpg',
+    image: '/resductwork.jpg',
   },
 ]
 
@@ -33,9 +33,10 @@ export default function Services() {
           <div className="inline-block bg-brand-blue/10 text-brand-blue text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
             What We Do
           </div>
-          <h2 className="section-heading">Complete HVAC Services for Niagara Homes</h2>
+          <h2 className="section-heading">Residential HVAC Services — That's Our Specialty</h2>
           <p className="section-sub">
-            From furnaces to ductless mini-splits, Tom handles it all — installed right the first time.
+            Tom works exclusively on homes — not commercial buildings. From furnaces to ductless mini-splits,
+            every job gets the focused expertise of a dedicated residential specialist.
           </p>
         </div>
 
@@ -45,11 +46,11 @@ export default function Services() {
               key={s.title}
               className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden"
             >
-              <div className="overflow-hidden">
+              <div className="overflow-hidden h-52">
                 <img
                   src={s.image}
                   alt={`FixAIR ${s.title} — Niagara Region HVAC`}
-                  className="w-full h-auto block"
+                  className="w-full h-full object-cover block"
                   loading="lazy"
                 />
               </div>
