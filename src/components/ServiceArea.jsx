@@ -12,23 +12,17 @@ export default function ServiceArea() {
     <section id="area" className="py-20 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Map image placeholder */}
-          <div className="relative rounded-2xl overflow-hidden shadow-xl order-2 lg:order-1">
-            <img
-              src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&q=80"
-              alt="Niagara and surrounding areas service map"
-              className="w-full h-72 md:h-96 object-cover"
+          {/* Google Maps embed for the FixAIR business location */}
+          <div className="rounded-2xl overflow-hidden shadow-xl order-2 lg:order-1">
+            <iframe
+              title="FixAIR Heating and Air Conditioning location on Google Maps"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d373050.07033610117!2d-79.52796817502455!3d43.07395659687544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882a8bdffd1e1775%3A0x4f058f4f82b2bedc!2sFixAir%20Heating%20and%20Air%20Conditioning!5e0!3m2!1sen!2sth!4v1782200098249!5m2!1sen!2sth"
+              className="w-full h-72 md:h-96 block"
+              style={{ border: 0 }}
+              allowFullScreen
               loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-brand-blue/70 to-brand-blue/40 flex items-center justify-center">
-              <div className="text-center text-white">
-                <svg className="w-12 h-12 mx-auto text-brand-orange mb-3" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/>
-                </svg>
-                <div className="text-2xl font-extrabold">Niagara &amp; Surrounding Areas</div>
-                <div className="text-blue-200 text-sm mt-1">Ontario, Canada</div>
-              </div>
-            </div>
           </div>
 
           {/* Text side */}

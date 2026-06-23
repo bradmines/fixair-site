@@ -213,7 +213,7 @@ export default function Testimonials() {
 
         <div className="mt-10 text-center space-y-3">
           <a
-            href="https://www.google.com/search?q=FixAIR+Heating+Air+Conditioning+Niagara"
+            href="https://www.google.com/maps/place/FixAir+Heating+and+Air+Conditioning/@43.0713027,-79.5314574,9.98z/data=!4m8!3m7!1s0x882a8bdffd1e1775:0x4f058f4f82b2bedc!8m2!3d43.073928!4d-79.1983315!9m1!1b1!16s%2Fg%2F11tfnjymwg?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm font-semibold text-brand-blue hover:text-brand-blue-light transition-colors group"
