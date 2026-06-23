@@ -7,7 +7,7 @@ export default function About() {
         <div className="relative min-h-[420px] lg:min-h-0">
           <img
             src="/tom.avif"
-            alt="Tom Guitard — Owner and lead technician, FixAIR Heating & Air Conditioning"
+            alt="Tom Guitard, Owner and lead technician, FixAIR Heating & Air Conditioning"
             className="absolute inset-0 w-full h-full object-cover object-top"
             loading="lazy"
           />
@@ -30,7 +30,7 @@ export default function About() {
             <p className="text-xs text-gray-600 leading-relaxed italic mt-1">
               His meticulous workmanship is top notch.
             </p>
-            <p className="text-[11px] font-bold text-brand-blue mt-2">— Sandy, Niagara Region</p>
+            <p className="text-[11px] font-bold text-brand-blue mt-2">Sandy, Niagara</p>
           </div>
         </div>
 
@@ -48,10 +48,10 @@ export default function About() {
 
             <div className="mt-6 space-y-4 text-gray-600 leading-relaxed text-[15px]">
               <p>
-                Hi, I'm Tom — the owner, technician, and the person who answers the phone
-                when you call FixAIR. I've been working on heating and cooling systems across
-                the Niagara Region for over two decades, and I built this company on a simple
-                belief: every customer deserves the same care I'd give my own home.
+                Hi, I'm Tom, the owner, technician, and the person who answers the phone
+                when you call FixAIR. I've been working on home heating and cooling systems across
+                Niagara and surrounding areas for over two decades, and I built this company on a
+                simple belief: every customer deserves the same care I'd give my own home.
               </p>
               <p>
                 No overselling. No upsells you don't need. Just honest assessments, quality
@@ -92,7 +92,7 @@ export default function About() {
                 },
                 {
                   title: 'Residential Only',
-                  desc: 'Tom specializes exclusively in homes — it\'s where his expertise shines',
+                  desc: 'Tom specializes exclusively in homes, where his expertise shines',
                   icon: (
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>

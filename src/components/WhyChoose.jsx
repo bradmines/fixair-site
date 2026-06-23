@@ -6,7 +6,7 @@ const reasons = [
       </svg>
     ),
     title: 'Licensed & Insured',
-    description: 'Fully licensed HVAC technician in Ontario. Carry full liability and WSIB coverage — your home and investment are protected.',
+    description: 'Fully licensed HVAC technician in Ontario. Carry full liability and WSIB coverage, so your home and investment are protected.',
   },
   {
     icon: (
@@ -16,7 +16,7 @@ const reasons = [
       </svg>
     ),
     title: 'Locally Owned & Operated',
-    description: 'Born and raised in Niagara. Tom lives here, works here, and takes personal pride in keeping local homes comfortable year-round.',
+    description: 'Born and raised in Niagara. Tom lives here, works here, and takes personal pride in keeping local homes comfortable all year round.',
   },
   {
     icon: (
@@ -25,7 +25,7 @@ const reasons = [
       </svg>
     ),
     title: 'Fast Response Times',
-    description: 'No long waits. Tom responds quickly and gets your system back up and running — especially when you need it most.',
+    description: 'No long waits. Tom responds quickly and gets your system back up and running, especially when you need it most.',
   },
   {
     icon: (
@@ -34,7 +34,7 @@ const reasons = [
       </svg>
     ),
     title: 'Friendly & Professional',
-    description: 'Tom is easy to work with, takes time to explain the work, and treats your home with respect — every single visit.',
+    description: 'Tom is easy to work with, takes time to explain the work, and treats your home with respect on every single visit.',
   },
   {
     icon: (
@@ -75,7 +75,7 @@ export default function WhyChoose() {
             <span className="text-brand-orange">Homeowners Trust</span>
           </h2>
           <p className="mt-4 text-lg text-blue-200 max-w-2xl mx-auto">
-            Not all contractors are equal. Here's what sets FixAIR apart.
+            Not all contractors are equal. As a residential only company, here's what sets FixAIR apart.
           </p>
         </div>
 

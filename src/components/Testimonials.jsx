@@ -181,7 +181,7 @@ export default function Testimonials() {
           </div>
           <h2 className="section-heading">Real Words from Real Niagara Neighbours</h2>
           <p className="section-sub">
-            Don't take our word for it — here's what customers say about working with Tom.
+            Don't take our word for it. Here's what customers say about working with Tom.
           </p>
           <div className="mt-5 inline-flex items-center gap-2 bg-white border border-gray-100 shadow-sm rounded-full px-5 py-2">
             <div className="flex gap-0.5">

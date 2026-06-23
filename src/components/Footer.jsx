@@ -6,7 +6,7 @@ export default function Footer() {
       {/* Top strip */}
       <div className="bg-brand-orange py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
-          <span className="font-bold text-white">Ready for comfortable year-round temperatures? Call Tom today.</span>
+          <span className="font-bold text-white">Ready for comfortable year round temperatures? Call Tom today.</span>
           <a
             href="tel:+19057322791"
             className="flex-shrink-0 bg-white text-brand-orange font-extrabold px-6 py-2.5 rounded-lg shadow hover:bg-gray-50 transition text-sm"
@@ -28,8 +28,9 @@ export default function Footer() {
             />
           </div>
           <p className="text-blue-200 text-sm leading-relaxed max-w-xs">
-            Honest, expert HVAC service for Niagara Region homeowners. Licensed, local, and dedicated to
-            first-rate workmanship on every job.
+            Honest, expert residential HVAC service for homeowners across Niagara and surrounding
+            areas. A residential only company, licensed, local, and dedicated to first rate
+            workmanship on every job.
           </p>
           <div className="mt-5 flex items-center gap-3">
             <a
@@ -97,7 +98,7 @@ export default function Footer() {
       <div className="border-t border-white/10 py-5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-blue-300">
           <span>© {year} FixAIR Heating & Air Conditioning. All rights reserved.</span>
-          <span>Niagara Region, Ontario · 905-732-2791 · fixairheatandcool@gmail.com</span>
+          <span>Niagara &amp; surrounding areas, Ontario · 905-732-2791 · fixairheatandcool@gmail.com</span>
         </div>
       </div>
     </footer>

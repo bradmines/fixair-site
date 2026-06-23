@@ -21,7 +21,7 @@ export default function Hero() {
         <div>
           <div className="inline-flex items-center gap-2 bg-brand-orange/20 border border-brand-orange/40 text-brand-orange text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
             <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
-            Niagara Region's Trusted HVAC Pro
+            Niagara's Trusted Residential HVAC Pro
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
@@ -31,9 +31,10 @@ export default function Hero() {
           </h1>
 
           <p className="mt-6 text-lg md:text-xl text-blue-100 max-w-xl leading-relaxed">
-            Honest, expert HVAC service from Tom — a licensed technician with over{' '}
-            <strong className="text-white">20 years</strong> of experience serving Welland,
-            St. Catharines, Niagara Falls and beyond.
+            Honest, expert HVAC service from Tom, a licensed technician with over{' '}
+            <strong className="text-white">20 years</strong> of experience. FixAIR is a{' '}
+            <strong className="text-white">residential only</strong> company, focused entirely on
+            homes across Niagara and surrounding areas.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
@@ -144,8 +145,8 @@ export default function Hero() {
                 T
               </div>
               <div>
-                <div className="font-bold">Tom — Owner & Lead Tech</div>
-                <div className="text-blue-200 text-sm">Available Mon–Sat · Niagara Region</div>
+                <div className="font-bold">Tom, Owner & Lead Tech</div>
+                <div className="text-blue-200 text-sm">Available Mon to Sat · Niagara &amp; surrounding areas</div>
               </div>
             </div>
           </div>

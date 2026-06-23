@@ -1,7 +1,7 @@
 const services = [
   {
     title: 'Furnaces',
-    image: '/furnace.jpg',
+    image: '/forcedairfurance.jpg',
   },
   {
     title: 'Air Conditioners',
@@ -13,7 +13,7 @@ const services = [
   },
   {
     title: 'Hot Water Heaters',
-    image: '/service-water-heaters.jpg',
+    image: '/powerventhotwaterheater.jpg',
   },
   {
     title: 'Boilers',
@@ -33,10 +33,11 @@ export default function Services() {
           <div className="inline-block bg-brand-blue/10 text-brand-blue text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
             What We Do
           </div>
-          <h2 className="section-heading">Residential HVAC Services — That's Our Specialty</h2>
+          <h2 className="section-heading">Residential HVAC Is Our Specialty</h2>
           <p className="section-sub">
-            From furnaces to ductless mini-splits, Tom brings the focused expertise of a dedicated
-            residential specialist to every job — installed right the first time.
+            FixAIR is a residential only company. Furnaces, air conditioners, ductless systems and
+            more, installed and serviced by a dedicated residential specialist who gets it right the
+            first time so your home stays comfortable.
           </p>
         </div>
 
@@ -49,7 +50,7 @@ export default function Services() {
               <div className="overflow-hidden h-52">
                 <img
                   src={s.image}
-                  alt={`FixAIR ${s.title} — Niagara Region HVAC`}
+                  alt={`FixAIR ${s.title} for homes in Niagara and surrounding areas`}
                   className="w-full h-full object-cover block"
                   loading="lazy"
                 />

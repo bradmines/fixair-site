@@ -1,14 +1,14 @@
 import { useState } from 'react'
 
 const SERVICE_OPTIONS = [
-  'Furnace — repair or replacement',
-  'Air Conditioner — repair or replacement',
-  'Ductless Mini-Split system',
-  'Hot Water Heater',
+  'Furnace repair or replacement',
+  'Air conditioner repair or replacement',
+  'Ductless mini split system',
+  'Hot water heater',
   'Boiler',
   'Duct cleaning',
-  'Annual maintenance / tune-up',
-  'Not sure — need advice',
+  'Annual maintenance or tune up',
+  'Not sure, need advice',
   'Other',
 ]
 
@@ -55,7 +55,7 @@ export default function Contact() {
               <span className="text-brand-orange">Tom's Here to Help.</span>
             </h2>
             <p className="mt-4 text-gray-500 leading-relaxed">
-              Call, or fill out the form and Tom will get back to you promptly. No pressure, no obligation —
+              Call, or fill out the form and Tom will get back to you promptly. No pressure, no obligation,
               just an honest conversation about what your home needs.
             </p>
 
@@ -98,7 +98,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="text-xs text-gray-400 font-medium uppercase tracking-wide">Hours</div>
-                  <div className="text-sm font-semibold text-brand-blue mt-0.5">Mon – Sat: 8am – 6pm</div>
+                  <div className="text-sm font-semibold text-brand-blue mt-0.5">Mon to Sat: 8am to 6pm</div>
                   <div className="text-xs text-gray-400">Sunday by appointment</div>
                 </div>
               </div>
@@ -133,7 +133,7 @@ export default function Contact() {
                 </h3>
                 <p className="text-gray-400 text-sm mb-6">
                   {contactMethod === 'phone'
-                    ? 'Leave your number and Tom will call you back — usually same day.'
+                    ? 'Leave your number and Tom will call you back, usually same day.'
                     : 'Leave your email and Tom will get back to you promptly.'}
                 </p>
 
