@@ -65,9 +65,9 @@ export default function Financing() {
             </h2>
 
             <p className="mt-5 text-blue-100/80 text-base md:text-lg leading-relaxed max-w-xl">
-              Flexible financing is available through Financeit, so you can pay for your furnace, air
-              conditioner, or home comfort needs over time instead of all at once. Just ask Tom and
-              he will help you find a plan that fits your budget.
+              Pay for your furnace, air conditioner, or home comfort needs at Fix Air in monthly
+              installments through Financeit. Apply for financing up to $100,000 and find out if you
+              pre-qualify in seconds — no obligation, no commitment.
             </p>
 
             {/* Financeit logo */}
@@ -100,17 +100,19 @@ export default function Financing() {
           <div className="lg:col-span-5">
             <div className="relative rounded-3xl bg-white/[0.07] backdrop-blur-sm border border-white/10 p-8 md:p-10 shadow-2xl shadow-black/20">
               <h3 className="text-2xl font-extrabold text-white leading-snug">
-                Have questions about financing?
+                Apply Now for Financing
               </h3>
               <p className="mt-3 text-blue-100/75 text-[15px] leading-relaxed">
-                Tom will walk you through the options and find what works best for your home. No
-                pressure, no obligation, just a quick conversation.
+                See if you pre-qualify in seconds through our Financeit application. Financing up to
+                $100,000 is available with no obligation and no commitment.
               </p>
               <a
-                href="#contact"
+                href="https://www.financeit.ca/s/gXF_UQ"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-primary group mt-7 w-full text-base px-8 py-4 shadow-lg shadow-brand-orange/25 hover:shadow-brand-orange/40"
               >
-                Ask About Financing
+                Apply Now for Financing
                 <svg
                   className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1"
                   fill="none"
@@ -122,7 +124,7 @@ export default function Financing() {
                 </svg>
               </a>
               <p className="mt-4 text-center text-xs text-blue-200/60">
-                Connects you straight to Tom
+                Secure application through Financeit
               </p>
             </div>
           </div>
