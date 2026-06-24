@@ -72,14 +72,20 @@ export default function Financing() {
 
             {/* Financeit logo */}
             <div className="mt-8 flex items-center gap-4">
-              <div className="bg-white rounded-xl px-5 py-3 shadow-lg shadow-black/10">
+              <a
+                href="https://www.financeit.ca/s/gXF_UQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white rounded-xl px-5 py-3 shadow-lg shadow-black/10 transition-all duration-200 hover:shadow-xl hover:shadow-black/20 hover:-translate-y-0.5"
+                aria-label="Apply for financing through Financeit"
+              >
                 <img
                   src="/financeitlogo.png"
                   alt="Financeit"
                   className="h-7 md:h-8 w-auto block"
                   loading="lazy"
                 />
-              </div>
+              </a>
               <span className="text-blue-200/70 text-sm font-medium">Our financing partner</span>
             </div>
 
