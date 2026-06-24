@@ -103,8 +103,8 @@ export default function Financing() {
                 Apply Now for Financing
               </h3>
               <p className="mt-3 text-blue-100/75 text-[15px] leading-relaxed">
-                See if you pre-qualify in seconds through our Financeit application. Financing up to
-                $100,000 is available with no obligation and no commitment.
+                Start your application online through our secure Financeit portal — it only takes a
+                few minutes.
               </p>
               <a
                 href="https://www.financeit.ca/s/gXF_UQ"
