@@ -1,27 +1,27 @@
 const services = [
   {
     title: 'Furnaces',
-    image: '/forcedairfurance.jpg',
+    image: '/logoforcedairfurnace.jpg',
   },
   {
     title: 'Air Conditioners',
-    image: '/bba10316-206d-4aa1-8472-e8d1e2aecfc0.jpg',
+    image: '/logoAC.jpg',
   },
   {
     title: 'Ductless Systems',
-    image: '/grok-image-e842f194-4cb0-4e62-8fd9-3b808d7a71b5.jpg',
+    image: '/logoductlesssystems.jpg',
   },
   {
     title: 'Hot Water Heaters',
-    image: '/powerventhotwaterheater.jpg',
+    image: '/logopowerventhotwaterheater.jpg',
   },
   {
     title: 'Boilers',
-    image: '/boilerwall.jpg',
+    image: '/logoboilers.jpg',
   },
   {
     title: 'Air Ducts',
-    image: '/resductwork.jpg',
+    image: '/logoresductwork.jpg',
   },
 ]
 
