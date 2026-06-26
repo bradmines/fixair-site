@@ -88,7 +88,8 @@ export default function Hero() {
 
             <div className="flex items-center gap-2">
               <svg className="w-5 h-5 text-[#C8102E]" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2 Q 10 5 10.5 8 Q 7 7 7.5 11 Q 4 10 5 14 Q 8 13 9 17 Q 11 15 12 20 Q 13 15 15 17 Q 16 13 19 14 Q 20 10 17 11 Q 17.5 7 14 8 Q 14.5 5 12 2 Z" />
+                <path d="M12 2 Q9.5 5 9.8 8 Q5.8 7.2 6.2 11.5 Q2.5 10.5 4 15.5 Q8 14 8.8 19 Q11.2 16 12 21.5 Q12.8 16 15.2 19 Q16 14 19.5 15.5 Q21 10.5 17.5 11.5 Q18 7.2 14.2 8 Q14.5 5 12 2 Z" />
+                <path d="M12 18.5 L12 22" fill="none" stroke="#C8102E" strokeWidth="1.2" strokeLinecap="round" />
               </svg>
               Proudly <span className="text-[#C8102E]">Canadian</span>, Locally Owned
             </div>
@@ -136,7 +137,7 @@ export default function Hero() {
           <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 text-white">
             <div className="grid grid-cols-2 gap-6">
               {[
-                { value: '20+', label: 'Years Experience' },
+                { value: '25+', label: 'Years Experience' },
                 { value: '6', label: 'Communities Served' },
                 { value: '5.0★', label: 'Google Rating' },
                 { value: 'Licensed', label: '& Insured in ON' },

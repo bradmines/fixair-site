@@ -21,7 +21,7 @@ export default function About() {
           {/* Name plate */}
           <div className="absolute bottom-6 left-6 right-6 lg:right-16 text-white">
             <div className="text-2xl font-extrabold leading-tight">Tom Guitard</div>
-            <div className="text-sm text-blue-200 mt-0.5 font-medium">Owner &amp; Lead Technician · 20+ Years</div>
+            <div className="text-sm text-blue-200 mt-0.5 font-medium">Owner &amp; Lead Technician · 25+ Years</div>
           </div>
 
           {/* Floating pull quote — desktop only */}
@@ -50,7 +50,7 @@ export default function About() {
               <p>
                 Hi, I'm Tom, the owner, technician, and the person who answers the phone
                 when you call FixAIR. I've been working on home heating and cooling systems across
-                Niagara and surrounding areas for over two decades, and I built this company on a
+                Niagara and surrounding areas for over 25 years, and I built this company on a
                 simple belief: every customer deserves the same care I'd give my own home.
               </p>
               <p>
