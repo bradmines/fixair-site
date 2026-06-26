@@ -10,13 +10,6 @@ export default function Hero() {
           loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-brand-blue via-brand-blue/95 to-brand-blue-mid/80" />
-
-        {/* Subtle faint maple leaf watermark in hero background - tasteful, understated Canadian detail */}
-        <div className="absolute top-[-25px] right-[-70px] w-[240px] h-[240px] sm:w-[280px] sm:h-[280px] md:w-[340px] md:h-[340px] lg:w-[380px] lg:h-[380px] text-white opacity-[0.028] -rotate-[18deg] pointer-events-none select-none z-0">
-          <svg viewBox="0 0 100 100" className="w-full h-full" fill="currentColor">
-            <path d="M50 2 Q35 10 38 25 Q20 20 25 38 Q8 32 15 52 Q3 48 8 68 Q18 60 22 78 Q35 68 38 85 Q50 75 50 92 Q50 75 62 85 Q65 68 78 78 Q82 60 92 68 Q97 48 85 52 Q90 32 72 38 Q75 20 65 25 Q68 10 50 2 Z" />
-          </svg>
-        </div>
       </div>
 
       {/* Decorative circles */}
@@ -94,8 +87,10 @@ export default function Hero() {
             </div>
 
             <div className="flex items-center gap-2">
-              <svg className="w-5 h-5 text-brand-orange" viewBox="0 0 100 100" fill="currentColor">
-                <path d="M50 2 Q35 10 38 25 Q20 20 25 38 Q8 32 15 52 Q3 48 8 68 Q18 60 22 78 Q35 68 38 85 Q50 75 50 92 Q50 75 62 85 Q65 68 78 78 Q82 60 92 68 Q97 48 85 52 Q90 32 72 38 Q75 20 65 25 Q68 10 50 2 Z" />
+              <svg className="w-4 h-3" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="16" height="12" fill="#C8102E"/>
+                <rect x="5" width="6" height="12" fill="#FFFFFF"/>
+                <path d="M8 1.5 L9 4 L12 3.5 L10.5 6 L12 8.5 L8 7 L4 8.5 L5.5 6 L4 3.5 L7 4 Z" fill="#C8102E"/>
               </svg>
               Proudly Canadian, Locally Owned
             </div>
