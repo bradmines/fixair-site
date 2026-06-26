@@ -90,16 +90,18 @@ export default function Contact() {
                 </div>
               </a>
 
-              <div className="flex items-center gap-4 bg-white border border-gray-100 rounded-2xl px-6 py-5 shadow-sm">
+              <div className="flex items-start gap-4 bg-white border border-gray-100 rounded-2xl px-6 py-5 shadow-sm">
                 <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center text-gray-500 flex-shrink-0">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                   </svg>
                 </div>
                 <div>
-                  <div className="text-xs text-gray-400 font-medium uppercase tracking-wide">Hours</div>
-                  <div className="text-sm font-semibold text-brand-blue mt-0.5">Mon to Sat: 8am to 6pm</div>
-                  <div className="text-xs text-gray-400">Sunday by appointment</div>
+                  <div className="text-xs text-gray-400 font-medium uppercase tracking-wide">Business Hours</div>
+                  <div className="text-sm font-semibold text-brand-blue mt-0.5">Monday through Friday: 8:00 AM to 5:00 PM</div>
+                  <div className="text-xs text-gray-400 font-medium uppercase tracking-wide mt-3">Emergency HVAC Service</div>
+                  <div className="text-sm font-semibold text-brand-blue mt-0.5">24/7 Emergency Availability</div>
+                  <div className="text-xs text-gray-400">Open 7 Days a Week</div>
                 </div>
               </div>
             </div>
