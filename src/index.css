@@ -35,3 +35,18 @@
     @apply text-lg text-gray-500 mt-3 max-w-2xl mx-auto;
   }
 }
+
+@keyframes subtle-pulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.012);
+    filter: brightness(1.025);
+  }
+}
+
+.subtle-pulse {
+  animation: subtle-pulse 3.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

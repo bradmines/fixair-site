@@ -82,7 +82,7 @@ export default function Financing() {
                 <img
                   src="/financeitlogo.png"
                   alt="Financeit"
-                  className="h-8 md:h-10 w-auto block"
+                  className="h-8 md:h-10 w-auto block subtle-pulse"
                   loading="lazy"
                 />
               </a>
