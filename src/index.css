@@ -39,14 +39,14 @@
 @keyframes subtle-pulse {
   0%, 100% {
     transform: scale(1);
-    filter: brightness(1);
+    filter: brightness(1) drop-shadow(0 0 0 transparent);
   }
   50% {
-    transform: scale(1.012);
-    filter: brightness(1.025);
+    transform: scale(1.03);
+    filter: brightness(1.05) drop-shadow(0 0 6px rgba(249, 115, 22, 0.15));
   }
 }
 
 .subtle-pulse {
-  animation: subtle-pulse 3.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation: subtle-pulse 2.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }

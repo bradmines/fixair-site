@@ -10,19 +10,25 @@ export default function Hero() {
           loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-brand-blue via-brand-blue/95 to-brand-blue-mid/80" />
+
+        {/* Aesthetic subtle maple leaf in hero background for Proudly Canadian branding */}
+        <div className="absolute -top-10 -right-8 w-[320px] h-[320px] md:w-[380px] md:h-[380px] lg:w-[440px] lg:h-[440px] text-[#C8102E] opacity-[0.11] -rotate-[6deg] pointer-events-none select-none blur-[0.5px] z-0">
+          <svg viewBox="0 0 100 100" className="w-full h-full" fill="currentColor">
+            <path d="M50 3 Q22 14 28 36 Q6 30 14 52 Q1 55 12 76 Q27 68 34 86 Q50 76 50 96 Q50 76 66 86 Q73 68 88 76 Q99 55 86 52 Q94 30 72 36 Q78 14 50 3 Z" />
+            <path d="M50 80 L50 96" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.4" />
+          </svg>
+        </div>
+        {/* Secondary fainter maple for layered aesthetic depth */}
+        <div className="absolute top-8 right-[-40px] w-[220px] h-[220px] md:w-[260px] md:h-[260px] text-[#C8102E] opacity-[0.05] rotate-[12deg] pointer-events-none select-none blur-[1px] z-0">
+          <svg viewBox="0 0 100 100" className="w-full h-full" fill="currentColor">
+            <path d="M50 3 Q22 14 28 36 Q6 30 14 52 Q1 55 12 76 Q27 68 34 86 Q50 76 50 96 Q50 76 66 86 Q73 68 88 76 Q99 55 86 52 Q94 30 72 36 Q78 14 50 3 Z" />
+          </svg>
+        </div>
       </div>
 
       {/* Decorative circles */}
       <div className="absolute top-20 right-0 w-96 h-96 bg-brand-orange/10 rounded-full -translate-y-1/4 translate-x-1/3 blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-brand-blue-light/20 rounded-full translate-y-1/3 -translate-x-1/4 blur-3xl pointer-events-none" />
-
-      {/* Aesthetic subtle maple leaf in hero background for Proudly Canadian branding */}
-      <div className="absolute top-[-55px] right-[-95px] w-[440px] h-[440px] text-[#C8102E] opacity-[0.052] -rotate-[8deg] pointer-events-none select-none z-0 hidden lg:block">
-        <svg viewBox="0 0 100 100" className="w-full h-full" fill="currentColor">
-          <path d="M50 2 Q33 11 38 23 Q24 17 27 32 Q12 26 18 43 Q5 42 12 58 Q5 62 13 74 Q22 68 30 80 Q40 72 50 84 Q50 76 50 84 Q60 72 70 80 Q78 68 87 74 Q95 62 88 58 Q95 42 82 43 Q88 26 73 32 Q76 17 67 23 Q72 11 50 2 Z" />
-          <path d="M50 80 L50 96" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" fill="none" opacity="0.5" />
-        </svg>
-      </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40 grid lg:grid-cols-2 gap-12 items-center">
         {/* Text */}
@@ -95,9 +101,7 @@ export default function Hero() {
             </div>
 
             <div className="flex items-center gap-2">
-              <svg className="w-[17px] h-[17px] flex-shrink-0" viewBox="0 0 24 24" fill="#C8102E">
-                <path d="M12 1.8 Q8.2 4 9 6.5 Q6 5.8 6.8 8.8 Q3.8 8.2 4.8 11.2 Q2.2 10.8 3.5 13.8 Q6.3 13.2 7.5 15.8 Q10 15 12 18.2 Q12 15 14 15.8 Q15.2 13.2 18 13.8 Q19.3 10.8 16.5 11.2 Q17.5 8.2 14.5 8.8 Q15.3 5.8 12 1.8 Z" />
-              </svg>
+              <span className="text-[15px] leading-none" style={{ color: '#C8102E' }}>🍁</span>
               Proudly Canadian, Locally Owned
             </div>
 

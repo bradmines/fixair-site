@@ -76,13 +76,13 @@ export default function Financing() {
                 href="https://www.financeit.ca/s/gXF_UQ"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white rounded-xl px-5 py-3 shadow-lg shadow-black/10 transition-all duration-200 hover:shadow-xl hover:shadow-black/20 hover:-translate-y-0.5"
+                className="bg-white rounded-xl px-5 py-3 shadow-lg shadow-black/10 transition-all duration-200 hover:shadow-xl hover:shadow-black/20 hover:-translate-y-0.5 subtle-pulse"
                 aria-label="Apply for financing through Financeit"
               >
                 <img
                   src="/financeitlogo.png"
                   alt="Financeit"
-                  className="h-8 md:h-10 w-auto block subtle-pulse"
+                  className="h-8 md:h-10 w-auto block"
                   loading="lazy"
                 />
               </a>
