@@ -11,17 +11,10 @@ export default function Hero() {
         />
         <div className="absolute inset-0 bg-gradient-to-br from-brand-blue via-brand-blue/95 to-brand-blue-mid/80" />
 
-        {/* Aesthetic subtle maple leaf in hero background for Proudly Canadian branding */}
-        <div className="absolute -top-10 -right-8 w-[320px] h-[320px] md:w-[380px] md:h-[380px] lg:w-[440px] lg:h-[440px] text-[#C8102E] opacity-[0.11] -rotate-[6deg] pointer-events-none select-none blur-[0.5px] z-0">
+        {/* Subtle faint maple leaf watermark in hero background - tasteful, understated Canadian detail */}
+        <div className="absolute top-[-30px] right-[-80px] w-[260px] h-[260px] sm:w-[300px] sm:h-[300px] md:w-[360px] md:h-[360px] lg:w-[400px] lg:h-[400px] text-white opacity-[0.04] -rotate-[15deg] pointer-events-none select-none z-0">
           <svg viewBox="0 0 100 100" className="w-full h-full" fill="currentColor">
-            <path d="M50 3 Q22 14 28 36 Q6 30 14 52 Q1 55 12 76 Q27 68 34 86 Q50 76 50 96 Q50 76 66 86 Q73 68 88 76 Q99 55 86 52 Q94 30 72 36 Q78 14 50 3 Z" />
-            <path d="M50 80 L50 96" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.4" />
-          </svg>
-        </div>
-        {/* Secondary fainter maple for layered aesthetic depth */}
-        <div className="absolute top-8 right-[-40px] w-[220px] h-[220px] md:w-[260px] md:h-[260px] text-[#C8102E] opacity-[0.05] rotate-[12deg] pointer-events-none select-none blur-[1px] z-0">
-          <svg viewBox="0 0 100 100" className="w-full h-full" fill="currentColor">
-            <path d="M50 3 Q22 14 28 36 Q6 30 14 52 Q1 55 12 76 Q27 68 34 86 Q50 76 50 96 Q50 76 66 86 Q73 68 88 76 Q99 55 86 52 Q94 30 72 36 Q78 14 50 3 Z" />
+            <path d="M50 2 Q35 10 38 25 Q20 20 25 38 Q8 32 15 52 Q3 48 8 68 Q18 60 22 78 Q35 68 38 85 Q50 75 50 92 Q50 75 62 85 Q65 68 78 78 Q82 60 92 68 Q97 48 85 52 Q90 32 72 38 Q75 20 65 25 Q68 10 50 2 Z" />
           </svg>
         </div>
       </div>
@@ -101,7 +94,9 @@ export default function Hero() {
             </div>
 
             <div className="flex items-center gap-2">
-              <span className="text-[15px] leading-none" style={{ color: '#C8102E' }}>🍁</span>
+              <svg className="w-5 h-5 text-brand-orange/70" viewBox="0 0 100 100" fill="currentColor">
+                <path d="M50 2 Q35 10 38 25 Q20 20 25 38 Q8 32 15 52 Q3 48 8 68 Q18 60 22 78 Q35 68 38 85 Q50 75 50 92 Q50 75 62 85 Q65 68 78 78 Q82 60 92 68 Q97 48 85 52 Q90 32 72 38 Q75 20 65 25 Q68 10 50 2 Z" />
+              </svg>
               Proudly Canadian, Locally Owned
             </div>
 
