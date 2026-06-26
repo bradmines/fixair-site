@@ -86,12 +86,15 @@ export default function Hero() {
               Residential Specialist
             </div>
 
-            <div className="flex items-center gap-2">
-              <svg className="w-5 h-5 text-[#C8102E]" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2 Q9.5 5 9.8 8 Q5.8 7.2 6.2 11.5 Q2.5 10.5 4 15.5 Q8 14 8.8 19 Q11.2 16 12 21.5 Q12.8 16 15.2 19 Q16 14 19.5 15.5 Q21 10.5 17.5 11.5 Q18 7.2 14.2 8 Q14.5 5 12 2 Z" />
-                <path d="M12 18.5 L12 22" fill="none" stroke="#C8102E" strokeWidth="1.2" strokeLinecap="round" />
+            <div className="flex items-center gap-3 rounded-2xl border border-[#C8102E]/20 bg-[#C8102E]/5 px-4 py-2.5 text-sm font-medium text-blue-100">
+              <svg className="h-5 w-5 flex-shrink-0 text-[#C8102E]" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2c-1.5 2.8-2.8 4.5-2 7-2.2 0-3.8 1.8-3.3 4.2.3 1.3 1.2 2.3 2.3 2.5-.8 1.5-.2 3.3 1.2 3.8.6-.9 1.5-1.3 2.5-.8.1 1.2 1 2 2 2s1.9-.8 2-2c1-.5 1.9-.1 2.5.8 1.4-.5 2-2.3 1.2-3.8 1.1-.2 2-.9 2.3-2.5.5-2.4-1.1-4.2-3.3-4.2.8-2.5-.5-4.2-2-7z" />
               </svg>
-              Proudly <span className="text-[#C8102E]">Canadian</span>, Locally Owned
+              <div className="flex items-baseline gap-1.5">
+                <span className="font-semibold tracking-[-0.2px] text-white">Proudly Canadian</span>
+                <span className="text-blue-200/70">•</span>
+                <span className="text-blue-200">Locally Owned</span>
+              </div>
             </div>
 
             {/* Divider + social callout */}
