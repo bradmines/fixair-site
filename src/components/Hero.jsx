@@ -86,15 +86,10 @@ export default function Hero() {
               Residential Specialist
             </div>
 
-            <div className="flex items-center gap-3 rounded-2xl border border-[#C8102E]/20 bg-[#C8102E]/5 px-4 py-2.5 text-sm font-medium text-blue-100">
-              <svg className="h-5 w-5 flex-shrink-0 text-[#C8102E]" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2c-1.5 2.8-2.8 4.5-2 7-2.2 0-3.8 1.8-3.3 4.2.3 1.3 1.2 2.3 2.3 2.5-.8 1.5-.2 3.3 1.2 3.8.6-.9 1.5-1.3 2.5-.8.1 1.2 1 2 2 2s1.9-.8 2-2c1-.5 1.9-.1 2.5.8 1.4-.5 2-2.3 1.2-3.8 1.1-.2 2-.9 2.3-2.5.5-2.4-1.1-4.2-3.3-4.2.8-2.5-.5-4.2-2-7z" />
-              </svg>
-              <div className="flex items-baseline gap-1.5">
-                <span className="font-semibold tracking-[-0.2px] text-white">Proudly Canadian</span>
-                <span className="text-blue-200/70">•</span>
-                <span className="text-blue-200">Locally Owned</span>
-              </div>
+            <div className="flex items-center gap-2 rounded-2xl border border-[#C8102E]/40 bg-[#C8102E]/5 px-4 py-2 text-sm font-medium text-blue-100">
+              <span className="font-semibold tracking-[-0.2px] text-white">Proudly Canadian</span>
+              <span className="text-blue-200/70">•</span>
+              <span className="text-blue-200">Locally Owned</span>
             </div>
 
             {/* Divider + social callout */}
