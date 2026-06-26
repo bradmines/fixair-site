@@ -87,12 +87,10 @@ export default function Hero() {
             </div>
 
             <div className="flex items-center gap-2">
-              <svg className="w-4 h-3" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="16" height="12" fill="#C8102E"/>
-                <rect x="5" width="6" height="12" fill="#FFFFFF"/>
-                <path d="M8 1.5 L9 4 L12 3.5 L10.5 6 L12 8.5 L8 7 L4 8.5 L5.5 6 L4 3.5 L7 4 Z" fill="#C8102E"/>
+              <svg className="w-5 h-5 text-[#C8102E]" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2 Q 10 5 10.5 8 Q 7 7 7.5 11 Q 4 10 5 14 Q 8 13 9 17 Q 11 15 12 20 Q 13 15 15 17 Q 16 13 19 14 Q 20 10 17 11 Q 17.5 7 14 8 Q 14.5 5 12 2 Z" />
               </svg>
-              Proudly Canadian, Locally Owned
+              Proudly <span className="text-[#C8102E]">Canadian</span>, Locally Owned
             </div>
 
             {/* Divider + social callout */}
