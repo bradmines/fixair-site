@@ -32,7 +32,7 @@ export default function Hero() {
 
           <p className="mt-6 text-lg md:text-xl text-blue-100 max-w-xl leading-relaxed">
             Honest, expert HVAC service from Tom, a licensed technician with over{' '}
-            <strong className="text-white">20 years</strong> of experience. FixAIR is a{' '}
+            <strong className="text-white">25 years</strong> of experience. FixAIR is a{' '}
             <strong className="text-white">residential only</strong> company, focused entirely on
             homes across Niagara and surrounding areas.
           </p>
@@ -84,6 +84,11 @@ export default function Hero() {
                 <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
               </svg>
               Residential Specialist
+            </div>
+
+            <div className="flex items-center gap-2">
+              <span className="text-base">🇨🇦</span>
+              Proudly Canadian
             </div>
 
             {/* Divider + social callout */}

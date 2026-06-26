@@ -82,11 +82,11 @@ export default function Financing() {
                 <img
                   src="/financeitlogo.png"
                   alt="Financeit"
-                  className="h-7 md:h-8 w-auto block"
+                  className="h-8 md:h-10 w-auto block"
                   loading="lazy"
                 />
               </a>
-              <span className="text-blue-200/70 text-sm font-medium">Our financing partner</span>
+              <span className="text-blue-200/70 text-base font-medium">Our financing partner</span>
             </div>
 
             {/* Benefits */}
