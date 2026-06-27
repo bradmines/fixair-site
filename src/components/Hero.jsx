@@ -152,7 +152,7 @@ export default function Hero() {
               </div>
               <div>
                 <div className="font-bold">Tom, Owner & Lead Tech</div>
-                <div className="text-blue-200 text-sm">Available Mon to Sat · Niagara &amp; surrounding areas</div>
+                <div className="text-blue-200 text-sm">Mon–Fri + 24/7 emergency · Niagara &amp; surrounding areas</div>
               </div>
             </div>
           </div>
