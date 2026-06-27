@@ -1,5 +1,9 @@
 import { useState } from 'react'
 
+// Formspree endpoint — get this from your Formspree dashboard after creating a form.
+// It looks like: https://formspree.io/f/abcdwxyz  (replace YOUR_FORM_ID below)
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mgojkqza'
+
 const SERVICE_OPTIONS = [
   'Furnace repair or replacement',
   'Air conditioner repair or replacement',
@@ -16,6 +20,8 @@ export default function Contact() {
   const [contactMethod, setContactMethod] = useState('phone')
   const [form, setForm] = useState({ name: '', phone: '', email: '', service: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState('')
   const [errors, setErrors] = useState({})
 
   function validate() {
@@ -31,11 +37,36 @@ export default function Contact() {
     setErrors(er => ({ ...er, [e.target.name]: undefined }))
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault()
     const e2 = validate()
     if (Object.keys(e2).length) { setErrors(e2); return }
-    setSubmitted(true)
+
+    setSubmitting(true)
+    setSubmitError('')
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          name: form.name,
+          preferredContact: contactMethod === 'phone' ? 'Phone call' : 'Email',
+          phone: form.phone,
+          email: form.email,
+          service: form.service,
+          message: form.message,
+          _subject: `New website lead from ${form.name}`,
+        }),
+      })
+      if (!res.ok) throw new Error('Submission failed')
+      setSubmitted(true)
+    } catch (err) {
+      setSubmitError(
+        "Sorry, something went wrong sending your message. Please call Tom at 905-732-2791 and we'll help right away."
+      )
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   const inputClass = (field) =>
@@ -128,7 +159,7 @@ export default function Contact() {
                   <a href="tel:+19057322791" className="font-bold text-brand-orange">905-732-2791</a>.
                 </p>
                 <button
-                  onClick={() => { setSubmitted(false); setForm({ name: '', phone: '', email: '', service: '', message: '' }) }}
+                  onClick={() => { setSubmitted(false); setSubmitError(''); setForm({ name: '', phone: '', email: '', service: '', message: '' }) }}
                   className="mt-6 text-sm text-brand-blue hover:underline font-semibold"
                 >
                   Send another message
@@ -266,8 +297,23 @@ export default function Contact() {
                     />
                   </div>
 
-                  <button type="submit" className="btn-primary w-full py-3.5 text-base">
-                    {contactMethod === 'phone' ? (
+                  {submitError && (
+                    <p className="text-red-500 text-sm text-center bg-red-50 border border-red-200 rounded-xl px-4 py-3">
+                      {submitError}
+                    </p>
+                  )}
+
+                  <button
+                    type="submit"
+                    disabled={submitting}
+                    className="btn-primary w-full py-3.5 text-base disabled:opacity-60 disabled:cursor-not-allowed"
+                  >
+                    {submitting ? (
+                      <svg className="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z" />
+                      </svg>
+                    ) : contactMethod === 'phone' ? (
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
                       </svg>
@@ -276,7 +322,11 @@ export default function Contact() {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                       </svg>
                     )}
-                    {contactMethod === 'phone' ? 'Request a Call from Tom' : 'Send Message to Tom'}
+                    {submitting
+                      ? 'Sending…'
+                      : contactMethod === 'phone'
+                        ? 'Request a Call from Tom'
+                        : 'Send Message to Tom'}
                   </button>
 
                   <p className="text-xs text-center text-gray-400 mt-2">
