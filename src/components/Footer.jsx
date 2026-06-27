@@ -98,7 +98,18 @@ export default function Footer() {
       <div className="border-t border-white/10 py-5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-blue-300">
           <span>© {year} FixAIR Heating & Air Conditioning. All rights reserved.</span>
-          <span>Niagara &amp; surrounding areas, Ontario · 905-732-2791 · fixairheatandcool@gmail.com</span>
+          <div className="flex flex-wrap items-center justify-center sm:justify-end gap-x-2 gap-y-0.5 text-center sm:text-right">
+            <span>Niagara &amp; surrounding areas, Ontario · 905-732-2791 · fixairheatandcool@gmail.com</span>
+            <span className="hidden sm:inline text-blue-400/70">·</span>
+            <a
+              href="https://bradmines.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors hover:underline underline-offset-2"
+            >
+              Website by bradmines
+            </a>
+          </div>
         </div>
       </div>
     </footer>
