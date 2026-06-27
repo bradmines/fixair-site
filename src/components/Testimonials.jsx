@@ -42,6 +42,7 @@ const testimonials = [
 
 const featured = testimonials.slice(0, 3)
 const carousel  = testimonials.slice(3)
+const TOTAL_REVIEWS = 27
 
 function StarRating({ count }) {
   return (
@@ -192,7 +193,7 @@ export default function Testimonials() {
               ))}
             </div>
             <span className="text-sm font-bold text-gray-800">5.0</span>
-            <span className="text-sm text-gray-400">· {testimonials.length} Google reviews</span>
+            <span className="text-sm text-gray-400">· {TOTAL_REVIEWS} Google reviews</span>
           </div>
         </div>
 
