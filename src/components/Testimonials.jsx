@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useRef } from 'react'
 
 const testimonials = [
   {
@@ -40,8 +40,6 @@ const testimonials = [
   },
 ]
 
-const featured = testimonials.slice(0, 3)
-const carousel  = testimonials.slice(3)
 const TOTAL_REVIEWS = 27
 
 function StarRating({ count }) {
@@ -80,7 +78,7 @@ function Avatar({ name }) {
 
 function ReviewCard({ t, large = false }) {
   return (
-    <div className={`bg-white rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-4 ${large ? 'p-7' : 'p-6'}`}>
+    <div className={`w-full bg-white rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-4 ${large ? 'p-7' : 'p-6'}`}>
       <div className="flex items-center gap-3">
         <Avatar name={t.name} />
         <div className="min-w-0">
@@ -104,75 +102,12 @@ function ReviewCard({ t, large = false }) {
   )
 }
 
-function Carousel({ items }) {
-  const [idx, setIdx] = useState(0)
-  const [paused, setPaused] = useState(false)
-  const timer = useRef(null)
-
-  const advance = (dir) => setIdx(i => (i + dir + items.length) % items.length)
-
-  useEffect(() => {
-    if (paused) return
-    timer.current = setInterval(() => advance(1), 5000)
-    return () => clearInterval(timer.current)
-  }, [paused, items.length])
-
-  return (
-    <div
-      className="relative"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-    >
-      {/* Cards — use CSS transitions for a smooth fade */}
-      <div className="relative min-h-[13rem]">
-        {items.map((t, i) => (
-          <div
-            key={i}
-            className={`absolute inset-0 transition-opacity duration-500 ${i === idx ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}
-          >
-            <ReviewCard t={t} />
-          </div>
-        ))}
-      </div>
-
-      {/* Controls */}
-      <div className="mt-4 flex items-center justify-between">
-        <button
-          onClick={() => advance(-1)}
-          className="w-8 h-8 rounded-full border border-gray-200 hover:border-brand-blue hover:text-brand-blue flex items-center justify-center text-gray-400 transition-colors"
-          aria-label="Previous review"
-        >
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"/>
-          </svg>
-        </button>
-
-        <div className="flex gap-2">
-          {items.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setIdx(i)}
-              className={`rounded-full transition-all duration-300 ${i === idx ? 'w-5 h-2 bg-brand-orange' : 'w-2 h-2 bg-gray-300 hover:bg-gray-400'}`}
-              aria-label={`Review ${i + 1}`}
-            />
-          ))}
-        </div>
-
-        <button
-          onClick={() => advance(1)}
-          className="w-8 h-8 rounded-full border border-gray-200 hover:border-brand-blue hover:text-brand-blue flex items-center justify-center text-gray-400 transition-colors"
-          aria-label="Next review"
-        >
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/>
-          </svg>
-        </button>
-      </div>
-    </div>
-  )
-}
-
 export default function Testimonials() {
+  const scroller = useRef(null)
+  const scrollByCard = (dir) => {
+    const el = scroller.current
+    if (el) el.scrollBy({ left: dir * el.clientWidth, behavior: 'smooth' })
+  }
   return (
     <section id="testimonials" className="py-20 md:py-28 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -197,22 +132,49 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* Featured 3 */}
-        <div className="grid md:grid-cols-3 gap-5">
-          {featured.map((t, i) => (
-            <ReviewCard key={i} t={t} large />
-          ))}
-        </div>
-
-        {/* Carousel for remaining 3 */}
-        <div className="mt-8 max-w-xl mx-auto">
-          <div className="text-center mb-4 text-xs font-semibold uppercase tracking-widest text-gray-400">
-            More Reviews
+        {/* One box — scroll through the best reviews */}
+        <div className="relative max-w-2xl mx-auto">
+          <div
+            ref={scroller}
+            className="flex overflow-x-auto snap-x snap-mandatory reviews-scroll rounded-2xl"
+          >
+            {testimonials.map((t, i) => (
+              <div key={i} className="snap-center shrink-0 w-full">
+                <ReviewCard t={t} />
+              </div>
+            ))}
           </div>
-          <Carousel items={carousel} />
+
+          {/* Desktop arrows */}
+          <button
+            onClick={() => scrollByCard(-1)}
+            aria-label="Previous review"
+            className="hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-white shadow-md border border-gray-100 items-center justify-center text-gray-500 hover:text-brand-blue hover:border-brand-blue transition-colors"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"/>
+            </svg>
+          </button>
+          <button
+            onClick={() => scrollByCard(1)}
+            aria-label="Next review"
+            className="hidden sm:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-10 h-10 rounded-full bg-white shadow-md border border-gray-100 items-center justify-center text-gray-500 hover:text-brand-blue hover:border-brand-blue transition-colors"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
         </div>
 
-        <div className="mt-10 text-center space-y-3">
+        <div className="mt-4 flex items-center justify-center gap-2 text-xs font-medium text-gray-400">
+          <svg className="w-4 h-4 sm:hidden" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M8 7l-4 5 4 5M16 7l4 5-4 5"/>
+          </svg>
+          <span className="sm:hidden">Swipe through more reviews</span>
+          <span className="hidden sm:inline">Use the arrows to read more reviews</span>
+        </div>
+
+        <div className="mt-8 text-center space-y-3">
           <a
             href="https://www.google.com/maps/place/FixAir+Heating+and+Air+Conditioning/@43.0713027,-79.5314574,9.98z/data=!4m8!3m7!1s0x882a8bdffd1e1775:0x4f058f4f82b2bedc!8m2!3d43.073928!4d-79.1983315!9m1!1b1!16s%2Fg%2F11tfnjymwg?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D"
             target="_blank"

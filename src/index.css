@@ -36,6 +36,16 @@
   }
 }
 
+/* Horizontal review scroller — clean single box, touch-friendly */
+.reviews-scroll {
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE/Edge */
+}
+.reviews-scroll::-webkit-scrollbar {
+  display: none;                /* Chrome/Safari */
+}
+
 @keyframes subtle-pulse {
   0%, 100% {
     transform: scale(1);

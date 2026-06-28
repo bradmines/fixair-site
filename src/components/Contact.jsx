@@ -77,7 +77,7 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           {/* Left: info */}
-          <div>
+          <div className="min-w-0">
             <div className="inline-block bg-brand-blue/10 text-brand-blue text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-5">
               Get in Touch
             </div>
@@ -115,9 +115,9 @@ export default function Contact() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                   </svg>
                 </div>
-                <div>
+                <div className="min-w-0">
                   <div className="text-xs text-gray-400 font-medium uppercase tracking-wide">Email</div>
-                  <div className="text-base font-bold text-brand-blue mt-0.5">fixairheatandcool@gmail.com</div>
+                  <div className="text-base font-bold text-brand-blue mt-0.5 break-all">fixairheatandcool@gmail.com</div>
                 </div>
               </a>
 
@@ -145,7 +145,7 @@ export default function Contact() {
           </div>
 
           {/* Right: form */}
-          <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8">
+          <div className="min-w-0 bg-white rounded-2xl shadow-xl border border-gray-100 p-8">
             {submitted ? (
               <div className="text-center py-10">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">

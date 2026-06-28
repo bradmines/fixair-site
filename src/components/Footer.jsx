@@ -3,8 +3,8 @@ export default function Footer() {
 
   return (
     <footer className="bg-brand-blue text-white">
-      {/* Top strip */}
-      <div className="bg-brand-orange py-4">
+      {/* Top strip — hidden on mobile; the sticky call bar already covers this */}
+      <div className="hidden sm:block bg-brand-orange py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
           <span className="font-bold text-white">Ready for comfortable year round temperatures? Call Tom today.</span>
           <a
@@ -17,9 +17,9 @@ export default function Footer() {
       </div>
 
       {/* Main footer */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-14 grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
         {/* Brand */}
-        <div className="lg:col-span-2">
+        <div className="col-span-2 lg:col-span-2">
           <div className="mb-4">
             <img
               src="/fixair-logo.avif"
@@ -96,20 +96,22 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/10 py-5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-blue-300">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-blue-300 text-center sm:text-left">
           <span>© {year} FixAIR Heating & Air Conditioning. All rights reserved.</span>
-          <div className="flex flex-wrap items-center justify-center sm:justify-end gap-x-2 gap-y-0.5 text-center sm:text-right">
-            <span>Niagara &amp; surrounding areas, Ontario · 905-732-2791 · fixairheatandcool@gmail.com</span>
-            <span className="hidden sm:inline text-blue-400/70">·</span>
-            <a
-              href="https://bradmines.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition-colors hover:underline underline-offset-2"
-            >
-              Website by bradmines
-            </a>
-          </div>
+          <span className="text-blue-300 sm:text-right">
+            Niagara &amp; surrounding areas, Ontario
+            <span className="hidden sm:inline"> · 905-732-2791 · fixairheatandcool@gmail.com</span>
+          </span>
+        </div>
+        <div className="mt-4 pt-4 border-t border-white/10 text-center">
+          <a
+            href="https://bradmines.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[11px] text-blue-400/80 hover:text-white transition-colors hover:underline underline-offset-2"
+          >
+            Website by bradmines
+          </a>
         </div>
       </div>
     </footer>

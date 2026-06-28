@@ -86,12 +86,6 @@ export default function Hero() {
               Residential Specialist
             </div>
 
-            <div className="flex items-center gap-2 rounded-2xl border border-[#C8102E]/40 bg-[#C8102E]/5 px-4 py-2 text-sm font-medium text-blue-100">
-              <span className="font-semibold tracking-[-0.2px] text-white">Proudly Canadian</span>
-              <span className="text-blue-200/70">•</span>
-              <span className="text-blue-200">Locally Owned</span>
-            </div>
-
             {/* Divider + social callout */}
             <div className="w-full sm:w-auto flex items-center gap-3 mt-1 sm:mt-0">
               <div className="w-px h-5 bg-white/20 hidden sm:block" />
@@ -131,7 +125,23 @@ export default function Hero() {
         </div>
 
         {/* Stats card */}
-        <div className="hidden lg:flex flex-col gap-4">
+        <div className="hidden lg:flex flex-col gap-5">
+          {/* Proudly Canadian stamp above the stats card */}
+          <div className="flex flex-col items-center gap-2">
+            <img
+              src="/redleaf.png"
+              alt="Proudly Canadian"
+              className="w-44 h-44 object-contain"
+            />
+            <div className="text-center -mt-1">
+              <div className="text-sm font-bold uppercase tracking-[0.25em] text-white">
+                Proudly Canadian
+              </div>
+              <div className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-200 mt-1">
+                Locally Owned
+              </div>
+            </div>
+          </div>
           <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 text-white">
             <div className="grid grid-cols-2 gap-6">
               {[
