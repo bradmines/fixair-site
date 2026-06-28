@@ -100,8 +100,8 @@ export default function About() {
                   ),
                 },
               ].map(f => (
-                <div key={f.title} className="flex items-start gap-3 bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
-                  <div className="w-9 h-9 bg-brand-blue/10 text-brand-blue rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                <div key={f.title} className="flex flex-col items-center text-center gap-2 sm:flex-row sm:items-start sm:text-left sm:gap-3 bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
+                  <div className="w-10 h-10 sm:w-9 sm:h-9 bg-brand-blue/10 text-brand-blue rounded-lg flex items-center justify-center flex-shrink-0 sm:mt-0.5">
                     {f.icon}
                   </div>
                   <div>
