@@ -1,3 +1,5 @@
+import { PHONE, PHONE_HREF, EMAIL } from '../constants'
+
 export default function Footer() {
   const year = new Date().getFullYear()
 
@@ -8,10 +10,10 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
           <span className="font-bold text-white">Ready for comfortable year round temperatures? Call Tom today.</span>
           <a
-            href="tel:+19057322791"
+            href={PHONE_HREF}
             className="flex-shrink-0 bg-white text-brand-orange font-extrabold px-6 py-2.5 rounded-lg shadow hover:bg-gray-50 transition text-sm"
           >
-            905-732-2791
+            {PHONE}
           </a>
         </div>
       </div>
@@ -100,7 +102,7 @@ export default function Footer() {
           <span>© {year} FixAIR Heating & Air Conditioning. All rights reserved.</span>
           <span className="text-blue-300 sm:text-right">
             Niagara &amp; surrounding areas, Ontario
-            <span className="hidden sm:inline"> · 905-732-2791 · fixairheatandcool@gmail.com</span>
+            <span className="hidden sm:inline"> · {PHONE} · {EMAIL}</span>
           </span>
         </div>
         <div className="mt-4 pt-4 border-t border-white/10 text-center">

@@ -7,6 +7,8 @@ const towns = [
   { name: 'Port Colborne', desc: 'South Niagara' },
 ]
 
+import { PHONE, PHONE_HREF } from '../constants'
+
 export default function ServiceArea() {
   return (
     <section id="area" className="py-20 md:py-24 bg-white">
@@ -37,7 +39,7 @@ export default function ServiceArea() {
             <p className="mt-4 text-gray-500 leading-relaxed">
               FixAIR serves homeowners throughout Niagara and surrounding areas. If you are nearby and
               don't see your town listed,{' '}
-              <a href="tel:+19057322791" className="text-brand-blue font-semibold hover:underline">give Tom a call</a>{' '}
+              <a href={PHONE_HREF} className="text-brand-blue font-semibold hover:underline">give Tom a call</a>{' '}
               and he can let you know.
             </p>
 
@@ -65,7 +67,7 @@ export default function ServiceArea() {
               <div>
                 <div className="font-semibold text-brand-blue text-sm">Not sure if we cover your area?</div>
                 <div className="text-gray-500 text-xs mt-0.5">
-                  Call <a href="tel:+19057322791" className="font-bold text-brand-orange">905-732-2791</a> and Tom will let you know right away.
+                  Call <a href={PHONE_HREF} className="font-bold text-brand-orange">{PHONE}</a> and Tom will let you know right away.
                 </div>
               </div>
             </div>

@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react'
-
-const PHONE = '905-732-2791'
-const PHONE_HREF = 'tel:+19057322791'
+import { PHONE, PHONE_HREF } from '../constants'
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
@@ -94,6 +92,7 @@ export default function Header() {
               className="lg:hidden p-2 rounded-md text-gray-600 hover:text-brand-blue hover:bg-gray-100 transition"
               onClick={() => setMenuOpen(o => !o)}
               aria-label="Toggle menu"
+              aria-expanded={menuOpen}
             >
               {menuOpen ? (
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">

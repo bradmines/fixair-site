@@ -95,7 +95,7 @@ function ReviewCard({ t, large = false }) {
         <div className="ml-auto"><GoogleG /></div>
       </div>
       <StarRating count={t.stars} />
-      <p className={`text-gray-600 leading-relaxed flex-1 ${large ? 'text-sm' : 'text-sm'}`}>
+      <p className="text-gray-600 leading-relaxed flex-1 text-sm">
         {t.quote}
       </p>
     </div>

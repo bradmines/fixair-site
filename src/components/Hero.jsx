@@ -1,11 +1,14 @@
+import { PHONE_HREF, EMAIL_HREF } from '../constants'
+
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-brand-blue" id="home">
       {/* Background image overlay */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80"
-          alt="Modern home HVAC system"
+          src="/hero-bg.jpg"
+          alt=""
+          aria-hidden="true"
           className="w-full h-full object-cover opacity-20"
           loading="eager"
         />
@@ -46,13 +49,13 @@ export default function Hero() {
               Get a Free Quote
             </a>
             {/* Desktop: no sticky bar here, so keep the call CTA in the hero */}
-            <a href="tel:+19057322791" className="btn-primary text-base px-8 py-4 hidden sm:inline-flex">
+            <a href={PHONE_HREF} className="btn-primary text-base px-8 py-4 hidden sm:inline-flex">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
               </svg>
               Call Tom Now
             </a>
-            <a href="mailto:fixairheatandcool@gmail.com" className="btn-secondary text-base px-8 py-4 border-white/40 bg-white/10 text-white hover:bg-white/20">
+            <a href={EMAIL_HREF} className="btn-secondary text-base px-8 py-4 border-white/40 bg-white/10 text-white hover:bg-white/20">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
               </svg>

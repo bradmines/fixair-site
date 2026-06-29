@@ -1,7 +1,6 @@
 import { useState } from 'react'
+import { PHONE, PHONE_HREF, EMAIL, EMAIL_HREF } from '../constants'
 
-// Formspree endpoint — get this from your Formspree dashboard after creating a form.
-// It looks like: https://formspree.io/f/abcdwxyz  (replace YOUR_FORM_ID below)
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mgojkqza'
 
 const SERVICE_OPTIONS = [
@@ -27,8 +26,14 @@ export default function Contact() {
   function validate() {
     const e = {}
     if (!form.name.trim()) e.name = 'Please enter your name.'
-    if (contactMethod === 'phone' && !form.phone.trim()) e.phone = 'Please enter a phone number.'
-    if (contactMethod === 'email' && !form.email.trim()) e.email = 'Please enter your email address.'
+    if (contactMethod === 'phone') {
+      if (!form.phone.trim()) e.phone = 'Please enter a phone number.'
+      else if (form.phone.replace(/\D/g, '').length < 10) e.phone = 'Please enter a valid phone number.'
+    }
+    if (contactMethod === 'email') {
+      if (!form.email.trim()) e.email = 'Please enter your email address.'
+      else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) e.email = 'Please enter a valid email address.'
+    }
     return e
   }
 
@@ -62,7 +67,7 @@ export default function Contact() {
       setSubmitted(true)
     } catch (err) {
       setSubmitError(
-        "Sorry, something went wrong sending your message. Please call Tom at 905-732-2791 and we'll help right away."
+        `Sorry, something went wrong sending your message. Please call Tom at ${PHONE} and we'll help right away.`
       )
     } finally {
       setSubmitting(false)
@@ -92,7 +97,7 @@ export default function Contact() {
 
             <div className="mt-8 space-y-4">
               <a
-                href="tel:+19057322791"
+                href={PHONE_HREF}
                 className="flex items-center gap-4 bg-white border border-gray-100 rounded-2xl px-6 py-5 shadow-sm hover:shadow-md hover:border-brand-orange/30 transition-all group"
               >
                 <div className="w-12 h-12 bg-brand-orange rounded-xl flex items-center justify-center text-white flex-shrink-0 group-hover:scale-105 transition-transform">
@@ -102,12 +107,12 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="text-xs text-gray-400 font-medium uppercase tracking-wide">Call Tom directly</div>
-                  <div className="text-lg font-extrabold text-brand-blue mt-0.5">905-732-2791</div>
+                  <div className="text-lg font-extrabold text-brand-blue mt-0.5">{PHONE}</div>
                 </div>
               </a>
 
               <a
-                href="mailto:fixairheatandcool@gmail.com"
+                href={EMAIL_HREF}
                 className="flex items-center gap-4 bg-white border border-gray-100 rounded-2xl px-6 py-5 shadow-sm hover:shadow-md hover:border-brand-blue/30 transition-all group"
               >
                 <div className="w-12 h-12 bg-brand-blue rounded-xl flex items-center justify-center text-white flex-shrink-0 group-hover:scale-105 transition-transform">
@@ -117,7 +122,7 @@ export default function Contact() {
                 </div>
                 <div className="min-w-0">
                   <div className="text-xs text-gray-400 font-medium uppercase tracking-wide">Email</div>
-                  <div className="text-base font-bold text-brand-blue mt-0.5 break-all">fixairheatandcool@gmail.com</div>
+                  <div className="text-base font-bold text-brand-blue mt-0.5 break-all">{EMAIL}</div>
                 </div>
               </a>
 
@@ -133,11 +138,11 @@ export default function Contact() {
                   <div className="text-xs text-gray-400 font-medium uppercase tracking-wide mt-3">Emergency HVAC Service</div>
                   <div className="text-sm font-semibold text-brand-blue mt-0.5">24/7 Emergency Availability</div>
                   <div className="text-xs text-gray-400">Open 7 Days a Week</div>
-                  <a href="tel:+19057322791" className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-orange mt-2 hover:underline">
+                  <a href={PHONE_HREF} className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-orange mt-2 hover:underline">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M6.62 10.79a15.53 15.53 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.36 11.36 0 003.56.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.56 1 1 0 01-.24 1.02l-2.2 2.21z"/>
                     </svg>
-                    Emergency? Call now — 905-732-2791
+                    Emergency? Call now — {PHONE}
                   </a>
                 </div>
               </div>
@@ -156,10 +161,10 @@ export default function Contact() {
                 <h3 className="text-xl font-extrabold text-brand-blue">You're all set!</h3>
                 <p className="text-gray-500 mt-2 text-sm">
                   Thanks, {form.name.split(' ')[0]}! Tom will be in touch shortly. For faster service, call{' '}
-                  <a href="tel:+19057322791" className="font-bold text-brand-orange">905-732-2791</a>.
+                  <a href={PHONE_HREF} className="font-bold text-brand-orange">{PHONE}</a>.
                 </p>
                 <button
-                  onClick={() => { setSubmitted(false); setSubmitError(''); setForm({ name: '', phone: '', email: '', service: '', message: '' }) }}
+                  onClick={() => { setSubmitted(false); setSubmitError(''); setForm({ name: '', phone: '', email: '', service: '', message: '' }); setErrors({}) }}
                   className="mt-6 text-sm text-brand-blue hover:underline font-semibold"
                 >
                   Send another message
@@ -330,7 +335,7 @@ export default function Contact() {
                   </button>
 
                   <p className="text-xs text-center text-gray-400 mt-2">
-                    Rather call now? <a href="tel:+19057322791" className="text-brand-orange font-semibold">905-732-2791</a>
+                    Rather call now? <a href={PHONE_HREF} className="text-brand-orange font-semibold">{PHONE}</a>
                   </p>
                 </form>
               </>
