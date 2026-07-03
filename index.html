@@ -45,12 +45,16 @@
         "@type": "Person",
         "name": "Tom Guitard"
       },
-      "address": {
-        "@type": "PostalAddress",
-        "addressRegion": "ON",
-        "addressCountry": "CA"
-      },
       "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Regional Municipality of Niagara",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Ontario",
+            "containedInPlace": { "@type": "Country", "name": "Canada" }
+          }
+        },
         { "@type": "City", "name": "St. Catharines" },
         { "@type": "City", "name": "Welland" },
         { "@type": "City", "name": "Thorold" },
