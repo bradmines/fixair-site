@@ -31,7 +31,7 @@ export default function Header() {
           <a href="#" className="flex-shrink-0">
             <img
               src="/fixair-logo.avif"
-              alt="FixAIR Heating & Air Conditioning"
+              alt="FixAir Heating and Air Conditioning"
               className="h-10 md:h-12 w-auto"
             />
           </a>

@@ -9,7 +9,7 @@ export default function About() {
         <div className="relative min-h-[420px] lg:min-h-0">
           <img
             src="/tom.avif"
-            alt="Tom Guitard, Owner and lead technician, FixAIR Heating & Air Conditioning"
+            alt="Tom Guitard, Owner and lead technician, FixAir Heating and Air Conditioning"
             className="absolute inset-0 w-full h-full object-cover object-top"
             loading="lazy"
           />

@@ -17,7 +17,7 @@ export default function ServiceArea() {
           {/* Google Maps embed for the FixAIR business location */}
           <div className="rounded-2xl overflow-hidden shadow-xl order-2 lg:order-1">
             <iframe
-              title="FixAIR Heating and Air Conditioning location on Google Maps"
+              title="FixAir Heating and Air Conditioning location on Google Maps"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d373050.07033610117!2d-79.52796817502455!3d43.07395659687544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882a8bdffd1e1775%3A0x4f058f4f82b2bedc!2sFixAir%20Heating%20and%20Air%20Conditioning!5e0!3m2!1sen!2sth!4v1782200098249!5m2!1sen!2sth"
               className="w-full h-72 md:h-96 block"
               style={{ border: 0 }}

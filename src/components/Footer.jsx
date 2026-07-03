@@ -25,7 +25,7 @@ export default function Footer() {
           <div className="mb-4">
             <img
               src="/fixair-logo.avif"
-              alt="FixAIR Heating & Air Conditioning"
+              alt="FixAir Heating and Air Conditioning"
               className="h-10 w-auto brightness-0 invert"
             />
           </div>
@@ -99,7 +99,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/10 py-5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-blue-300 text-center sm:text-left">
-          <span>© {year} FixAIR Heating & Air Conditioning. All rights reserved.</span>
+          <span>© {year} FixAir Heating and Air Conditioning. All rights reserved.</span>
           <span className="text-blue-300 sm:text-right">
             Niagara &amp; surrounding areas, Ontario
             <span className="hidden sm:inline"> · {PHONE} · {EMAIL}</span>
