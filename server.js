@@ -15,9 +15,9 @@ app.use((_req, res, next) => {
 
 app.use(express.static(join(__dirname, 'dist')))
 
-// SPA fallback
+// Anything not matched by a prerendered static file is a real 404.
 app.get('/{*path}', (_req, res) => {
-  res.sendFile(join(__dirname, 'dist', 'index.html'))
+  res.status(404).sendFile(join(__dirname, 'dist', '404.html'))
 })
 
 app.listen(port, () => {

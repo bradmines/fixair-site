@@ -1,12 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
+import { matchRoute } from './routes.js'
 import './index.css'
 
 const rootEl = document.getElementById('root')
+const route = matchRoute(window.location.pathname)
 const app = (
   <React.StrictMode>
-    <App />
+    <App route={route} />
   </React.StrictMode>
 )
 

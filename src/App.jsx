@@ -1,33 +1,13 @@
-import Header from './components/Header'
-import Hero from './components/Hero'
-import HomeComfort from './components/HomeComfort'
-import Services from './components/Services'
-import Financing from './components/Financing'
-import About from './components/About'
-import WhyChoose from './components/WhyChoose'
-import Testimonials from './components/Testimonials'
-import ServiceArea from './components/ServiceArea'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
-import MobileCallBar from './components/MobileCallBar'
+import Home from './pages/Home'
+import ServicePage from './pages/ServicePage'
+import LocationPage from './pages/LocationPage'
+import NotFound from './pages/NotFound'
 
-export default function App() {
-  return (
-    <>
-      <Header />
-      <main>
-        <Hero />
-        <HomeComfort />
-        <Services />
-        <Financing />
-        <About />
-        <WhyChoose />
-        <Testimonials />
-        <ServiceArea />
-        <Contact />
-      </main>
-      <Footer />
-      <MobileCallBar />
-    </>
-  )
+// Renders the page for the matched route. `route` comes from routes.js
+// (matchRoute) on both the server (prerender) and client (hydration).
+export default function App({ route }) {
+  if (route?.kind === 'service') return <ServicePage service={route.data} />
+  if (route?.kind === 'location') return <LocationPage location={route.data} />
+  if (route?.kind === '404') return <NotFound />
+  return <Home />
 }

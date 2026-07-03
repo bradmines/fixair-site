@@ -1,13 +1,5 @@
-const towns = [
-  { name: 'Welland', desc: 'Home base' },
-  { name: 'St. Catharines', desc: 'Regional hub' },
-  { name: 'Niagara Falls', desc: 'Tourist city & suburbs' },
-  { name: 'Thorold', desc: 'Just south of the Falls' },
-  { name: 'Fonthill', desc: 'Pelham community' },
-  { name: 'Port Colborne', desc: 'South Niagara' },
-]
-
 import { PHONE, PHONE_HREF } from '../constants'
+import { locations } from '../data/locations'
 
 export default function ServiceArea() {
   return (
@@ -44,19 +36,20 @@ export default function ServiceArea() {
             </p>
 
             <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-3">
-              {towns.map(t => (
-                <div
-                  key={t.name}
-                  className="flex items-center gap-2.5 bg-gray-50 hover:bg-brand-blue/5 rounded-xl px-4 py-3 border border-gray-100 transition-colors"
+              {locations.map(t => (
+                <a
+                  key={t.slug}
+                  href={`/service-areas/${t.slug}/`}
+                  className="flex items-center gap-2.5 bg-gray-50 hover:bg-brand-blue/5 rounded-xl px-4 py-3 border border-gray-100 hover:border-brand-blue/30 transition-colors group"
                 >
                   <svg className="w-4 h-4 text-brand-orange flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/>
                   </svg>
                   <div>
-                    <div className="text-sm font-bold text-brand-blue">{t.name}</div>
-                    <div className="text-xs text-gray-400">{t.desc}</div>
+                    <div className="text-sm font-bold text-brand-blue group-hover:underline">{t.name}</div>
+                    <div className="text-xs text-gray-400">{t.tagline}</div>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
 

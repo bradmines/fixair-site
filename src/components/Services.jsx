@@ -1,29 +1,4 @@
-const services = [
-  {
-    title: 'Furnaces',
-    image: '/logoforcedairfurnace.jpg',
-  },
-  {
-    title: 'Air Conditioners',
-    image: '/logoAC.jpg',
-  },
-  {
-    title: 'Ductless Systems',
-    image: '/logoductlesssystems.jpg',
-  },
-  {
-    title: 'Hot Water Heaters',
-    image: '/logopowerventhotwaterheater.jpg',
-  },
-  {
-    title: 'Boilers',
-    image: '/logoboilers.jpg',
-  },
-  {
-    title: 'Air Ducts',
-    image: '/logoresductwork.jpg',
-  },
-]
+import { services } from '../data/services'
 
 export default function Services() {
   return (
@@ -43,31 +18,29 @@ export default function Services() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map(s => (
-            <div
-              key={s.title}
-              className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden"
+            <a
+              key={s.slug}
+              href={`/services/${s.slug}/`}
+              className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md hover:border-brand-orange/30 transition-all group"
             >
               <div className="overflow-hidden h-52">
                 <img
                   src={s.image}
-                  alt={`FixAIR ${s.title} for homes in Niagara and surrounding areas`}
-                  className="w-full h-full object-cover block"
+                  alt={`FixAIR ${s.name} for homes in Niagara and surrounding areas`}
+                  className="w-full h-full object-cover block group-hover:scale-105 transition-transform"
                   loading="lazy"
                 />
               </div>
               <div className="px-5 py-4 flex items-center justify-between">
-                <span className="font-bold text-brand-blue">{s.title}</span>
-                <a
-                  href="#contact"
-                  className="inline-flex items-center gap-1 text-brand-orange text-sm font-semibold hover:gap-2 transition-all"
-                >
-                  Get a quote
+                <span className="font-bold text-brand-blue">{s.name}</span>
+                <span className="inline-flex items-center gap-1 text-brand-orange text-sm font-semibold group-hover:gap-2 transition-all">
+                  Learn more
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                   </svg>
-                </a>
+                </span>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>

@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import { PHONE, PHONE_HREF } from '../constants'
+import { services } from '../data/services'
+import { locations } from '../data/locations'
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
@@ -12,11 +14,11 @@ export default function Header() {
   }, [])
 
   const navLinks = [
-    { label: 'Services', href: '#services' },
-    { label: 'About', href: '#about' },
-    { label: 'Why FixAIR', href: '#why' },
-    { label: 'Testimonials', href: '#testimonials' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Services', href: '/#services' },
+    { label: 'About', href: '/#about' },
+    { label: 'Why FixAIR', href: '/#why' },
+    { label: 'Testimonials', href: '/#testimonials' },
+    { label: 'Contact', href: '/#contact' },
   ]
 
   return (
@@ -28,7 +30,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#" className="flex-shrink-0">
+          <a href="/" className="flex-shrink-0">
             <img
               src="/fixair-logo.avif"
               alt="FixAir Heating and Air Conditioning"
@@ -122,6 +124,37 @@ export default function Header() {
                 {l.label}
               </a>
             ))}
+
+            {/* Service pages */}
+            <div className="mt-2 pt-3 border-t border-gray-100">
+              <div className="px-3 mb-1 text-xs font-bold uppercase tracking-widest text-gray-400">Services</div>
+              {services.map(s => (
+                <a
+                  key={s.slug}
+                  href={`/services/${s.slug}/`}
+                  onClick={() => setMenuOpen(false)}
+                  className="block px-3 py-2 text-sm font-semibold text-gray-600 hover:text-brand-blue hover:bg-blue-50 rounded-lg transition"
+                >
+                  {s.name}
+                </a>
+              ))}
+            </div>
+
+            {/* City pages */}
+            <div className="mt-2 pt-3 border-t border-gray-100">
+              <div className="px-3 mb-1 text-xs font-bold uppercase tracking-widest text-gray-400">Service Areas</div>
+              {locations.map(l => (
+                <a
+                  key={l.slug}
+                  href={`/service-areas/${l.slug}/`}
+                  onClick={() => setMenuOpen(false)}
+                  className="block px-3 py-2 text-sm font-semibold text-gray-600 hover:text-brand-blue hover:bg-blue-50 rounded-lg transition"
+                >
+                  {l.name}
+                </a>
+              ))}
+            </div>
+
             <a
               href={PHONE_HREF}
               className="mt-3 flex items-center justify-center gap-2 bg-brand-orange text-white font-bold px-5 py-3 rounded-lg"

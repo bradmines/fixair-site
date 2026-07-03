@@ -1,4 +1,6 @@
 import { PHONE, PHONE_HREF, EMAIL } from '../constants'
+import { services } from '../data/services'
+import { locations } from '../data/locations'
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -19,7 +21,7 @@ export default function Footer() {
       </div>
 
       {/* Main footer */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-14 grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-14 grid grid-cols-2 lg:grid-cols-5 gap-x-8 gap-y-10">
         {/* Brand */}
         <div className="col-span-2 lg:col-span-2">
           <div className="mb-4">
@@ -67,12 +69,12 @@ export default function Footer() {
           <h4 className="font-bold text-white uppercase text-xs tracking-widest mb-4">Quick Links</h4>
           <ul className="space-y-2 text-sm text-blue-200">
             {[
-              { label: 'Services', href: '#services' },
-              { label: 'Meet Tom', href: '#about' },
-              { label: 'Why FixAIR', href: '#why' },
-              { label: 'Testimonials', href: '#testimonials' },
-              { label: 'Service Area', href: '#area' },
-              { label: 'Request a Quote', href: '#contact' },
+              { label: 'Services', href: '/#services' },
+              { label: 'Meet Tom', href: '/#about' },
+              { label: 'Why FixAIR', href: '/#why' },
+              { label: 'Testimonials', href: '/#testimonials' },
+              { label: 'Service Area', href: '/#area' },
+              { label: 'Request a Quote', href: '/#contact' },
             ].map(l => (
               <li key={l.href}>
                 <a href={l.href} className="hover:text-white hover:underline transition-colors">
@@ -87,9 +89,21 @@ export default function Footer() {
         <div>
           <h4 className="font-bold text-white uppercase text-xs tracking-widest mb-4">Services</h4>
           <ul className="space-y-2 text-sm text-blue-200">
-            {['Furnaces', 'Air Conditioners', 'Ductless Systems', 'Hot Water Heaters', 'Boilers', 'Air Ducts'].map(s => (
-              <li key={s}>
-                <a href="#services" className="hover:text-white hover:underline transition-colors">{s}</a>
+            {services.map(s => (
+              <li key={s.slug}>
+                <a href={`/services/${s.slug}/`} className="hover:text-white hover:underline transition-colors">{s.name}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Service Areas */}
+        <div>
+          <h4 className="font-bold text-white uppercase text-xs tracking-widest mb-4">Service Areas</h4>
+          <ul className="space-y-2 text-sm text-blue-200">
+            {locations.map(l => (
+              <li key={l.slug}>
+                <a href={`/service-areas/${l.slug}/`} className="hover:text-white hover:underline transition-colors">{l.name}</a>
               </li>
             ))}
           </ul>
