@@ -74,6 +74,7 @@ export default function Footer() {
               { label: 'Why FixAIR', href: '/#why' },
               { label: 'Testimonials', href: '/#testimonials' },
               { label: 'Service Area', href: '/#area' },
+              { label: 'FAQ', href: '/faq/' },
               { label: 'Request a Quote', href: '/#contact' },
             ].map(l => (
               <li key={l.href}>

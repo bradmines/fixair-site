@@ -1,6 +1,6 @@
 // Visible FAQ section. Mirrors the FAQPage JSON-LD emitted for the same page.
 // Uses native <details> so it works without any client JS / hydration.
-export default function FAQ({ faqs, heading = 'Frequently Asked Questions' }) {
+export default function FAQ({ faqs, heading = 'Frequently Asked Questions', moreHref, moreLabel }) {
   if (!faqs || !faqs.length) return null
   return (
     <section id="faq" className="py-20 md:py-24 bg-white">
@@ -34,6 +34,20 @@ export default function FAQ({ faqs, heading = 'Frequently Asked Questions' }) {
             </details>
           ))}
         </div>
+
+        {moreHref && (
+          <div className="mt-10 text-center">
+            <a
+              href={moreHref}
+              className="inline-flex items-center gap-2 font-bold text-brand-blue hover:text-brand-orange transition-colors"
+            >
+              {moreLabel || 'See all FAQs'}
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+        )}
       </div>
     </section>
   )

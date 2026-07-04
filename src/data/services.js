@@ -28,7 +28,7 @@ export const services = [
     faqs: [
       {
         q: 'How do I know if I need a new furnace or just a repair?',
-        a: "If your furnace is over 15 years old, needs frequent repairs, or your heating bills keep climbing, replacement is often the smarter long-term choice. Tom will give you an honest assessment — if a repair makes more sense, he'll tell you.",
+        a: "If your furnace is over 15 years old, needs frequent repairs, or your heating bills keep climbing, replacement is often the smarter long-term choice. Tom will give you an honest assessment, and if a repair makes more sense, he'll tell you.",
       },
       {
         q: 'Do you offer emergency furnace repair?',
@@ -53,7 +53,7 @@ export const services = [
       'Niagara summers get hot and humid. Tom installs, replaces and repairs residential central air conditioners so your home stays cool and comfortable when it matters most.',
     body: [
       "Whether your old AC has finally given out or you're cooling your home for the first time, FixAir sizes and installs the right system for your space. A properly matched, correctly installed air conditioner runs quieter, lasts longer and keeps your energy bills in check.",
-      "As a residential-only contractor, Tom brings 25+ years of focused experience to every install and repair. You'll get a straight answer on what your home needs and a clean, professional job — not a sales pitch.",
+      "As a residential-only contractor, Tom brings 25+ years of focused experience to every install and repair. You'll get a straight answer on what your home needs and a clean, professional job, not a sales pitch.",
     ],
     highlights: [
       'Central AC installation & replacement',
@@ -69,7 +69,7 @@ export const services = [
         a: 'Most residential central air installations are completed in a single day. Tom will confirm the timeline when he quotes the job.',
       },
       {
-        q: 'My AC is blowing warm air — can you fix it?',
+        q: 'My AC is blowing warm air. Can you fix it?',
         a: 'Often, yes. Warm air can come from low refrigerant, a failing compressor or electrical issues. Call 905-732-2791 and Tom will diagnose the problem.',
       },
       {
@@ -85,12 +85,12 @@ export const services = [
     image: '/logoductlesssystems.jpg',
     metaTitle: 'Ductless Mini-Split Installation in Niagara | FixAir',
     metaDescription:
-      "Ductless mini-split heat pumps installed across Niagara — efficient heating and cooling for homes without ductwork. 25+ years' experience. Call 905-732-2791.",
+      "Ductless mini-split heat pumps installed across Niagara for efficient heating and cooling in homes without ductwork. 25+ years' experience. Call 905-732-2791.",
     h1: 'Ductless Mini-Split Heating & Cooling in Niagara',
     intro:
       "Ductless mini-split systems deliver efficient heating and cooling to homes, additions and rooms that ductwork can't easily reach. Tom designs and installs single- and multi-zone systems across Niagara.",
     body: [
-      "Ductless heat pumps are one of the most efficient ways to heat and cool a home. They're perfect for older houses without ducts, finished basements, additions, garages and sunrooms — or any room that's always too hot or too cold.",
+      "Ductless heat pumps are one of the most efficient ways to heat and cool a home. They're perfect for older houses without ducts, finished basements, additions, garages and sunrooms, or any room that's always too hot or too cold.",
       "Tom takes the time to design a clean, efficient layout, often running multiple indoor units off a single outdoor unit to keep your home's exterior tidy. The result is quiet, room-by-room comfort and lower energy bills.",
     ],
     highlights: [
@@ -126,7 +126,7 @@ export const services = [
       'Hot water heater and power-vent water heater installation and replacement for Niagara homes. Reliable hot water, installed right. Call Tom at 905-732-2791.',
     h1: 'Hot Water Heater Installation & Replacement in Niagara',
     intro:
-      'No hot water is more than an inconvenience. Tom supplies, installs and replaces residential hot water heaters — including power-vent models — for homes across Niagara.',
+      'No hot water is more than an inconvenience. Tom supplies, installs and replaces residential hot water heaters, including power-vent models, for homes across Niagara.',
     body: [
       'A reliable water heater is easy to take for granted until it fails. When yours is leaking, running cold or simply past its prime, FixAir will replace it promptly with a properly sized unit that fits your household’s hot water demand.',
       'Tom handles the full swap safely and cleanly, including venting and connections done to code. You get dependable hot water back fast, with honest pricing and no surprises.',
@@ -166,7 +166,7 @@ export const services = [
     intro:
       'Boiler and hydronic heating systems deliver steady, comfortable warmth. Tom installs, replaces and repairs residential boilers for homeowners throughout Niagara.',
     body: [
-      'If your home uses hot-water or radiant heat, you know how comfortable and even that warmth feels. When a boiler starts to fail — or needs replacing after years of service — you want someone who understands these systems, not a generalist learning on the job.',
+      'If your home uses hot-water or radiant heat, you know how comfortable and even that warmth feels. When a boiler starts to fail, or needs replacing after years of service, you want someone who understands these systems, not a generalist learning on the job.',
       'With 25+ years focused on residential heating, Tom diagnoses boiler problems accurately and installs replacement systems that run efficiently and reliably for years. Honest advice, careful work, fair pricing.',
     ],
     highlights: [
@@ -205,7 +205,7 @@ export const services = [
       "Over time, dust, debris and allergens build up in your home's ductwork. Tom provides residential duct cleaning and ductwork services to improve airflow and indoor air quality across Niagara.",
     body: [
       "Clean, well-designed ductwork helps your heating and cooling system run efficiently and keeps the air in your home fresher. If you've noticed uneven airflow, excess dust or rooms that never seem to reach the right temperature, your ducts may be the culprit.",
-      'As a residential HVAC specialist, Tom looks at your whole system — not just the ducts — so any airflow or comfort issues get solved at the source. Honest assessment, clean work, results you can feel.',
+      'As a residential HVAC specialist, Tom looks at your whole system, not just the ducts, so any airflow or comfort issues get solved at the source. Honest assessment, clean work, results you can feel.',
     ],
     highlights: [
       'Residential duct cleaning',
@@ -218,7 +218,7 @@ export const services = [
     faqs: [
       {
         q: 'How often should I have my ducts cleaned?',
-        a: "For most homes, every few years is plenty — sooner if you've had renovations, pets, or noticeable dust. Tom can advise based on your home.",
+        a: "For most homes, every few years is plenty, or sooner if you've had renovations, pets, or noticeable dust. Tom can advise based on your home.",
       },
       {
         q: 'Will duct cleaning help with dust and allergies?',

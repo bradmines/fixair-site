@@ -57,7 +57,7 @@ export default function ServicePage({ service }) {
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
                   </svg>
-                  Call Tom — {PHONE}
+                  Call Tom: {PHONE}
                 </a>
                 <a
                   href="#contact"
@@ -83,7 +83,7 @@ export default function ServicePage({ service }) {
               <div className="rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/15">
                 <img
                   src={service.image}
-                  alt={`${service.name} — residential HVAC in Niagara by FixAir`}
+                  alt={`${service.name} service for Niagara homes from FixAir`}
                   className="w-full h-64 sm:h-80 lg:h-[440px] object-cover"
                   loading="eager"
                 />
@@ -93,7 +93,7 @@ export default function ServicePage({ service }) {
                   T
                 </div>
                 <div>
-                  <div className="text-sm font-bold text-brand-blue">Installed by Tom</div>
+                  <div className="text-sm font-bold text-brand-blue">Tom</div>
                   <div className="text-xs text-gray-500">Owner &amp; lead tech · 25+ yrs</div>
                 </div>
               </div>
@@ -174,7 +174,7 @@ export default function ServicePage({ service }) {
 
         <Testimonials />
 
-        <FAQ faqs={service.faqs} heading={`${service.name} — Common Questions`} />
+        <FAQ faqs={service.faqs} heading={`${service.name}: Common Questions`} />
 
         {/* ── Other services (internal links) ──────────────────────── */}
         <section className="py-16 md:py-20 bg-gray-50">

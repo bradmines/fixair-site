@@ -67,7 +67,7 @@ export default function Financing() {
             <p className="mt-5 text-blue-100/80 text-base md:text-lg leading-relaxed max-w-xl">
               Pay for your furnace, air conditioner, or home comfort needs at Fix Air in monthly
               installments through Financeit. Apply for financing up to $100,000 and find out if you
-              pre-qualify in seconds — no obligation, no commitment.
+              pre-qualify in seconds, with no obligation and no commitment.
             </p>
 
             {/* Financeit logo */}
@@ -109,7 +109,7 @@ export default function Financing() {
                 Apply Now for Financing
               </h3>
               <p className="mt-3 text-blue-100/75 text-[15px] leading-relaxed">
-                Start your application online through our secure Financeit portal — it only takes a
+                Start your application online through our secure Financeit portal. It only takes a
                 few minutes.
               </p>
               <a

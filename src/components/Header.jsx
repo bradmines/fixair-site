@@ -18,6 +18,7 @@ export default function Header() {
     { label: 'About', href: '/#about' },
     { label: 'Why FixAIR', href: '/#why' },
     { label: 'Testimonials', href: '/#testimonials' },
+    { label: 'FAQ', href: '/faq/' },
     { label: 'Contact', href: '/#contact' },
   ]
 

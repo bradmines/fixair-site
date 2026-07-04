@@ -140,7 +140,7 @@ export default function Contact() {
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M6.62 10.79a15.53 15.53 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.36 11.36 0 003.56.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.56 1 1 0 01-.24 1.02l-2.2 2.21z"/>
                     </svg>
-                    Call now — {PHONE}
+                    Call now: {PHONE}
                   </a>
                   <div className="text-xs text-gray-400 mt-1">Open 7 Days a Week</div>
                 </div>

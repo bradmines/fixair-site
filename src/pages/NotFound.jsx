@@ -18,7 +18,7 @@ export default function NotFound() {
               We couldn't find that page
             </h1>
             <p className="mt-4 text-lg text-blue-100 leading-relaxed">
-              The page may have moved or no longer exists. Let's get you back on track — or call Tom
+              The page may have moved or no longer exists. Let's get you back on track, or call Tom
               directly and he'll help right away.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
@@ -29,7 +29,7 @@ export default function NotFound() {
                 href={PHONE_HREF}
                 className="btn-secondary text-base px-8 py-4 border-white/40 bg-white/10 text-white hover:bg-white/20"
               >
-                Call Tom — {PHONE}
+                Call Tom: {PHONE}
               </a>
             </div>
           </div>

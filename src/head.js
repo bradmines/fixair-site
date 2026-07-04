@@ -1,13 +1,13 @@
 import { BUSINESS, NIAGARA_AREA_SERVED, PROVIDER } from './data/business'
 import { REVIEWS } from './data/reviews'
-import { generalFaqs } from './data/faqs'
+import { generalFaqs, allFaqs } from './data/faqs'
 
 // Builds the per-page <head> markup (title, meta, OG/Twitter, canonical,
 // JSON-LD) that prerender.js injects into each page. Server/build-time only —
 // not imported by the client bundle.
 
 const OG_IMAGE = BUSINESS.image
-const OG_IMAGE_ALT = 'FixAir residential HVAC — furnace, AC and home comfort in Niagara'
+const OG_IMAGE_ALT = 'FixAir residential HVAC in Niagara: furnace, AC and home comfort'
 
 // Escape a value for use in an HTML attribute or text node.
 function esc(s) {
@@ -141,7 +141,7 @@ function headForService(route) {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    serviceType: `${s.name} — residential HVAC`,
+    serviceType: `Residential ${s.name}`,
     name: s.h1,
     description,
     url: canonical,
@@ -207,6 +207,30 @@ function headForLocation(route) {
   }
 }
 
+function headForFaq(route) {
+  const canonical = canonicalFor(route)
+  const title = 'HVAC FAQ | Furnace, AC & Heating Questions in Niagara | FixAir'
+  const description =
+    'Answers to common residential HVAC questions in Niagara: furnace and AC repair or replacement, ductless systems, boilers, maintenance, costs and financing. Call Tom: 905-732-2791.'
+  const crumbs = breadcrumb([
+    { name: 'Home', url: BUSINESS.url + '/' },
+    { name: 'FAQ', url: canonical },
+  ])
+  return {
+    title,
+    lines: [
+      `<title>${esc(title)}</title>`,
+      `<meta name="description" content="${esc(description)}" />`,
+      `<meta name="keywords" content="HVAC FAQ Niagara, furnace questions, air conditioner questions, when to replace furnace, HVAC cost Niagara, ductless mini split FAQ, residential HVAC contractor Niagara" />`,
+      `<meta name="robots" content="index, follow" />`,
+      `<link rel="canonical" href="${esc(canonical)}" />`,
+      ...ogAndTwitter({ title, description, canonical }),
+      jsonLd(faqPage(allFaqs)),
+      jsonLd(crumbs),
+    ],
+  }
+}
+
 function headForNotFound() {
   const title = 'Page Not Found | FixAir Heating and Air Conditioning'
   return {
@@ -225,6 +249,7 @@ export function buildHead(route) {
   let built
   if (route.kind === 'service') built = headForService(route)
   else if (route.kind === 'location') built = headForLocation(route)
+  else if (route.kind === 'faq') built = headForFaq(route)
   else if (route.kind === '404') built = headForNotFound()
   else built = headForHome(route)
   return built.lines.join('\n    ')

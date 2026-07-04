@@ -26,7 +26,12 @@ export default function Home() {
         <WhyChoose />
         <Testimonials />
         <ServiceArea />
-        <FAQ faqs={generalFaqs} heading="Frequently Asked Questions" />
+        <FAQ
+          faqs={generalFaqs}
+          heading="Frequently Asked Questions"
+          moreHref="/faq/"
+          moreLabel="See all HVAC FAQs"
+        />
         <Contact />
       </main>
       <Footer />
