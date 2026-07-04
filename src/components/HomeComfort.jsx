@@ -21,13 +21,15 @@ export default function HomeComfort() {
 
           {/* Image */}
           <div className="relative">
-            <div className="rounded-2xl overflow-hidden shadow-xl">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl ring-1 ring-black/5">
               <img
                 src="/happyfam2.jpg"
                 alt="A family enjoying the comfort of their home"
-                className="w-full h-72 md:h-[28rem] object-cover block"
+                className="w-full h-80 md:h-[34rem] object-cover block"
                 loading="lazy"
               />
+              {/* Soft fade to help the image blend into the page */}
+              <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/15 via-transparent to-transparent" />
             </div>
             {/* Floating badge */}
             <div className="absolute -bottom-5 left-5 right-5 sm:left-8 sm:right-auto bg-white rounded-2xl shadow-xl border border-gray-100 px-5 py-4 flex items-center gap-3">
