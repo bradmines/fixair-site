@@ -23,7 +23,7 @@ export default function HomeComfort() {
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-xl ring-1 ring-black/5">
               <img
-                src="/happyfam3.jpg"
+                src="/happyfam4.jpg"
                 alt="A family enjoying the comfort of their home"
                 className="w-full h-80 md:h-[34rem] object-cover block"
                 loading="lazy"
