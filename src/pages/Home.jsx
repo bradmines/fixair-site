@@ -19,10 +19,10 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <HomeComfort />
-        <Services />
-        <Financing />
         <About />
+        <Services />
+        <HomeComfort />
+        <Financing />
         <WhyChoose />
         <Testimonials />
         <ServiceArea />

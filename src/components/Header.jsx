@@ -25,18 +25,26 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm shadow-sm'
+        scrolled ? 'bg-white shadow-lg' : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="px-4 sm:px-10 lg:px-16">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
+          {/* Logo — white version over hero video, original on white header */}
           <a href="/" className="flex-shrink-0">
-            <img
-              src="/fixair-logo.avif"
-              alt="FixAir Heating and Air Conditioning"
-              className="h-10 md:h-12 w-auto"
-            />
+            {!scrolled ? (
+              <img
+                src="/fixairlogowhite.png"
+                alt="FixAir Heating and Air Conditioning"
+                className="h-10 md:h-12 w-auto"
+              />
+            ) : (
+              <img
+                src="/fixair-logo.avif"
+                alt="FixAir Heating and Air Conditioning"
+                className="h-10 md:h-12 w-auto"
+              />
+            )}
           </a>
 
           {/* Desktop nav */}
@@ -45,7 +53,9 @@ export default function Header() {
               <a
                 key={l.href}
                 href={l.href}
-                className="text-sm font-semibold text-gray-600 hover:text-brand-blue transition-colors"
+                className={`text-sm font-semibold transition-colors ${
+                  scrolled ? 'text-gray-600 hover:text-brand-blue' : 'text-white/90 hover:text-white'
+                }`}
               >
                 {l.label}
               </a>
@@ -60,7 +70,9 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="FixAIR on Facebook"
-              className="hidden lg:flex w-9 h-9 items-center justify-center rounded-lg text-gray-400 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+              className={`hidden lg:flex w-9 h-9 items-center justify-center rounded-lg transition-colors ${
+                scrolled ? 'text-gray-400 hover:text-blue-600 hover:bg-blue-50' : 'text-white/70 hover:text-white hover:bg-white/10'
+              }`}
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
@@ -71,7 +83,9 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="FixAIR on Instagram"
-              className="hidden lg:flex w-9 h-9 items-center justify-center rounded-lg text-gray-400 hover:text-pink-600 hover:bg-pink-50 transition-colors"
+              className={`hidden lg:flex w-9 h-9 items-center justify-center rounded-lg transition-colors ${
+                scrolled ? 'text-gray-400 hover:text-pink-600 hover:bg-pink-50' : 'text-white/70 hover:text-white hover:bg-white/10'
+              }`}
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
@@ -79,7 +93,7 @@ export default function Header() {
                 <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
               </svg>
             </a>
-            <div className="hidden lg:block w-px h-6 bg-gray-200 mx-1" />
+            <div className={`hidden lg:block w-px h-6 mx-1 ${scrolled ? 'bg-gray-200' : 'bg-white/20'}`} />
             <a
               href={PHONE_HREF}
               className="hidden sm:inline-flex items-center gap-2 bg-brand-orange text-white text-sm font-bold px-5 py-2.5 rounded-lg shadow hover:bg-brand-orange-dark transition-colors"
@@ -92,7 +106,9 @@ export default function Header() {
 
             {/* Hamburger */}
             <button
-              className="lg:hidden p-2 rounded-md text-gray-600 hover:text-brand-blue hover:bg-gray-100 transition"
+              className={`lg:hidden p-2 rounded-md transition ${
+                scrolled ? 'text-gray-600 hover:text-brand-blue hover:bg-gray-100' : 'text-white hover:bg-white/10'
+              }`}
               onClick={() => setMenuOpen(o => !o)}
               aria-label="Toggle menu"
               aria-expanded={menuOpen}
