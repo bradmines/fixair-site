@@ -1,5 +1,6 @@
 import { services } from './data/services'
 import { locations } from './data/locations'
+import { blogPosts } from './data/blog'
 
 // Central route registry. Shared by the server (prerender) and the client
 // (hydration) so both resolve the same component + data for a given path.
@@ -10,6 +11,8 @@ export const routes = [
   ...services.map(s => ({ path: `/services/${s.slug}/`, kind: 'service', data: s })),
   ...locations.map(l => ({ path: `/service-areas/${l.slug}/`, kind: 'location', data: l })),
   { path: '/faq/', kind: 'faq', data: null },
+  { path: '/blog/', kind: 'blog', data: null },
+  ...blogPosts.map(p => ({ path: `/blog/${p.slug}/`, kind: 'blog-post', data: p })),
 ]
 
 // Normalize a pathname to a canonical, trailing-slash form.

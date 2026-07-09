@@ -2,14 +2,15 @@ import { services } from '../data/services'
 
 export default function Services() {
   return (
-    <section id="services" className="py-20 md:py-28 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className="relative py-20 md:py-28 bg-brand-blue overflow-hidden">
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
-          <div className="inline-block bg-brand-blue/10 text-brand-blue text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
+          <div className="inline-block bg-white/10 text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
             What We Do
           </div>
-          <h2 className="section-heading">Residential HVAC Is Our Specialty</h2>
-          <p className="section-sub">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-white leading-tight">Residential HVAC Is Our Specialty</h2>
+          <p className="mt-4 text-blue-100/80 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
             FixAIR is a residential only company. Furnaces, air conditioners, ductless systems and
             more, installed and serviced by a dedicated residential specialist who gets it right the
             first time so your home stays comfortable.
@@ -21,7 +22,7 @@ export default function Services() {
             <a
               key={s.slug}
               href={`/services/${s.slug}/`}
-              className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md hover:border-brand-orange/30 transition-all group"
+              className="bg-white/[0.07] rounded-2xl border border-white/10 overflow-hidden hover:bg-white/10 hover:border-brand-orange/40 transition-all group"
             >
               <div className="overflow-hidden h-52">
                 <img
@@ -32,7 +33,7 @@ export default function Services() {
                 />
               </div>
               <div className="px-5 py-4 flex items-center justify-between">
-                <span className="font-bold text-brand-blue">{s.name}</span>
+                <span className="font-bold text-white">{s.name}</span>
                 <span className="inline-flex items-center gap-1 text-brand-orange text-sm font-semibold group-hover:gap-2 transition-all">
                   Learn more
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">

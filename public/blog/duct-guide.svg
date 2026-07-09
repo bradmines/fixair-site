@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="1200" height="480">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0b2d52"/>
+      <stop offset="100%" style="stop-color:#0f3d6e"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#34d399;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#34d399;stop-opacity:0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="480" fill="url(#bg)"/>
+  <circle cx="940" cy="240" r="260" fill="url(#glow)"/>
+  <!-- Ductwork illustration -->
+  <!-- Main horizontal duct -->
+  <rect x="770" y="200" width="330" height="60" rx="8" fill="white" fill-opacity="0.07" stroke="white" stroke-opacity="0.14" stroke-width="2"/>
+  <!-- Left vertical branch -->
+  <rect x="795" y="145" width="50" height="60" rx="6" fill="white" fill-opacity="0.06" stroke="white" stroke-opacity="0.12" stroke-width="1.5"/>
+  <!-- Right vertical branch -->
+  <rect x="1025" y="145" width="50" height="60" rx="6" fill="white" fill-opacity="0.06" stroke="white" stroke-opacity="0.12" stroke-width="1.5"/>
+  <!-- Down branch left -->
+  <rect x="845" y="260" width="50" height="80" rx="6" fill="white" fill-opacity="0.06" stroke="white" stroke-opacity="0.12" stroke-width="1.5"/>
+  <!-- Down branch right -->
+  <rect x="975" y="260" width="50" height="80" rx="6" fill="white" fill-opacity="0.06" stroke="white" stroke-opacity="0.12" stroke-width="1.5"/>
+  <!-- Vent grilles at ends -->
+  <!-- Top left vent -->
+  <rect x="790" y="100" width="60" height="48" rx="4" fill="white" fill-opacity="0.08" stroke="white" stroke-opacity="0.15" stroke-width="1"/>
+  <line x1="800" y1="110" x2="840" y2="110" stroke="white" stroke-opacity="0.2" stroke-width="2"/>
+  <line x1="800" y1="120" x2="840" y2="120" stroke="white" stroke-opacity="0.2" stroke-width="2"/>
+  <line x1="800" y1="130" x2="840" y2="130" stroke="white" stroke-opacity="0.2" stroke-width="2"/>
+  <line x1="800" y1="140" x2="840" y2="140" stroke="white" stroke-opacity="0.2" stroke-width="2"/>
+  <!-- Top right vent -->
+  <rect x="1020" y="100" width="60" height="48" rx="4" fill="white" fill-opacity="0.08" stroke="white" stroke-opacity="0.15" stroke-width="1"/>
+  <line x1="1030" y1="110" x2="1070" y2="110" stroke="white" stroke-opacity="0.2" stroke-width="2"/>
+  <line x1="1030" y1="120" x2="1070" y2="120" stroke="white" stroke-opacity="0.2" stroke-width="2"/>
+  <line x1="1030" y1="130" x2="1070" y2="130" stroke="white" stroke-opacity="0.2" stroke-width="2"/>
+  <line x1="1030" y1="140" x2="1070" y2="140" stroke="white" stroke-opacity="0.2" stroke-width="2"/>
+  <!-- Bottom vents -->
+  <rect x="840" y="338" width="60" height="16" rx="4" fill="white" fill-opacity="0.1" stroke="white" stroke-opacity="0.15" stroke-width="1"/>
+  <rect x="970" y="338" width="60" height="16" rx="4" fill="white" fill-opacity="0.1" stroke="white" stroke-opacity="0.15" stroke-width="1"/>
+  <!-- Air flow particles -->
+  <circle cx="820" cy="230" r="3" fill="#34d399" fill-opacity="0.5"/>
+  <circle cx="870" cy="225" r="2" fill="#34d399" fill-opacity="0.4"/>
+  <circle cx="960" cy="230" r="3" fill="#34d399" fill-opacity="0.5"/>
+  <circle cx="1010" cy="225" r="2" fill="#34d399" fill-opacity="0.4"/>
+  <!-- Text -->
+  <text x="100" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="56" font-weight="800" fill="white" fill-opacity="0.95">Duct Cleaning</text>
+  <text x="100" y="235" font-family="system-ui, -apple-system, sans-serif" font-size="56" font-weight="800" fill="#f97316">Guide</text>
+  <text x="100" y="295" font-family="system-ui, -apple-system, sans-serif" font-size="22" fill="white" fill-opacity="0.55">Niagara Residential HVAC</text>
+  <rect x="100" y="335" width="140" height="36" rx="18" fill="#f97316" fill-opacity="0.2" stroke="#f97316" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="170" y="358" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#f97316" text-anchor="middle" letter-spacing="1">FIXAIR BLOG</text>
+</svg>

@@ -14,10 +14,11 @@ export default function Header() {
   }, [])
 
   const navLinks = [
-    { label: 'Services', href: '/#services' },
     { label: 'About', href: '/#about' },
+    { label: 'Services', href: '/#services' },
     { label: 'Why FixAIR', href: '/#why' },
     { label: 'Testimonials', href: '/#testimonials' },
+    { label: 'Blog', href: '/blog/' },
     { label: 'FAQ', href: '/faq/' },
     { label: 'Contact', href: '/#contact' },
   ]

@@ -7,19 +7,6 @@ export default function Footer() {
 
   return (
     <footer className="bg-brand-blue text-white">
-      {/* Top strip — hidden on mobile; the sticky call bar already covers this */}
-      <div className="hidden sm:block bg-brand-orange py-4">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
-          <span className="font-bold text-white">Ready for comfortable year round temperatures? Call Tom today.</span>
-          <a
-            href={PHONE_HREF}
-            className="flex-shrink-0 bg-white text-brand-orange font-extrabold px-6 py-2.5 rounded-lg shadow hover:bg-gray-50 transition text-sm"
-          >
-            {PHONE}
-          </a>
-        </div>
-      </div>
-
       {/* Main footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-14 grid grid-cols-2 lg:grid-cols-5 gap-x-8 gap-y-10">
         {/* Brand */}

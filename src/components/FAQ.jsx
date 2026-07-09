@@ -3,22 +3,22 @@
 export default function FAQ({ faqs, heading = 'Frequently Asked Questions', moreHref, moreLabel }) {
   if (!faqs || !faqs.length) return null
   return (
-    <section id="faq" className="py-20 md:py-24 bg-white">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="faq" className="relative py-20 md:py-24 bg-brand-blue overflow-hidden">
+      <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <div className="inline-block bg-brand-blue/10 text-brand-blue text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
+          <div className="inline-block bg-white/10 text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
             FAQ
           </div>
-          <h2 className="section-heading">{heading}</h2>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-white leading-tight">{heading}</h2>
         </div>
 
         <div className="space-y-3">
           {faqs.map((f, i) => (
             <details
               key={i}
-              className="group bg-gray-50 border border-gray-100 rounded-2xl px-5 py-4 [&_summary::-webkit-details-marker]:hidden"
+              className="group bg-white/[0.06] border border-white/10 rounded-2xl px-5 py-4 [&_summary::-webkit-details-marker]:hidden"
             >
-              <summary className="flex items-center justify-between gap-4 cursor-pointer list-none font-bold text-brand-blue">
+              <summary className="flex items-center justify-between gap-4 cursor-pointer list-none font-bold text-white">
                 {f.q}
                 <svg
                   className="w-5 h-5 flex-shrink-0 text-brand-orange transition-transform group-open:rotate-45"
@@ -30,7 +30,7 @@ export default function FAQ({ faqs, heading = 'Frequently Asked Questions', more
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
                 </svg>
               </summary>
-              <p className="mt-3 text-gray-600 leading-relaxed text-sm">{f.a}</p>
+              <p className="mt-3 text-blue-100/80 leading-relaxed text-sm">{f.a}</p>
             </details>
           ))}
         </div>
@@ -39,7 +39,7 @@ export default function FAQ({ faqs, heading = 'Frequently Asked Questions', more
           <div className="mt-10 text-center">
             <a
               href={moreHref}
-              className="inline-flex items-center gap-2 font-bold text-brand-blue hover:text-brand-orange transition-colors"
+              className="inline-flex items-center gap-2 font-bold text-white hover:text-brand-orange transition-colors"
             >
               {moreLabel || 'See all FAQs'}
               <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">

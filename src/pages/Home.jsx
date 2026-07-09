@@ -11,6 +11,7 @@ import FAQ from '../components/FAQ'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 import MobileCallBar from '../components/MobileCallBar'
+import VentStrip from '../components/VentStrip'
 import { generalFaqs } from '../data/faqs'
 
 export default function Home() {
@@ -19,21 +20,30 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <About />
-        <Services />
         <HomeComfort />
+        {/* <VentStrip slim /> */}
+        <About />
+        {/* <VentStrip slim /> */}
+        <Services />
+        {/* <VentStrip slim /> */}
         <Financing />
+        {/* <VentStrip slim /> */}
         <WhyChoose />
+        {/* <VentStrip slim /> */}
         <Testimonials />
+        {/* <VentStrip slim /> */}
         <ServiceArea />
+        {/* <VentStrip slim /> */}
         <FAQ
           faqs={generalFaqs}
           heading="Frequently Asked Questions"
           moreHref="/faq/"
           moreLabel="See all HVAC FAQs"
         />
+        {/* <VentStrip slim /> */}
         <Contact />
       </main>
+      {/* <VentStrip slim /> */}
       <Footer />
       <MobileCallBar />
     </>

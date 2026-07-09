@@ -75,22 +75,22 @@ export default function Contact() {
   }
 
   const inputClass = (field) =>
-    `w-full rounded-xl border ${errors[field] ? 'border-red-400 bg-red-50' : 'border-gray-200 bg-gray-50'} px-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-blue/40 focus:border-brand-blue transition`
+    `w-full rounded-xl border ${errors[field] ? 'border-red-400 bg-red-900/30' : 'border-white/20 bg-white/10'} px-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-white/40 transition`
 
   return (
-    <section id="contact" className="py-20 md:py-28 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="relative py-20 md:py-28 bg-brand-blue overflow-hidden">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           {/* Left: info */}
           <div className="min-w-0">
-            <div className="inline-block bg-brand-blue/10 text-brand-blue text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-5">
+            <div className="inline-block bg-white/10 text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-5">
               Get in Touch
             </div>
-            <h2 className="section-heading text-left">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-white leading-tight text-left">
               Ready to Get Started?<br />
               <span className="text-brand-orange">Tom's Here to Help.</span>
             </h2>
-            <p className="mt-4 text-gray-500 leading-relaxed">
+            <p className="mt-4 text-blue-100/80 leading-relaxed">
               Call, or fill out the form and Tom will get back to you promptly. No pressure, no obligation,
               just an honest conversation about what your home needs.
             </p>
@@ -98,7 +98,7 @@ export default function Contact() {
             <div className="mt-8 space-y-4">
               <a
                 href={PHONE_HREF}
-                className="flex items-center gap-4 bg-white border border-gray-100 rounded-2xl px-6 py-5 shadow-sm hover:shadow-md hover:border-brand-orange/30 transition-all group"
+                className="flex items-center gap-4 bg-white/[0.07] border border-white/10 rounded-2xl px-6 py-5 hover:bg-white/10 hover:border-brand-orange/40 transition-all group"
               >
                 <div className="w-12 h-12 bg-brand-orange rounded-xl flex items-center justify-center text-white flex-shrink-0 group-hover:scale-105 transition-transform">
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -106,50 +106,50 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <div className="text-xs text-gray-400 font-medium uppercase tracking-wide">Call Tom directly</div>
-                  <div className="text-lg font-extrabold text-brand-blue mt-0.5">{PHONE}</div>
+                  <div className="text-xs text-blue-100/60 font-medium uppercase tracking-wide">Call Tom directly</div>
+                  <div className="text-lg font-extrabold text-white mt-0.5">{PHONE}</div>
                 </div>
               </a>
 
               <a
                 href={EMAIL_HREF}
-                className="flex items-center gap-4 bg-white border border-gray-100 rounded-2xl px-6 py-5 shadow-sm hover:shadow-md hover:border-brand-blue/30 transition-all group"
+                className="flex items-center gap-4 bg-white/[0.07] border border-white/10 rounded-2xl px-6 py-5 hover:bg-white/10 hover:border-white/25 transition-all group"
               >
-                <div className="w-12 h-12 bg-brand-blue rounded-xl flex items-center justify-center text-white flex-shrink-0 group-hover:scale-105 transition-transform">
+                <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-white flex-shrink-0 group-hover:scale-105 transition-transform">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                   </svg>
                 </div>
                 <div className="min-w-0">
-                  <div className="text-xs text-gray-400 font-medium uppercase tracking-wide">Email</div>
-                  <div className="text-base font-bold text-brand-blue mt-0.5 break-all">{EMAIL}</div>
+                  <div className="text-xs text-blue-100/60 font-medium uppercase tracking-wide">Email</div>
+                  <div className="text-base font-bold text-white mt-0.5 break-all">{EMAIL}</div>
                 </div>
               </a>
 
-              <div className="flex items-start gap-4 bg-white border border-gray-100 rounded-2xl px-6 py-5 shadow-sm">
-                <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center text-gray-500 flex-shrink-0">
+              <div className="flex items-start gap-4 bg-white/[0.07] border border-white/10 rounded-2xl px-6 py-5">
+                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-blue-100/70 flex-shrink-0">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                   </svg>
                 </div>
                 <div>
-                  <div className="text-xs text-gray-400 font-medium uppercase tracking-wide">Business Hours</div>
-                  <div className="text-sm font-semibold text-brand-blue mt-0.5">Monday through Friday: 8:00 AM to 5:00 PM</div>
-                  <div className="text-xs text-gray-400 font-medium uppercase tracking-wide mt-3">Emergency HVAC Service</div>
+                  <div className="text-xs text-blue-100/60 font-medium uppercase tracking-wide">Business Hours</div>
+                  <div className="text-sm font-semibold text-white mt-0.5">Monday through Friday: 8:00 AM to 5:00 PM</div>
+                  <div className="text-xs text-blue-100/60 font-medium uppercase tracking-wide mt-3">Emergency HVAC Service</div>
                   <a href={PHONE_HREF} className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-orange mt-1 hover:underline">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M6.62 10.79a15.53 15.53 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.36 11.36 0 003.56.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.56 1 1 0 01-.24 1.02l-2.2 2.21z"/>
                     </svg>
                     Call now: {PHONE}
                   </a>
-                  <div className="text-xs text-gray-400 mt-1">Open 7 Days a Week</div>
+                  <div className="text-xs text-blue-100/50 mt-1">Open 7 Days a Week</div>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Right: form */}
-          <div className="min-w-0 bg-white rounded-2xl shadow-xl border border-gray-100 p-8">
+          <div className="min-w-0 bg-white/[0.07] rounded-2xl border border-white/10 p-8">
             {submitted ? (
               <div className="text-center py-10">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -157,24 +157,24 @@ export default function Contact() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/>
                   </svg>
                 </div>
-                <h3 className="text-xl font-extrabold text-brand-blue">You're all set!</h3>
-                <p className="text-gray-500 mt-2 text-sm">
+                <h3 className="text-xl font-extrabold text-white">You're all set!</h3>
+                <p className="text-blue-100/80 mt-2 text-sm">
                   Thanks, {form.name.split(' ')[0]}! Tom will be in touch shortly. For faster service, call{' '}
                   <a href={PHONE_HREF} className="font-bold text-brand-orange">{PHONE}</a>.
                 </p>
                 <button
                   onClick={() => { setSubmitted(false); setSubmitError(''); setForm({ name: '', phone: '', email: '', service: '', message: '' }); setErrors({}) }}
-                  className="mt-6 text-sm text-brand-blue hover:underline font-semibold"
+                  className="mt-6 text-sm text-white hover:underline font-semibold"
                 >
                   Send another message
                 </button>
               </div>
             ) : (
               <>
-                <h3 className="text-xl font-extrabold text-brand-blue mb-1">
+                <h3 className="text-xl font-extrabold text-white mb-1">
                   {contactMethod === 'phone' ? 'Request a Call from Tom' : 'Send Tom a Message'}
                 </h3>
-                <p className="text-gray-400 text-sm mb-6">
+                <p className="text-blue-100/60 text-sm mb-6">
                   {contactMethod === 'phone'
                     ? 'Leave your number and Tom will call you back, usually same day.'
                     : 'Leave your email and Tom will get back to you promptly.'}
@@ -183,7 +183,7 @@ export default function Contact() {
                 <form onSubmit={handleSubmit} noValidate className="space-y-4">
                   {/* Name */}
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-1.5" htmlFor="name">
+                    <label className="block text-sm font-semibold text-blue-100/80 mb-1.5" htmlFor="name">
                       Your Name
                     </label>
                     <input
@@ -201,7 +201,7 @@ export default function Contact() {
 
                   {/* Contact method toggle */}
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-1.5">
+                    <label className="block text-sm font-semibold text-blue-100/80 mb-1.5">
                       How should Tom reach you?
                     </label>
                     <div className="grid grid-cols-2 gap-2 mb-3">
@@ -211,7 +211,7 @@ export default function Contact() {
                         className={`flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-semibold border-2 transition-all ${
                           contactMethod === 'phone'
                             ? 'border-brand-orange bg-brand-orange/10 text-brand-orange'
-                            : 'border-gray-200 text-gray-500 hover:border-gray-300'
+                            : 'border-white/20 text-blue-100/60 hover:border-white/40'
                         }`}
                       >
                         <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -224,8 +224,8 @@ export default function Contact() {
                         onClick={() => setContactMethod('email')}
                         className={`flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-semibold border-2 transition-all ${
                           contactMethod === 'email'
-                            ? 'border-brand-blue bg-brand-blue/10 text-brand-blue'
-                            : 'border-gray-200 text-gray-500 hover:border-gray-300'
+                            ? 'border-blue-400 bg-blue-400/20 text-blue-200'
+                            : 'border-white/20 text-blue-100/60 hover:border-white/40'
                         }`}
                       >
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -268,7 +268,7 @@ export default function Contact() {
 
                   {/* Service dropdown */}
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-1.5" htmlFor="service">
+                    <label className="block text-sm font-semibold text-blue-100/80 mb-1.5" htmlFor="service">
                       What can Tom help you with?
                     </label>
                     <select
@@ -276,7 +276,7 @@ export default function Contact() {
                       name="service"
                       value={form.service}
                       onChange={handleChange}
-                      className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-brand-blue/40 focus:border-brand-blue transition appearance-none"
+                      className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-white/40 transition appearance-none"
                     >
                       <option value="">Select a service (optional)</option>
                       {SERVICE_OPTIONS.map(o => (
@@ -287,7 +287,7 @@ export default function Contact() {
 
                   {/* Optional message */}
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-1.5" htmlFor="message">
+                    <label className="block text-sm font-semibold text-blue-100/80 mb-1.5" htmlFor="message">
                       Anything else? <span className="text-gray-400 font-normal">(optional)</span>
                     </label>
                     <textarea
@@ -333,7 +333,7 @@ export default function Contact() {
                         : 'Send Message to Tom'}
                   </button>
 
-                  <p className="text-xs text-center text-gray-400 mt-2">
+                  <p className="text-xs text-center text-blue-100/50 mt-2">
                     Rather call now? <a href={PHONE_HREF} className="text-brand-orange font-semibold">{PHONE}</a>
                   </p>
                 </form>
