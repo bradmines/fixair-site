@@ -128,7 +128,7 @@ export default function BlogPage() {
         {/* <VentStrip slim /> */}
         <Contact />
       </main>
-      <VentStrip slim />
+      {/* <VentStrip slim /> */}
       <Footer />
       <MobileCallBar />
     </>

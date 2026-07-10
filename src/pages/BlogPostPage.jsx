@@ -201,7 +201,7 @@ export default function BlogPostPage({ post }) {
         {/* <VentStrip slim /> */}
         <Contact />
       </main>
-      <VentStrip slim />
+      {/* <VentStrip slim /> */}
       <Footer />
       <MobileCallBar />
     </>
