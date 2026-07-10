@@ -24,6 +24,8 @@ export default function HomeComfort() {
           loop
           muted
           playsInline
+          poster="/homecomfort-poster.jpg"
+          preload="auto"
           className="w-full h-full object-cover"
         >
           <source src="/newfamilyvid.mp4" type="video/mp4" />
@@ -56,6 +58,8 @@ export default function HomeComfort() {
           loop
           muted
           playsInline
+          poster="/homecomfort-poster.jpg"
+          preload="auto"
           className="w-full h-full object-cover"
         >
           <source src="/newfamilyvid.mp4" type="video/mp4" />
