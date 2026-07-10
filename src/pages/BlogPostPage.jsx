@@ -198,7 +198,7 @@ export default function BlogPostPage({ post }) {
           </div>
         </section>
 
-        <VentStrip slim />
+        {/* <VentStrip slim /> */}
         <Contact />
       </main>
       <VentStrip slim />

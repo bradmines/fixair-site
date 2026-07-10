@@ -125,7 +125,7 @@ export default function BlogPage() {
           </div>
         </section>
 
-        <VentStrip slim />
+        {/* <VentStrip slim /> */}
         <Contact />
       </main>
       <VentStrip slim />
