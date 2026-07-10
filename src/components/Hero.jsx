@@ -31,6 +31,8 @@ export default function Hero() {
             muted
             loop
             playsInline
+            poster="/hero-poster.jpg"
+            preload="auto"
             className="hidden sm:block w-full h-full object-cover"
           >
             <source src="/longdrive.mp4" type="video/mp4" />
@@ -42,6 +44,8 @@ export default function Hero() {
             muted
             loop
             playsInline
+            poster="/hero-poster-mobile.jpg"
+            preload="auto"
             className="sm:hidden w-full h-full object-cover"
           >
             <source src="/mobilehero.mp4" type="video/mp4" />
