@@ -8,7 +8,7 @@ const _blogPosts = [
       "Is your furnace past its best? Learn the key signs it's time to replace your home furnace, how to choose the right unit, and what to expect from the installation process in Niagara.",
     serviceSlug: "furnaces",
     serviceName: "Furnaces",
-    image: "/blog/make article header image for article entitled- Signs Your Furnace Needs Replacing (And What to Do Next).jpg",
+    image: "/blog/furnace-replacing.jpg",
     date: "2026-06-10",
     readTime: "5 min read",
     excerpt:
@@ -88,7 +88,7 @@ const _blogPosts = [
       "Not sure if your AC needs a repair or full replacement? Learn the warning signs of a failing air conditioner and how to choose the right new system for your Niagara home.",
     serviceSlug: "air-conditioners",
     serviceName: "Air Conditioners",
-    image: "/blog/How to Know When Your Air Conditioner Needs Replacing.jpg",
+    image: "/blog/ac-replacing.jpg",
     date: "2026-06-15",
     readTime: "5 min read",
     excerpt:

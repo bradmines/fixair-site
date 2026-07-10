@@ -88,6 +88,8 @@ export default function BlogPostPage({ post }) {
               <img
                 src={post.image}
                 alt={post.title}
+                width={1280}
+                height={720}
                 className="w-full"
                 loading="eager"
               />
@@ -166,6 +168,8 @@ export default function BlogPostPage({ post }) {
                           <img
                             src={p.image}
                             alt={p.title}
+                            width={1280}
+                            height={720}
                             className="w-16 h-12 rounded-lg object-cover flex-shrink-0"
                             loading="lazy"
                           />
