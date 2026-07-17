@@ -48,7 +48,7 @@ export default function Hero() {
             preload="auto"
             className="sm:hidden w-full h-full object-cover"
           >
-            <source src="/newmobilevideo.mp4" type="video/mp4" />
+            <source src="/zoomoutvidmobile.mov" type="video/mp4" />
           </video>
           <div className="absolute inset-x-0 top-0 h-36 bg-gradient-to-b from-black/60 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-blue/90 via-brand-blue/20 to-transparent" />
