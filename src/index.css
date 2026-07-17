@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Metrics-matched fallback for Inter — keeps the pre-swap render the same
+   size/shape as Inter so there is no visible reshape ("flash") on load. */
+@font-face {
+  font-family: 'Inter Fallback';
+  src: local('Arial');
+  ascent-override: 90.20%;
+  descent-override: 22.48%;
+  line-gap-override: 0.00%;
+  size-adjust: 107.40%;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
