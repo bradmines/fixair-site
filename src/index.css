@@ -2,7 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Metrics-matched fallback for Inter — keeps the pre-swap render the same
+/* Self-hosted Inter (variable, latin) — served from our own origin and
+   preloaded in index.html, so it is present before first paint. Using
+   font-display: block guarantees no fallback->Inter swap reshape. */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: block;
+  src: url('/fonts/inter-latin-variable.woff2') format('woff2');
+}
+
+/* Metrics-matched fallback for Inter — keeps any pre-swap render the same
    size/shape as Inter so there is no visible reshape ("flash") on load. */
 @font-face {
   font-family: 'Inter Fallback';
