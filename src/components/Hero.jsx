@@ -35,7 +35,7 @@ export default function Hero() {
             preload="auto"
             className="hidden sm:block w-full h-full object-cover"
           >
-            <source src="/zoomoutvid.mp4" type="video/mp4" />
+            <source src="/zoomoutvid1.mov" type="video/mp4" />
           </video>
           {/* Mobile video */}
           <video
