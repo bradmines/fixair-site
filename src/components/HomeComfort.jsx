@@ -28,7 +28,7 @@ export default function HomeComfort() {
           preload="auto"
           className="w-full h-full object-cover"
         >
-          <source src="/newfamilyvid.mp4" type="video/mp4" />
+          <source src="/familymug.mp4" type="video/mp4" />
         </video>
         {/* Vignette top/bottom for depth */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-black/30 pointer-events-none" />
@@ -62,7 +62,7 @@ export default function HomeComfort() {
           preload="auto"
           className="w-full h-full object-cover"
         >
-          <source src="/newfamilyvid.mp4" type="video/mp4" />
+          <source src="/familymug.mp4" type="video/mp4" />
         </video>
         <div
           className="absolute inset-0 pointer-events-none"
