@@ -52,7 +52,7 @@ export default function HomeComfort() {
       </div>
 
       {/* Mobile: full-width video above text, fades down into section */}
-      <div className="lg:hidden relative h-64 sm:h-72 overflow-hidden">
+      <div className="lg:hidden relative h-80 sm:h-96 overflow-hidden">
         <video
           autoPlay
           loop
