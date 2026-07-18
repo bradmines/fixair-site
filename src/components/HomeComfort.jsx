@@ -68,6 +68,10 @@ export default function HomeComfort() {
           className="absolute inset-0 pointer-events-none"
           style={{ background: 'linear-gradient(to bottom, transparent 40%, #1a3a5c 100%)' }}
         />
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{ background: 'linear-gradient(to top, transparent 40%, #1a3a5c 100%)' }}
+        />
       </div>
 
       {/* Text content — right half on desktop, full-width on mobile */}
