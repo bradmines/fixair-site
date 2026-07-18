@@ -7,7 +7,13 @@ const app = express()
 const port = process.env.PORT || 3000
 
 app.use((_req, res, next) => {
-  res.setHeader('X-Frame-Options', 'SAMEORIGIN')
+  // Allow this site to be framed by itself and bradmines.com (portfolio embed).
+  // frame-ancestors replaces X-Frame-Options, which can't allowlist a specific
+  // cross-origin site in modern browsers (ALLOW-FROM is deprecated).
+  res.setHeader(
+    'Content-Security-Policy',
+    "frame-ancestors 'self' https://bradmines.com https://www.bradmines.com"
+  )
   res.setHeader('X-Content-Type-Options', 'nosniff')
   res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin')
   next()
