@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="1200" height="480">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0b2d52"/>
+      <stop offset="100%" style="stop-color:#0f3d6e"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f97316;stop-opacity:0.25"/>
+      <stop offset="100%" style="stop-color:#f97316;stop-opacity:0"/>
+    </linearGradient>
+    <linearGradient id="tank" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:white;stop-opacity:0.12"/>
+      <stop offset="100%" style="stop-color:white;stop-opacity:0.05"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="480" fill="url(#bg)"/>
+  <circle cx="920" cy="240" r="260" fill="url(#glow)"/>
+  <!-- Water heater tank -->
+  <rect x="840" y="80" width="160" height="300" rx="20" fill="url(#tank)" stroke="white" stroke-opacity="0.15" stroke-width="2"/>
+  <!-- Top dome -->
+  <ellipse cx="920" cy="80" rx="80" ry="20" fill="white" fill-opacity="0.1"/>
+  <!-- Bottom dome -->
+  <ellipse cx="920" cy="380" rx="80" ry="20" fill="white" fill-opacity="0.08"/>
+  <!-- Pipes top -->
+  <rect x="890" y="30" width="16" height="55" rx="6" fill="white" fill-opacity="0.12" stroke="white" stroke-opacity="0.15" stroke-width="1"/>
+  <rect x="934" y="30" width="16" height="55" rx="6" fill="white" fill-opacity="0.12" stroke="white" stroke-opacity="0.15" stroke-width="1"/>
+  <!-- Hot indicator at top -->
+  <circle cx="898" cy="35" r="6" fill="#f97316" fill-opacity="0.7"/>
+  <circle cx="942" cy="35" r="6" fill="#38bdf8" fill-opacity="0.7"/>
+  <!-- Label band -->
+  <rect x="850" y="150" width="140" height="60" rx="6" fill="white" fill-opacity="0.06"/>
+  <text x="920" y="173" font-family="system-ui" font-size="12" font-weight="700" fill="white" fill-opacity="0.5" text-anchor="middle" letter-spacing="1">HOT WATER</text>
+  <text x="920" y="195" font-family="system-ui" font-size="12" font-weight="700" fill="white" fill-opacity="0.5" text-anchor="middle" letter-spacing="1">HEATER</text>
+  <!-- Gauge -->
+  <circle cx="920" cy="270" r="28" fill="white" fill-opacity="0.06" stroke="white" stroke-opacity="0.12" stroke-width="1"/>
+  <circle cx="920" cy="270" r="20" fill="white" fill-opacity="0.04"/>
+  <path d="M920 256 L920 270" stroke="#f97316" stroke-width="2.5" stroke-linecap="round" transform="rotate(30 920 270)"/>
+  <!-- Heating element bars -->
+  <rect x="862" y="320" width="116" height="6" rx="3" fill="white" fill-opacity="0.1"/>
+  <rect x="862" y="334" width="116" height="6" rx="3" fill="white" fill-opacity="0.08"/>
+  <!-- Text -->
+  <text x="100" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="52" font-weight="800" fill="white" fill-opacity="0.95">Hot Water Heater</text>
+  <text x="100" y="235" font-family="system-ui, -apple-system, sans-serif" font-size="56" font-weight="800" fill="#f97316">Guide</text>
+  <text x="100" y="295" font-family="system-ui, -apple-system, sans-serif" font-size="22" fill="white" fill-opacity="0.55">Niagara Residential HVAC</text>
+  <rect x="100" y="335" width="140" height="36" rx="18" fill="#f97316" fill-opacity="0.2" stroke="#f97316" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="170" y="358" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#f97316" text-anchor="middle" letter-spacing="1">FIXAIR BLOG</text>
+</svg>

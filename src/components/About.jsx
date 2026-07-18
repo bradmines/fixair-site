@@ -2,13 +2,13 @@ import { PHONE, PHONE_HREF } from '../constants'
 
 export default function About() {
   return (
-    <section id="about" className="overflow-hidden">
-      <div className="grid lg:grid-cols-2 min-h-[700px] lg:min-h-[780px]">
+    <section id="about" className="relative overflow-hidden">
+      <div className="relative z-10 grid lg:grid-cols-2 min-h-[700px] lg:min-h-[780px]">
 
         {/* ── Full-bleed photo ── */}
         <div className="relative min-h-[420px] lg:min-h-0">
           <img
-            src="/tom.avif"
+            src="/upscaletom.jpg"
             alt="Tom Guitard, Owner and lead technician, FixAir Heating and Air Conditioning"
             className="absolute inset-0 w-full h-full object-cover object-top"
             loading="lazy"
@@ -18,7 +18,7 @@ export default function About() {
           <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-brand-blue/90 to-transparent" />
 
           {/* Right-edge fade so photo blends into text column on desktop */}
-          <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-slate-50 to-transparent hidden lg:block" />
+          <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-brand-blue to-transparent hidden lg:block" />
 
           {/* Name plate */}
           <div className="absolute bottom-6 left-6 right-6 lg:right-16 text-white">
@@ -27,28 +27,28 @@ export default function About() {
           </div>
 
           {/* Floating pull quote — desktop only */}
-          <div className="absolute top-8 right-0 lg:-right-6 z-20 hidden lg:block w-52 bg-white rounded-l-2xl lg:rounded-2xl shadow-xl border border-gray-100 p-4">
+          <div className="absolute top-8 right-0 lg:-right-6 z-20 hidden lg:block w-52 bg-white/10 backdrop-blur-sm rounded-l-2xl lg:rounded-2xl border border-white/20 p-4">
             <div className="text-brand-orange text-3xl font-serif leading-none">"</div>
-            <p className="text-xs text-gray-600 leading-relaxed italic mt-1">
+            <p className="text-xs text-blue-100/80 leading-relaxed italic mt-1">
               His meticulous workmanship is top notch.
             </p>
-            <p className="text-[11px] font-bold text-brand-blue mt-2">Sandy, Niagara</p>
+            <p className="text-[11px] font-bold text-white mt-2">Sandy, Niagara</p>
           </div>
         </div>
 
         {/* ── Text column ── */}
-        <div className="bg-slate-50 flex flex-col justify-center px-8 py-14 lg:px-14 lg:py-20">
+        <div className="bg-brand-blue flex flex-col justify-center px-8 py-14 lg:px-14 lg:py-20">
           <div className="max-w-lg">
-            <div className="inline-block bg-brand-blue/10 text-brand-blue text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-5">
+            <div className="inline-block bg-white/10 text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-5">
               Meet Tom
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-extrabold text-brand-blue leading-tight">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-white leading-tight">
               First-Rate Workmanship,{' '}
               <span className="text-brand-orange">Every Single Job</span>
             </h2>
 
-            <div className="mt-6 space-y-4 text-gray-600 leading-relaxed text-[15px]">
+            <div className="mt-6 space-y-4 text-blue-100/80 leading-relaxed text-[15px]">
               <p>
                 Hi, I'm Tom, the owner, technician, and the person who answers the phone
                 when you call FixAIR. I've been working on home heating and cooling systems across
@@ -102,13 +102,13 @@ export default function About() {
                   ),
                 },
               ].map(f => (
-                <div key={f.title} className="flex flex-col items-center text-center gap-2 sm:flex-row sm:items-start sm:text-left sm:gap-3 bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
-                  <div className="w-10 h-10 sm:w-9 sm:h-9 bg-brand-blue/10 text-brand-blue rounded-lg flex items-center justify-center flex-shrink-0 sm:mt-0.5">
+                <div key={f.title} className="flex flex-col items-center text-center gap-2 sm:flex-row sm:items-start sm:text-left sm:gap-3 bg-white/[0.07] rounded-xl p-4 border border-white/10">
+                  <div className="w-10 h-10 sm:w-9 sm:h-9 bg-white/10 text-white rounded-lg flex items-center justify-center flex-shrink-0 sm:mt-0.5">
                     {f.icon}
                   </div>
                   <div>
-                    <div className="font-bold text-brand-blue text-sm">{f.title}</div>
-                    <div className="text-gray-500 text-xs mt-0.5">{f.desc}</div>
+                    <div className="font-bold text-white text-sm">{f.title}</div>
+                    <div className="text-blue-100/70 text-xs mt-0.5">{f.desc}</div>
                   </div>
                 </div>
               ))}

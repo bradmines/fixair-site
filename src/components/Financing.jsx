@@ -49,7 +49,7 @@ export default function Financing() {
         className="pointer-events-none absolute -bottom-32 -left-28 w-[28rem] h-[28rem] bg-brand-blue-light/20 rounded-full blur-3xl"
       />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
           {/* Left: heading, explanation, logo, benefits */}

@@ -40,7 +40,7 @@ const testimonials = [
   },
 ]
 
-const TOTAL_REVIEWS = 27
+const TOTAL_REVIEWS = 28
 
 function StarRating({ count }) {
   return (
@@ -78,24 +78,24 @@ function Avatar({ name }) {
 
 function ReviewCard({ t, large = false }) {
   return (
-    <div className={`w-full bg-white rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-4 ${large ? 'p-7' : 'p-6'}`}>
+    <div className={`w-full bg-white/[0.08] rounded-2xl border border-white/10 flex flex-col gap-4 ${large ? 'p-7' : 'p-6'}`}>
       <div className="flex items-center gap-3">
         <Avatar name={t.name} />
         <div className="min-w-0">
-          <div className="font-bold text-sm text-gray-900 truncate">{t.name}</div>
+          <div className="font-bold text-sm text-white truncate">{t.name}</div>
           <div className="flex items-center gap-1.5 mt-0.5">
             {t.badge && (
-              <span className="text-[10px] font-semibold text-brand-blue bg-brand-blue/10 px-1.5 py-0.5 rounded">
+              <span className="text-[10px] font-semibold text-blue-200 bg-white/10 px-1.5 py-0.5 rounded">
                 {t.badge}
               </span>
             )}
-            <span className="text-xs text-gray-400">{t.age}</span>
+            <span className="text-xs text-blue-100/50">{t.age}</span>
           </div>
         </div>
         <div className="ml-auto"><GoogleG /></div>
       </div>
       <StarRating count={t.stars} />
-      <p className="text-gray-600 leading-relaxed flex-1 text-sm">
+      <p className="text-blue-100/80 leading-relaxed flex-1 text-sm">
         {t.quote}
       </p>
     </div>
@@ -109,17 +109,18 @@ export default function Testimonials() {
     if (el) el.scrollBy({ left: dir * el.clientWidth, behavior: 'smooth' })
   }
   return (
-    <section id="testimonials" className="py-20 md:py-28 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="testimonials" className="relative py-20 md:py-28 bg-brand-blue overflow-hidden">
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
-          <div className="inline-block bg-brand-blue/10 text-brand-blue text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
+          <div className="inline-block bg-white/10 text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
             Google Reviews
           </div>
-          <h2 className="section-heading">Real Words from Real Niagara Neighbours</h2>
-          <p className="section-sub">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-white leading-tight">Real Words from Real Niagara Neighbours</h2>
+          <p className="mt-4 text-blue-100/80 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
             Don't take our word for it. Here's what customers say about working with Tom.
           </p>
-          <div className="mt-5 inline-flex items-center gap-2 bg-white border border-gray-100 shadow-sm rounded-full px-5 py-2">
+          <div className="mt-5 inline-flex items-center gap-2 bg-white/10 border border-white/15 rounded-full px-5 py-2">
             <div className="flex gap-0.5">
               {[1,2,3,4,5].map(i => (
                 <svg key={i} className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -127,12 +128,12 @@ export default function Testimonials() {
                 </svg>
               ))}
             </div>
-            <span className="text-sm font-bold text-gray-800">5.0</span>
-            <span className="text-sm text-gray-400">· {TOTAL_REVIEWS} Google reviews</span>
+            <span className="text-sm font-bold text-white">5.0</span>
+            <span className="text-sm text-blue-100/60">· {TOTAL_REVIEWS} Google reviews</span>
           </div>
         </div>
 
-        {/* One box — scroll through the best reviews */}
+        {/* Review carousel */}
         <div className="relative max-w-2xl mx-auto">
           <div
             ref={scroller}
@@ -149,7 +150,7 @@ export default function Testimonials() {
           <button
             onClick={() => scrollByCard(-1)}
             aria-label="Previous review"
-            className="hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-white shadow-md border border-gray-100 items-center justify-center text-gray-500 hover:text-brand-blue hover:border-brand-blue transition-colors"
+            className="hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-white/10 border border-white/20 items-center justify-center text-blue-100/70 hover:text-white hover:border-white/40 transition-colors"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"/>
@@ -158,7 +159,7 @@ export default function Testimonials() {
           <button
             onClick={() => scrollByCard(1)}
             aria-label="Next review"
-            className="hidden sm:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-10 h-10 rounded-full bg-white shadow-md border border-gray-100 items-center justify-center text-gray-500 hover:text-brand-blue hover:border-brand-blue transition-colors"
+            className="hidden sm:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-10 h-10 rounded-full bg-white/10 border border-white/20 items-center justify-center text-blue-100/70 hover:text-white hover:border-white/40 transition-colors"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/>
@@ -179,7 +180,7 @@ export default function Testimonials() {
             href="https://www.google.com/maps/place/FixAir+Heating+and+Air+Conditioning/@43.0713027,-79.5314574,9.98z/data=!4m8!3m7!1s0x882a8bdffd1e1775:0x4f058f4f82b2bedc!8m2!3d43.073928!4d-79.1983315!9m1!1b1!16s%2Fg%2F11tfnjymwg?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-brand-blue hover:text-brand-blue-light transition-colors group"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-blue-200 transition-colors group"
           >
             <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
               <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
@@ -192,7 +193,7 @@ export default function Testimonials() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
             </svg>
           </a>
-          <p className="text-gray-400 text-xs">
+          <p className="text-blue-100/50 text-xs">
             Happy with FixAIR? A Google review helps your neighbours find a trusted local contractor.
           </p>
         </div>

@@ -17,7 +17,7 @@ export const BUSINESS = {
     'https://www.facebook.com/fixairheatandcool',
     'https://www.instagram.com/fixairheatandcool',
   ],
-  aggregateRating: { ratingValue: '5', reviewCount: '27', bestRating: '5' },
+  aggregateRating: { ratingValue: '5', reviewCount: '28', bestRating: '5' },
   // The cities FixAir serves, used for areaServed on the homepage schema.
   cities: [
     'St. Catharines',

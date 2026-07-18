@@ -87,7 +87,7 @@ export default function LocationPage({ location }) {
                     { label: 'Call Tom directly', value: PHONE, href: PHONE_HREF },
                     { label: 'Hours', value: 'Mon–Fri 8–5 · 24/7 emergency' },
                     { label: 'Service area', value: 'Niagara & surrounding areas' },
-                    { label: 'Google rating', value: '5.0 ★ · 27 reviews' },
+                    { label: 'Google rating', value: '5.0 ★ · 28 reviews' },
                   ].map(row => (
                     <div key={row.label} className="flex items-center justify-between gap-4 border-b border-white/10 pb-4 last:border-0 last:pb-0">
                       <dt className="text-sm text-blue-200">{row.label}</dt>

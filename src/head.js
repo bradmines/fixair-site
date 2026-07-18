@@ -1,6 +1,7 @@
 import { BUSINESS, NIAGARA_AREA_SERVED, PROVIDER } from './data/business'
 import { REVIEWS } from './data/reviews'
 import { generalFaqs, allFaqs } from './data/faqs'
+import { blogPosts } from './data/blog'
 
 // Builds the per-page <head> markup (title, meta, OG/Twitter, canonical,
 // JSON-LD) that prerender.js injects into each page. Server/build-time only —
@@ -231,6 +232,68 @@ function headForFaq(route) {
   }
 }
 
+function headForBlog(route) {
+  const canonical = canonicalFor(route)
+  const title = 'HVAC Tips & Advice for Niagara Homeowners | FixAir Blog'
+  const description =
+    'Plain-language heating and cooling advice from Tom at FixAir — a residential HVAC specialist with 25+ years serving Niagara. Furnaces, AC, ductless systems, boilers and more.'
+  const crumbs = breadcrumb([
+    { name: 'Home', url: BUSINESS.url + '/' },
+    { name: 'Blog', url: canonical },
+  ])
+  return {
+    title,
+    lines: [
+      `<title>${esc(title)}</title>`,
+      `<meta name="description" content="${esc(description)}" />`,
+      `<meta name="keywords" content="HVAC tips Niagara, furnace advice, air conditioner guide, ductless mini split, water heater replacement, boiler guide, duct cleaning Niagara" />`,
+      `<meta name="robots" content="index, follow" />`,
+      `<link rel="canonical" href="${esc(canonical)}" />`,
+      ...ogAndTwitter({ title, description, canonical }),
+      jsonLd(crumbs),
+    ],
+  }
+}
+
+function headForBlogPost(route) {
+  const p = route.data
+  const canonical = canonicalFor(route)
+  const title = p.metaTitle
+  const description = p.metaDescription
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: p.title,
+    description,
+    url: canonical,
+    datePublished: p.date,
+    author: { '@type': 'Person', name: BUSINESS.founder },
+    publisher: {
+      '@type': 'Organization',
+      name: BUSINESS.name,
+      logo: { '@type': 'ImageObject', url: BUSINESS.logo },
+    },
+    image: BUSINESS.url + p.image,
+  }
+  const crumbs = breadcrumb([
+    { name: 'Home', url: BUSINESS.url + '/' },
+    { name: 'Blog', url: BUSINESS.url + '/blog/' },
+    { name: p.title, url: canonical },
+  ])
+  return {
+    title,
+    lines: [
+      `<title>${esc(title)}</title>`,
+      `<meta name="description" content="${esc(description)}" />`,
+      `<meta name="robots" content="index, follow" />`,
+      `<link rel="canonical" href="${esc(canonical)}" />`,
+      ...ogAndTwitter({ title, description, canonical }),
+      jsonLd(articleSchema),
+      jsonLd(crumbs),
+    ],
+  }
+}
+
 function headForNotFound() {
   const title = 'Page Not Found | FixAir Heating and Air Conditioning'
   return {
@@ -250,6 +313,8 @@ export function buildHead(route) {
   if (route.kind === 'service') built = headForService(route)
   else if (route.kind === 'location') built = headForLocation(route)
   else if (route.kind === 'faq') built = headForFaq(route)
+  else if (route.kind === 'blog') built = headForBlog(route)
+  else if (route.kind === 'blog-post') built = headForBlogPost(route)
   else if (route.kind === '404') built = headForNotFound()
   else built = headForHome(route)
   return built.lines.join('\n    ')
