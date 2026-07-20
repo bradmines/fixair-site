@@ -111,7 +111,7 @@ export default function Footer() {
           <a
             href="https://bradmines.com"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
             className="text-[11px] text-blue-400/80 hover:text-white transition-colors hover:underline underline-offset-2"
           >
             Website by bradmines
