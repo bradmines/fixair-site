@@ -8,7 +8,7 @@ const _blogPosts = [
       "Air conditioner running but not cooling your Niagara home? Here are the most common causes — from dirty filters to refrigerant leaks — and what you can check before calling for repair.",
     serviceSlug: "air-conditioners",
     serviceName: "Air Conditioners",
-    image: "/blog/ac-not-cooling.svg",
+    image: "/blog/ac-not-cooling.jpg",
     date: "2026-07-19",
     readTime: "5 min read",
     excerpt:
@@ -79,7 +79,7 @@ const _blogPosts = [
       "Need air conditioner repair in Niagara Falls? Here are the most common AC problems local homeowners face, what typically causes them, and honest guidance on repair costs.",
     serviceSlug: "air-conditioners",
     serviceName: "Air Conditioners",
-    image: "/blog/ac-repair-niagara-falls.svg",
+    image: "/blog/ac-repair-niagara-falls.jpg",
     date: "2026-07-18",
     readTime: "5 min read",
     excerpt:
@@ -212,7 +212,7 @@ const _blogPosts = [
       "Furnace trouble in Wainfleet? Learn the common furnace problems rural Niagara homeowners face, what to check first, and when to call for professional heating repair.",
     serviceSlug: "furnaces",
     serviceName: "Furnaces",
-    image: "/blog/furnace-wainfleet.svg",
+    image: "/blog/furnace-wainfleet.jpg",
     date: "2026-07-16",
     readTime: "4 min read",
     excerpt:
@@ -274,7 +274,7 @@ const _blogPosts = [
       "Need heating or air conditioning service in Haldimand County? Learn what to expect from furnace and AC repair, installation, and maintenance for homes in and around the county.",
     serviceSlug: "air-conditioners",
     serviceName: "Air Conditioners",
-    image: "/blog/hvac-haldimand.svg",
+    image: "/blog/hvac-haldimand.jpg",
     date: "2026-07-14",
     readTime: "4 min read",
     excerpt:
@@ -331,7 +331,7 @@ const _blogPosts = [
       "Wondering what heating and air conditioning repair costs in Niagara? Here's an honest look at what drives HVAC repair prices and how to avoid overpaying for service.",
     serviceSlug: "furnaces",
     serviceName: "Furnaces",
-    image: "/blog/hvac-cost.svg",
+    image: "/blog/hvac-cost.jpg",
     date: "2026-07-15",
     readTime: "5 min read",
     excerpt:
@@ -467,7 +467,7 @@ const _blogPosts = [
       "An annual furnace and AC tune-up prevents breakdowns, lowers energy bills, and extends equipment life. Here's what a proper HVAC maintenance visit includes and why it pays off.",
     serviceSlug: "furnaces",
     serviceName: "Furnaces",
-    image: "/blog/hvac-tune-up.svg",
+    image: "/blog/hvac-tune-up.jpg",
     date: "2026-07-11",
     readTime: "4 min read",
     excerpt:
@@ -529,7 +529,7 @@ const _blogPosts = [
       "Thinking about a smart thermostat for your Niagara home? Here's an honest look at how they work, how much they can save on heating and cooling bills, and whether they're worth it.",
     serviceSlug: "furnaces",
     serviceName: "Furnaces",
-    image: "/blog/smart-thermostat.svg",
+    image: "/blog/smart-thermostat.jpg",
     date: "2026-07-10",
     readTime: "4 min read",
     excerpt:
@@ -591,7 +591,7 @@ const _blogPosts = [
       "Considering a heat pump for your Niagara home? Learn how heat pumps work, why they're so efficient, and what to know about rebates and incentives available in Ontario.",
     serviceSlug: "ductless-systems",
     serviceName: "Ductless Systems",
-    image: "/blog/heat-pump-rebates.svg",
+    image: "/blog/heat-pump-rebates.jpg",
     date: "2026-07-13",
     readTime: "5 min read",
     excerpt:
