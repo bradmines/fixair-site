@@ -142,7 +142,7 @@ const _blogPosts = [
       "Looking for air conditioner repair or installation in Welland? Learn what a proper AC install involves, how sizing works, and when repair beats replacement for Welland homes.",
     serviceSlug: "air-conditioners",
     serviceName: "Air Conditioners",
-    image: "/blog/ac-welland.svg",
+    image: "/blog/ac-welland.jpg",
     date: "2026-07-17",
     readTime: "5 min read",
     excerpt:
@@ -397,7 +397,7 @@ const _blogPosts = [
       "Furnace not turning on in your Niagara home? Work through this simple troubleshooting checklist — thermostat, breaker, filter, and more — before calling for heating repair.",
     serviceSlug: "furnaces",
     serviceName: "Furnaces",
-    image: "/blog/furnace-wont-start.svg",
+    image: "/blog/furnace-wont-start.jpg",
     date: "2026-07-12",
     readTime: "4 min read",
     excerpt:
