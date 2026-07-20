@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="1200" height="480">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0b2d52"/>
+      <stop offset="100%" style="stop-color:#0f3d6e"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f97316;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#f97316;stop-opacity:0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="480" fill="url(#bg)"/>
+  <circle cx="920" cy="250" r="260" fill="url(#glow)"/>
+  <line x1="0" y1="120" x2="1200" y2="120" stroke="white" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="0" y1="240" x2="1200" y2="240" stroke="white" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="0" y1="360" x2="1200" y2="360" stroke="white" stroke-opacity="0.04" stroke-width="1"/>
+  <!-- Furnace cabinet -->
+  <rect x="800" y="110" width="210" height="270" rx="14" fill="white" fill-opacity="0.06" stroke="white" stroke-opacity="0.15" stroke-width="2"/>
+  <rect x="818" y="128" width="174" height="52" rx="6" fill="white" fill-opacity="0.08"/>
+  <circle cx="840" cy="154" r="7" fill="#f97316" fill-opacity="0.7"/>
+  <rect x="818" y="196" width="174" height="168" rx="8" fill="#0b2d52"/>
+  <!-- dim flame -->
+  <path d="M905 342 c-22 0-40-18-40-40 0-27 27-36 20-63 16 10 20 27 20 36 7-10 5-23 4-32 20 13 36 36 36 59 0 22-18 40-40 40z" fill="#f97316" fill-opacity="0.28"/>
+  <!-- power symbol -->
+  <g transform="translate(1075,250)">
+    <circle r="52" fill="none" stroke="#f97316" stroke-opacity="0.6" stroke-width="9" stroke-dasharray="235 60" transform="rotate(-70)"/>
+    <line x1="0" y1="-58" x2="0" y2="-14" stroke="#f97316" stroke-opacity="0.75" stroke-width="9" stroke-linecap="round"/>
+  </g>
+  <!-- Text -->
+  <text x="100" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="52" font-weight="800" fill="white" fill-opacity="0.95">Furnace Won't</text>
+  <text x="100" y="232" font-family="system-ui, -apple-system, sans-serif" font-size="52" font-weight="800" fill="#f97316">Turn On?</text>
+  <text x="100" y="292" font-family="system-ui, -apple-system, sans-serif" font-size="22" fill="white" fill-opacity="0.55">What to Check Before You Call</text>
+  <rect x="100" y="332" width="140" height="36" rx="18" fill="#f97316" fill-opacity="0.2" stroke="#f97316" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="170" y="355" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#f97316" text-anchor="middle" letter-spacing="1">FIXAIR BLOG</text>
+</svg>

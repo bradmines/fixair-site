@@ -188,4 +188,66 @@ export const locations = [
       },
     ],
   },
+  {
+    slug: 'wainfleet',
+    name: 'Wainfleet',
+    tagline: 'Rural south Niagara',
+    metaTitle: 'HVAC in Wainfleet | Furnace Repair, AC & Heating | FixAir',
+    metaDescription:
+      'Residential furnace repair, AC and heating service in Wainfleet and rural south Niagara. Local, licensed HVAC from Tom with 25+ years experience. Call 905-732-2791.',
+    h1: 'Residential HVAC Services in Wainfleet',
+    intro:
+      'Wainfleet homeowners rely on FixAir for dependable furnace, air conditioning and heating service — with fast response for the rural properties that big regional outfits often overlook.',
+    localDetail: [
+      "Wainfleet's rural setting means many homes sit further from the nearest service call, so a heating or cooling breakdown is more than an inconvenience. Tom has spent 25+ years servicing furnaces, air conditioners and ductless systems across south Niagara, and being local to the area means he can get to you quickly.",
+      "You get the same person every time — Tom assesses honestly, works cleanly, and stands behind every job. No rotating crews, no hard sell, just reliable heating and cooling for rural and lakeside homes.",
+      "From Wainfleet village and the Long Beach shoreline to Chambers Corners, Winger and the farms in between, Tom fits the right system to each property. Rural homes here run their furnace hard through long winters and often benefit from ductless heat pumps, propane furnace service and equipment sized for the demands of country living.",
+    ],
+    neighbourhoods: ['Wainfleet village', 'Long Beach', 'Chambers Corners', 'Winger', 'Marshville'],
+    faqs: [
+      {
+        q: 'Do you service rural Wainfleet properties?',
+        a: 'Yes. Tom regularly serves rural and lakeside homes throughout Wainfleet and south Niagara.',
+      },
+      {
+        q: 'Can you help with a furnace that won’t heat?',
+        a: "Yes. Furnace repair is one of Tom's most common calls. Phone 905-732-2791 and he'll respond as quickly as he can.",
+      },
+      {
+        q: 'Do you work on propane furnaces?',
+        a: 'Yes. Tom services the gas, propane and ductless systems common in rural Wainfleet homes.',
+      },
+    ],
+  },
+  {
+    slug: 'haldimand-county',
+    name: 'Haldimand County',
+    tagline: 'Just beyond Niagara',
+    metaTitle: 'HVAC in Haldimand County | Furnace & AC Repair | FixAir',
+    metaDescription:
+      'Residential furnace and air conditioner repair, installation and service in Haldimand County — Dunnville, Caledonia, Cayuga and beyond. Licensed local HVAC. Call 905-732-2791.',
+    h1: 'Residential HVAC Services in Haldimand County',
+    intro:
+      'Just beyond the Niagara border, Haldimand County homeowners count on FixAir for honest furnace and air conditioning repair, installation and service from a local specialist.',
+    localDetail: [
+      'Haldimand County sits right on Niagara’s doorstep, and its homes face the same humid summers and cold winters. Tom brings 25+ years of residential HVAC experience to the county, handling furnace and AC repair, new installations, and seasonal maintenance for homeowners across the region.',
+      "With FixAir you get a residential-only specialist who does the work himself. That means an honest diagnosis, a fair quote, and clean workmanship — not a rotating cast of technicians or a pushy sales pitch.",
+      'From Dunnville and Caledonia to Cayuga, Hagersville and the rural properties throughout the county, Tom tailors his recommendations to each home. Many county homes rely on gas or propane furnaces and ductless heat pumps, and he sizes and services equipment to keep them comfortable and efficient year-round.',
+    ],
+    neighbourhoods: ['Dunnville', 'Caledonia', 'Cayuga', 'Hagersville', 'Jarvis'],
+    faqs: [
+      {
+        q: 'Do you service Haldimand County?',
+        a: 'Yes. Tom serves Haldimand County — including Dunnville, Caledonia, Cayuga and Hagersville — alongside the wider Niagara region.',
+      },
+      {
+        q: 'What HVAC services do you offer in Haldimand County?',
+        a: 'Furnace and AC repair and installation, ductless mini-splits, hot water heaters, boilers and duct cleaning for residential homes.',
+      },
+      {
+        q: 'How quickly can you come out?',
+        a: "Tom aims to respond quickly, often the same day for urgent no-heat or no-cooling issues. Call 905-732-2791.",
+      },
+    ],
+  },
 ]

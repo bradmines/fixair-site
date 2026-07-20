@@ -29,21 +29,23 @@ function canonicalFor(route) {
   return BUSINESS.url + route.path
 }
 
-function ogAndTwitter({ title, description, canonical }) {
+function ogAndTwitter({ title, description, canonical, image, imageAlt, type = 'website' }) {
+  const img = image || OG_IMAGE
+  const alt = imageAlt || OG_IMAGE_ALT
   return [
-    `<meta property="og:type" content="website" />`,
+    `<meta property="og:type" content="${esc(type)}" />`,
     `<meta property="og:site_name" content="${esc(BUSINESS.name)}" />`,
     `<meta property="og:url" content="${esc(canonical)}" />`,
     `<meta property="og:title" content="${esc(title)}" />`,
     `<meta property="og:description" content="${esc(description)}" />`,
-    `<meta property="og:image" content="${esc(OG_IMAGE)}" />`,
+    `<meta property="og:image" content="${esc(img)}" />`,
     `<meta property="og:image:width" content="1280" />`,
     `<meta property="og:image:height" content="720" />`,
-    `<meta property="og:image:alt" content="${esc(OG_IMAGE_ALT)}" />`,
+    `<meta property="og:image:alt" content="${esc(alt)}" />`,
     `<meta name="twitter:card" content="summary_large_image" />`,
     `<meta name="twitter:title" content="${esc(title)}" />`,
     `<meta name="twitter:description" content="${esc(description)}" />`,
-    `<meta name="twitter:image" content="${esc(OG_IMAGE)}" />`,
+    `<meta name="twitter:image" content="${esc(img)}" />`,
   ]
 }
 
@@ -287,7 +289,7 @@ function headForBlogPost(route) {
       `<meta name="description" content="${esc(description)}" />`,
       `<meta name="robots" content="index, follow" />`,
       `<link rel="canonical" href="${esc(canonical)}" />`,
-      ...ogAndTwitter({ title, description, canonical }),
+      ...ogAndTwitter({ title, description, canonical, image: BUSINESS.url + p.image, imageAlt: p.title, type: 'article' }),
       jsonLd(articleSchema),
       jsonLd(crumbs),
     ],
