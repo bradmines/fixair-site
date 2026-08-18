@@ -1,3 +1,6 @@
+import { useRef } from 'react'
+import useLazyVideo from '../hooks/useLazyVideo'
+
 const points = [
   {
     title: 'Residential Only, On Purpose',
@@ -14,18 +17,27 @@ const points = [
 ]
 
 export default function HomeComfort() {
+  const desktopRef = useRef(null)
+  const mobileRef = useRef(null)
+
+  // Both sit below the fold — don't spend the visitor's bandwidth on them
+  // until they're actually scrolled to.
+  // Tight margin: these are decorative and well below the fold, so they must
+  // not compete with the hero for bandwidth.
+  useLazyVideo([desktopRef, mobileRef], { rootMargin: '0px' })
+
   return (
     <section id="home-comfort" className="relative bg-brand-blue overflow-hidden min-h-[620px] lg:min-h-[700px]">
 
       {/* Desktop: video panel pinned to the true right half of the section */}
       <div className="hidden lg:block absolute inset-y-0 right-0 w-[50%]">
         <video
-          autoPlay
+          ref={desktopRef}
           loop
           muted
           playsInline
           poster="/homecomfort-poster.jpg"
-          preload="auto"
+          preload="none"
           className="w-full h-full object-cover"
         >
           <source src="/fixairmug.mp4" type="video/mp4" />
@@ -54,12 +66,12 @@ export default function HomeComfort() {
       {/* Mobile: full-width video above text, fades down into section */}
       <div className="lg:hidden relative h-80 sm:h-96 overflow-hidden">
         <video
-          autoPlay
+          ref={mobileRef}
           loop
           muted
           playsInline
           poster="/homecomfort-poster.jpg"
-          preload="auto"
+          preload="none"
           className="w-full h-full object-cover"
         >
           <source src="/fixairmug.mp4" type="video/mp4" />

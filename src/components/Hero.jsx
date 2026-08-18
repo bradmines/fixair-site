@@ -1,23 +1,15 @@
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import { PHONE_HREF, EMAIL_HREF } from '../constants'
 import VentStrip from './VentStrip'
+import useLazyVideo from '../hooks/useLazyVideo'
 
 export default function Hero() {
   const desktopRef = useRef(null)
   const mobileRef = useRef(null)
 
-  useEffect(() => {
-    const mq = window.matchMedia('(prefers-reduced-motion: reduce)')
-    const sync = () => {
-      ;[desktopRef, mobileRef].forEach(ref => {
-        if (!ref.current) return
-        mq.matches ? ref.current.pause() : ref.current.play()
-      })
-    }
-    sync()
-    mq.addEventListener('change', sync)
-    return () => mq.removeEventListener('change', sync)
-  }, [])
+  // Only the video for the current breakpoint loads; the hidden one never
+  // intersects, so phones never pull the 11 MB desktop file.
+  useLazyVideo([desktopRef, mobileRef])
 
   return (
     <>
@@ -27,12 +19,11 @@ export default function Hero() {
           {/* Desktop video */}
           <video
             ref={desktopRef}
-            autoPlay
             muted
             loop
             playsInline
             poster="/hero-poster-newnew.jpg"
-            preload="auto"
+            preload="none"
             className="hidden sm:block w-full h-full object-cover"
           >
             <source src="/zoomoutvid1.mp4" type="video/mp4" />
@@ -40,12 +31,11 @@ export default function Hero() {
           {/* Mobile video */}
           <video
             ref={mobileRef}
-            autoPlay
             muted
             loop
             playsInline
             poster="/hero-poster-mobile.jpg"
-            preload="auto"
+            preload="none"
             className="sm:hidden w-full h-full object-cover"
           >
             <source src="/zoomoutvidmobile.mp4" type="video/mp4" />

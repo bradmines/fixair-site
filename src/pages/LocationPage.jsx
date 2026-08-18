@@ -5,6 +5,7 @@ import Contact from '../components/Contact'
 import MobileCallBar from '../components/MobileCallBar'
 import FAQ from '../components/FAQ'
 import Breadcrumbs from '../components/Breadcrumbs'
+import RelatedArticles, { articlesForLocation } from '../components/RelatedArticles'
 import { services } from '../data/services'
 import { PHONE, PHONE_HREF } from '../constants'
 
@@ -17,14 +18,10 @@ export default function LocationPage({ location }) {
       <main>
         {/* ── Hero ─────────────────────────────────────────────── */}
         <section className="relative bg-brand-blue overflow-hidden">
+          {/* Gradient wash. (A /hero-bg.jpg texture used to sit under this at
+              20% opacity, but the file doesn't exist — it was a 404 on every
+              service and location page.) */}
           <div className="absolute inset-0">
-            <img
-              src="/hero-bg.jpg"
-              alt=""
-              aria-hidden="true"
-              className="w-full h-full object-cover opacity-20"
-              loading="eager"
-            />
             <div className="absolute inset-0 bg-gradient-to-br from-brand-blue via-brand-blue/95 to-brand-blue-mid/80" />
           </div>
           <div className="absolute top-16 right-0 w-96 h-96 bg-brand-orange/10 rounded-full translate-x-1/3 blur-3xl pointer-events-none" />
@@ -181,6 +178,12 @@ export default function LocationPage({ location }) {
             </div>
           </div>
         </section>
+
+        <RelatedArticles
+          posts={articlesForLocation(location.name)}
+          heading={`HVAC Guides for ${location.name} Homeowners`}
+          sub="Practical advice on repairs, replacement and keeping your system running."
+        />
 
         <Testimonials />
 

@@ -129,6 +129,10 @@ function headForHome(route) {
       `<meta name="keywords" content="residential HVAC Niagara, home heating and cooling Niagara, furnace repair Niagara, air conditioner install Niagara, ductless mini split Niagara, residential HVAC contractor, FixAir" />`,
       `<meta name="robots" content="index, follow" />`,
       `<link rel="canonical" href="${esc(canonical)}" />`,
+      // The hero poster is the LCP element. Preload it (per breakpoint, so
+      // only one is ever fetched) instead of letting it wait on the JS bundle.
+      `<link rel="preload" as="image" href="/hero-poster-newnew.jpg" media="(min-width: 640px)" fetchpriority="high" />`,
+      `<link rel="preload" as="image" href="/hero-poster-mobile.jpg" media="(max-width: 639px)" fetchpriority="high" />`,
       ...ogAndTwitter({ title, description, canonical }),
       jsonLd(homeBusinessSchema()),
       jsonLd(faqPage(generalFaqs)),
