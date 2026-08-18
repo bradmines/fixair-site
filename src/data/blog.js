@@ -1,6 +1,117 @@
 // Blog articles — one per service type. Used by BlogPage (index) and BlogPostPage.
 const _blogPosts = [
   {
+    slug: "hvac-service-st-catharines",
+    title: "Furnace and AC Service in St. Catharines: What Older Homes Need Before Winter",
+    metaTitle: "Furnace & AC Service in St. Catharines | FixAir Niagara",
+    metaDescription:
+      "Furnace and air conditioning service for St. Catharines homes. What century homes, post-war houses and no-duct properties need before the first cold snap.",
+    serviceSlug: "furnaces",
+    serviceName: "Furnaces",
+    image: "/blog/hvac-st-catharines.jpg",
+    date: "2026-08-18",
+    readTime: "6 min read",
+    excerpt:
+      "St. Catharines has everything from century homes in Port Dalhousie to newer builds near Brock — and each one needs something different from its heating system. Here's what to sort out before the cold arrives.",
+    body: [
+      {
+        type: "p",
+        text: "Late August is the quiet stretch between the last heatwave and the first cold morning, and it's the single best time of year to deal with your heating system. Nothing is urgent yet, parts are available, and you're not competing with everyone else in the region for the same appointment. By the time the furnace won't start on a November morning, all three of those things have changed.",
+      },
+      {
+        type: "p",
+        text: "St. Catharines is a bigger and older city than most of Niagara, and that shows up in the HVAC work. What your home needs depends a lot on when it was built and what's already in the basement.",
+      },
+      {
+        type: "h2",
+        text: "The Housing Stock Changes the Answer",
+      },
+      {
+        type: "p",
+        text: "There's no single \"St. Catharines home.\" Tom works on all of these in a given month, and each one comes with its own set of issues:",
+      },
+      {
+        type: "list",
+        items: [
+          "Century homes in Port Dalhousie and the old downtown — often converted from older heating systems, with undersized or improvised ductwork, uneven room temperatures, and rooms that were never properly served in the first place",
+          "Post-war houses in Merritton and the Facer district — compact layouts, original ductwork that's now well past its design life, and furnaces that have been repaired more times than replaced",
+          "1960s–80s homes in Grantham and Glenridge — the group most likely to be running a furnace or AC that's now at or past the end of its service life, where the repair-versus-replace conversation is genuinely close",
+          "Newer builds near Brock and the south end — generally sound systems where the real gains come from proper maintenance, airflow balancing, and thermostat setup rather than new equipment",
+        ],
+      },
+      {
+        type: "h2",
+        text: "What to Sort Out Before the First Cold Snap",
+      },
+      {
+        type: "p",
+        text: "Some of this you can do yourself in an afternoon. The rest is worth a service call before the season gets busy.",
+      },
+      {
+        type: "list",
+        items: [
+          "Change the filter — the cheapest thing you can do and the one most often skipped; a restricted filter makes the furnace work harder and run hotter all winter",
+          "Run the furnace for fifteen minutes now — if it's going to fail, you want to find out in August, not at 6 a.m. in January",
+          "Listen for the start-up — grinding, squealing, or repeated clicking before ignition are all early warnings worth acting on",
+          "Check the vents and cold-air returns — furniture and rugs moved over the winter block airflow and make rooms uneven",
+          "Look at the exhaust vent outside — high-efficiency furnaces vent through a PVC pipe on the side wall that needs to stay clear of nests, debris, and eventually snow",
+          "Test the thermostat schedule — if it's still running a summer cooling program, it won't do what you expect in October",
+          "Book the tune-up now — a proper inspection catches a cracked heat exchanger, a failing inducer motor, or a weak igniter while it's still a scheduled repair rather than an emergency",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Homes Without Ductwork",
+      },
+      {
+        type: "p",
+        text: "A lot of older St. Catharines homes have no ductwork at all, or ductwork that only ever reached half the house. Homeowners in that situation often assume their only options are baseboard heaters and window units, and end up paying for both in comfort and hydro costs.",
+      },
+      {
+        type: "p",
+        text: "Ductless systems are usually the better answer. A single outdoor unit can feed multiple indoor heads, each one controlled independently, and it heats as well as it cools. For a century home, a converted attic space, an addition, or a finished basement that the existing system never quite reached, it solves the problem without tearing the house apart to run ducts. It's a large part of the work Tom does across the older parts of the city.",
+      },
+      {
+        type: "h2",
+        text: "Repair or Replace?",
+      },
+      {
+        type: "p",
+        text: "The honest answer depends on age, the cost of the specific repair, and how the rest of the system is holding up. A fifteen-year-old furnace that needs an igniter is worth fixing. The same furnace with a cracked heat exchanger is not — that's a safety issue and a replacement conversation. As a rough guide, if the repair costs more than a third of a new system and the unit is past twelve years, replacement is usually the better use of the money.",
+      },
+      {
+        type: "p",
+        text: "What you should be wary of is a contractor who reaches for replacement on every call. Plenty of systems have years left in them, and a good technician will tell you that even when it means a smaller invoice.",
+      },
+      {
+        type: "h2",
+        text: "Signs You Shouldn't Wait on",
+      },
+      {
+        type: "list",
+        items: [
+          "A burning or acrid smell that doesn't clear after the first ten minutes of the season",
+          "A yellow or flickering burner flame instead of a steady blue one",
+          "Soot or scorch marks around the furnace cabinet",
+          "The furnace short-cycling — turning on and off every few minutes without reaching temperature",
+          "A carbon monoxide detector that has gone off, even once, even briefly",
+        ],
+      },
+      {
+        type: "p",
+        text: "Any of those mean shut it down and call. Carbon monoxide in particular is not something to troubleshoot yourself, and every St. Catharines home with a gas appliance should have a working detector on each floor.",
+      },
+      {
+        type: "h2",
+        text: "Talk to a Local Technician",
+      },
+      {
+        type: "p",
+        text: "Tom at FixAir is a residential-only HVAC technician with 25+ years of experience, serving St. Catharines and the wider Niagara region. It's Tom on the job every time — no rotating crews, no hard sell, and a straight answer on whether you need a repair, a tune-up, or a new system. Get it looked at now, while it's still a choice rather than an emergency.",
+      },
+    ],
+  },
+  {
     slug: "why-is-my-ac-not-cooling",
     title: "Why Is My AC Not Cooling? A Homeowner's Troubleshooting Guide",
     metaTitle: "Why Is My AC Not Cooling? Troubleshooting Guide | FixAir Niagara",
