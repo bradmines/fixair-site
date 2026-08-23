@@ -13,9 +13,17 @@ export const BUSINESS = {
   founder: 'Tom Guitard',
   logo: 'https://www.fixairheatandcool.ca/fixairlog.png',
   image: 'https://www.fixairheatandcool.ca/logoforcedairfurnace.jpg',
+  // Canonical URL of the Google Business Profile listing. Decoded from the
+  // place URL behind the review button in components/Testimonials.jsx: Google
+  // encodes the listing there as 0x<mapsFeatureId>:0x<cid>, and 0x4f058f4f82b2bedc
+  // is 5694114875537800924 in decimal. The ?cid= form is used rather than the
+  // long place URL because the latter carries session/version params
+  // (entry=ttu, g_ep=...) that go stale.
+  gbpUrl: 'https://www.google.com/maps?cid=5694114875537800924',
   sameAs: [
     'https://www.facebook.com/fixairheatandcool',
     'https://www.instagram.com/fixairheatandcool',
+    'https://www.google.com/maps?cid=5694114875537800924',
   ],
   aggregateRating: { ratingValue: '5', reviewCount: '28', bestRating: '5' },
   // FixAir is a service-area business: Tom travels to the customer and has no

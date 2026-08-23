@@ -90,6 +90,10 @@ function homeBusinessSchema() {
     founder: { '@type': 'Person', name: BUSINESS.founder },
     address: BUSINESS.address,
     priceRange: BUSINESS.priceRange,
+    // Points at the Google Business Profile listing. Only the homepage carries
+    // this — it's the canonical business record; subpages use the compact
+    // PROVIDER reference and stay lean.
+    hasMap: BUSINESS.gbpUrl,
     areaServed: [
       NIAGARA_AREA_SERVED,
       ...BUSINESS.cities.map(name => ({ '@type': 'City', name })),
