@@ -52,6 +52,11 @@ app.use(
         // Prerendered HTML must revalidate, or a deploy won't reach visitors
         // who already have the page cached.
         res.setHeader('Cache-Control', 'no-cache')
+      } else if (path.endsWith('sitemap.xml') || path.endsWith('robots.txt')) {
+        // Crawler control files. These must not sit in an intermediary cache
+        // for a week — sitemap.xml is exactly what Google re-fetches to find
+        // newly published pages, so a stale copy delays indexing.
+        res.setHeader('Cache-Control', 'public, max-age=3600, must-revalidate')
       } else if (path.includes('/assets/')) {
         // Vite fingerprints these filenames, so they can never go stale.
         res.setHeader('Cache-Control', `public, max-age=${YEAR}, immutable`)
