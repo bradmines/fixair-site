@@ -230,4 +230,52 @@ export const services = [
       },
     ],
   },
+  {
+    slug: 'emergency-repair',
+    name: 'Emergency Repair',
+    navLabel: 'Emergency Repair',
+    image: '/blog/furnace-wont-start.jpg',
+    metaTitle: '24/7 Emergency Furnace & AC Repair in Niagara | FixAir',
+    metaDescription:
+      'No heat or no cooling? FixAir offers 24/7 emergency furnace and air conditioner repair for Niagara homes. Call Tom directly at 905-732-2791, day or night.',
+    h1: 'Emergency Furnace & AC Repair in Niagara \u2014 24/7',
+    intro:
+      "A furnace that quits at 2 a.m. in February is not a next-business-day problem. Tom answers the emergency line himself, 24/7, for no-heat and no-cooling calls across Welland, St. Catharines, Niagara Falls and the surrounding area.",
+    body: [
+      "When a heating system fails in the middle of a Niagara cold snap, the clock matters. Indoor temperatures drop fast in older, less-insulated homes, and once you get near freezing you are no longer just uncomfortable \u2014 you are risking burst pipes and thousands in water damage. That is why FixAir keeps a genuine 24/7 emergency line rather than an answering service that books you in for Tuesday.",
+      "You call 905-732-2791 and you reach Tom, the licensed technician who will actually be doing the work. He will talk you through what to check before he leaves the shop, because a surprising number of no-heat calls come down to a tripped breaker, a switched-off service switch, a clogged filter or a thermostat with dead batteries. If it turns out you can fix it yourself in five minutes, he will tell you that instead of charging you for a visit.",
+      "If it is a real failure, Tom arrives with the parts that fail most often on the systems common in this region \u2014 igniters, flame sensors, pressure switches, capacitors, control boards and blower motors \u2014 so most emergency calls are resolved in a single visit. If a component has to be ordered, he will get you safe heat in the meantime and be straight with you about the timeline.",
+      "Summer emergencies get the same treatment. A dead air conditioner during a humid Niagara heatwave is a genuine health issue for infants, older adults and anyone with a respiratory condition, and those calls are treated as urgent, not as a scheduling inconvenience.",
+    ],
+    highlights: [
+      '24/7 emergency phone line \u2014 you reach Tom, not a call centre',
+      'No-heat and no-cooling priority response',
+      'Free phone triage before anyone is dispatched',
+      'Common failure parts carried on the truck',
+      'Up-front pricing quoted before work starts',
+      'Frozen-pipe risk treated as urgent',
+    ],
+    faqs: [
+      {
+        q: 'What counts as an HVAC emergency?',
+        a: "No heat in winter, no cooling during a heatwave, a smell of gas, a furnace that keeps shutting itself down, or water pouring from a system. If your home is getting genuinely cold or dangerously hot, or you suspect a gas issue, treat it as an emergency and call. If you smell gas, leave the house first and call the gas utility, then call Tom.",
+      },
+      {
+        q: 'Do you charge extra for after-hours calls?',
+        a: "After-hours emergency work does carry a higher rate than a scheduled weekday visit, which is standard in the trade. What is not standard is being surprised by it \u2014 Tom quotes you the rate on the phone before he is dispatched, so you can decide whether it can safely wait until morning.",
+      },
+      {
+        q: 'What should I check before calling?',
+        a: "Check that the thermostat is set to heat (or cool) and has working batteries, that the furnace service switch on or near the unit is on, that the breaker has not tripped, and that the filter is not completely blocked. Those four things account for a large share of no-heat calls. If all four are fine, call 905-732-2791.",
+      },
+      {
+        q: 'How fast can you get here?',
+        a: "It depends on where you are and what else is active, and Tom will give you an honest window on the phone rather than a promise he cannot keep. Welland, Thorold, Fonthill and Port Colborne are closest to home base; St. Catharines, Niagara Falls and Haldimand County take longer.",
+      },
+      {
+        q: 'Should I keep using my furnace if it is short-cycling?',
+        a: "If a furnace repeatedly starts and shuts down, it is usually a safety control doing its job \u2014 a blocked flue, an overheating heat exchanger or a failing sensor. Repeatedly resetting it can be dangerous. Shut it off and call.",
+      },
+    ],
+  },
 ]

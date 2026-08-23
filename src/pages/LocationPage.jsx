@@ -7,11 +7,16 @@ import FAQ from '../components/FAQ'
 import Breadcrumbs from '../components/Breadcrumbs'
 import RelatedArticles, { articlesForLocation } from '../components/RelatedArticles'
 import { services } from '../data/services'
+import { cityServicesForCity } from '../data/cityServices'
 import { PHONE, PHONE_HREF } from '../constants'
 
 const TRUST = ['Licensed & Insured', '25+ Years Experience', '5.0★ on Google', 'Residential Only']
 
 export default function LocationPage({ location }) {
+  // Deep-link the high-intent city+service pages for this city, so they get
+  // real internal links rather than existing only in the sitemap.
+  const cityPages = cityServicesForCity(location.slug)
+
   return (
     <>
       <Header />
@@ -136,6 +141,30 @@ export default function LocationPage({ location }) {
                       </svg>
                       {n}
                     </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {cityPages.length > 0 && (
+              <div className="mt-10 border-t border-gray-100 pt-8">
+                <div className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">
+                  Most requested in {location.name}
+                </div>
+                <div className="grid sm:grid-cols-2 gap-4">
+                  {cityPages.map(cs => (
+                    <a
+                      key={cs.slug}
+                      href={`/service-areas/${cs.citySlug}/${cs.slug}/`}
+                      className="group bg-gray-50 border border-gray-100 rounded-2xl px-5 py-4 hover:border-brand-orange/40 hover:bg-white transition-all"
+                    >
+                      <div className="font-bold text-brand-blue group-hover:text-brand-orange transition-colors">
+                        {cs.service} in {location.name} →
+                      </div>
+                      <p className="mt-1 text-sm text-gray-500 leading-relaxed line-clamp-2">
+                        {cs.intro}
+                      </p>
+                    </a>
                   ))}
                 </div>
               </div>

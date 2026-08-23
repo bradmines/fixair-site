@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import Home from './pages/Home'
 import ServicePage from './pages/ServicePage'
 import LocationPage from './pages/LocationPage'
+import CityServicePage from './pages/CityServicePage'
 import FaqPage from './pages/FaqPage'
 import BlogPage from './pages/BlogPage'
 import BlogPostPage from './pages/BlogPostPage'
@@ -29,6 +30,7 @@ export default function App({ route }) {
 
   if (route?.kind === 'service') return <ServicePage service={route.data} />
   if (route?.kind === 'location') return <LocationPage location={route.data} />
+  if (route?.kind === 'city-service') return <CityServicePage page={route.data} />
   if (route?.kind === 'faq') return <FaqPage />
   if (route?.kind === 'blog') return <BlogPage />
   if (route?.kind === 'blog-post') return <BlogPostPage post={route.data} />

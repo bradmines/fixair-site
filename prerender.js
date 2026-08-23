@@ -10,6 +10,12 @@ const templatePath = join(distDir, 'index.html')
 const { render, routes, siteUrl } = await import(join(serverDir, 'entry-server.js'))
 
 const template = readFileSync(templatePath, 'utf-8')
+
+// String.replace() interprets $$, $&, $` and $' inside the REPLACEMENT string
+// as substitution patterns, so page copy or JSON-LD containing them would be
+// silently corrupted (a priceRange of '$$' came out as '$'). Passing a
+// function as the replacement disables that interpretation entirely.
+const literal = value => () => value
 const rootPlaceholder = '<div id="root"></div>'
 const headPlaceholder = '<!--app-head-->'
 if (!template.includes(rootPlaceholder)) {
@@ -23,8 +29,8 @@ if (!template.includes(headPlaceholder)) {
 for (const route of routes) {
   const { html, head } = render(route.path)
   const output = template
-    .replace(headPlaceholder, head)
-    .replace(rootPlaceholder, `<div id="root">${html}</div>`)
+    .replace(headPlaceholder, literal(head))
+    .replace(rootPlaceholder, literal(`<div id="root">${html}</div>`))
 
   // '/' -> dist/index.html ; '/services/furnaces/' -> dist/services/furnaces/index.html
   const relDir = route.path.replace(/^\/|\/$/g, '') // trim leading/trailing slash
@@ -39,22 +45,60 @@ for (const route of routes) {
 {
   const { html, head } = render('/__404__')
   const output = template
-    .replace(headPlaceholder, head)
-    .replace(rootPlaceholder, `<div id="root">${html}</div>`)
+    .replace(headPlaceholder, literal(head))
+    .replace(rootPlaceholder, literal(`<div id="root">${html}</div>`))
   writeFileSync(join(distDir, '404.html'), output)
   console.log('✓ 404.html')
 }
 
 // Regenerate sitemap.xml from the route list.
-const lastmod = new Date().toISOString().slice(0, 10)
+//
+// lastmod is only useful to Google if it's true. Stamping every URL with the
+// build date told crawlers the entire site changed on every deploy, which
+// devalues the signal for the pages that genuinely did change. Articles carry
+// their own publish/update date; evergreen pages fall back to the build date
+// since that's the last point their content could have moved.
+const buildDate = new Date().toISOString().slice(0, 10)
+
+function lastmodFor(route) {
+  if (route.kind === 'blog-post') return route.data.updated || route.data.date
+  // The blog index changes whenever its newest post does.
+  if (route.kind === 'blog') {
+    const dates = routes
+      .filter(r => r.kind === 'blog-post')
+      .map(r => r.data.updated || r.data.date)
+      .sort()
+    return dates.length ? dates[dates.length - 1] : buildDate
+  }
+  return buildDate
+}
+
+// Crawl priority by page type: the homepage first, then the money pages
+// (city+service landing pages and services), then areas, then articles.
+function priorityFor(route) {
+  if (route.path === '/') return '1.0'
+  if (route.kind === 'city-service') return '0.9'
+  if (route.kind === 'service') return '0.9'
+  if (route.kind === 'location') return '0.8'
+  if (route.kind === 'faq') return '0.6'
+  if (route.kind === 'blog') return '0.6'
+  return '0.5'
+}
+
+function changefreqFor(route) {
+  if (route.path === '/') return 'weekly'
+  if (route.kind === 'blog') return 'weekly'
+  if (route.kind === 'blog-post') return 'yearly'
+  return 'monthly'
+}
+
 const urls = routes
   .map(r => {
-    const priority = r.path === '/' ? '1.0' : '0.8'
     return `  <url>
     <loc>${siteUrl}${r.path}</loc>
-    <lastmod>${lastmod}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>${priority}</priority>
+    <lastmod>${lastmodFor(r)}</lastmod>
+    <changefreq>${changefreqFor(r)}</changefreq>
+    <priority>${priorityFor(r)}</priority>
   </url>`
   })
   .join('\n')

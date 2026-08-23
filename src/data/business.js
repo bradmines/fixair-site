@@ -18,6 +18,19 @@ export const BUSINESS = {
     'https://www.instagram.com/fixairheatandcool',
   ],
   aggregateRating: { ratingValue: '5', reviewCount: '28', bestRating: '5' },
+  // FixAir is a service-area business: Tom travels to the customer and has no
+  // public storefront, so there is deliberately no streetAddress here. Google
+  // accepts a city/region-level address for SABs, and inventing a street
+  // address would conflict with the Google Business Profile listing.
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Welland',
+    addressRegion: 'ON',
+    addressCountry: 'CA',
+  },
+  // Quotes are free and job cost varies by equipment, so a range band is the
+  // honest signal here rather than a fabricated figure.
+  priceRange: '$$',
   // The cities FixAir serves, used for areaServed on the homepage schema.
   cities: [
     'St. Catharines',

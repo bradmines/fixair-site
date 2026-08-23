@@ -6,6 +6,7 @@ import MobileCallBar from '../components/MobileCallBar'
 import FAQ from '../components/FAQ'
 import Breadcrumbs from '../components/Breadcrumbs'
 import RelatedArticles, { articlesForService } from '../components/RelatedArticles'
+import { cityServicesForService } from '../data/cityServices'
 import { services } from '../data/services'
 import { locations } from '../data/locations'
 import { PHONE, PHONE_HREF } from '../constants'
@@ -14,6 +15,9 @@ const TRUST = ['Licensed & Insured', '25+ Years Experience', '5.0★ on Google',
 
 export default function ServicePage({ service }) {
   const others = services.filter(s => s.slug !== service.slug)
+  // City-specific landing pages that roll up under this service, so the
+  // regional page passes authority down to them.
+  const cityPages = cityServicesForService(service.slug)
 
   return (
     <>
@@ -166,6 +170,28 @@ export default function ServicePage({ service }) {
                 </a>
               ))}
             </div>
+
+            {cityPages.length > 0 && (
+              <div className="mt-12 pt-10 border-t border-gray-200">
+                <div className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-5">
+                  {service.name} by city
+                </div>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                  {cityPages.map(cs => (
+                    <a
+                      key={`${cs.citySlug}-${cs.slug}`}
+                      href={`/service-areas/${cs.citySlug}/${cs.slug}/`}
+                      className="flex items-center justify-between gap-3 bg-white border border-gray-100 rounded-xl px-4 py-3 text-sm font-bold text-brand-blue shadow-sm hover:border-brand-orange/40 hover:text-brand-orange transition-colors"
+                    >
+                      {cs.service} in {cs.city}
+                      <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </section>
 
