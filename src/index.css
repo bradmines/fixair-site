@@ -35,7 +35,10 @@
   }
   @media (max-width: 639px) {
     body {
-      padding-bottom: 64px;
+      /* The bar is 64px plus whatever the device reserves for its home
+         indicator, which MobileCallBar adds to its own padding. Matching that
+         here keeps the footer clear of it on notched phones. */
+      padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px));
     }
   }
 }
@@ -81,4 +84,18 @@
 
 .subtle-pulse {
   animation: subtle-pulse 2.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Hero poster. Declared per breakpoint so a phone never downloads the desktop
+   image (and vice versa) — a <video poster> attribute cannot do this, because
+   both video elements exist in the DOM regardless of which one is displayed. */
+.hero-poster {
+  background-image: url('/hero-poster-mobile.jpg');
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 640px) {
+  .hero-poster {
+    background-image: url('/hero-poster-newnew.jpg');
+  }
 }

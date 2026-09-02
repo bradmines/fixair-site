@@ -16,13 +16,18 @@ export default function Hero() {
       <section className="relative min-h-screen overflow-hidden bg-brand-blue" id="home">
         {/* Full-bleed video */}
         <div className="absolute inset-0">
+          {/* Poster lives here rather than on the <video> elements: both videos
+              are in the DOM at every breakpoint, so poster attributes made the
+              browser fetch both images on every device. A CSS background in a
+              media query fetches only the one that matches, and it is the
+              element the preload hint in <head> is warming. */}
+          <div className="hero-poster absolute inset-0" aria-hidden="true" />
           {/* Desktop video */}
           <video
             ref={desktopRef}
             muted
             loop
             playsInline
-            poster="/hero-poster-newnew.jpg"
             preload="none"
             className="hidden sm:block w-full h-full object-cover"
           >
@@ -34,7 +39,6 @@ export default function Hero() {
             muted
             loop
             playsInline
-            poster="/hero-poster-mobile.jpg"
             preload="none"
             className="sm:hidden w-full h-full object-cover"
           >

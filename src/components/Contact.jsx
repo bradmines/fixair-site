@@ -75,7 +75,7 @@ export default function Contact() {
   }
 
   const inputClass = (field) =>
-    `w-full rounded-xl border ${errors[field] ? 'border-red-400 bg-red-900/30' : 'border-white/20 bg-white/10'} px-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-white/40 transition`
+    `w-full rounded-xl border ${errors[field] ? 'border-red-400 bg-red-900/30' : 'border-white/20 bg-white/10'} px-4 py-3 text-base sm:text-sm text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-white/40 transition`
 
   return (
     <section id="contact" className="relative py-20 md:py-28 bg-brand-blue overflow-hidden">
@@ -276,7 +276,7 @@ export default function Contact() {
                       name="service"
                       value={form.service}
                       onChange={handleChange}
-                      className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-white/40 transition appearance-none"
+                      className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-white/40 transition appearance-none"
                     >
                       <option value="">Select a service (optional)</option>
                       {SERVICE_OPTIONS.map(o => (

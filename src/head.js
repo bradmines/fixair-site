@@ -1,5 +1,10 @@
-import { BUSINESS, NIAGARA_AREA_SERVED, PROVIDER } from './data/business'
-import { REVIEWS } from './data/reviews'
+import {
+  BUSINESS,
+  NIAGARA_AREA_SERVED,
+  NIAGARA_SERVICE_CIRCLE,
+  BUSINESS_GEO,
+  PROVIDER,
+} from './data/business'
 import { generalFaqs, allFaqs } from './data/faqs'
 import { blogPosts } from './data/blog'
 
@@ -78,8 +83,14 @@ function faqPage(faqs) {
 function homeBusinessSchema() {
   return {
     '@context': 'https://schema.org',
-    '@type': 'HVACBusiness',
+    // Typed as both so one node satisfies the Organization role (brand, logo,
+    // sameAs, publisher target) and the local-business role. Emitting a
+    // separate Organization node would describe the same company twice and
+    // leave Google to work out they are the same entity.
+    '@type': ['HVACBusiness', 'Organization'],
+    '@id': BUSINESS.url + '/#business',
     name: BUSINESS.name,
+    alternateName: 'FixAir',
     description:
       'Residential only HVAC company serving Niagara and surrounding areas for 25+ years. Furnaces, air conditioners, ductless systems, boilers, hot water heaters and duct cleaning.',
     url: BUSINESS.url,
@@ -94,8 +105,15 @@ function homeBusinessSchema() {
     // this — it's the canonical business record; subpages use the compact
     // PROVIDER reference and stay lean.
     hasMap: BUSINESS.gbpUrl,
+    // Where the business physically sits, so Google can place it rather than
+    // inferring a location from the copy.
+    geo: BUSINESS_GEO,
+    // Named region + explicit bounded circle + the individual cities. The
+    // GeoCircle is the part that says how far out we actually go, which the
+    // named region alone does not.
     areaServed: [
       NIAGARA_AREA_SERVED,
+      NIAGARA_SERVICE_CIRCLE,
       ...BUSINESS.cities.map(name => ({ '@type': 'City', name })),
     ],
     openingHoursSpecification: [
@@ -132,18 +150,11 @@ function homeBusinessSchema() {
       },
     },
     sameAs: BUSINESS.sameAs,
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: BUSINESS.aggregateRating.ratingValue,
-      reviewCount: BUSINESS.aggregateRating.reviewCount,
-      bestRating: BUSINESS.aggregateRating.bestRating,
-    },
-    review: REVIEWS.map(r => ({
-      '@type': 'Review',
-      author: { '@type': 'Person', name: r.author },
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      reviewBody: r.body,
-    })),
+    // No aggregateRating or review here by design. Self-serving review markup —
+    // a business rating itself on its own site — is against Google's structured
+    // data policy for LocalBusiness and risks a manual action, and we have no
+    // independently verified rating to publish. Reviews stay as visible page
+    // content; the Google rating lives on the GBP listing linked via hasMap.
   }
 }
 
@@ -153,11 +164,13 @@ function webSiteSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
+    '@id': BUSINESS.url + '/#website',
     name: BUSINESS.name,
     alternateName: 'FixAir',
     url: BUSINESS.url,
     inLanguage: 'en-CA',
-    publisher: { '@type': 'HVACBusiness', name: BUSINESS.name, url: BUSINESS.url },
+    // Reference rather than restate, so both nodes resolve to one entity.
+    publisher: { '@id': BUSINESS.url + '/#business' },
   }
 }
 

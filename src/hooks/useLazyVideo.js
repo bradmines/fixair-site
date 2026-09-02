@@ -33,6 +33,24 @@ export default function useLazyVideo(refs, { rootMargin = '200px' } = {}) {
       return
     }
 
+    // Wait for load, then idle, before observing at all. The hero video sits
+    // above the fold, so intersection fires immediately and its fetch competes
+    // with the render-critical assets — which is why preload="none" alone did
+    // not protect LCP. The poster is already painted by then, so deferring the
+    // video costs nothing visually and takes it off the critical path.
+    let cancelled = false
+    let idleHandle = null
+    const afterIdle = fn => {
+      const run = () => {
+        if (cancelled) return
+        idleHandle = window.requestIdleCallback
+          ? window.requestIdleCallback(fn, { timeout: 2000 })
+          : setTimeout(fn, 200)
+      }
+      if (document.readyState === 'complete') run()
+      else window.addEventListener('load', run, { once: true })
+    }
+
     const io = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
@@ -44,12 +62,14 @@ export default function useLazyVideo(refs, { rootMargin = '200px' } = {}) {
       },
       { rootMargin }
     )
-    els.forEach(el => io.observe(el))
+    afterIdle(() => els.forEach(el => io.observe(el)))
 
     const sync = () => els.forEach(el => (mq.matches ? el.pause() : start(el)))
     mq.addEventListener('change', sync)
 
     return () => {
+      cancelled = true
+      if (idleHandle && window.cancelIdleCallback) window.cancelIdleCallback(idleHandle)
       io.disconnect()
       mq.removeEventListener('change', sync)
     }
