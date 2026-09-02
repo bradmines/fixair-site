@@ -11,6 +11,32 @@ const port = process.env.PORT || 3000
 app.set('trust proxy', true)
 
 const CANONICAL_HOST = 'www.fixairheatandcool.ca'
+const CANONICAL_ORIGIN = `https://${CANONICAL_HOST}`
+
+// Canonical path form for a request.
+//
+// Every indexable page is prerendered to <route>/index.html and is canonicalled
+// at the trailing-slash URL, so exactly one URL per page may return 200:
+//   /services/furnaces        -> /services/furnaces/   (add the slash)
+//   /services/furnaces/index.html -> /services/furnaces/   (hide the file)
+//   /index.html               -> /
+// Anything whose last segment contains a dot is a real asset (/assets/x.js,
+// /robots.txt, /hero-poster.jpg) and is left exactly as-is.
+function canonicalPath(pathname) {
+  let p = pathname || '/'
+
+  // Collapse accidental double slashes; they serve the same page otherwise.
+  p = p.replace(/\/{2,}/g, '/')
+
+  // /index.html and /any/path/index.html are duplicates of their directory.
+  if (p === '/index.html') return '/'
+  if (p.endsWith('/index.html')) return p.slice(0, -'index.html'.length)
+
+  const last = p.slice(p.lastIndexOf('/') + 1)
+  const isAsset = last.includes('.')
+  if (!isAsset && !p.endsWith('/')) p += '/'
+  return p
+}
 
 app.use((_req, res, next) => {
   // Allow this site to be framed by itself and bradmines.com (portfolio embed).
@@ -25,19 +51,42 @@ app.use((_req, res, next) => {
   next()
 })
 
-// Send every request to one canonical origin (https + www) with a single 301.
-// Serving the same page on apex/www or http/https splits link equity and makes
-// Google pick a canonical for us. Skipped for local dev and Railway's own
-// *.railway.app preview domain, which should stay reachable as-is.
+// Normalize host, scheme AND path in ONE 301.
+//
+// Previously the host redirect lived here and the trailing-slash redirect was
+// left to express.static's own `redirect` option, so a request that was wrong
+// in both respects took two hops (apex/no-slash -> www/no-slash -> www/slash).
+// Redirect chains dilute the signal Google passes through, so both corrections
+// are folded into a single Location. express.static's redirect is disabled
+// below so it can't add a second hop behind our back.
+//
+// Skipped for local dev and Railway's own *.railway.app preview domain, which
+// must stay reachable on their own hostnames.
 app.use((req, res, next) => {
   const host = (req.headers.host || '').toLowerCase().split(':')[0]
-  const isLocal = host === 'localhost' || host === '127.0.0.1' || host.endsWith('.railway.app')
-  if (isLocal) return next()
+  const isInternal =
+    host === 'localhost' || host === '127.0.0.1' || host.endsWith('.railway.app')
+
+  const [rawPath, rawQuery] = req.originalUrl.split('?')
+  const wantPath = canonicalPath(rawPath)
+  const query = rawQuery ? `?${rawQuery}` : ''
+
+  if (isInternal) {
+    // Still fix the path on preview hosts, but keep the host they arrived on.
+    if (wantPath !== rawPath) {
+      return res.redirect(301, `${wantPath}${query}`)
+    }
+    return next()
+  }
 
   const needsHost = host !== CANONICAL_HOST
   const needsHttps = req.protocol !== 'https'
-  if (needsHost || needsHttps) {
-    return res.redirect(301, `https://${CANONICAL_HOST}${req.originalUrl}`)
+  const needsPath = wantPath !== rawPath
+
+  if (needsHost || needsHttps || needsPath) {
+    // Absolute Location: unambiguous for crawlers and required anyway whenever
+    // the host or scheme is changing.
+    return res.redirect(301, `${CANONICAL_ORIGIN}${wantPath}${query}`)
   }
   next()
 })
@@ -47,6 +96,8 @@ const WEEK = 60 * 60 * 24 * 7
 
 app.use(
   express.static(join(__dirname, 'dist'), {
+    // The middleware above is the single source of truth for path shape.
+    redirect: false,
     setHeaders(res, path) {
       if (path.endsWith('.html')) {
         // Prerendered HTML must revalidate, or a deploy won't reach visitors
