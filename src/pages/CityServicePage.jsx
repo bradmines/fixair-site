@@ -6,7 +6,7 @@ import MobileCallBar from '../components/MobileCallBar'
 import FAQ from '../components/FAQ'
 import Breadcrumbs from '../components/Breadcrumbs'
 import RelatedArticles, { articlesForLocation } from '../components/RelatedArticles'
-import { cityServicesForCity } from '../data/cityServices'
+import { cityServicesForCity, cityServicesForService } from '../data/cityServices'
 import { services } from '../data/services'
 import { locations } from '../data/locations'
 import { PHONE, PHONE_HREF } from '../constants'
@@ -20,6 +20,13 @@ export default function CityServicePage({ page }) {
   const parent = services.find(s => s.slug === page.parentService)
   const city = locations.find(l => l.slug === page.citySlug)
   const siblings = cityServicesForCity(page.citySlug).filter(cs => cs.slug !== page.slug)
+  // The same service in the other cities that have a page for it. This is the
+  // link that was missing: without it the city+service pages formed isolated
+  // per-city clusters with no path between them, so crawl depth stayed high
+  // and PageRank had no way to flow sideways across the set.
+  const nearby = cityServicesForService(page.parentService).filter(
+    cs => cs.citySlug !== page.citySlug
+  )
 
   return (
     <>
@@ -163,6 +170,28 @@ export default function CityServicePage({ page }) {
                       className="inline-flex items-center gap-1.5 bg-white border border-gray-200 rounded-lg px-3 py-1.5 text-sm font-semibold text-brand-blue hover:border-brand-orange/50 hover:text-brand-orange transition-colors"
                     >
                       {s.service}
+                      <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {nearby.length > 0 && (
+              <div className="mt-8">
+                <div className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-3">
+                  {page.service} in nearby Niagara cities
+                </div>
+                <div className="flex flex-wrap gap-2.5">
+                  {nearby.map(n => (
+                    <a
+                      key={`${n.citySlug}-${n.slug}`}
+                      href={`/service-areas/${n.citySlug}/${n.slug}/`}
+                      className="inline-flex items-center gap-1.5 bg-white border border-gray-200 rounded-lg px-3 py-1.5 text-sm font-semibold text-brand-blue hover:border-brand-orange/50 hover:text-brand-orange transition-colors"
+                    >
+                      {n.service} in {n.city}
                       <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                       </svg>

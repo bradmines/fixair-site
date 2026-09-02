@@ -1,9 +1,20 @@
 import { PHONE, PHONE_HREF, EMAIL } from '../constants'
 import { services } from '../data/services'
 import { locations } from '../data/locations'
+import { cityServices } from '../data/cityServices'
 
 export default function Footer() {
   const year = new Date().getFullYear()
+
+  // City + service pages grouped by city. These are the deepest pages on the
+  // site and were previously reachable only from their parent city page and
+  // their parent service page — three inbound links each, none of them
+  // sitewide. Linking them from the footer is what takes them off the
+  // "Discovered - currently not indexed" pile: a page Google only finds two
+  // clicks in, from two places, reads as low priority no matter how good it is.
+  const cityGroups = locations
+    .map(l => ({ city: l, pages: cityServices.filter(cs => cs.citySlug === l.slug) }))
+    .filter(g => g.pages.length > 0)
 
   return (
     <footer className="bg-brand-blue text-white">
@@ -97,6 +108,41 @@ export default function Footer() {
           </ul>
         </div>
       </div>
+
+      {/* Local service pages — every city+service page, linked sitewide */}
+      {cityGroups.length > 0 && (
+        <div className="border-t border-white/10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <h4 className="font-bold text-white uppercase text-xs tracking-widest mb-5">
+              Furnace &amp; AC Repair by City
+            </h4>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-6 gap-y-5">
+              {cityGroups.map(g => (
+                <div key={g.city.slug}>
+                  <a
+                    href={`/service-areas/${g.city.slug}/`}
+                    className="block text-sm font-bold text-white hover:underline"
+                  >
+                    {g.city.name}
+                  </a>
+                  <ul className="mt-2 space-y-1.5">
+                    {g.pages.map(cs => (
+                      <li key={cs.slug}>
+                        <a
+                          href={`/service-areas/${cs.citySlug}/${cs.slug}/`}
+                          className="text-[13px] text-blue-200 hover:text-white hover:underline transition-colors"
+                        >
+                          {cs.service}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Bottom bar */}
       <div className="border-t border-white/10 py-5">

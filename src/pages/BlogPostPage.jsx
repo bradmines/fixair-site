@@ -15,7 +15,44 @@ function formatDate(dateStr) {
   })
 }
 
-function renderBody(body) {
+// Turn the first occurrence of each configured phrase into a real in-body
+// link. Each target is linked once, at its earliest mention, so the article
+// reads naturally instead of repeating the same anchor every paragraph.
+// `pending` is consumed as links are placed.
+function linkify(text, pending) {
+  if (!pending.size) return text
+  const nodes = []
+  let rest = text
+  let key = 0
+  for (;;) {
+    let best = null
+    for (const [phrase, href] of pending) {
+      const at = rest.indexOf(phrase)
+      if (at !== -1 && (best === null || at < best.at)) best = { at, phrase, href }
+    }
+    if (!best) break
+    nodes.push(rest.slice(0, best.at))
+    nodes.push(
+      <a
+        key={key++}
+        href={best.href}
+        className="text-brand-orange font-semibold hover:underline underline-offset-2"
+      >
+        {best.phrase}
+      </a>
+    )
+    rest = rest.slice(best.at + best.phrase.length)
+    pending.delete(best.phrase)
+  }
+  if (!nodes.length) return text
+  nodes.push(rest)
+  return nodes
+}
+
+function renderBody(body, contextLinks = []) {
+  // One shared map across the whole article so a phrase is linked once per
+  // post, not once per paragraph.
+  const pending = new Map(contextLinks.map(l => [l.text, l.href]))
   return body.map((block, i) => {
     if (block.type === 'h2') {
       return (
@@ -32,7 +69,7 @@ function renderBody(body) {
               <svg className="w-5 h-5 text-brand-orange flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-7.5 7.5a1 1 0 01-1.4 0L3.3 10.7a1 1 0 011.4-1.4l3.8 3.8 6.8-6.8a1 1 0 011.4 0z" clipRule="evenodd" />
               </svg>
-              <span>{item}</span>
+              <span>{linkify(item, pending)}</span>
             </li>
           ))}
         </ul>
@@ -40,14 +77,25 @@ function renderBody(body) {
     }
     return (
       <p key={i} className="text-gray-600 leading-relaxed text-lg mt-4">
-        {block.text}
+        {linkify(block.text, pending)}
       </p>
     )
   })
 }
 
 export default function BlogPostPage({ post }) {
-  const others = blogPosts.filter(p => p.slug !== post.slug).slice(0, 3)
+  // Walk forward from this post and wrap, rather than always taking the first
+  // three posts in the array. The old slice(0, 3) meant posts 1-3 collected
+  // every "More Articles" link on the site and posts 4+ collected none, which
+  // is why most of the blog sat on one or two inbound links. Rotating gives
+  // every post exactly three inbound sibling links and costs nothing.
+  const idx = blogPosts.findIndex(p => p.slug === post.slug)
+  const others =
+    idx === -1
+      ? blogPosts.slice(0, 3)
+      : Array.from({ length: Math.min(3, blogPosts.length - 1) }, (_, k) =>
+          blogPosts[(idx + 1 + k) % blogPosts.length]
+        )
 
   return (
     <>
@@ -99,7 +147,7 @@ export default function BlogPostPage({ post }) {
 
               {/* Main content */}
               <article className="prose-custom">
-                {renderBody(post.body)}
+                {renderBody(post.body, post.contextLinks)}
 
                 {/* CTA at end of article */}
                 <div className="mt-12 rounded-2xl bg-brand-blue p-8 text-white">

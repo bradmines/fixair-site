@@ -2,6 +2,11 @@
 const _blogPosts = [
   {
     slug: "hvac-service-st-catharines",
+    contextLinks: [
+      { text: "St. Catharines", href: "/service-areas/st-catharines/" },
+      { text: "Ductless systems", href: "/services/ductless-systems/" },
+      { text: "furnace", href: "/services/furnaces/" },
+    ],
     title: "Furnace and AC Service in St. Catharines: What Older Homes Need Before Winter",
     metaTitle: "Furnace & AC Service in St. Catharines | FixAir Niagara",
     metaDescription:
@@ -113,6 +118,9 @@ const _blogPosts = [
   },
   {
     slug: "why-is-my-ac-not-cooling",
+    contextLinks: [
+      { text: "air conditioner", href: "/services/air-conditioners/" },
+    ],
     title: "Why Is My AC Not Cooling? A Homeowner's Troubleshooting Guide",
     metaTitle: "Why Is My AC Not Cooling? Troubleshooting Guide | FixAir Niagara",
     metaDescription:
@@ -184,6 +192,10 @@ const _blogPosts = [
   },
   {
     slug: "ac-repair-niagara-falls",
+    contextLinks: [
+      { text: "Niagara Falls", href: "/service-areas/niagara-falls/ac-repair/" },
+      { text: "air conditioner repair", href: "/services/air-conditioners/" },
+    ],
     title: "Air Conditioner Repair in Niagara Falls: Common Problems and What They Cost",
     metaTitle: "AC Repair in Niagara Falls | Common Problems & Costs | FixAir",
     metaDescription:
@@ -247,6 +259,10 @@ const _blogPosts = [
   },
   {
     slug: "ac-repair-installation-welland",
+    contextLinks: [
+      { text: "Welland", href: "/service-areas/welland/ac-repair/" },
+      { text: "air conditioner repair", href: "/services/air-conditioners/" },
+    ],
     title: "Air Conditioner Repair and Installation in Welland",
     metaTitle: "AC Repair & Installation in Welland | FixAir Niagara HVAC",
     metaDescription:
@@ -317,6 +333,10 @@ const _blogPosts = [
   },
   {
     slug: "furnace-repair-wainfleet",
+    contextLinks: [
+      { text: "Wainfleet", href: "/service-areas/wainfleet/" },
+      { text: "furnace repair", href: "/services/furnaces/" },
+    ],
     title: "Furnace Repair in Wainfleet: What Rural Homeowners Need to Know",
     metaTitle: "Furnace Repair in Wainfleet | FixAir Niagara HVAC Blog",
     metaDescription:
@@ -379,6 +399,11 @@ const _blogPosts = [
   },
   {
     slug: "hvac-service-haldimand-county",
+    contextLinks: [
+      { text: "Haldimand County", href: "/service-areas/haldimand-county/" },
+      { text: "boiler", href: "/services/boilers/" },
+      { text: "ductless", href: "/services/ductless-systems/" },
+    ],
     title: "Heating and Air Conditioning Service in Haldimand County",
     metaTitle: "HVAC Service in Haldimand County | Heating & Cooling | FixAir",
     metaDescription:
@@ -436,6 +461,10 @@ const _blogPosts = [
   },
   {
     slug: "hvac-repair-cost-niagara",
+    contextLinks: [
+      { text: "furnace", href: "/services/furnaces/" },
+      { text: "air conditioner", href: "/services/air-conditioners/" },
+    ],
     title: "How Much Does HVAC Repair Cost in Niagara?",
     metaTitle: "How Much Does HVAC Repair Cost in Niagara? | FixAir Blog",
     metaDescription:
@@ -502,6 +531,9 @@ const _blogPosts = [
   },
   {
     slug: "furnace-wont-turn-on",
+    contextLinks: [
+      { text: "furnace repair", href: "/services/furnaces/" },
+    ],
     title: "Furnace Won't Turn On? What to Check Before You Call",
     metaTitle: "Furnace Won't Turn On? Troubleshooting Guide | FixAir Niagara",
     metaDescription:
@@ -572,6 +604,10 @@ const _blogPosts = [
   },
   {
     slug: "hvac-maintenance-tune-up",
+    contextLinks: [
+      { text: "furnace", href: "/services/furnaces/" },
+      { text: "air conditioner", href: "/services/air-conditioners/" },
+    ],
     title: "Why an Annual HVAC Tune-Up Saves You Money",
     metaTitle: "Why an Annual HVAC Tune-Up Saves Money | FixAir Niagara Blog",
     metaDescription:
@@ -634,6 +670,9 @@ const _blogPosts = [
   },
   {
     slug: "smart-thermostats-worth-it",
+    contextLinks: [
+      { text: "boiler", href: "/services/boilers/" },
+    ],
     title: "Are Smart Thermostats Worth It for Niagara Homes?",
     metaTitle: "Are Smart Thermostats Worth It? | FixAir Niagara HVAC Blog",
     metaDescription:
@@ -696,6 +735,9 @@ const _blogPosts = [
   },
   {
     slug: "heat-pump-rebates-ontario",
+    contextLinks: [
+      { text: "ductless", href: "/services/ductless-systems/" },
+    ],
     title: "Heat Pumps and Rebates: What Niagara Homeowners Should Know",
     metaTitle: "Heat Pumps & Rebates for Niagara Homeowners | FixAir Blog",
     metaDescription:
@@ -764,6 +806,9 @@ const _blogPosts = [
   },
   {
     slug: "when-to-replace-your-furnace",
+    contextLinks: [
+      { text: "furnace", href: "/services/furnaces/" },
+    ],
     title: "Signs Your Furnace Needs Replacing (And What to Do Next)",
     metaTitle: "Signs Your Furnace Needs Replacing | FixAir Niagara HVAC Blog",
     metaDescription:
@@ -844,6 +889,9 @@ const _blogPosts = [
   },
   {
     slug: "when-to-replace-your-air-conditioner",
+    contextLinks: [
+      { text: "air conditioner", href: "/services/air-conditioners/" },
+    ],
     title: "How to Know When Your Air Conditioner Needs Replacing",
     metaTitle: "When to Replace Your Air Conditioner | FixAir Niagara HVAC Blog",
     metaDescription:
@@ -920,6 +968,9 @@ const _blogPosts = [
   },
   {
     slug: "what-is-a-ductless-mini-split",
+    contextLinks: [
+      { text: "ductless", href: "/services/ductless-systems/" },
+    ],
     title: "Ductless Mini-Split Systems Explained: What They Are and Why Homeowners Love Them",
     metaTitle: "What is a Ductless Mini-Split System? | FixAir Niagara HVAC Blog",
     metaDescription:
@@ -999,6 +1050,9 @@ const _blogPosts = [
   },
   {
     slug: "how-long-does-a-water-heater-last",
+    contextLinks: [
+      { text: "water heater", href: "/services/hot-water-heaters/" },
+    ],
     title: "How Long Does a Water Heater Last? Signs It's Time for a Replacement",
     metaTitle: "How Long Does a Water Heater Last? | FixAir Niagara HVAC Blog",
     metaDescription:
@@ -1074,6 +1128,10 @@ const _blogPosts = [
   },
   {
     slug: "hydronic-heating-guide-niagara",
+    contextLinks: [
+      { text: "boiler", href: "/services/boilers/" },
+      { text: "furnace", href: "/services/furnaces/" },
+    ],
     title: "What is Hydronic Heating? A Guide to Boilers for Niagara Homeowners",
     metaTitle: "What is Hydronic Heating? Boiler Guide for Niagara | FixAir Blog",
     metaDescription:
@@ -1158,6 +1216,10 @@ const _blogPosts = [
   },
   {
     slug: "how-often-should-you-clean-ducts",
+    contextLinks: [
+      { text: "duct cleaning", href: "/services/duct-cleaning/" },
+      { text: "furnace", href: "/services/furnaces/" },
+    ],
     title: "How Often Should You Get Your Ducts Cleaned? The Honest Answer",
     metaTitle: "How Often Should You Clean Your Air Ducts? | FixAir Niagara Blog",
     metaDescription:

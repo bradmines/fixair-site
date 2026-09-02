@@ -3,9 +3,26 @@ import { blogPosts } from '../data/blog'
 // Contextual blog links for service and location pages. Without these the
 // articles are only reachable from /blog/, which leaves them with almost no
 // internal links pointing at them.
+// Deterministic offset from a string, so the "filler" articles differ per page
+// instead of every page padding with the same first few posts. Same input
+// always gives the same output, which keeps the prerendered HTML stable.
+function offsetFor(key, len) {
+  let h = 0
+  for (let i = 0; i < key.length; i++) h = (h * 31 + key.charCodeAt(i)) >>> 0
+  return len ? h % len : 0
+}
+
+// Rotate a list so it starts at a per-key offset. Every post still appears on
+// some page; which page just stops being biased toward array order.
+function rotate(list, key) {
+  if (list.length < 2) return list
+  const o = offsetFor(key, list.length)
+  return [...list.slice(o), ...list.slice(0, o)]
+}
+
 export function articlesForService(serviceSlug, count = 3) {
   const onTopic = blogPosts.filter(p => p.serviceSlug === serviceSlug)
-  const rest = blogPosts.filter(p => p.serviceSlug !== serviceSlug)
+  const rest = rotate(blogPosts.filter(p => p.serviceSlug !== serviceSlug), serviceSlug)
   return [...onTopic, ...rest].slice(0, count)
 }
 
@@ -14,7 +31,7 @@ export function articlesForLocation(locationName, count = 3) {
   const local = blogPosts.filter(
     p => p.title.toLowerCase().includes(needle) || p.slug.includes(needle.replace(/[^a-z]+/g, '-'))
   )
-  const rest = blogPosts.filter(p => !local.includes(p))
+  const rest = rotate(blogPosts.filter(p => !local.includes(p)), needle)
   return [...local, ...rest].slice(0, count)
 }
 
