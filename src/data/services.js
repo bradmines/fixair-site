@@ -7,9 +7,9 @@ export const services = [
     name: 'Furnaces',
     navLabel: 'Furnaces',
     image: '/logoforcedairfurnace.jpg',
-    metaTitle: 'Furnace Repair, Installation & Replacement in Niagara | FixAir',
+    metaTitle: 'Furnace Repair & Installation Niagara | 24/7 | FixAir',
     metaDescription:
-      'Residential furnace installation, replacement and repair across Niagara. High-efficiency gas furnaces installed by Tom, a licensed tech with 25+ years. Call 905-732-2791.',
+      'Furnace installation, replacement and no-heat repair across Niagara. High-efficiency gas furnaces, 25+ years. Call Tom: 905-732-2791.',
     h1: 'Furnace Installation, Replacement & Repair in Niagara',
     intro:
       'When your furnace quits on a cold Niagara night, you need someone who answers. Tom installs, replaces and repairs residential gas furnaces across Welland, St. Catharines, Niagara Falls and surrounding areas.',
@@ -45,9 +45,9 @@ export const services = [
     name: 'Air Conditioners',
     navLabel: 'Air Conditioners',
     image: '/logoAC.jpg',
-    metaTitle: 'Air Conditioner Installation & Repair in Niagara | FixAir',
+    metaTitle: 'Air Conditioner Repair & Installation Niagara | FixAir',
     metaDescription:
-      'Central AC installation, replacement and repair for Niagara homes. Stay cool all summer with help from Tom, a licensed HVAC tech with 25+ years. Call 905-732-2791.',
+      'Central AC installation, replacement and repair for Niagara homes. Correctly sized, cleanly installed, 25+ years. Call Tom: 905-732-2791.',
     h1: 'Central Air Conditioner Installation & Repair in Niagara',
     intro:
       'Niagara summers get hot and humid. Tom installs, replaces and repairs residential central air conditioners so your home stays cool and comfortable when it matters most.',
@@ -83,9 +83,9 @@ export const services = [
     name: 'Ductless Systems',
     navLabel: 'Ductless Systems',
     image: '/logoductlesssystems.jpg',
-    metaTitle: 'Ductless Mini-Split Installation in Niagara | FixAir',
+    metaTitle: 'Ductless Mini-Split Installation Niagara | FixAir',
     metaDescription:
-      "Ductless mini-split heat pumps installed across Niagara for efficient heating and cooling in homes without ductwork. 25+ years' experience. Call 905-732-2791.",
+      'Ductless mini-split heat pumps installed across Niagara. Ideal for homes without ductwork, 25+ years. Call Tom: 905-732-2791.',
     h1: 'Ductless Mini-Split Heating & Cooling in Niagara',
     intro:
       "Ductless mini-split systems deliver efficient heating and cooling to homes, additions and rooms that ductwork can't easily reach. Tom designs and installs single- and multi-zone systems across Niagara.",
@@ -121,7 +121,7 @@ export const services = [
     name: 'Hot Water Heaters',
     navLabel: 'Hot Water Heaters',
     image: '/logopowerventhotwaterheater.jpg',
-    metaTitle: 'Hot Water Heater Installation & Replacement in Niagara | FixAir',
+    metaTitle: 'Hot Water Heater Replacement Niagara | Same-Day | FixAir',
     metaDescription:
       'Hot water heater and power-vent water heater installation and replacement for Niagara homes. Reliable hot water, installed right. Call Tom at 905-732-2791.',
     h1: 'Hot Water Heater Installation & Replacement in Niagara',
@@ -159,9 +159,9 @@ export const services = [
     name: 'Boilers',
     navLabel: 'Boilers',
     image: '/logoboilers.jpg',
-    metaTitle: 'Boiler Installation & Repair in Niagara | FixAir',
+    metaTitle: 'Boiler Repair & Installation Niagara | FixAir',
     metaDescription:
-      'Residential boiler installation, replacement and repair across Niagara. Comfortable, even hydronic heat from a licensed tech with 25+ years. Call 905-732-2791.',
+      'Residential boiler installation, replacement and repair across Niagara. Even, comfortable hydronic heat. Call Tom: 905-732-2791.',
     h1: 'Residential Boiler Installation & Repair in Niagara',
     intro:
       'Boiler and hydronic heating systems deliver steady, comfortable warmth. Tom installs, replaces and repairs residential boilers for homeowners throughout Niagara.',
@@ -197,7 +197,7 @@ export const services = [
     name: 'Air Ducts',
     navLabel: 'Air Ducts',
     image: '/logoresductwork.jpg',
-    metaTitle: 'Duct Cleaning & Ductwork Services in Niagara | FixAir',
+    metaTitle: 'Duct Cleaning & Ductwork Niagara | FixAir',
     metaDescription:
       'Residential air duct cleaning and ductwork services across Niagara. Cleaner air and better airflow for your home. Call Tom at 905-732-2791.',
     h1: 'Air Duct Cleaning & Ductwork in Niagara',
@@ -235,7 +235,7 @@ export const services = [
     name: 'Emergency Repair',
     navLabel: 'Emergency Repair',
     image: '/blog/furnace-wont-start.jpg',
-    metaTitle: '24/7 Emergency Furnace & AC Repair in Niagara | FixAir',
+    metaTitle: '24/7 Emergency Furnace & AC Repair Niagara | FixAir',
     metaDescription:
       'No heat or no cooling? FixAir offers 24/7 emergency furnace and air conditioner repair for Niagara homes. Call Tom directly at 905-732-2791, day or night.',
     h1: 'Emergency Furnace & AC Repair in Niagara \u2014 24/7',

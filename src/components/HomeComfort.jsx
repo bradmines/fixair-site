@@ -4,7 +4,7 @@ import useLazyVideo from '../hooks/useLazyVideo'
 const points = [
   {
     title: 'Residential Only, On Purpose',
-    desc: 'FixAIR works on homes and nothing else. That focus means deeper expertise and better results for your family.',
+    desc: 'FixAir works on homes and nothing else. That focus means deeper expertise and better results for your family.',
   },
   {
     title: 'Comfort You Can Feel',
@@ -98,7 +98,7 @@ export default function HomeComfort() {
               <span className="text-brand-orange">Your Home Comfort</span>
             </h2>
             <p className="mt-4 text-blue-100/80 leading-relaxed">
-              FixAIR is a residential only HVAC company. By specializing in homes rather than spreading
+              FixAir is a residential only HVAC company. By specializing in homes rather than spreading
               across every kind of building, Tom can give your family his full attention and serve you
               better, from a quick repair to a full system upgrade across Niagara and surrounding areas.
             </p>

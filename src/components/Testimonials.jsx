@@ -194,7 +194,7 @@ export default function Testimonials() {
             </svg>
           </a>
           <p className="text-blue-100/50 text-xs">
-            Happy with FixAIR? A Google review helps your neighbours find a trusted local contractor.
+            Happy with FixAir? A Google review helps your neighbours find a trusted local contractor.
           </p>
         </div>
       </div>

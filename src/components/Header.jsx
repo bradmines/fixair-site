@@ -16,7 +16,7 @@ export default function Header() {
   const navLinks = [
     { label: 'About', href: '/#about' },
     { label: 'Services', href: '/#services' },
-    { label: 'Why FixAIR', href: '/#why' },
+    { label: 'Why FixAir', href: '/#why' },
     { label: 'Testimonials', href: '/#testimonials' },
     { label: 'Blog', href: '/blog/' },
     { label: 'FAQ', href: '/faq/' },
@@ -70,7 +70,7 @@ export default function Header() {
               href="https://www.facebook.com/fixairheatandcool"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="FixAIR on Facebook"
+              aria-label="FixAir on Facebook"
               className={`hidden lg:flex w-9 h-9 items-center justify-center rounded-lg transition-colors ${
                 scrolled ? 'text-gray-400 hover:text-blue-600 hover:bg-blue-50' : 'text-white/70 hover:text-white hover:bg-white/10'
               }`}
@@ -83,7 +83,7 @@ export default function Header() {
               href="https://www.instagram.com/fixairheatandcool"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="FixAIR on Instagram"
+              aria-label="FixAir on Instagram"
               className={`hidden lg:flex w-9 h-9 items-center justify-center rounded-lg transition-colors ${
                 scrolled ? 'text-gray-400 hover:text-pink-600 hover:bg-pink-50' : 'text-white/70 hover:text-white hover:bg-white/10'
               }`}

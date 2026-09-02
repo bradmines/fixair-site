@@ -6,7 +6,7 @@ export default function ServiceArea() {
     <section id="area" className="relative py-20 md:py-24 bg-brand-blue overflow-hidden">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-5 gap-12 items-center">
-          {/* Google Maps embed for the FixAIR business location */}
+          {/* Google Maps embed for the FixAir business location */}
           <div className="rounded-2xl overflow-hidden shadow-xl order-2 lg:order-1 lg:col-span-3">
             <iframe
               title="FixAir Heating and Air Conditioning location on Google Maps"
@@ -29,7 +29,7 @@ export default function ServiceArea() {
               <span className="text-brand-orange">Niagara and Surrounding Areas</span>
             </h2>
             <p className="mt-4 text-blue-100/80 leading-relaxed">
-              FixAIR serves homeowners throughout Niagara and surrounding areas. If you are nearby and
+              FixAir serves homeowners throughout Niagara and surrounding areas. If you are nearby and
               don't see your town listed,{' '}
               <a href={PHONE_HREF} className="text-blue-300 font-semibold hover:underline">give Tom a call</a>{' '}
               and he can let you know.

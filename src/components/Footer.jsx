@@ -39,7 +39,7 @@ export default function Footer() {
               href="https://www.facebook.com/fixairheatandcool"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="FixAIR on Facebook"
+              aria-label="FixAir on Facebook"
               className="w-9 h-9 bg-white/10 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -50,7 +50,7 @@ export default function Footer() {
               href="https://www.instagram.com/fixairheatandcool"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="FixAIR on Instagram"
+              aria-label="FixAir on Instagram"
               className="w-9 h-9 bg-white/10 hover:bg-pink-600 rounded-lg flex items-center justify-center transition-colors"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -69,7 +69,7 @@ export default function Footer() {
             {[
               { label: 'Services', href: '/#services' },
               { label: 'Meet Tom', href: '/#about' },
-              { label: 'Why FixAIR', href: '/#why' },
+              { label: 'Why FixAir', href: '/#why' },
               { label: 'Testimonials', href: '/#testimonials' },
               { label: 'Service Area', href: '/#area' },
               { label: 'FAQ', href: '/faq/' },

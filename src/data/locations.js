@@ -6,9 +6,9 @@ export const locations = [
     slug: 'welland',
     name: 'Welland',
     tagline: 'Home base',
-    metaTitle: 'HVAC in Welland | Furnace, AC & Heating | FixAir',
+    metaTitle: 'Welland HVAC | Furnace & AC Repair | Call Tom 24/7',
     metaDescription:
-      "FixAir is Welland's residential HVAC specialist, handling furnace, AC, ductless and water heater service from Tom, a local tech with 25+ years. Call 905-732-2791.",
+      "Welland's local residential HVAC specialist: furnace, AC, ductless and water heaters from Tom, 25+ years. Call 905-732-2791.",
     h1: 'Residential HVAC Services in Welland',
     intro:
       'Welland is home base for FixAir. Tom lives and works right here, providing furnace, air conditioning, ductless and water heater service to Welland homeowners.',
@@ -37,7 +37,7 @@ export const locations = [
     slug: 'st-catharines',
     name: 'St. Catharines',
     tagline: 'Regional hub',
-    metaTitle: 'HVAC in St. Catharines | Furnace & AC Service | FixAir',
+    metaTitle: 'St. Catharines HVAC | Furnace & AC Repair | FixAir',
     metaDescription:
       'Residential furnace, AC and heating service for St. Catharines homes. Trusted, licensed HVAC from Tom with 25+ years experience. Call 905-732-2791.',
     h1: 'Residential HVAC Services in St. Catharines',
@@ -68,7 +68,7 @@ export const locations = [
     slug: 'niagara-falls',
     name: 'Niagara Falls',
     tagline: 'Tourist city & suburbs',
-    metaTitle: 'HVAC in Niagara Falls | Furnace, AC & Heating | FixAir',
+    metaTitle: 'Niagara Falls HVAC | Furnace & AC Repair | 24/7',
     metaDescription:
       'Residential HVAC service in Niagara Falls: furnace, air conditioning, ductless and more from a licensed local tech with 25+ years. Call 905-732-2791.',
     h1: 'Residential HVAC Services in Niagara Falls',
@@ -99,7 +99,7 @@ export const locations = [
     slug: 'thorold',
     name: 'Thorold',
     tagline: 'Just south of the Falls',
-    metaTitle: 'HVAC in Thorold | Furnace, AC & Heating | FixAir',
+    metaTitle: 'Thorold HVAC | Furnace & AC Repair | Same-Day',
     metaDescription:
       'Residential furnace, AC and heating service for Thorold homes. Local, licensed HVAC from Tom with 25+ years experience. Call 905-732-2791.',
     h1: 'Residential HVAC Services in Thorold',
@@ -130,7 +130,7 @@ export const locations = [
     slug: 'fonthill',
     name: 'Fonthill',
     tagline: 'Pelham community',
-    metaTitle: 'HVAC in Fonthill (Pelham) | Furnace & AC | FixAir',
+    metaTitle: 'Fonthill & Pelham HVAC | Furnace & AC Repair | FixAir',
     metaDescription:
       'Residential HVAC service in Fonthill and Pelham: furnace, AC, ductless and water heaters from a licensed local tech with 25+ years. Call 905-732-2791.',
     h1: 'Residential HVAC Services in Fonthill',
@@ -161,7 +161,7 @@ export const locations = [
     slug: 'port-colborne',
     name: 'Port Colborne',
     tagline: 'South Niagara',
-    metaTitle: 'HVAC in Port Colborne | Furnace, AC & Heating | FixAir',
+    metaTitle: 'Port Colborne HVAC | Furnace & AC Repair | FixAir',
     metaDescription:
       'Residential furnace, AC and heating service in Port Colborne. Local, licensed HVAC from Tom with 25+ years experience. Call 905-732-2791.',
     h1: 'Residential HVAC Services in Port Colborne',
@@ -192,9 +192,9 @@ export const locations = [
     slug: 'wainfleet',
     name: 'Wainfleet',
     tagline: 'Rural south Niagara',
-    metaTitle: 'HVAC in Wainfleet | Furnace Repair, AC & Heating | FixAir',
+    metaTitle: 'Wainfleet HVAC | Furnace, AC & Propane Heat | 24/7',
     metaDescription:
-      'Residential furnace repair, AC and heating service in Wainfleet and rural south Niagara. Local, licensed HVAC from Tom with 25+ years experience. Call 905-732-2791.',
+      'Residential HVAC across Wainfleet, Long Beach and Winger: propane, oil and gas. Rural specialist, 25+ years. Call 905-732-2791.',
     h1: 'Residential HVAC Services in Wainfleet',
     intro:
       'Wainfleet homeowners rely on FixAir for dependable furnace, air conditioning and heating service — with fast response for the rural properties that big regional outfits often overlook.',
@@ -223,9 +223,9 @@ export const locations = [
     slug: 'haldimand-county',
     name: 'Haldimand County',
     tagline: 'Just beyond Niagara',
-    metaTitle: 'HVAC in Haldimand County | Furnace & AC Repair | FixAir',
+    metaTitle: 'Haldimand County HVAC | Furnace & AC Repair | FixAir',
     metaDescription:
-      'Residential furnace and air conditioner repair, installation and service in Haldimand County — Dunnville, Caledonia, Cayuga and beyond. Licensed local HVAC. Call 905-732-2791.',
+      'Furnace and air conditioner repair in Dunnville, Caledonia, Cayuga and Hagersville. Licensed local HVAC. Call Tom: 905-732-2791.',
     h1: 'Residential HVAC Services in Haldimand County',
     intro:
       'Just beyond the Niagara border, Haldimand County homeowners count on FixAir for honest furnace and air conditioning repair, installation and service from a local specialist.',

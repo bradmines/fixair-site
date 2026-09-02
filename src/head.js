@@ -163,9 +163,9 @@ function webSiteSchema() {
 
 function headForHome(route) {
   const canonical = canonicalFor(route)
-  const title = 'FixAir Heating and Air Conditioning | Residential HVAC in Niagara'
+  const title = 'FixAir Heating and Air Conditioning | 24/7 Niagara HVAC'
   const description =
-    'FixAir Heating and Air Conditioning is a residential only HVAC company serving Niagara and surrounding areas for 25+ years. Furnaces, AC, ductless systems, hot water heaters and more. Call Tom: 905-732-2791.'
+    'FixAir Heating and Air Conditioning: residential HVAC across Niagara for 25+ years. Furnaces, AC, ductless and water heaters. Call Tom: 905-732-2791.'
   return {
     title,
     lines: [
@@ -311,9 +311,9 @@ function headForCityService(route) {
 
 function headForFaq(route) {
   const canonical = canonicalFor(route)
-  const title = 'HVAC FAQ | Furnace, AC & Heating Questions in Niagara | FixAir'
+  const title = 'HVAC FAQ Niagara | Furnace & AC Questions | FixAir'
   const description =
-    'Answers to common residential HVAC questions in Niagara: furnace and AC repair or replacement, ductless systems, boilers, maintenance, costs and financing. Call Tom: 905-732-2791.'
+    'Answers to common HVAC questions in Niagara: furnace and AC repair, ductless, boilers, costs and financing. Call Tom: 905-732-2791.'
   const crumbs = breadcrumb([
     { name: 'Home', url: BUSINESS.url + '/' },
     { name: 'FAQ', url: canonical },
@@ -335,9 +335,9 @@ function headForFaq(route) {
 
 function headForBlog(route) {
   const canonical = canonicalFor(route)
-  const title = 'HVAC Tips & Advice for Niagara Homeowners | FixAir Blog'
+  const title = 'HVAC Tips for Niagara Homeowners | FixAir Blog'
   const description =
-    'Plain-language heating and cooling advice from Tom at FixAir — a residential HVAC specialist with 25+ years serving Niagara. Furnaces, AC, ductless systems, boilers and more.'
+    'Plain-language heating and cooling advice from Tom, a residential HVAC specialist with 25+ years in Niagara. Call: 905-732-2791.'
   const crumbs = breadcrumb([
     { name: 'Home', url: BUSINESS.url + '/' },
     { name: 'Blog', url: canonical },

@@ -11,7 +11,7 @@ export default function Services() {
           </div>
           <h2 className="text-3xl md:text-4xl font-extrabold text-white leading-tight">Residential HVAC Is Our Specialty</h2>
           <p className="mt-4 text-blue-100/80 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-            FixAIR is a residential only company. Furnaces, air conditioners, ductless systems and
+            FixAir is a residential only company. Furnaces, air conditioners, ductless systems and
             more, installed and serviced by a dedicated residential specialist who gets it right the
             first time so your home stays comfortable.
           </p>
@@ -27,7 +27,7 @@ export default function Services() {
               <div className="overflow-hidden h-52">
                 <img
                   src={s.image}
-                  alt={`FixAIR ${s.name} for homes in Niagara and surrounding areas`}
+                  alt={`FixAir ${s.name} for homes in Niagara and surrounding areas`}
                   className="w-full h-full object-cover block group-hover:scale-105 transition-transform"
                   loading="lazy"
                 />

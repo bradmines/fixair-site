@@ -53,7 +53,7 @@ export default function Hero() {
           </div>
 
           <h1 className="text-5xl lg:text-6xl font-extrabold text-white leading-tight">
-            Keep Your Niagara Home{' '}
+            FixAir Keeps Your Niagara Home{' '}
             <span className="text-brand-orange">Comfortable</span>{' '}
             All Year Round
           </h1>
@@ -118,12 +118,12 @@ export default function Hero() {
       {/* ── Mobile text section ── */}
       <div className="sm:hidden bg-brand-blue px-6 pt-8 pb-10">
         <h1 className="text-3xl font-extrabold text-white leading-tight">
-          Keep Your Niagara Home{' '}
+          FixAir Keeps Your Niagara Home{' '}
           <span className="text-brand-orange">Comfortable</span>{' '}
           All Year Round
         </h1>
         <p className="mt-4 text-base text-blue-100 leading-relaxed">
-          Honest, expert HVAC service from Tom, a licensed technician. FixAIR is a{' '}
+          Honest, expert HVAC service from Tom, a licensed technician. FixAir is a{' '}
           <strong className="text-white">residential only</strong> company, focused entirely on
           homes across Niagara and surrounding areas.
         </p>

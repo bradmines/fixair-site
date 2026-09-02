@@ -51,7 +51,7 @@ export default function About() {
             <div className="mt-6 space-y-4 text-blue-100/80 leading-relaxed text-[15px]">
               <p>
                 Hi, I'm Tom, the owner, technician, and the person who answers the phone
-                when you call FixAIR. I've been working on home heating and cooling systems across
+                when you call FixAir. I've been working on home heating and cooling systems across
                 Niagara and surrounding areas for over 25 years, and I built this company on a
                 simple belief: every customer deserves the same care I'd give my own home.
               </p>

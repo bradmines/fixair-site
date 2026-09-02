@@ -15,9 +15,9 @@ const _cityServices = [
     service: "Furnace Repair",
     parentService: "furnaces",
     image: "/blog/furnace-wont-start.jpg",
-    metaTitle: "Furnace Repair in Welland | Same-Day No-Heat Service | FixAir",
+    metaTitle: "Furnace Repair Welland | Same-Day No-Heat | 24/7",
     metaDescription:
-      "Furnace repair in Welland from Tom at FixAir, based right here in the city. No-heat diagnostics, igniter and sensor failures, 24/7 emergency line. Call 905-732-2791.",
+      "Furnace repair in Welland from Tom, based right here in the city. No-heat diagnostics, igniter and sensor faults. Call 905-732-2791.",
     h1: "Furnace Repair in Welland",
     intro:
       "Welland is home base for FixAir, so a no-heat call here usually means the shortest drive Tom makes all day. He repairs residential gas furnaces across the city, from the century homes along the canal to the newer subdivisions in the north end.",
@@ -64,9 +64,9 @@ const _cityServices = [
     service: "Air Conditioner Repair",
     parentService: "air-conditioners",
     image: "/blog/ac-not-cooling.jpg",
-    metaTitle: "AC Repair in Welland | Air Conditioner Service | FixAir",
+    metaTitle: "Air Conditioner Repair Welland | Same-Day Service",
     metaDescription:
-      "Air conditioner repair in Welland from a local, residential-only HVAC specialist. Not-cooling diagnostics, capacitor and refrigerant faults. Call Tom at 905-732-2791.",
+      "Air conditioner repair in Welland from a local residential-only specialist. Not-cooling and capacitor faults. Call Tom: 905-732-2791.",
     h1: "Air Conditioner Repair in Welland",
     intro:
       "When the AC quits during a humid Welland July, you want someone close. Tom lives and works in the city, and he repairs residential central air and ductless systems for homeowners from downtown out to Dain City and Cooks Mills.",
@@ -115,7 +115,7 @@ const _cityServices = [
     service: "Furnace Repair",
     parentService: "furnaces",
     image: "/blog/furnace-replacing.jpg",
-    metaTitle: "Furnace Repair in St. Catharines | No-Heat Service | FixAir",
+    metaTitle: "Furnace Repair St. Catharines | Same-Day No-Heat",
     metaDescription:
       "Furnace repair for St. Catharines homes, from century houses in Port Dalhousie to newer builds near Brock. Licensed tech, 25+ years. Call 905-732-2791.",
     h1: "Furnace Repair in St. Catharines",
@@ -164,9 +164,9 @@ const _cityServices = [
     service: "Air Conditioner Repair",
     parentService: "air-conditioners",
     image: "/blog/ac-replacing.jpg",
-    metaTitle: "AC Repair in St. Catharines | Air Conditioner Service | FixAir",
+    metaTitle: "Air Conditioner Repair St. Catharines | Same-Day",
     metaDescription:
-      "Air conditioner repair in St. Catharines, including no-duct heritage homes that suit ductless systems. Residential-only specialist. Call Tom at 905-732-2791.",
+      "Air conditioner repair in St. Catharines, including no-duct heritage homes suited to ductless. Call Tom: 905-732-2791.",
     h1: "Air Conditioner Repair in St. Catharines",
     intro:
       "St. Catharines cooling problems split cleanly between two kinds of house: newer builds with central air that has failed, and older homes that never had proper ductwork to begin with. Tom handles both, across Port Dalhousie, Merritton, Grantham and Glenridge.",
@@ -215,9 +215,9 @@ const _cityServices = [
     service: "Furnace Repair",
     parentService: "furnaces",
     image: "/blog/furnace-wont-start.jpg",
-    metaTitle: "Furnace Repair in Niagara Falls | No-Heat Service | FixAir",
+    metaTitle: "Furnace Repair Niagara Falls | Same-Day No-Heat",
     metaDescription:
-      "Furnace repair for Niagara Falls homes in Stamford, Drummondville, Chippawa and Mount Carmel. Licensed residential tech, 24/7 emergency. Call 905-732-2791.",
+      "Furnace repair for Niagara Falls homes in Stamford, Drummondville and Chippawa. 24/7 emergency. Call Tom: 905-732-2791.",
     h1: "Furnace Repair in Niagara Falls",
     intro:
       "Most of the residential housing in Niagara Falls sits well away from the tourist strip, in established neighbourhoods where the furnaces are getting old. Tom repairs residential gas furnaces across Stamford, Drummondville, Chippawa, Mount Carmel and the Lundy's Lane area.",
@@ -265,7 +265,7 @@ const _cityServices = [
     service: "Air Conditioner Repair",
     parentService: "air-conditioners",
     image: "/blog/ac-repair-niagara-falls.jpg",
-    metaTitle: "AC Repair in Niagara Falls | Air Conditioner Service | FixAir",
+    metaTitle: "Air Conditioner Repair Niagara Falls | Same-Day",
     metaDescription:
       "Air conditioner repair in Niagara Falls — Stamford, Drummondville, Chippawa and Lundy's Lane. Residential-only specialist, 25+ years. Call 905-732-2791.",
     h1: "Air Conditioner Repair in Niagara Falls",
@@ -316,7 +316,7 @@ const _cityServices = [
     service: "Furnace Repair",
     parentService: "furnaces",
     image: "/blog/furnace-replacing.jpg",
-    metaTitle: "Furnace Repair in Thorold | Fast No-Heat Service | FixAir",
+    metaTitle: "Furnace Repair Thorold | Fast No-Heat Service",
     metaDescription:
       "Furnace repair in Thorold, Confederation Heights, Port Robinson, Allanburg and Beaverdams. Close to home base, 24/7 emergency. Call Tom at 905-732-2791.",
     h1: "Furnace Repair in Thorold",
@@ -366,7 +366,7 @@ const _cityServices = [
     service: "Air Conditioner Repair",
     parentService: "air-conditioners",
     image: "/blog/ac-not-cooling.jpg",
-    metaTitle: "AC Repair in Thorold | Air Conditioner Service | FixAir",
+    metaTitle: "Air Conditioner Repair Thorold | Same-Day Service",
     metaDescription:
       "Air conditioner repair in Thorold, Confederation Heights, Port Robinson and Beaverdams. Local residential-only specialist. Call Tom at 905-732-2791.",
     h1: "Air Conditioner Repair in Thorold",
@@ -417,7 +417,7 @@ const _cityServices = [
     service: "Furnace Repair",
     parentService: "furnaces",
     image: "/blog/furnace-replacing.jpg",
-    metaTitle: "Furnace Repair in Fonthill & Pelham | No-Heat Service | FixAir",
+    metaTitle: "Furnace Repair Fonthill & Pelham | Same-Day No-Heat",
     metaDescription:
       "Furnace repair in Fonthill, Fenwick, Ridgeville and North Pelham. Two-stage and zoned system experience, 24/7 emergency. Call Tom at 905-732-2791.",
     h1: "Furnace Repair in Fonthill & Pelham",
@@ -467,9 +467,9 @@ const _cityServices = [
     service: "Air Conditioner Repair",
     parentService: "air-conditioners",
     image: "/blog/ac-replacing.jpg",
-    metaTitle: "AC Repair in Fonthill & Pelham | Air Conditioner Service | FixAir",
+    metaTitle: "Air Conditioner Repair Fonthill & Pelham | 24/7",
     metaDescription:
-      "Air conditioner repair in Fonthill, Fenwick and Ridgeville. Multi-zone and large-home cooling problems solved by a residential specialist. Call 905-732-2791.",
+      "Air conditioner repair in Fonthill, Fenwick and Ridgeville. Multi-zone and large-home cooling solved. Call Tom: 905-732-2791.",
     h1: "Air Conditioner Repair in Fonthill & Pelham",
     intro:
       "Cooling a large Fonthill home evenly is harder than cooling a small one, and most of the calls Tom takes here are about balance rather than total failure. He repairs central air and ductless systems across Fonthill, Fenwick, Ridgeville and North Pelham.",
@@ -518,7 +518,7 @@ const _cityServices = [
     service: "Furnace Repair",
     parentService: "furnaces",
     image: "/blog/furnace-wont-start.jpg",
-    metaTitle: "Furnace Repair in Port Colborne | No-Heat Service | FixAir",
+    metaTitle: "Furnace Repair Port Colborne | Same-Day No-Heat",
     metaDescription:
       "Furnace repair in Port Colborne, Sugarloaf, the West Side and out toward Sherkston. Lakeside wind and cold experience. Call Tom at 905-732-2791.",
     h1: "Furnace Repair in Port Colborne",
@@ -568,7 +568,7 @@ const _cityServices = [
     service: "Air Conditioner Repair",
     parentService: "air-conditioners",
     image: "/blog/ac-welland.jpg",
-    metaTitle: "AC Repair in Port Colborne | Air Conditioner Service | FixAir",
+    metaTitle: "Air Conditioner Repair Port Colborne | Same-Day",
     metaDescription:
       "Air conditioner repair in Port Colborne, Sugarloaf and the West Side. Lakeside humidity and coil corrosion specialists. Call Tom at 905-732-2791.",
     h1: "Air Conditioner Repair in Port Colborne",
@@ -619,7 +619,7 @@ const _cityServices = [
     service: "Furnace Repair",
     parentService: "furnaces",
     image: "/blog/furnace-wainfleet.jpg",
-    metaTitle: "Furnace Repair Wainfleet | Same-Day No-Heat | FixAir",
+    metaTitle: "Furnace Repair & Replacement Wainfleet | Same-Day",
     metaDescription:
       "Propane, oil and gas furnace repair across Wainfleet, Long Beach and Winger. Rural no-heat calls answered by Tom himself, 24/7. Call 905-732-2791.",
     h1: "Furnace Repair in Wainfleet",
@@ -669,9 +669,9 @@ const _cityServices = [
     service: "Air Conditioner Repair",
     parentService: "air-conditioners",
     image: "/blog/hvac-haldimand.jpg",
-    metaTitle: "AC Repair Haldimand County | Same-Day Service | FixAir",
+    metaTitle: "Air Conditioner Repair Haldimand County | Same-Day",
     metaDescription:
-      "Air conditioner repair in Dunnville, Cayuga, Caledonia, Hagersville and Jarvis. Residential-only specialist, honest diagnosis. Call Tom at 905-732-2791.",
+      "AC repair and installation in Dunnville, Cayuga, Caledonia, Hagersville and Jarvis. Honest diagnosis. Call Tom: 905-732-2791.",
     h1: "Air Conditioner Repair in Haldimand County",
     intro:
       "Haldimand County is spread out, and homeowners here have fewer residential HVAC specialists to choose from than anyone in Niagara. Tom repairs central air and ductless systems across Dunnville, Cayuga, Caledonia, Hagersville and Jarvis.",

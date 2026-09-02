@@ -70,14 +70,14 @@ export default function WhyChoose() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
           <div className="inline-block bg-white/10 text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
-            Why FixAIR
+            Why FixAir
           </div>
           <h2 className="text-3xl md:text-4xl font-extrabold text-white leading-tight">
             The Niagara HVAC Contractor<br />
             <span className="text-brand-orange">Homeowners Trust</span>
           </h2>
           <p className="mt-4 text-lg text-blue-200 max-w-2xl mx-auto">
-            Not all contractors are equal. As a residential only company, here's what sets FixAIR apart.
+            Not all contractors are equal. As a residential only company, here's what sets FixAir apart.
           </p>
         </div>
 
