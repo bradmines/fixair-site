@@ -15,13 +15,18 @@ export default function Hero() {
     <>
       <section className="relative min-h-screen overflow-hidden bg-brand-blue" id="home">
         {/* Full-bleed video */}
-        <div className="absolute inset-0">
-          {/* Poster lives here rather than on the <video> elements: both videos
-              are in the DOM at every breakpoint, so poster attributes made the
-              browser fetch both images on every device. A CSS background in a
-              media query fetches only the one that matches, and it is the
-              element the preload hint in <head> is warming. */}
-          <div className="hero-poster absolute inset-0" aria-hidden="true" />
+        {/* The poster is the container's own background, not a child element:
+            as a child it was absolutely positioned and therefore painted ON TOP
+            of the in-flow <video> elements, hiding the video entirely. As a
+            background it sits behind them and shows through until the first
+            frame renders.
+
+            It is a CSS background rather than a <video poster> attribute
+            because both video elements are in the DOM at every breakpoint, so
+            poster attributes made every device download both images. A
+            background declared inside a media query fetches only the matching
+            one, and it is the file the <head> preload is warming. */}
+        <div className="hero-poster absolute inset-0">
           {/* Desktop video */}
           <video
             ref={desktopRef}
