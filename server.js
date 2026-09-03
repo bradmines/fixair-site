@@ -94,6 +94,9 @@ app.use((req, res, next) => {
 const YEAR = 60 * 60 * 24 * 365
 const WEEK = 60 * 60 * 24 * 7
 
+// name.<8 hex>.ext — the shape scripts/fingerprint.js produces at build time.
+const FINGERPRINTED = /\.[0-9a-f]{8}\.[a-z0-9]+$/i
+
 app.use(
   express.static(join(__dirname, 'dist'), {
     // The middleware above is the single source of truth for path shape.
@@ -108,12 +111,16 @@ app.use(
         // for a week — sitemap.xml is exactly what Google re-fetches to find
         // newly published pages, so a stale copy delays indexing.
         res.setHeader('Cache-Control', 'public, max-age=3600, must-revalidate')
-      } else if (path.includes('/assets/')) {
-        // Vite fingerprints these filenames, so they can never go stale.
+      } else if (path.includes('/assets/') || FINGERPRINTED.test(path)) {
+        // Fingerprinted by Vite (/assets/) or by scripts/fingerprint.js. The
+        // filename contains a hash of the contents, so the bytes behind this
+        // URL can never change and it is safe to cache forever. Replacing the
+        // asset produces a different URL, which misses cache automatically.
         res.setHeader('Cache-Control', `public, max-age=${YEAR}, immutable`)
       } else {
-        // Images, video and fonts: stable names, so cache hard but allow
-        // revalidation in case one is replaced in place.
+        // Anything still on a stable name. Cache, but allow revalidation —
+        // replacing one of these in place otherwise serves stale bytes for the
+        // full TTL, at the CDN as well as in the browser.
         res.setHeader('Cache-Control', `public, max-age=${WEEK}`)
       }
     },
