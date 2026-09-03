@@ -98,20 +98,34 @@ on the site and posts 4–17 collected none.
 
 ## Lighthouse — mobile homepage
 
-Before = production (unchanged code). After = staging. Same flags, same run.
+Both columns are production. **After** is the median of 5 runs, with the range
+shown: LCP on this page is genuinely noisy because a 1.6 MB autoplaying hero
+video competes for bandwidth, so a single run is not trustworthy. The 42
+baseline was a single run and carries the same caveat.
 
-| Metric | Before | After |
+| Metric | Before | After (median of 5) |
 |---|---|---|
-| **Performance** | **42** | **79** |
+| **Performance** | 42 | **81** (79–85) |
 | Accessibility | 96 | 96 |
 | Best practices | 100 | 100 |
 | SEO | 100 | 100 |
-| First contentful paint | 2.4 s | 2.4 s |
-| **Largest contentful paint** | **8.9 s** | **3.1 s** |
-| Total blocking time | 880 ms | 480 ms |
-| **Speed index** | **12.6 s** | **2.4 s** |
+| First contentful paint | 2.4 s | 2.3 s |
+| **Largest contentful paint** | 8.9 s | **4.7 s** (4.0–4.9) |
+| **Total blocking time** | 880 ms | **0 ms** |
+| **Speed index** | 12.6 s | **2.4 s** |
 | Cumulative layout shift | 0 | 0 |
-| Page weight | 3,216 KB | 2,300 KB |
+| Page weight | 3,216 KB | 2,453 KB |
+
+Speed Index and TBT are the unambiguous wins — 12.6 s to 2.4 s, and 880 ms to
+zero. Those came from deferring the video off the critical path and cutting
+783 KB of oversized images.
+
+**LCP is still 4.7 s, which is above Google's 2.5 s "good" threshold.** The
+remaining cost is the hero video itself: 1.6 MB on mobile, which competes for
+bandwidth even though it is now deferred. Getting LCP into the good band means
+addressing the video — a smaller/shorter encode, a still image on mobile, or
+dropping it below the fold. That is a design decision, not a technical one, so
+it is left open rather than assumed.
 
 ---
 
@@ -196,6 +210,28 @@ were needed. No pages or copy were added for towns we do not serve.
   homepage — see below.
 - Verified **all 130 FAQPage entries across the site render as visible text** on
   their own page. No invisible FAQ markup.
+
+### 8. Asset fingerprinting
+
+`scripts/fingerprint.js` runs last in the build. Vite fingerprints what it
+bundles into `/assets/`, but `public/` files keep their names, so replacing one
+in place leaves every CDN and browser serving the old bytes for the full cache
+TTL. That is not hypothetical: after the images above were resized, Cloudflare
+kept serving the originals (`cf-cache-status: HIT`, 266 KB where the file was
+3 KB) until the cache was purged by hand.
+
+Each public asset is now renamed to `name.<content-hash>.ext` with every
+reference rewritten — including the absolute `https://www.fixairheatandcool.ca`
+URLs in `og:image` and JSON-LD. The script then re-scans the output and exits
+non-zero if any reference still points at an unhashed path, so a missed rewrite
+fails the build rather than shipping a 404. `robots.txt`, `sitemap.xml` and
+`favicon.svg` are pinned, since crawlers request those by exact name.
+`server.js` serves anything matching the hash pattern as `immutable` for a year.
+
+Hashes are content-derived, so an unchanged asset keeps a byte-identical URL
+across deploys and stays cached; a changed one gets a new URL and misses
+automatically. 67 assets fingerprinted, 676 references rewritten, all verified
+resolving on production.
 
 ### 7. Mobile
 The click-to-call bar and poster preloads already existed. What was actually
