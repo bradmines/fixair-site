@@ -621,7 +621,7 @@ const _cityServices = [
     image: "/blog/furnace-wainfleet.jpg",
     metaTitle: "Furnace Repair & Replacement Wainfleet | Same-Day",
     metaDescription:
-      "Propane, oil and gas furnace repair across Wainfleet, Long Beach and Winger. Rural no-heat calls answered by Tom himself, 24/7. Call 905-732-2791.",
+      "Propane and gas furnace repair across Wainfleet, Long Beach and Winger. Rural no-heat calls answered by Tom himself, 24/7. Call 905-732-2791.",
     h1: "Furnace Repair in Wainfleet",
     intro:
       "Wainfleet is rural, and rural heating is its own trade. Much of the township sits outside the natural gas network, so Tom works on propane and oil furnaces here as often as gas ones, from the village out to Long Beach, Winger, Marshville and Chambers Corners.",

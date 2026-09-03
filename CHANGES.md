@@ -29,12 +29,32 @@ The real 5xx is the legacy host:
 | `https://fixairheatandcool.ca/` | 301 → https://www ✅ |
 | `https://www.fixairheatandcool.ca/` | 200 ✅ |
 
-**This is the single highest-value item on the list and I could not fix it.**
-The URL Google ranks at position 5.0 is serving a 5xx. Header forensics show
-`http://www` and `https://apex` are answered by the **Cloudflare edge** (no
-`x-powered-by: Express`), while `https://www` is answered by **Railway origin**.
-The failing request never reaches `server.js`, so no code change can fix it.
-See "What still needs you" below.
+**RESOLVED** in the Cloudflare dashboard after this document was first written.
+Root cause was not a stale Railway hostname but a **TLD typo**: the apex CNAME
+pointed at `www.fixairheatandcool.com` — `.com`, not `.ca` — which does not
+resolve, hence 1016. Fixed by pointing the apex at `x8ab3562.up.railway.app`
+(proxied, identical to `www`), enabling **Always Use HTTPS**, and rewriting the
+apex redirect rule to match on `http.host` rather than a scheme-locked URI
+wildcard.
+
+That rule change fixed a second bug nobody was looking for: the old wildcard
+**dropped query strings**, so every campaign/UTM link hitting the apex lost its
+parameters.
+
+Verified after the change — all four variants resolve in exactly one hop, with
+path and query string preserved:
+
+| URL | Before | After |
+|---|---|---|
+| `http://fixairheatandcool.ca/` | **530 (1016)** | **301 → https://www, 66 ms** |
+| `http://www.fixairheatandcool.ca/` | 301 | 301 |
+| `https://fixairheatandcool.ca/` | 301 | 301 |
+| `https://www.fixairheatandcool.ca/` | 200 | 200 |
+
+Note: the apex CNAME now points at Railway directly, so if the redirect rule is
+ever disabled the apex would serve the site rather than fail. `server.js` has
+always redirected non-canonical hosts at the origin, so the fallback is a second
+hop rather than duplicate content — but do not rely on it.
 
 **2. The 12 city+service pages were not orphaned in the way assumed.**
 They had 3 inbound links each. But they were the only page type with **zero
@@ -201,22 +221,11 @@ Phone number is selectable text everywhere and appears in no image.
 
 ## What still needs you
 
-### Blocking, and worth more than everything above combined
+### Resolved
 
-**The Cloudflare 530.** `http://fixairheatandcool.ca` returns error 1016
-(Origin DNS error). This is the URL Google ranks at **position 5.0** while the
-canonical sits at 48.3. It is a dashboard change (nameservers `joan` /
-`mark.ns.cloudflare.com`):
-
-1. Point the apex `fixairheatandcool.ca` record at the same origin as `www` —
-   1016 means its current target does not resolve.
-2. Turn on **Always Use HTTPS** zone-wide so `http://apex` is 301'd at the edge
-   and never reaches origin.
-3. Make the apex redirect rule scheme-agnostic — it currently fires on HTTPS
-   but not HTTP.
-
-I could not do this: the Chrome extension was not connected, and I cannot enter
-credentials.
+**The Cloudflare 530 is fixed** — see the top of this document. This was the
+highest-value item in the engagement: the URL Google ranked at position 5.0 was
+serving a 5xx while the canonical sat at 48.3.
 
 ### Decision needed
 
@@ -235,7 +244,7 @@ should change — same reasoning that removed the schema.
 
 | Where | Question |
 |---|---|
-| `cityServices.js:631` | **Does Tom service oil-fired equipment, or refer it out?** This is a service claim on the Wainfleet page — the most important of these. |
+| `cityServices.js:631` | **Does Tom service oil-fired equipment, or refer it out?** The most important of these. The page body, highlights and meta description now all avoid claiming oil service; if he does offer it, this is a selling point currently left on the table. |
 | `cityServices.js:685` | How far into Haldimand County will he travel, and what response window? Dunnville and Caledonia are very different distances. |
 | `cityServices.js:131` | "Roughly a half-hour" drive to St. Catharines is my estimate, not verified. |
 | `cityServices.js:80` | Does he want an explicit same-day commitment stated for Welland AC? |
