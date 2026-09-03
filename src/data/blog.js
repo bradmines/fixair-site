@@ -1,6 +1,305 @@
 // Blog articles — one per service type. Used by BlogPage (index) and BlogPostPage.
 const _blogPosts = [
   {
+    slug: "furnace-blowing-cold-air",
+    contextLinks: [
+      { text: "furnace", href: "/services/furnaces/" },
+      { text: "emergency repair", href: "/services/emergency-repair/" },
+    ],
+    title: "Why Is My Furnace Blowing Cold Air?",
+    metaTitle: "Furnace Blowing Cold Air? Niagara Guide | FixAir",
+    metaDescription:
+      "Furnace running but blowing cold air? The common causes, what you can check yourself, and when to stop and call. Call Tom: 905-732-2791.",
+    serviceSlug: "furnaces",
+    serviceName: "Furnaces",
+    image: "/blog/furnace-blowing-cold-air.jpg",
+    date: "2026-09-02",
+    readTime: "6 min read",
+    excerpt:
+      "The furnace is clearly running, but what comes out of the vents is cool. It's the most common call of the early heating season, and a fair number of them turn out to be something you can sort out yourself in ten minutes.",
+    body: [
+      {
+        type: "p",
+        text: "It's the first properly cold morning, the thermostat is calling for heat, and you can hear the furnace running — but the air coming out of the registers is cool. It's one of the most common calls Tom takes once the season turns, and the causes range from a thermostat setting you can change in ten seconds to a safety device doing exactly what it's supposed to do.",
+      },
+      {
+        type: "p",
+        text: "Here's how to work through it, roughly in the order worth checking.",
+      },
+      {
+        type: "h2",
+        text: "First: Is It Actually Cold, or Just Not Hot Yet?",
+      },
+      {
+        type: "p",
+        text: "A furnace doesn't produce warm air the instant it starts. It runs through an ignition sequence first — the inducer motor clears the flue, the pressure switch confirms it, the igniter heats up, the burners light, and only once the heat exchanger has warmed does the blower come on. That's usually thirty to sixty seconds from the thermostat calling for heat.",
+      },
+      {
+        type: "p",
+        text: "There's also a short stretch of cool air at the end of every cycle. The blower keeps running after the burners shut off to pull the remaining heat out of the exchanger — that's by design, and it's air that's already given up most of its warmth. If the air is cool for the first minute and the last minute and warm in between, nothing is wrong.",
+      },
+      {
+        type: "h2",
+        text: "The Thermostat Fan Setting",
+      },
+      {
+        type: "p",
+        text: "This is the single most common cause, and it isn't a repair. If your thermostat's fan is set to ON rather than AUTO, the blower runs continuously — including through the long stretches when the burners aren't firing. You get room-temperature or slightly cool air out of the vents most of the time, which reads as a broken furnace.",
+      },
+      {
+        type: "p",
+        text: "Switch the fan to AUTO and the blower will only run when there's actual heat to move. Worth checking before anything else, particularly if someone has been in the thermostat settings recently or the batteries were changed and it reset to defaults.",
+      },
+      {
+        type: "h2",
+        text: "Airflow: The Filter and the Vents",
+      },
+      {
+        type: "p",
+        text: "A furnace needs to move a certain volume of air across the heat exchanger to carry the heat away. Restrict that airflow and the exchanger overheats, at which point a high-limit switch shuts the burners down as a safety measure — while leaving the blower running to cool things off. The result is a furnace that's clearly on and clearly blowing cold.",
+      },
+      {
+        type: "p",
+        text: "The usual culprits:",
+      },
+      {
+        type: "list",
+        items: [
+          "A filter that hasn't been changed in months — the most frequent cause by a wide margin, and the cheapest to fix",
+          "A filter that's too restrictive for the system — a very high-MERV filter in a furnace that wasn't designed for it chokes airflow even when it's clean",
+          "Supply vents closed or covered by furniture, rugs or curtains after a summer of rearranging",
+          "Blocked cold-air returns — these matter as much as the supply side and get overlooked more often",
+          "A failing blower motor or a slipping belt on older units, which moves air but not enough of it",
+        ],
+      },
+      {
+        type: "p",
+        text: "If the furnace runs warm for a few minutes, goes cold, and then repeats the cycle, airflow restriction is the first thing to suspect. Repeated high-limit trips are hard on a heat exchanger, so it's worth resolving rather than living with.",
+      },
+      {
+        type: "h2",
+        text: "Ignition and Flame Sensor Problems",
+      },
+      {
+        type: "p",
+        text: "If the burners light and then shut off a few seconds later — sometimes trying two or three times before the furnace gives up and locks out — the flame sensor is the usual suspect. It's a thin metal rod that sits in the flame and confirms to the control board that the gas is actually burning. Over a season it builds up a film of oxidation, stops reading the flame properly, and the board shuts the gas off because as far as it knows, it's dumping unburned gas into your house.",
+      },
+      {
+        type: "p",
+        text: "That's a good safety system doing its job. Cleaning the sensor is a routine part of a proper tune-up and one of the more common no-heat repairs. A failing igniter produces a similar symptom, except the burners never light at all.",
+      },
+      {
+        type: "h2",
+        text: "The Condensate Drain on High-Efficiency Furnaces",
+      },
+      {
+        type: "p",
+        text: "If your furnace vents through white PVC pipe out a side wall rather than up a chimney, it's a condensing unit — it pulls enough heat out of the exhaust that water condenses and has to drain away. That drain line, and the trap it runs through, can clog with sediment or algae.",
+      },
+      {
+        type: "p",
+        text: "When it backs up, a float switch shuts the furnace down rather than letting water sit where it shouldn't. Some units will run the blower while refusing to fire the burners. If you see water pooling near the furnace or in the drain pan, that's the lead you want to follow.",
+      },
+      {
+        type: "h2",
+        text: "Gas Supply",
+      },
+      {
+        type: "p",
+        text: "Less common, but worth ruling out: the gas shut-off valve at the furnace has been closed, the propane tank on a rural property has run low, or another gas appliance in the house also isn't working. If the stove won't light either, the problem isn't the furnace.",
+      },
+      {
+        type: "h2",
+        text: "Ductwork Losing the Heat on the Way",
+      },
+      {
+        type: "p",
+        text: "Sometimes the furnace is producing perfectly warm air and losing it in transit. Ducts that run through an unheated crawlspace, an attic, or an attached garage shed heat the whole way, and disconnected or leaking joints dump warm air into spaces nobody lives in. The tell is usually that some rooms are fine and the ones furthest from the furnace never quite get there — worth looking at if only part of the house is cold.",
+      },
+      {
+        type: "h2",
+        text: "What You Can Check Yourself",
+      },
+      {
+        type: "list",
+        items: [
+          "Set the thermostat fan to AUTO and confirm it's on HEAT and set above the current room temperature",
+          "Replace the filter if you can't remember the last time you did, and note the size while you're there",
+          "Check that supply vents and cold-air returns are open and unobstructed",
+          "Confirm the furnace switch — it looks like an ordinary light switch near the unit — is on, and check the breaker",
+          "Look for a blinking status light on the furnace and note the pattern; the legend on the access panel translates it into a fault code",
+          "Check the exhaust and intake pipes outside for nests, debris or blockage",
+          "Look for standing water near a high-efficiency furnace, which points at the condensate drain",
+        ],
+      },
+      {
+        type: "p",
+        text: "Between the fan setting and the filter, a real share of early-season no-heat calls resolve themselves. There's no harm in spending ten minutes on it before you pick up the phone.",
+      },
+      {
+        type: "h2",
+        text: "When to Stop and Call",
+      },
+      {
+        type: "list",
+        items: [
+          "You smell gas — leave the house first and call the gas utility's emergency line, not your HVAC technician",
+          "A carbon monoxide detector has gone off, even once, even briefly",
+          "The burner flame is yellow or flickering rather than steady blue",
+          "There's soot, rust or scorch marks around the furnace cabinet",
+          "You've reset the furnace and it has locked out again — a repeated lockout means the safety system is catching something real",
+          "Banging, grinding or a loud boom on ignition",
+        ],
+      },
+      {
+        type: "p",
+        text: "Resetting a furnace once to clear a one-off fault is reasonable. Resetting it repeatedly to keep a system running that keeps shutting itself down is not — the lockout exists for a reason, and overriding it turns a repair into a safety problem.",
+      },
+      {
+        type: "h2",
+        text: "Get It Looked At Before the Cold Sets In",
+      },
+      {
+        type: "p",
+        text: "Most of what causes cold air at the vents is small, and most of it is cheaper to deal with in September than in January. Tom at FixAir is a residential-only HVAC technician with 25+ years of experience serving Niagara. It's Tom on the job every time — an honest diagnosis, and a straight answer on whether you need a repair, a tune-up, or nothing at all.",
+      },
+    ],
+  },
+  {
+    slug: "hvac-service-port-colborne",
+    contextLinks: [
+      { text: "Port Colborne", href: "/service-areas/port-colborne/" },
+      { text: "air conditioning", href: "/services/air-conditioners/" },
+      { text: "ductless systems", href: "/services/ductless-systems/" },
+    ],
+    title: "Furnace and AC Service in Port Colborne: What Lakeside Homes Need",
+    metaTitle: "Furnace & AC Service Port Colborne | FixAir",
+    metaDescription:
+      "What Port Colborne's lake air, wind and humidity do to heating and cooling systems, and what to sort out each season. Call Tom: 905-732-2791.",
+    serviceSlug: "furnaces",
+    serviceName: "Furnaces",
+    image: "/blog/hvac-port-colborne.jpg",
+    date: "2026-08-28",
+    readTime: "5 min read",
+    excerpt:
+      "Lake Erie shapes almost everything about how a Port Colborne home heats and cools — humid summers, wind straight off the water, and a housing mix that runs from century homes near the harbour to converted cottages out toward Sherkston.",
+    body: [
+      {
+        type: "p",
+        text: "Port Colborne sits at the south end of the Welland Canal with Lake Erie on its doorstep, and that position shapes almost everything about how homes here heat and cool. Systems in this part of Niagara deal with humidity most cooling systems elsewhere in the region never see, and wind exposure that homes a few kilometres inland are sheltered from.",
+      },
+      {
+        type: "p",
+        text: "Here's what that actually means for the equipment in your basement, and what's worth sorting out each season.",
+      },
+      {
+        type: "h2",
+        text: "Humidity Is the Real Summer Problem",
+      },
+      {
+        type: "p",
+        text: "Lakeside summers here aren't just hot, they're damp — and an air conditioner's job is as much removing moisture as lowering temperature. A house at 23 degrees and 65% humidity feels considerably worse than the same house at 23 degrees and 45%, which is why homeowners sometimes drop the thermostat further and further without ever feeling comfortable.",
+      },
+      {
+        type: "p",
+        text: "The counterintuitive part: an oversized air conditioner makes this worse, not better. It cools the air to temperature fast, shuts off, and never runs long enough to pull real moisture out. You get a cold, clammy house and a compressor that short-cycles itself toward an early failure. Correct sizing matters more here than almost anywhere else in Niagara, and it's a large part of why a proper load calculation is worth doing rather than matching whatever tonnage was there before.",
+      },
+      {
+        type: "h2",
+        text: "What Lake Air Does to an Outdoor Unit",
+      },
+      {
+        type: "p",
+        text: "Condensers on the lake side of a property live a harder life. Wind carries dust, grit and organic debris straight into the coil fins, and constant damp slows down how quickly everything dries out. A coil packed with debris can't reject heat, so the system works harder for less cooling and the compressor runs hotter than it should.",
+      },
+      {
+        type: "p",
+        text: "None of that is exotic — it just means the outdoor unit needs looking at more often than an inland one. Keeping a metre of clearance around it, rinsing the fins gently from the inside out once a season, and keeping shrubs and grass clippings off it does most of the work.",
+      },
+      {
+        type: "h2",
+        text: "Winter Wind and Snow Off the Lake",
+      },
+      {
+        type: "p",
+        text: "Winter here brings wind straight off the water and, when conditions line up, heavy snow in a hurry. Two things follow from that.",
+      },
+      {
+        type: "p",
+        text: "First, a high-efficiency furnace vents through a PVC pipe out a side wall, usually about a foot or two off the ground. Drifting snow blocks it, the pressure switch detects the blockage, and the furnace shuts itself down — often overnight, on the coldest night of the year. Knowing where that pipe is and clearing it after a heavy snowfall prevents a service call.",
+      },
+      {
+        type: "p",
+        text: "Second, wind exposure drives real heat loss. Homes on the exposed side of a street lose more heat than the model would suggest, which shows up as a furnace that runs longer, rooms on the windward side that never keep up, and a system that gets blamed for what's actually an air-sealing problem. Worth distinguishing before anyone starts talking about new equipment.",
+      },
+      {
+        type: "h2",
+        text: "The Housing Mix Changes the Answer",
+      },
+      {
+        type: "p",
+        text: "There isn't one Port Colborne home. What makes sense depends heavily on what you've got:",
+      },
+      {
+        type: "list",
+        items: [
+          "Older homes around Sugarloaf and the harbour — solid houses, often with ductwork that was added long after the house was built, uneven room temperatures, and rooms that were never properly served",
+          "Post-war houses on the West Side — compact layouts with original ductwork now well past its design life, and furnaces that have been repaired more often than they've been replaced",
+          "Cottages and seasonal properties out toward Sherkston — many now lived in year-round, with heating that was only ever meant for shoulder-season weekends",
+          "Newer builds and infill — generally sound systems where the gains come from correct airflow balancing, proper thermostat setup and regular maintenance rather than new equipment",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Cottage Conversions and Homes Without Ductwork",
+      },
+      {
+        type: "p",
+        text: "The lakeshore stretch has a lot of properties that started life as seasonal cottages and are now full-time homes. The heating usually didn't get upgraded to match — baseboard electric, a space heater or two, and a hydro bill that goes up every winter.",
+      },
+      {
+        type: "p",
+        text: "Ductless systems are generally the better answer, and not just because they avoid the demolition of running ductwork through a house that has none. One outdoor unit can feed several indoor heads, each controlled independently, so you're not paying to heat rooms nobody is in. They heat as well as they cool, which matters in a shoulder season that runs long here. The same logic applies to additions, converted attics and finished basements that the original system never quite reached.",
+      },
+      {
+        type: "h2",
+        text: "What to Sort Out Before the Season Turns",
+      },
+      {
+        type: "list",
+        items: [
+          "Change the filter, and check it monthly through the heating season rather than annually",
+          "Run the furnace for fifteen minutes in early fall — if it's going to fail, find out now rather than on the first cold night",
+          "Clear the exhaust and intake pipes outside, and note where they are so you can find them under snow",
+          "Rinse the condenser coil and clear anything growing or drifting against the outdoor unit",
+          "Check that supply vents and cold-air returns are open and unblocked",
+          "Set the thermostat schedule for heating rather than leaving a summer cooling program running",
+          "Confirm carbon monoxide detectors are working — every home with a gas or propane appliance needs one on each floor",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Repair or Replace",
+      },
+      {
+        type: "p",
+        text: "The honest answer depends on the age of the unit, the cost of the specific repair, and how the rest of the system is holding up. A fifteen-year-old furnace that needs an igniter or a flame sensor is worth fixing. The same furnace with a cracked heat exchanger is not — that's a safety issue and a replacement conversation. As a rough guide, if the repair runs more than a third of the cost of a new system and the unit is past twelve years, replacing is usually the better use of the money.",
+      },
+      {
+        type: "p",
+        text: "Be wary of anyone who reaches for replacement on every call. Plenty of systems have years left in them, and a good technician will say so even when it means a smaller invoice.",
+      },
+      {
+        type: "h2",
+        text: "Talk to a Local Technician",
+      },
+      {
+        type: "p",
+        text: "Tom at FixAir is a residential-only HVAC technician with 25+ years of experience, serving Port Colborne and the wider south Niagara area. It's Tom on the job every time — no rotating crews, no hard sell, and a straight answer on whether you need a repair, a tune-up or a new system.",
+      },
+    ],
+  },
+  {
     slug: "hvac-service-st-catharines",
     contextLinks: [
       { text: "St. Catharines", href: "/service-areas/st-catharines/" },
