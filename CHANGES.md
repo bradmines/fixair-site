@@ -313,7 +313,6 @@ the effectiveness caveat noted above rather than left implied.
   - 16 unused SVGs removed.
   - Post dates no longer render a day early.
 - **Content:** eight furnace posts, one each Tuesday from 2026-09-29 to 2026-11-17 (ending with a Thorold town post), with 1280x720 header images.
-- **Open:**
-  - The hot water heater post's header shows a boiler.
-  - `public/blog/boilers.jpg` is now unused.
-  - The oldest post has no "More Articles" box, because related links only point to earlier posts.
+- **Follow-ups done:**
+  - The water heater post now uses a tank water heater header (`water-heater-tank.jpg`). The mismatched `hot-water-heater.jpg` and the unused `boilers.jpg` are removed.
+  - Posts with fewer than three older siblings fill "More Articles" with the next newer posts that were live at build time. Every post now shows three.

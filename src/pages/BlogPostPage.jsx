@@ -5,7 +5,7 @@ import Breadcrumbs from '../components/Breadcrumbs'
 import VentStrip from '../components/VentStrip'
 import Contact from '../components/Contact'
 import ScheduledBadge from '../components/ScheduledBadge'
-import { getPublishedPosts, formatPostDate } from '../data/blog'
+import { getPublishedPosts, formatPostDate, BUILD_TODAY } from '../data/blog'
 import { PHONE, PHONE_HREF } from '../constants'
 
 // Turn the first occurrence of each configured phrase into a real in-body
@@ -100,6 +100,16 @@ export default function BlogPostPage({ post }) {
       : Array.from({ length: Math.min(3, published.length - 1) }, (_, k) =>
           published[(idx + 1 + k) % published.length]
         )
+  // The oldest posts have fewer than three older siblings (the very oldest has
+  // none). Top them up with the next newer posts that were already live at
+  // build time: still never an unpublished post, and BUILD_TODAY is a build
+  // constant, so the server render and hydration pick the same ones.
+  if (others.length < 3) {
+    const newer = getPublishedPosts(BUILD_TODAY)
+      .filter(p => p.date > post.date && !others.includes(p))
+      .reverse() // oldest first: the posts closest to this one
+    others.push(...newer.slice(0, 3 - others.length))
+  }
   const contextLinks = liveContextLinks(post.contextLinks, published)
 
   return (

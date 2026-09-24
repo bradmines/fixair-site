@@ -2564,8 +2564,8 @@ const _blogPosts = [
       "Most tanks last 8-12 years. The warning signs yours is failing and what replacement involves. Call Tom: 905-732-2791.",
     serviceSlug: "hot-water-heaters",
     serviceName: "Hot Water Heaters",
-    image: "/blog/hot-water-heater.jpg",
-    imageAlt: "Wall-mounted tankless water heater with copper supply lines",
+    image: "/blog/water-heater-tank.jpg",
+    imageAlt: "Tank water heater with its access panels open in a clean basement utility room",
     date: "2026-06-27",
     readTime: "4 min read",
     excerpt:
