@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- server.js replaces the placeholder with today's date (America/Toronto)
+         on every response, so hydration lists exactly the posts the HTML does. -->
+    <script>window.__TODAY__='%%TODAY%%'</script>
 
     <!-- Per-page SEO (title, meta, OG/Twitter, canonical, JSON-LD) injected at
          build time by prerender.js via src/head.js. -->

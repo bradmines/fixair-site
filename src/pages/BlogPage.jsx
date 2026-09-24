@@ -4,18 +4,11 @@ import MobileCallBar from '../components/MobileCallBar'
 import Breadcrumbs from '../components/Breadcrumbs'
 import VentStrip from '../components/VentStrip'
 import Contact from '../components/Contact'
-import { blogPosts } from '../data/blog'
-
-function formatDate(dateStr) {
-  return new Date(dateStr).toLocaleDateString('en-CA', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  })
-}
+import ScheduledBadge from '../components/ScheduledBadge'
+import { getPublishedPosts, todayForRender, formatPostDate } from '../data/blog'
 
 export default function BlogPage() {
-  const [featured, ...rest] = blogPosts
+  const [featured, ...rest] = getPublishedPosts(todayForRender())
 
   return (
     <>
@@ -53,7 +46,7 @@ export default function BlogPage() {
                 <div className="overflow-hidden bg-gray-50 flex items-center justify-center">
                   <img
                     src={featured.image}
-                    alt={featured.title}
+                    alt={featured.imageAlt}
                     width={1280}
                     height={720}
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
@@ -66,13 +59,14 @@ export default function BlogPage() {
                       Featured
                     </span>
                     <span className="text-xs text-gray-400 font-medium">{featured.readTime}</span>
+                    <ScheduledBadge post={featured} />
                   </div>
                   <h2 className="text-2xl md:text-3xl font-extrabold text-brand-blue leading-snug group-hover:text-brand-orange transition-colors">
                     {featured.title}
                   </h2>
                   <p className="mt-4 text-gray-500 leading-relaxed">{featured.excerpt}</p>
                   <div className="mt-6 flex items-center justify-between">
-                    <span className="text-sm text-gray-400">{formatDate(featured.date)}</span>
+                    <span className="text-sm text-gray-400">{formatPostDate(featured.date)}</span>
                     <span className="inline-flex items-center gap-1.5 text-brand-orange font-bold text-sm group-hover:gap-2.5 transition-all">
                       Read article
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -95,7 +89,7 @@ export default function BlogPage() {
                   <div className="overflow-hidden">
                     <img
                       src={post.image}
-                      alt={post.title}
+                      alt={post.imageAlt}
                       width={1280}
                       height={720}
                       className="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-500"
@@ -107,13 +101,14 @@ export default function BlogPage() {
                       <span className="text-xs font-bold text-brand-orange uppercase tracking-widest">{post.serviceName}</span>
                       <span className="text-gray-200">·</span>
                       <span className="text-xs text-gray-400">{post.readTime}</span>
+                      <ScheduledBadge post={post} className="ml-auto" />
                     </div>
                     <h2 className="font-extrabold text-brand-blue leading-snug group-hover:text-brand-orange transition-colors line-clamp-2">
                       {post.title}
                     </h2>
                     <p className="mt-2 text-sm text-gray-500 leading-relaxed line-clamp-2">{post.excerpt}</p>
                     <div className="mt-4 flex items-center justify-between">
-                      <span className="text-xs text-gray-400">{formatDate(post.date)}</span>
+                      <span className="text-xs text-gray-400">{formatPostDate(post.date)}</span>
                       <svg className="w-4 h-4 text-brand-orange group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                       </svg>

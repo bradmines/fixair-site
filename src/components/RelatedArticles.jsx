@@ -1,4 +1,5 @@
-import { blogPosts } from '../data/blog'
+import { getPublishedPosts, todayForRender } from '../data/blog'
+import ScheduledBadge from './ScheduledBadge'
 
 // Contextual blog links for service and location pages. Without these the
 // articles are only reachable from /blog/, which leaves them with almost no
@@ -21,12 +22,14 @@ function rotate(list, key) {
 }
 
 export function articlesForService(serviceSlug, count = 3) {
+  const blogPosts = getPublishedPosts(todayForRender())
   const onTopic = blogPosts.filter(p => p.serviceSlug === serviceSlug)
   const rest = rotate(blogPosts.filter(p => p.serviceSlug !== serviceSlug), serviceSlug)
   return [...onTopic, ...rest].slice(0, count)
 }
 
 export function articlesForLocation(locationName, count = 3) {
+  const blogPosts = getPublishedPosts(todayForRender())
   const needle = locationName.toLowerCase()
   const local = blogPosts.filter(
     p => p.title.toLowerCase().includes(needle) || p.slug.includes(needle.replace(/[^a-z]+/g, '-'))
@@ -55,7 +58,7 @@ export default function RelatedArticles({ posts, heading, sub }) {
               <div className="overflow-hidden h-44">
                 <img
                   src={p.image}
-                  alt={p.title}
+                  alt={p.imageAlt}
                   width={1280}
                   height={720}
                   className="w-full h-full object-cover block group-hover:scale-105 transition-transform"
@@ -66,6 +69,7 @@ export default function RelatedArticles({ posts, heading, sub }) {
                 <span className="text-xs font-bold uppercase tracking-widest text-brand-orange">
                   {p.serviceName}
                 </span>
+                <ScheduledBadge post={p} className="mt-2 self-start" />
                 <h3 className="mt-2 font-bold text-brand-blue leading-snug group-hover:text-brand-orange transition-colors">
                   {p.title}
                 </h3>

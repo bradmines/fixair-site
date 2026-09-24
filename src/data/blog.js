@@ -1,6 +1,1196 @@
 // Blog articles — one per service type. Used by BlogPage (index) and BlogPostPage.
 const _blogPosts = [
   {
+    slug: "furnace-making-noise",
+    contextLinks: [
+      { text: "furnace", href: "/services/furnaces/" },
+      { text: "won't turn on", href: "/blog/furnace-wont-turn-on/" },
+      { text: "annual tune-up", href: "/blog/hvac-maintenance-tune-up/" },
+      { text: "replacing the furnace", href: "/blog/when-to-replace-your-furnace/" },
+    ],
+    title: "Furnace Making Noise? What Banging, Squealing, Rattling and Clicking Mean",
+    metaTitle: "Furnace Noises: Banging, Squealing, Clicking | FixAir",
+    metaDescription:
+      "Banging, squealing, rattling or clicking from the furnace? What each sound usually means, what to check, and when to call. Call Tom: 905-732-2791.",
+    serviceSlug: "furnaces",
+    serviceName: "Furnaces",
+    image: "/blog/furnace-making-noise.jpg",
+    imageAlt: "Gas furnace with its front panel removed and leaning beside it, showing the controls and blower, in a bright finished basement",
+    date: "2026-09-29",
+    readTime: "6 min read",
+    excerpt:
+      "Every furnace makes some noise. A new bang, squeal, rattle or click is worth paying attention to, and most of the time it points to something small you can deal with before winter.",
+    body: [
+      {
+        type: "p",
+        text: "Furnaces are not silent machines. You'll hear the inducer motor start, a click or two as the igniter and gas valve do their jobs, a soft whoosh as the burners light, and then the steady sound of the blower moving air through the house. After a few weeks of heating season, those sounds fade into the background.",
+      },
+      {
+        type: "p",
+        text: "What gets noticed is a new sound, or an old one that has changed. Most of the time there's an ordinary explanation. Sometimes the sound is the first sign of a part wearing out, and once in a while it's the furnace telling you to shut it off and get it looked at. Here's how to tell the difference.",
+      },
+      {
+        type: "h2",
+        text: "Normal Sounds You Can Ignore",
+      },
+      {
+        type: "p",
+        text: "Before chasing a noise, it helps to know what a healthy furnace sounds like through a normal cycle:",
+      },
+      {
+        type: "list",
+        items: [
+          "A click at the thermostat, then a hum as the inducer motor starts to clear the flue",
+          "A few clicks or a faint ticking as the igniter heats up or sparks",
+          "A soft whoosh as the burners light, followed by a steady low roar",
+          "The blower starting a short time later, and running a little after the burners shut off",
+          "Light ticking or pinging from metal ducts as they warm up and cool down",
+        ],
+      },
+      {
+        type: "p",
+        text: "If what you're hearing fits that list, it's the furnace doing its job.",
+      },
+      {
+        type: "h2",
+        text: "Banging or Booming When the Furnace Starts",
+      },
+      {
+        type: "p",
+        text: "A single loud bang or boom right as the burners light is the sound worth taking most seriously. It usually means delayed ignition: gas is flowing into the burners but not lighting right away, so a small amount builds up and then lights all at once. Dirty burners, a weak igniter, or gas pressure that is out of adjustment are the common reasons.",
+      },
+      {
+        type: "p",
+        text: "Delayed ignition puts stress on the heat exchanger every time it happens, and it isn't something to live with through a winter. If the bang happens at ignition, turn the thermostat down and book a service visit rather than waiting for it to get worse.",
+      },
+      {
+        type: "p",
+        text: "A different kind of bang is the popping of sheet metal ductwork. As warm air pushes through, a flat panel of duct can flex outward with a loud pop, then pop back when the blower stops. It's annoying rather than dangerous, and it often points to an airflow problem such as a clogged filter, closed registers or not enough return air. That's worth sorting out, but it isn't an emergency.",
+      },
+      {
+        type: "h2",
+        text: "Squealing or Screeching",
+      },
+      {
+        type: "p",
+        text: "A high pitched squeal usually comes from something that spins. On older furnaces with a belt driven blower, a worn or loose belt squeals as it slips. On newer furnaces where the motor drives the blower directly, a squeal or screech points at a motor bearing that is drying out or wearing. The inducer motor, the smaller fan that pulls exhaust through the vent, can make the same sound as its bearings wear.",
+      },
+      {
+        type: "p",
+        text: "Bearings rarely fix themselves. A squeal that shows up in October tends to become a grinding noise by January, and then a motor that won't start. Caught early, it's usually a straightforward part replacement on a planned visit instead of a no heat call on a cold night.",
+      },
+      {
+        type: "h2",
+        text: "Rattling",
+      },
+      {
+        type: "p",
+        text: "Rattling covers a lot of ground, and most of it is minor. The common causes:",
+      },
+      {
+        type: "list",
+        items: [
+          "A loose access panel on the furnace cabinet that vibrates when the blower runs. Check that the door is seated properly and the screws are snug",
+          "Loose ductwork, hangers or registers somewhere in the house",
+          "A loose screw or mounting bolt on the blower or the inducer motor",
+          "Something that fell into the return air duct and is being shaken around by the airflow",
+        ],
+      },
+      {
+        type: "p",
+        text: "Less often, a rattle comes from inside the furnace where you can't see it, and a technician needs to open it up to find it. If the rattle started suddenly, is getting louder, or comes with a burning smell, turn the furnace off and have it checked.",
+      },
+      {
+        type: "h2",
+        text: "Clicking",
+      },
+      {
+        type: "p",
+        text: "Some clicking is normal. The thermostat clicks, relays on the control board click, and a spark igniter ticks as it tries to light the burners. What isn't normal is clicking that repeats over and over without the burners ever lighting.",
+      },
+      {
+        type: "p",
+        text: "That usually points to an ignition problem: an igniter that has weakened, a flame sensor that can't confirm the flame, or a gas valve that isn't opening. The furnace will often try a few times and then lock itself out. If it gets to that point, the checklist in our guide to a furnace that won't turn on is a good place to start before you call.",
+      },
+      {
+        type: "p",
+        text: "Clicking from the blower area while it runs is a different thing. That can be a fan blade striking something, or a loose part inside the blower housing, and it's worth shutting the furnace down and having it looked at.",
+      },
+      {
+        type: "h2",
+        text: "Humming and Buzzing",
+      },
+      {
+        type: "p",
+        text: "A low hum while the furnace runs is normal. A loud buzz, or a hum when nothing seems to be turning, usually means a motor that is trying to start and can't, often because of a failing capacitor, or an electrical part such as a transformer or relay that is on its way out. Neither is something to leave running. Switch the furnace off at its service switch and call.",
+      },
+      {
+        type: "h2",
+        text: "What You Can Check Yourself",
+      },
+      {
+        type: "list",
+        items: [
+          "Replace the filter if it's been a while. Restricted airflow is behind more strange furnace noises than most people expect",
+          "Make sure supply registers and cold air returns are open and not blocked by furniture",
+          "Check that the furnace access panel is seated properly and not loose",
+          "Listen for where the sound is coming from: the furnace itself, the ductwork, or a single register",
+          "Note when it happens: at start up, while running, or at shut down. That detail helps a technician narrow it down quickly",
+        ],
+      },
+      {
+        type: "h2",
+        text: "When to Stop and Call",
+      },
+      {
+        type: "list",
+        items: [
+          "A bang or boom when the burners light",
+          "Grinding, screeching or metal on metal sounds from the blower or inducer",
+          "Any new noise that comes with a burning smell",
+          "Your carbon monoxide alarm sounds, even briefly. Get everyone out of the house first",
+          "You smell gas. Leave the house and call the gas utility's emergency line from outside",
+        ],
+      },
+      {
+        type: "p",
+        text: "Most furnace noises are an early warning for a small repair, and the benefit of hearing them in the fall is that you get to choose when the work happens. An annual tune-up catches most of this before it becomes a sound at all, since the technician is cleaning burners, checking motors and tightening connections as part of the visit. And if a noise turns out to be one of several signs of an older furnace near the end of its life, it's better to plan for replacing the furnace than to have it decide for you in February.",
+      },
+      {
+        type: "h2",
+        text: "Get the Noise Checked Before Winter",
+      },
+      {
+        type: "p",
+        text: "Tom at FixAir is a licensed, residential-only HVAC technician with 25+ years of experience across Niagara. It's Tom on the job every time, and he'll tell you honestly whether that noise is worth fixing now, can wait until the next tune-up, or is nothing at all. Call Tom at 905-732-2791.",
+      },
+    ],
+  },
+  {
+    slug: "furnace-winter-checklist-niagara",
+    contextLinks: [
+      { text: "furnace", href: "/services/furnaces/" },
+      { text: "blowing cold air", href: "/blog/furnace-blowing-cold-air/" },
+      { text: "smart thermostat", href: "/blog/smart-thermostats-worth-it/" },
+      { text: "professional tune-up", href: "/blog/hvac-maintenance-tune-up/" },
+    ],
+    title: "Getting Your Furnace Ready for a Niagara Winter: An October Checklist",
+    metaTitle: "October Furnace Checklist for Niagara Winters | FixAir",
+    metaDescription:
+      "An October checklist to get your furnace ready for a Niagara winter: filter, vents, CO alarms, thermostat and a tune-up. Call Tom: 905-732-2791.",
+    serviceSlug: "furnaces",
+    serviceName: "Furnaces",
+    image: "/blog/furnace-winter-checklist-niagara.jpg",
+    imageAlt: "Red brick two storey house on a frosty morning, with steam rising from the furnace vent on the side wall",
+    date: "2026-10-06",
+    readTime: "6 min read",
+    excerpt:
+      "October is the month the furnace goes from sitting idle to running every night. A few hours of simple checks now saves you from finding a problem on the first cold night of the year.",
+    body: [
+      {
+        type: "p",
+        text: "In Niagara, October is the month the furnace goes from sitting idle to running every night. The weather usually gives you a few weeks of cool mornings before the first real cold snap, and that window is the best time of year to make sure the heating system is ready. Schedules are more open, and any problem you find becomes a planned repair rather than an emergency.",
+      },
+      {
+        type: "p",
+        text: "Here's a practical checklist, most of which you can do yourself in an afternoon.",
+      },
+      {
+        type: "h2",
+        text: "1. Change the Filter",
+      },
+      {
+        type: "p",
+        text: "Start here, because it's the single most useful thing you can do. A dirty filter restricts airflow, makes the furnace work harder, and is behind a large share of early season complaints, from rooms that won't warm up to a furnace that is blowing cold air. Pull the filter out, note the size printed on the edge, and replace it with the same size.",
+      },
+      {
+        type: "p",
+        text: "Through the heating season, check it monthly. How often it actually needs changing depends on the filter type, pets, renovations and how much the system runs, and looking at it is the only way to know.",
+      },
+      {
+        type: "h2",
+        text: "2. Run the Furnace Before You Need It",
+      },
+      {
+        type: "p",
+        text: "Don't wait for the first cold night to find out the furnace won't start. On a cool afternoon, set the thermostat a few degrees above room temperature and let the furnace run for fifteen minutes or so. You're watching and listening for a few things:",
+      },
+      {
+        type: "list",
+        items: [
+          "It starts within a minute or two of the thermostat calling for heat",
+          "Warm air comes out of the registers once the blower starts",
+          "No new banging, squealing or grinding sounds",
+          "A faint dusty smell for the first few minutes is normal as dust burns off the heat exchanger. A smell that lingers, or anything like burning plastic or wiring, is not",
+        ],
+      },
+      {
+        type: "p",
+        text: "If it fails this test, you've found the problem in October instead of January, which is exactly the point.",
+      },
+      {
+        type: "h2",
+        text: "3. Clear Around the Furnace and the Outside Vents",
+      },
+      {
+        type: "p",
+        text: "Basements collect things over the summer. Make sure nothing is stored against the furnace, and keep paint, solvents, gas cans and cleaning products well away from it. The furnace needs space for combustion air, and a technician needs room to work on it.",
+      },
+      {
+        type: "p",
+        text: "If you have a high-efficiency furnace, it vents through white plastic pipes out a side wall. Go outside and look at them. Clear away leaves, nests, garden debris and anything piled against the wall. Note where they are, because you'll want to clear snow away from them after a heavy snowfall. A blocked vent shuts the furnace down as a safety measure, and in a Niagara winter that tends to happen overnight.",
+      },
+      {
+        type: "h2",
+        text: "4. Test Your Carbon Monoxide Alarms",
+      },
+      {
+        type: "p",
+        text: "Ontario requires working carbon monoxide alarms near sleeping areas in any home with a fuel burning appliance or an attached garage. Press the test button on each one, replace the batteries if the alarm uses them, and check the expiry date printed on the alarm. CO alarms don't last forever, and an expired one may not warn you when it counts. October is a good month to make this a habit, since it's when the furnace starts running every day.",
+      },
+      {
+        type: "h2",
+        text: "5. Set Up the Thermostat for Heating",
+      },
+      {
+        type: "p",
+        text: "Switch the thermostat from cooling to heating and check that the fan is set to AUTO rather than ON. Replace the batteries if it uses them. If you have a programmable or smart thermostat, set a heating schedule instead of leaving the summer cooling program in place. Lowering the temperature a few degrees overnight and while the house is empty is an easy saving, and it's worth setting up now rather than after the first bill.",
+      },
+      {
+        type: "h2",
+        text: "6. Open the Vents and Returns",
+      },
+      {
+        type: "p",
+        text: "Walk through the house and make sure supply registers are open, and that furniture, rugs and curtains aren't blocking them or the cold air returns. Rooms that were closed off for the summer often stay that way into the fall. The furnace is designed to move a certain amount of air, and closing too many registers works against it.",
+      },
+      {
+        type: "h2",
+        text: "7. Check the Humidifier",
+      },
+      {
+        type: "p",
+        text: "If your furnace has a humidifier attached, turn it back on for the heating season, replace the pad if it's crusted with minerals, and make sure the water supply valve is open. Set it modestly. Too much humidity in winter shows up as condensation on the windows, and that's your sign to turn it down.",
+      },
+      {
+        type: "h2",
+        text: "8. Rural Homes: Check Your Fuel",
+      },
+      {
+        type: "p",
+        text: "If your home runs on propane, as plenty of properties in rural Niagara do, check the tank level and book a delivery before the busy season. Running out doesn't just mean a cold house. Getting the system safely back up and running afterward can mean a service call on top of the delivery.",
+      },
+      {
+        type: "h2",
+        text: "9. Know Where Things Are",
+      },
+      {
+        type: "list",
+        items: [
+          "The furnace service switch, which looks like an ordinary light switch on or near the furnace",
+          "The gas shutoff valve on the line going into the furnace",
+          "The breaker for the furnace in your electrical panel",
+          "The phone number you'll call if the furnace stops on a cold night",
+        ],
+      },
+      {
+        type: "p",
+        text: "Knowing these before you need them saves real time when something goes wrong.",
+      },
+      {
+        type: "h2",
+        text: "10. Book a Tune-Up",
+      },
+      {
+        type: "p",
+        text: "The list above covers what a homeowner can do. A professional tune-up covers what you can't: cleaning and inspecting the burners and flame sensor, checking the igniter, testing the safety controls, inspecting the heat exchanger, and confirming the furnace is venting properly. It's the best way to catch a small problem before it turns into a no heat call, and booking in October means you're not competing with everyone who waited for the first cold snap.",
+      },
+      {
+        type: "p",
+        text: "If your furnace gave you any trouble last winter, even once, mention it when you book. Those small signs are much easier to track down in mild weather.",
+      },
+      {
+        type: "h2",
+        text: "Ready for Winter",
+      },
+      {
+        type: "p",
+        text: "Tom at FixAir is a licensed, residential-only HVAC technician with 25+ years of experience serving homes across Niagara. It's Tom on the job every time, with honest advice and no pressure to buy anything you don't need. Call Tom at 905-732-2791 to book your fall tune-up.",
+      },
+    ],
+  },
+  {
+    slug: "furnace-filters-explained",
+    contextLinks: [
+      { text: "furnace", href: "/services/furnaces/" },
+      { text: "blowing cold air", href: "/blog/furnace-blowing-cold-air/" },
+      { text: "duct cleaning", href: "/blog/how-often-should-you-clean-ducts/" },
+      { text: "tune-up", href: "/blog/hvac-maintenance-tune-up/" },
+    ],
+    title: "Furnace Filters Explained: MERV Ratings, Sizes and How Often to Change Them",
+    metaTitle: "Furnace Filters Explained: MERV, Sizes, Changes | FixAir",
+    metaDescription:
+      "What MERV ratings mean, how to find the right filter size, and how often to change a furnace filter in a Niagara home. Call Tom: 905-732-2791.",
+    serviceSlug: "furnaces",
+    serviceName: "Furnaces",
+    image: "/blog/furnace-filters-explained.jpg",
+    imageAlt: "Dark grey furnace with a pleated filter leaning against it and a stack of new filters on the basement floor",
+    date: "2026-10-13",
+    readTime: "5 min read",
+    excerpt:
+      "The filter is the cheapest part of your heating system and one of the most overlooked. Here's what the ratings mean, how to get the size right, and how to know when it's time for a new one.",
+    body: [
+      {
+        type: "p",
+        text: "The furnace filter is the cheapest part of your heating system and one of the easiest to overlook. It sits in a slot near the furnace, it costs very little, and when it's neglected it causes a surprising number of the problems homeowners call about. It's also a part where the options on the store shelf can be confusing, with ratings, sizes and prices that don't explain themselves.",
+      },
+      {
+        type: "p",
+        text: "Here's what you need to know to pick the right one and keep it working.",
+      },
+      {
+        type: "h2",
+        text: "What the Filter Actually Does",
+      },
+      {
+        type: "p",
+        text: "The main job of a furnace filter is to protect the furnace. It catches dust, lint and debris before they reach the blower motor and the heat exchanger, and before they coat the air conditioner coil that usually sits on top of the furnace. Cleaner air in the house is a side benefit, and a better filter can help with that, but the equipment comes first.",
+      },
+      {
+        type: "p",
+        text: "Every filter also resists airflow a little. The furnace is designed to move a certain amount of air, and as a filter loads up with dust, that resistance grows. Past a point, the furnace can't move enough air, it runs hotter than it should, and a safety switch starts shutting the burners down. That's how a dirty filter ends up as a furnace blowing cold air, rooms that won't heat, and a system that runs longer for less comfort.",
+      },
+      {
+        type: "h2",
+        text: "What MERV Ratings Mean",
+      },
+      {
+        type: "p",
+        text: "MERV stands for Minimum Efficiency Reporting Value. It's a number printed on the filter frame or packaging that tells you how well the filter catches particles. A higher number means it traps smaller particles. A lower number means it mostly catches larger dust and lint.",
+      },
+      {
+        type: "p",
+        text: "It's tempting to buy the highest number on the shelf. The catch is that a higher rated filter usually resists airflow more, and a very high rated filter in a furnace that wasn't designed for it can choke airflow even when it's brand new. You end up with the same symptoms as a dirty filter.",
+      },
+      {
+        type: "p",
+        text: "For most homes, a filter in the middle of the range is the sensible choice. It protects the equipment and catches everyday dust without straining the blower. If someone in the house has allergies or asthma, a higher rated filter can make sense, but it's worth asking a technician whether your system can handle it. A thicker media filter is often the better way to get there.",
+      },
+      {
+        type: "h2",
+        text: "Finding the Right Size",
+      },
+      {
+        type: "p",
+        text: "The size is printed on the edge of your current filter as three numbers: width, height and thickness in inches, something like 16x25x1. Buy that size. A filter that's even slightly too small lets air sneak around the edges, which means dust bypasses the filter completely and goes straight into the blower and the coil.",
+      },
+      {
+        type: "p",
+        text: "A few things to watch for:",
+      },
+      {
+        type: "list",
+        items: [
+          "The printed size is a nominal size, and the actual dimensions are usually a little smaller. That's normal, and filters with the same nominal size fit the same slot",
+          "Check the airflow arrow on the frame. It should point toward the furnace, in the direction the air moves",
+          "If the slot has no cover or leaves a large gap, air is going around the filter, and that's worth fixing",
+          "If there's no filter in the slot at all, which happens more often than you'd think, put one in before running the furnace again",
+        ],
+      },
+      {
+        type: "h2",
+        text: "One Inch Filters and Media Filters",
+      },
+      {
+        type: "p",
+        text: "Most Niagara homes have a slot for a thin one inch filter right beside the furnace. Some have a thicker media cabinet, several inches deep, installed between the return duct and the furnace. The thicker filter has much more surface area, so it can catch more while resisting airflow less, and it lasts longer between changes.",
+      },
+      {
+        type: "p",
+        text: "If you have a media cabinet, use the filter made for it and follow the change interval the manufacturer gives. If you only have a one inch slot and want better filtration, a media cabinet can often be added when the furnace is serviced or replaced.",
+      },
+      {
+        type: "h2",
+        text: "How Often to Change It",
+      },
+      {
+        type: "p",
+        text: "The honest answer is that it depends, and the only reliable way to know is to look. Check the filter monthly through the heating season and the cooling season. Hold it up to a light. If you can't easily see light through it, or it's grey and matted with dust, change it.",
+      },
+      {
+        type: "p",
+        text: "Some homes need changes more often than others:",
+      },
+      {
+        type: "list",
+        items: [
+          "Homes with dogs or cats",
+          "Homes with smokers or wood stoves",
+          "During and after renovations, especially drywall work or sanding",
+          "Homes near gravel roads or farm fields, which covers a lot of rural Niagara",
+          "Busy households where the system runs most of the day",
+        ],
+      },
+      {
+        type: "p",
+        text: "A good habit is to buy filters in a multi-pack so there's always one on hand, and to write the date on the frame when you put a new one in.",
+      },
+      {
+        type: "h2",
+        text: "What a Filter Won't Fix",
+      },
+      {
+        type: "p",
+        text: "A new filter solves airflow problems caused by a dirty filter. It won't fix a failing blower motor, a clogged coil, or ductwork that was never sized properly. If you change the filter and the furnace still shuts off early, rooms still heat unevenly, or dust keeps building up quickly, something else is going on. The same thinking applies to duct cleaning: a good filter changed on schedule does more to keep ducts clean than an occasional cleaning service.",
+      },
+      {
+        type: "p",
+        text: "The filter is also one of the first things a technician looks at during a tune-up, along with the parts downstream of it that show how well it has been doing its job.",
+      },
+      {
+        type: "h2",
+        text: "Questions About Your Filter?",
+      },
+      {
+        type: "p",
+        text: "Tom at FixAir is a licensed, residential-only HVAC technician with 25+ years of experience in Niagara homes. If you're not sure which filter your system should use, or whether it can handle a higher rating, Tom will give you a straight answer. Call Tom at 905-732-2791.",
+      },
+    ],
+  },
+  {
+    slug: "furnace-short-cycling",
+    contextLinks: [
+      { text: "furnace", href: "/services/furnaces/" },
+      { text: "blowing cold air", href: "/blog/furnace-blowing-cold-air/" },
+      { text: "proper tune-up", href: "/blog/hvac-maintenance-tune-up/" },
+      { text: "time to replace the furnace", href: "/blog/when-to-replace-your-furnace/" },
+    ],
+    title: "Why Is My Furnace Short Cycling? Causes and Fixes",
+    metaTitle: "Furnace Short Cycling? Causes and Fixes | FixAir",
+    metaDescription:
+      "Furnace turning on and off every few minutes? The common causes of short cycling, what you can check yourself, and when to call. Call Tom: 905-732-2791.",
+    serviceSlug: "furnaces",
+    serviceName: "Furnaces",
+    image: "/blog/furnace-short-cycling.jpg",
+    imageAlt: "Wall thermostat beside a snowy window in a softly lit living room",
+    date: "2026-10-20",
+    readTime: "6 min read",
+    excerpt:
+      "A furnace that starts, runs a few minutes and shuts off again wastes fuel and wears out parts. The cause is often simple, and a few checks will tell you whether it's something you can fix yourself.",
+    body: [
+      {
+        type: "p",
+        text: "A furnace is supposed to run in steady cycles. The thermostat calls for heat, the furnace runs long enough to bring the house up to the setting, then shuts off and rests until it's needed again. In cold weather those cycles get longer and closer together, which is normal.",
+      },
+      {
+        type: "p",
+        text: "Short cycling is different. The furnace starts, runs for a few minutes, shuts off before the house is warm, and then starts again soon after. It wastes fuel, wears out parts that are built for a certain number of starts, and leaves the house feeling uneven. The good news is that the cause is often simple.",
+      },
+      {
+        type: "h2",
+        text: "How to Tell If It's Short Cycling",
+      },
+      {
+        type: "p",
+        text: "Watch a few cycles on a cold day. Signs of short cycling include:",
+      },
+      {
+        type: "list",
+        items: [
+          "The furnace shuts off after only a few minutes, well before the thermostat setting is reached",
+          "The burners shut off but the blower keeps running and blowing cool air, then everything restarts a little later",
+          "The furnace starts and stops many times an hour, even when it isn't very cold outside",
+          "Some rooms never get warm while the furnace seems to be running all the time",
+        ],
+      },
+      {
+        type: "p",
+        text: "Keep in mind that on a mild day a furnace may run short cycles simply because the house doesn't need much heat. What you're looking for is short runs that don't satisfy the thermostat.",
+      },
+      {
+        type: "h2",
+        text: "Cause 1: A Dirty Filter",
+      },
+      {
+        type: "p",
+        text: "This is the most common cause by a wide margin, and the cheapest to fix. A clogged filter restricts airflow, the heat exchanger gets too hot, and a safety device called the high limit switch shuts the burners off to protect it. The blower keeps running to cool things down, the switch resets, and the furnace fires again. The same pattern explains many cases of a furnace blowing cold air.",
+      },
+      {
+        type: "p",
+        text: "Change the filter and watch a few cycles. If the problem clears up, that was it.",
+      },
+      {
+        type: "h2",
+        text: "Cause 2: Blocked Vents and Returns",
+      },
+      {
+        type: "p",
+        text: "The same overheating can happen when too many supply registers are closed, or when cold air returns are blocked by furniture. Closing vents in unused rooms seems like it should save money, but past a certain point it restricts the whole system. Open them up and make sure the returns can breathe.",
+      },
+      {
+        type: "h2",
+        text: "Cause 3: A Dirty Flame Sensor",
+      },
+      {
+        type: "p",
+        text: "If the burners light and then shut off within a few seconds, the flame sensor is the usual suspect. It's a small metal rod that confirms to the control board that there's a flame. When it gets coated, the board can't see the flame and shuts off the gas as a precaution. The furnace may try several times and then lock out. Cleaning the sensor is a routine service item and part of a proper tune-up.",
+      },
+      {
+        type: "h2",
+        text: "Cause 4: Thermostat Location or Settings",
+      },
+      {
+        type: "p",
+        text: "A thermostat mounted near a supply register, above a lamp or TV, in direct sun, or beside a drafty door gets a false reading. If warm air blows straight onto it, it thinks the house is warm and shuts the furnace off early. Check whether anything near the thermostat is heating it, and whether a register is aimed at it.",
+      },
+      {
+        type: "p",
+        text: "Weak batteries can cause erratic behaviour too, and some thermostats have a cycle setting that was set up incorrectly. Replacing the batteries takes two minutes and rules out the easy answer.",
+      },
+      {
+        type: "h2",
+        text: "Cause 5: Venting and Drain Problems",
+      },
+      {
+        type: "p",
+        text: "High-efficiency furnaces rely on a pressure switch that confirms the vent is clear before the burners can fire. If the exhaust or intake pipe is partly blocked by snow, ice, leaves or a nest, or if the condensate drain is backing up, the switch can open during the cycle and shut the furnace down. Check the pipes outside and look for water around the furnace.",
+      },
+      {
+        type: "h2",
+        text: "Cause 6: A Furnace That's Too Big",
+      },
+      {
+        type: "p",
+        text: "This one isn't a quick fix. A furnace that's oversized for the house heats it very quickly, reaches the thermostat setting in a few minutes, and shuts off, then does it all again. It never runs long enough to settle into efficient operation, and the constant starts wear on the igniter, the motors and the heat exchanger.",
+      },
+      {
+        type: "p",
+        text: "Oversizing is common when a furnace is replaced by matching the old unit's size instead of working out what the house actually needs, especially after insulation, windows or air sealing have been upgraded. If your furnace has always short cycled, even with a clean filter and a well placed thermostat, sizing is worth looking at. It becomes part of the conversation when it's time to replace the furnace.",
+      },
+      {
+        type: "h2",
+        text: "Cause 7: Overheating From Other Problems",
+      },
+      {
+        type: "p",
+        text: "Less often, the furnace overheats because of a failing blower motor, a dirty blower wheel, or ductwork that's too small for the system. These all come back to the same thing: not enough air moving across the heat exchanger. They need a technician to diagnose properly.",
+      },
+      {
+        type: "h2",
+        text: "What You Can Check Yourself",
+      },
+      {
+        type: "list",
+        items: [
+          "Replace the filter",
+          "Open supply registers and clear the cold air returns",
+          "Check the thermostat batteries, and look for heat sources or registers near it",
+          "Clear snow, ice and debris from the vent pipes outside",
+          "Look for water around the furnace, or a condensate pump that's full",
+          "Note whether the burners shut off after seconds or after minutes. That detail helps narrow things down",
+        ],
+      },
+      {
+        type: "h2",
+        text: "When to Call",
+      },
+      {
+        type: "p",
+        text: "If you've checked the basics and the furnace still short cycles, it's time for a service visit. The same goes for a furnace that locks out repeatedly. Resetting it once to clear a fault is reasonable, but resetting it over and over hides a problem the safety controls are catching for a reason. A furnace that keeps tripping its high limit is under real stress, and it's better to find the cause than to keep restarting it.",
+      },
+      {
+        type: "h2",
+        text: "Get It Sorted Before the Cold Sets In",
+      },
+      {
+        type: "p",
+        text: "Tom at FixAir is a licensed, residential-only HVAC technician with 25+ years of experience serving Niagara homes. He'll find out why your furnace is short cycling and tell you honestly whether it's a filter, a cleaning, a part, or a bigger conversation. Call Tom at 905-732-2791.",
+      },
+    ],
+  },
+  {
+    slug: "new-furnace-cost-niagara",
+    contextLinks: [
+      { text: "furnace", href: "/services/furnaces/" },
+      { text: "heat pumps", href: "/blog/heat-pump-rebates-ontario/" },
+      { text: "when it's time to replace a furnace", href: "/blog/when-to-replace-your-furnace/" },
+      { text: "what HVAC repair costs in Niagara", href: "/blog/hvac-repair-cost-niagara/" },
+    ],
+    title: "How Much Does a New Furnace Cost in Niagara in 2026?",
+    metaTitle: "New Furnace Cost in Niagara: 2026 Price Guide | FixAir",
+    metaDescription:
+      "Typical installed prices for a new gas furnace in Niagara in 2026, what changes the cost, and where rebates stand now. Call Tom: 905-732-2791.",
+    serviceSlug: "furnaces",
+    serviceName: "Furnaces",
+    image: "/blog/new-furnace-cost-niagara.jpg",
+    imageAlt: "Grey high-efficiency furnace with white plastic intake and exhaust pipes running to the basement wall",
+    date: "2026-10-27",
+    readTime: "6 min read",
+    excerpt:
+      "There's no single price for a new furnace, but there are typical ranges. Here's what they are in 2026, what moves a quote up or down, and what's happened to the rebate programs.",
+    body: [
+      {
+        type: "p",
+        text: "If your furnace is getting older, or a technician has told you a repair isn't worth it, the next question is always the same: what is a new one going to cost? There's no single price, because installing a furnace involves more than the unit in the basement. But there are typical ranges, and knowing what moves a quote up or down makes it much easier to compare quotes and make a decision.",
+      },
+      {
+        type: "h2",
+        text: "Typical Installed Price Ranges",
+      },
+      {
+        type: "p",
+        text: "These are typical installed ranges for a new gas furnace in Ontario, covering the equipment and a standard installation:",
+      },
+      {
+        type: "list",
+        items: [
+          "Single stage, 80% AFUE: $3,500 to $5,500",
+          "Two stage, 90 to 95% AFUE: $4,500 to $7,000",
+          "Modulating, 96% AFUE and up: $5,500 to $10,000 and up",
+        ],
+      },
+      {
+        type: "p",
+        text: "AFUE stands for Annual Fuel Utilization Efficiency. It's the share of the fuel's energy that ends up as heat in your home, with the rest going out the vent. A higher AFUE means less gas burned for the same amount of heat.",
+      },
+      {
+        type: "p",
+        text: "Where your home lands within a range depends on the specifics covered below. A quote well outside these ranges isn't necessarily wrong, but it's worth asking what's driving it.",
+      },
+      {
+        type: "h2",
+        text: "What Single Stage, Two Stage and Modulating Mean",
+      },
+      {
+        type: "p",
+        text: "A single stage furnace has one setting: fully on. Every time the thermostat calls for heat, it runs at full output until the house is warm, then shuts off. It's the simplest and least expensive design.",
+      },
+      {
+        type: "p",
+        text: "A two stage furnace has a low setting and a high setting. On most winter days it runs on low, which is quieter, gives more even temperatures, and avoids a blast of hot air followed by a cool down. It switches to high on the coldest days.",
+      },
+      {
+        type: "p",
+        text: "A modulating furnace adjusts its output in small steps to match what the house needs at that moment. It runs long, gentle cycles and keeps temperatures the most even of the three. It also costs the most up front.",
+      },
+      {
+        type: "p",
+        text: "Which one makes sense depends on how long you plan to stay in the home, how much comfort matters to you, and what your ductwork can support. A higher efficiency furnace saves gas every year, but the savings take time to add up, and there's no point paying for features the rest of the system can't take advantage of.",
+      },
+      {
+        type: "h2",
+        text: "What Changes the Price",
+      },
+      {
+        type: "p",
+        text: "Two homes can get the same furnace and very different quotes. The main factors:",
+      },
+      {
+        type: "list",
+        items: [
+          "Home size. A larger home needs more heating capacity, and the furnace has to be sized to the house rather than matched to the old unit",
+          "Ductwork. If the existing ducts are in good shape and sized properly, the new furnace connects to them. If they're undersized, leaky or damaged, some work may be needed for the new furnace to perform properly",
+          "Venting. Moving from an older furnace that vents up a chimney to a high-efficiency furnace means new plastic venting out a side wall and a condensate drain. How easy that is varies a lot from house to house",
+          "Season. Replacing a furnace during a cold snap, when the house has no heat and everyone else is calling too, is harder to schedule than a planned replacement in spring, summer or early fall",
+          "Access. A furnace in a tight crawlspace or a finished basement with little clearance takes more labour than one in an open utility room",
+          "Extras. A new thermostat, humidifier, media filter cabinet or carbon monoxide alarms add to the total, and whether you need them depends on your home",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Where Rebates Stand Right Now",
+      },
+      {
+        type: "p",
+        text: "Many homeowners remember rebates for high-efficiency furnaces and other home upgrades. Those programs have changed. The Enbridge HER+ program and the Canada Greener Homes Grant are both closed to new applicants.",
+      },
+      {
+        type: "p",
+        text: "Ontario's current Home Renovation Savings program focuses on heat pumps, insulation and smart thermostats rather than gas furnaces. If you're considering a heat pump, or adding a smart thermostat along with a new furnace, it's worth checking what's available. Program details and eligibility change, so confirm them directly at homerenovationsavings.ca before you count on any rebate in your budget.",
+      },
+      {
+        type: "h2",
+        text: "Repair or Replace?",
+      },
+      {
+        type: "p",
+        text: "A new furnace isn't always the answer. If your furnace is in good shape overall and needs a single part, a repair is usually the better value. If it's older, needs repairs more and more often, or a major part like the heat exchanger has failed, replacement starts to make more sense. Our guide on when it's time to replace a furnace covers the warning signs, and our look at what HVAC repair costs in Niagara helps with the other side of the comparison.",
+      },
+      {
+        type: "p",
+        text: "Be cautious of anyone who pushes for replacement on the first visit without explaining why. A good technician will tell you when a repair makes more sense, even when it means a smaller job.",
+      },
+      {
+        type: "h2",
+        text: "Getting a Useful Quote",
+      },
+      {
+        type: "p",
+        text: "A useful furnace quote tells you exactly what you're getting:",
+      },
+      {
+        type: "list",
+        items: [
+          "The make, model and efficiency rating of the furnace",
+          "Whether it's single stage, two stage or modulating",
+          "How the furnace was sized for your home",
+          "What venting, ductwork or electrical work is included",
+          "Removal of the old unit",
+          "What the warranty covers and for how long",
+        ],
+      },
+      {
+        type: "p",
+        text: "Comparing quotes on price alone can mislead you if one includes venting changes or ductwork corrections and another doesn't. Ask each contractor to explain what's included, and be wary of any quote that doesn't mention sizing at all.",
+      },
+      {
+        type: "h2",
+        text: "Plan Ahead If You Can",
+      },
+      {
+        type: "p",
+        text: "The best time to replace a furnace is before it fails. If yours is getting older or has needed several repairs, getting a quote now gives you time to compare options, check which programs are open, and schedule the work when it suits you instead of on the coldest night of the year.",
+      },
+      {
+        type: "h2",
+        text: "Get an Honest Quote",
+      },
+      {
+        type: "p",
+        text: "Tom at FixAir is a licensed, residential-only HVAC technician with 25+ years of experience installing and servicing furnaces across Niagara. Quotes are free, and Tom will tell you honestly whether you need a new furnace, a repair, or neither. Call Tom at 905-732-2791.",
+      },
+    ],
+  },
+  {
+    slug: "carbon-monoxide-furnace-ontario",
+    contextLinks: [
+      { text: "furnace", href: "/services/furnaces/" },
+      { text: "keeps locking out", href: "/blog/furnace-wont-turn-on/" },
+      { text: "annual tune-up", href: "/blog/hvac-maintenance-tune-up/" },
+      { text: "replacing the furnace", href: "/blog/when-to-replace-your-furnace/" },
+    ],
+    title: "Carbon Monoxide and Your Furnace: What Ontario Homeowners Should Know",
+    metaTitle: "Carbon Monoxide and Your Furnace in Ontario | FixAir",
+    metaDescription:
+      "How a furnace can produce carbon monoxide, what Ontario requires for CO alarms, the symptoms to know, and why inspections matter. Call Tom: 905-732-2791.",
+    serviceSlug: "furnaces",
+    serviceName: "Furnaces",
+    image: "/blog/carbon-monoxide-furnace-ontario.jpg",
+    imageAlt: "Carbon monoxide alarm mounted on the hallway wall beside a bedroom door",
+    date: "2026-11-03",
+    readTime: "5 min read",
+    excerpt:
+      "A properly maintained furnace is safe, and a working CO alarm is the backstop in case something goes wrong. Here's what Ontario requires, what to watch for, and why the alarm's expiry date matters.",
+    body: [
+      {
+        type: "p",
+        text: "Carbon monoxide is one of those topics that's easy to put off because it sounds alarming. It doesn't need to be. A properly installed and maintained furnace is safe, and a working carbon monoxide alarm is an inexpensive backstop in case something goes wrong. Understanding how the two fit together is most of what you need to know.",
+      },
+      {
+        type: "h2",
+        text: "What Carbon Monoxide Is",
+      },
+      {
+        type: "p",
+        text: "Carbon monoxide, or CO, is a gas produced when fuel burns. Natural gas, propane, oil and wood all produce it. You can't see it, smell it or taste it, which is why an alarm is the only practical way to know it's there.",
+      },
+      {
+        type: "p",
+        text: "In a furnace, the burners fire into a heat exchanger. The heat exchanger keeps the combustion gases separate from the air that circulates through your house, and the venting carries those gases outside. When everything is working, the CO goes up the chimney or out the side wall vent, and none of it reaches your living space.",
+      },
+      {
+        type: "h2",
+        text: "How a Furnace Can Become a Problem",
+      },
+      {
+        type: "p",
+        text: "Problems come from a few directions:",
+      },
+      {
+        type: "list",
+        items: [
+          "A blocked vent. Snow drifting over a side wall vent, a nest in a chimney, or debris in a pipe can keep exhaust from leaving the house. Modern furnaces have safety switches designed to shut down when venting fails, which is one reason they should never be bypassed",
+          "Poor combustion. Dirty burners, incorrect gas pressure or not enough combustion air can make a furnace burn badly and produce more CO than it should",
+          "A cracked heat exchanger. After many years of heating up and cooling down, the metal can crack, which can let combustion gases mix with household air",
+          "Disconnected or damaged venting, especially in older homes where the venting has been changed several times",
+        ],
+      },
+      {
+        type: "p",
+        text: "Warning signs you might notice include a yellow or flickering burner flame instead of a steady blue one, soot or scorch marks around the furnace, a furnace that keeps locking out, or condensation that suddenly appears on windows near the furnace room. None of these prove there's a CO problem, but all of them are reasons to have the furnace looked at.",
+      },
+      {
+        type: "h2",
+        text: "What Ontario Requires",
+      },
+      {
+        type: "p",
+        text: "The Ontario Fire Code requires carbon monoxide alarms near sleeping areas in homes that have a fuel burning appliance, such as a gas furnace, water heater, fireplace or stove, or an attached garage. If your home has any of those, you need working CO alarms outside the bedrooms.",
+      },
+      {
+        type: "p",
+        text: "Many homeowners also put an alarm on each level of the house and one near the furnace room. The requirement is the minimum, not the limit. If you're not sure whether your alarms are in the right places, a technician can take a look during a furnace visit, and it only takes a few minutes to walk through the house together.",
+      },
+      {
+        type: "h2",
+        text: "CO Alarms Expire",
+      },
+      {
+        type: "p",
+        text: "This is the part many people miss. Carbon monoxide alarms don't last forever, and each one has an expiry date printed on it. Once it's past that date, the sensor may no longer do its job, even if the test button still produces a beep.",
+      },
+      {
+        type: "p",
+        text: "Check the date on every alarm in the house and replace them as the manufacturer directs. Test them regularly with the test button, and if an alarm uses batteries, change them on the schedule the manufacturer recommends. A combination smoke and CO alarm is fine, as long as it's installed where both are needed.",
+      },
+      {
+        type: "h2",
+        text: "Symptoms to Know",
+      },
+      {
+        type: "p",
+        text: "Exposure to carbon monoxide can cause symptoms that are easy to mistake for the flu:",
+      },
+      {
+        type: "list",
+        items: [
+          "Headache",
+          "Dizziness",
+          "Nausea",
+          "Tiredness or confusion",
+          "Shortness of breath",
+        ],
+      },
+      {
+        type: "p",
+        text: "Clues that point toward CO rather than a bug: several people in the house feeling unwell at the same time, pets seeming unwell too, and symptoms that ease when you leave the house and come back when you return.",
+      },
+      {
+        type: "h2",
+        text: "If the Alarm Goes Off",
+      },
+      {
+        type: "list",
+        items: [
+          "Get everyone out of the house, including pets",
+          "Call 911 from outside",
+          "Don't go back in until emergency responders say it's safe",
+          "Have the furnace and any other fuel burning appliances inspected before you use them again",
+        ],
+      },
+      {
+        type: "p",
+        text: "Don't assume an alarm is a false one, even if it stops after a moment. Treat it as real and let the professionals confirm what's going on.",
+      },
+      {
+        type: "h2",
+        text: "Why an Annual Inspection Matters",
+      },
+      {
+        type: "p",
+        text: "An alarm tells you when there's a problem. An inspection helps prevent one. During an annual tune-up, a technician checks the burners and the flame, confirms the gas pressure, inspects the heat exchanger for cracks, tests the safety switches, and makes sure the venting is intact and clear. Those are the things that keep combustion gases where they belong.",
+      },
+      {
+        type: "p",
+        text: "Inspections matter most for older furnaces. A heat exchanger doesn't crack overnight, and catching it early is the difference between a planned decision about replacing the furnace and an emergency. If a crack is found, the honest answer is that the furnace shouldn't keep running, and a good technician will show you why rather than just telling you.",
+      },
+      {
+        type: "h2",
+        text: "A Simple Routine",
+      },
+      {
+        type: "list",
+        items: [
+          "Test your CO alarms monthly and check their expiry dates twice a year",
+          "Keep outdoor vent pipes clear of snow, ice and debris all winter",
+          "Keep the area around the furnace clear so it gets the air it needs",
+          "Book a furnace inspection every fall",
+          "Call right away if you notice soot, a yellow flame or repeated lockouts",
+        ],
+      },
+      {
+        type: "h2",
+        text: "Book Your Furnace Inspection",
+      },
+      {
+        type: "p",
+        text: "Tom at FixAir is a licensed, residential-only HVAC technician with 25+ years of experience keeping Niagara homes safe and warm. It's Tom on the job every time, with a careful inspection and a straight answer about what he finds. Call Tom at 905-732-2791.",
+      },
+    ],
+  },
+  {
+    slug: "furnace-leaking-water",
+    contextLinks: [
+      { text: "furnace", href: "/services/furnaces/" },
+      { text: "furnace blowing cold air", href: "/blog/furnace-blowing-cold-air/" },
+      { text: "proper tune-up", href: "/blog/hvac-maintenance-tune-up/" },
+      { text: "conversation about replacement", href: "/blog/when-to-replace-your-furnace/" },
+    ],
+    title: "Why Is My Furnace Leaking Water?",
+    metaTitle: "Furnace Leaking Water? Causes and What to Do | FixAir",
+    metaDescription:
+      "Water around your furnace? The common causes, from a clogged condensate drain to a humidifier leak, and when it's urgent. Call Tom: 905-732-2791.",
+    serviceSlug: "furnaces",
+    serviceName: "Furnaces",
+    image: "/blog/furnace-leaking-water.jpg",
+    imageAlt: "Puddle of water spreading from under a furnace in a dim basement, with a clear drain tube resting in it",
+    date: "2026-11-10",
+    readTime: "5 min read",
+    excerpt:
+      "A puddle beside the furnace is unsettling, but most leaks come from a few predictable places and many are simple to fix. Here's how to find the source, and how to tell when it's urgent.",
+    body: [
+      {
+        type: "p",
+        text: "Finding a puddle beside the furnace is unsettling, especially since a furnace burns fuel rather than using water. But many modern furnaces produce water as part of normal operation, and most leaks come from a handful of predictable places. The fix is often simple. What matters is finding the source before the water damages flooring, drywall or the furnace itself.",
+      },
+      {
+        type: "h2",
+        text: "Does Your Furnace Make Water?",
+      },
+      {
+        type: "p",
+        text: "Start by working out what kind of furnace you have. Look at the vent pipes:",
+      },
+      {
+        type: "list",
+        items: [
+          "If the furnace vents through white plastic pipes out a side wall, it's a high-efficiency condensing furnace. It pulls so much heat from the exhaust that water vapour condenses into liquid, which drains away through a small tube. That's normal, and it produces a fair amount of water on cold days",
+          "If the furnace vents through a metal pipe into a chimney, it isn't designed to produce liquid water, so a leak points somewhere else, often the humidifier or an air conditioner coil",
+        ],
+      },
+      {
+        type: "p",
+        text: "Most leaks on high-efficiency furnaces trace back to the parts that handle that condensate.",
+      },
+      {
+        type: "h2",
+        text: "The Condensate Line",
+      },
+      {
+        type: "p",
+        text: "The condensate line is the small plastic tube that carries water from the furnace to a floor drain, a laundry tub or a condensate pump. It can slip off its fitting, crack, or get kinked when things are moved around in the basement. Follow the tube from the furnace to where it ends and look for drips, loose connections, or a section that sags and holds water.",
+      },
+      {
+        type: "h2",
+        text: "A Clogged Drain or Trap",
+      },
+      {
+        type: "p",
+        text: "Condensate isn't perfectly clean water. Over time, sediment and slime build up in the drain line and in the trap, a loop in the line that stops exhaust gases from escaping through the drain. When the trap or the line clogs, water backs up. Depending on the furnace, it either spills out of the cabinet or trips a safety switch that shuts the furnace down.",
+      },
+      {
+        type: "p",
+        text: "That second case is why a clogged drain sometimes shows up as a furnace blowing cold air or not heating at all, with only a little water in sight. Clearing and flushing the trap and drain is a routine service item, and it's checked as part of a proper tune-up.",
+      },
+      {
+        type: "h2",
+        text: "A Failed Condensate Pump",
+      },
+      {
+        type: "p",
+        text: "If there's no floor drain close to the furnace, the condensate runs into a small pump that pushes it up and away. These pumps have a float that turns the motor on as the reservoir fills. If the float sticks or the motor fails, the reservoir overflows. Check whether the pump is running and whether the reservoir is full. Many pumps have a safety switch that shuts the furnace off when they overflow, which again can look like a no heat problem.",
+      },
+      {
+        type: "h2",
+        text: "The Humidifier",
+      },
+      {
+        type: "p",
+        text: "A humidifier mounted on the furnace ductwork is connected to a water line and has its own drain. If the water valve sticks open, the pad is clogged with minerals, or the drain line is blocked, water can run down the side of the furnace or drip onto the floor. The water usually shows up near where the humidifier is mounted. Closing the small water supply valve to the humidifier is a safe first step while you wait for service.",
+      },
+      {
+        type: "h2",
+        text: "The Air Conditioner Coil",
+      },
+      {
+        type: "p",
+        text: "If you have central air, the indoor coil usually sits right on top of the furnace. In summer it produces condensation that drains through its own line, and a clogged coil drain can make it look like the furnace is leaking. If the leak only happens when the air conditioner runs, the coil drain is the likely source.",
+      },
+      {
+        type: "h2",
+        text: "A Cracked Secondary Heat Exchanger",
+      },
+      {
+        type: "p",
+        text: "High-efficiency furnaces have two heat exchangers. The secondary heat exchanger is where the condensing happens, and it's in contact with condensate for years. If it cracks or corrodes through, water can leak inside the furnace, often showing up as rust, dripping, or water in places it shouldn't be inside the cabinet.",
+      },
+      {
+        type: "p",
+        text: "This is less common than a clogged drain, and it isn't something a homeowner can diagnose. A technician needs to inspect the furnace. If the secondary heat exchanger has failed, it's a significant repair, and depending on the age of the furnace it may lead to a conversation about replacement.",
+      },
+      {
+        type: "h2",
+        text: "What You Can Check Yourself",
+      },
+      {
+        type: "list",
+        items: [
+          "Work out whether your furnace is high-efficiency by looking at the vent pipes",
+          "Follow the condensate line and look for disconnected, cracked or sagging sections",
+          "Check whether a condensate pump is running and whether its reservoir is overflowing",
+          "Look at the humidifier, and close its water supply valve if it's dripping",
+          "Note when the leak happens: while heating, while cooling, or all the time",
+          "Mop up the water and lay a towel down so you can see whether it comes back, and how fast",
+        ],
+      },
+      {
+        type: "h2",
+        text: "When It's Urgent",
+      },
+      {
+        type: "p",
+        text: "Most furnace leaks are a nuisance rather than an emergency, but some need attention right away:",
+      },
+      {
+        type: "list",
+        items: [
+          "Water is pooling near electrical connections, outlets or the furnace controls. Turn the furnace off at its service switch",
+          "The furnace has shut down and won't restart in cold weather",
+          "You see rust, corrosion or water inside the burner area or the furnace cabinet",
+          "The leak is steady and growing rather than a few drops",
+          "Your carbon monoxide alarm sounds. Get everyone out of the house and call 911 from outside",
+        ],
+      },
+      {
+        type: "p",
+        text: "If the furnace is still heating and the leak is small, it's usually fine to put a pan down and book a service visit rather than an emergency call. Don't leave it for long, though. Water sitting under a furnace rusts the base, damages flooring, and can lead to mould.",
+      },
+      {
+        type: "h2",
+        text: "Get the Leak Tracked Down",
+      },
+      {
+        type: "p",
+        text: "Tom at FixAir is a licensed, residential-only HVAC technician with 25+ years of experience with high-efficiency furnaces across Niagara. He'll find where the water is coming from and give you an honest answer on what it takes to fix it. Call Tom at 905-732-2791.",
+      },
+    ],
+  },
+  {
+    slug: "hvac-service-thorold",
+    contextLinks: [
+      { text: "Thorold", href: "/service-areas/thorold/" },
+      { text: "ductless systems", href: "/blog/what-is-a-ductless-mini-split/" },
+      { text: "not cooling", href: "/blog/why-is-my-ac-not-cooling/" },
+      { text: "annual tune-up", href: "/blog/hvac-maintenance-tune-up/" },
+      { text: "furnace repair", href: "/service-areas/thorold/furnace-repair/" },
+      { text: "air conditioner repair", href: "/service-areas/thorold/ac-repair/" },
+    ],
+    title: "Furnace and AC Service in Thorold: From the Canal Locks to the Escarpment",
+    metaTitle: "Furnace & AC Service Thorold | FixAir",
+    metaDescription:
+      "What Thorold homes near the canal, up on the escarpment and out in Port Robinson and Allanburg need from heating and cooling. Call Tom: 905-732-2791.",
+    serviceSlug: "furnaces",
+    serviceName: "Furnaces",
+    image: "/blog/hvac-service-thorold.jpg",
+    imageAlt: "Older red brick homes on a tree lined street in the fall, with an air conditioner in the front yard",
+    date: "2026-11-17",
+    readTime: "5 min read",
+    excerpt:
+      "Thorold packs a wide range of homes into a small area, from older houses near the canal locks to newer builds on the escarpment and rural properties in Port Robinson, Allanburg and Beaverdams.",
+    body: [
+      {
+        type: "p",
+        text: "Thorold is a small city with an unusually wide range of homes. Within a few kilometres you go from older, tightly spaced houses near the canal locks, through post-war streets, up to newer development on the escarpment, and out to rural properties in Port Robinson, Allanburg and Beaverdams. Each of those areas asks something different of a furnace and an air conditioner.",
+      },
+      {
+        type: "p",
+        text: "Here's what that means for the equipment in your home, and what's worth sorting out before each season.",
+      },
+      {
+        type: "h2",
+        text: "Downtown and the Canal: Older Homes With Layered Systems",
+      },
+      {
+        type: "p",
+        text: "The homes near the canal locks and along Front Street are some of the oldest in the city. Many have carried several generations of heating equipment, and each change left something behind: ductwork added long after the house was built, returns in odd places, a chimney that once served a very different furnace. The result is often uneven heat, upstairs rooms that never quite keep up, and a furnace that gets blamed for what is really an airflow problem.",
+      },
+      {
+        type: "p",
+        text: "The fix isn't always new equipment. Sometimes it's balancing the airflow, adding a return where one is missing, or correcting ductwork that was never sized properly. For rooms the ducts were never going to reach, such as a converted attic or a rear addition, ductless systems are often the cleanest answer, because they don't need ducts at all.",
+      },
+      {
+        type: "h2",
+        text: "Post-War Streets: Furnaces Near the End of Their Run",
+      },
+      {
+        type: "p",
+        text: "The post-war housing on the streets off Ormond Street and Pine Street is solid and compact, often with original ductwork and a furnace that has been repaired more than once. These are the homes where the repair or replace question comes up most. The honest answer depends on the age of the furnace, the cost of the repair, and how the rest of the system is holding up. A furnace that needs an igniter is worth fixing. One with a cracked heat exchanger is a replacement conversation.",
+      },
+      {
+        type: "h2",
+        text: "Confederation Heights and the Escarpment: Watch the Vents",
+      },
+      {
+        type: "p",
+        text: "Newer homes up on Confederation Heights and along the escarpment generally have high-efficiency furnaces that vent through white plastic pipes out a side wall. They're efficient systems, but the higher, more exposed properties catch wind and blowing snow. When snow drifts over the intake or exhaust, or strong wind disrupts the venting, the furnace's pressure switch shuts it down as a safety measure.",
+      },
+      {
+        type: "p",
+        text: "It looks like a dead furnace on the coldest night of the year, and it's often a five minute job to clear. Know where your vent pipes are, and check them after a heavy snowfall or a windy storm. If it happens every winter, the vent terminations can be extended or moved out of the wind, which ends the problem instead of repeating it.",
+      },
+      {
+        type: "h2",
+        text: "Port Robinson, Allanburg and Beaverdams: Propane and Power",
+      },
+      {
+        type: "p",
+        text: "In the rural parts of Thorold, properties are more spread out and some homes run on propane rather than natural gas. A propane furnace is set up differently from a natural gas one, with its own gas pressure and burner setup. A furnace that was converted improperly runs badly and can be unsafe, so part of any service call on a propane system is confirming the conversion was done right.",
+      },
+      {
+        type: "p",
+        text: "Rural homes are also the most likely to lose heat in a power outage. A furnace needs electricity to run, no matter how much fuel is in the tank. Keeping the propane tank topped up before winter, and having a plan for outages, is part of being ready.",
+      },
+      {
+        type: "h2",
+        text: "Summer in Thorold",
+      },
+      {
+        type: "p",
+        text: "The escarpment makes a difference in summer too. Homes up high tend to catch more breeze. The older streets lower down near the canal are more sheltered and more humid, and the complaint there is often about dampness rather than temperature. That matters, because an air conditioner that's too big for the house cools quickly and shuts off before it removes much moisture, leaving the house cold and clammy.",
+      },
+      {
+        type: "p",
+        text: "Tight lot lines downtown create another common problem: an outdoor unit wedged into a narrow side yard or against a fence, breathing its own hot air. It runs hot, cools poorly and wears out early. In the rural areas the opposite happens, with plenty of space but coils packed with grass clippings and cottonwood seed. If your air conditioner is not cooling the way it used to, check what the outdoor unit is breathing before assuming the worst.",
+      },
+      {
+        type: "h2",
+        text: "What to Sort Out Before Each Season",
+      },
+      {
+        type: "list",
+        items: [
+          "Change the furnace filter, and check it monthly through the heating season",
+          "Run the furnace for fifteen minutes in early fall to catch problems before the first cold night",
+          "Find your outdoor vent pipes and keep them clear of leaves, snow and ice",
+          "Test your carbon monoxide alarms and check their expiry dates",
+          "On propane, check the tank level and book a delivery early",
+          "In spring, clear debris from around the outdoor air conditioner and give it room to breathe",
+          "Book an annual tune-up so small problems are found in mild weather",
+        ],
+      },
+      {
+        type: "p",
+        text: "Fall is the best time to deal with most of this. A vent that needs moving, or a furnace that struggled last winter, is far easier to sort out in October than during a February storm.",
+      },
+      {
+        type: "h2",
+        text: "Close to Home Base",
+      },
+      {
+        type: "p",
+        text: "Thorold is one of the closest cities to FixAir's Welland home base, which makes it one of the quickest areas for Tom to reach on a no heat or no cooling call. That matters most during the first real cold snap, when calls come in all at once across Niagara. The 24/7 emergency line goes to Tom directly.",
+      },
+      {
+        type: "h2",
+        text: "Talk to a Local Technician",
+      },
+      {
+        type: "p",
+        text: "Tom at FixAir is a licensed, residential-only HVAC technician with 25+ years of experience, serving Thorold from the downtown core to Confederation Heights, Port Robinson, Allanburg and Beaverdams. It's Tom on the job every time, with honest advice on furnace repair, air conditioner repair and new systems. Call Tom at 905-732-2791.",
+      },
+    ],
+  },
+  {
     slug: "furnace-blowing-cold-air",
     contextLinks: [
       { text: "furnace", href: "/services/furnaces/" },
@@ -13,6 +1203,7 @@ const _blogPosts = [
     serviceSlug: "furnaces",
     serviceName: "Furnaces",
     image: "/blog/furnace-blowing-cold-air.jpg",
+    imageAlt: "High-efficiency gas furnace connected to sheet-metal ductwork in an unfinished basement",
     date: "2026-09-02",
     readTime: "6 min read",
     excerpt:
@@ -179,6 +1370,7 @@ const _blogPosts = [
     serviceSlug: "furnaces",
     serviceName: "Furnaces",
     image: "/blog/hvac-port-colborne.jpg",
+    imageAlt: "Grey gas furnace beside a water heater in a tidy basement utility room",
     date: "2026-08-28",
     readTime: "5 min read",
     excerpt:
@@ -313,6 +1505,7 @@ const _blogPosts = [
     serviceSlug: "furnaces",
     serviceName: "Furnaces",
     image: "/blog/hvac-st-catharines.jpg",
+    imageAlt: "Gas furnace and water heater in a basement utility room",
     date: "2026-08-18",
     readTime: "6 min read",
     excerpt:
@@ -427,6 +1620,7 @@ const _blogPosts = [
     serviceSlug: "air-conditioners",
     serviceName: "Air Conditioners",
     image: "/blog/ac-not-cooling.jpg",
+    imageAlt: "Man wiping his forehead in a warm living room with the thermostat reading 32°C",
     date: "2026-07-19",
     readTime: "5 min read",
     excerpt:
@@ -502,6 +1696,7 @@ const _blogPosts = [
     serviceSlug: "air-conditioners",
     serviceName: "Air Conditioners",
     image: "/blog/ac-repair-niagara-falls.jpg",
+    imageAlt: "HVAC technician testing an outdoor air conditioner beside a brick house",
     date: "2026-07-18",
     readTime: "5 min read",
     excerpt:
@@ -569,6 +1764,7 @@ const _blogPosts = [
     serviceSlug: "air-conditioners",
     serviceName: "Air Conditioners",
     image: "/blog/ac-welland.jpg",
+    imageAlt: "Technician servicing a side-yard air conditioner at a house with vinyl siding",
     date: "2026-07-17",
     readTime: "5 min read",
     excerpt:
@@ -643,6 +1839,7 @@ const _blogPosts = [
     serviceSlug: "furnaces",
     serviceName: "Furnaces",
     image: "/blog/furnace-wainfleet.jpg",
+    imageAlt: "Technician inspecting a furnace with a flashlight in a stone-walled basement",
     date: "2026-07-16",
     readTime: "4 min read",
     excerpt:
@@ -710,6 +1907,7 @@ const _blogPosts = [
     serviceSlug: "air-conditioners",
     serviceName: "Air Conditioners",
     image: "/blog/hvac-haldimand.jpg",
+    imageAlt: "Brick farmhouse with an outdoor heat pump unit, surrounded by open farmland",
     date: "2026-07-14",
     readTime: "4 min read",
     excerpt:
@@ -771,6 +1969,7 @@ const _blogPosts = [
     serviceSlug: "furnaces",
     serviceName: "Furnaces",
     image: "/blog/hvac-cost.jpg",
+    imageAlt: "Technician going over a written estimate with a homeowner on a front porch",
     date: "2026-07-15",
     readTime: "5 min read",
     excerpt:
@@ -840,6 +2039,7 @@ const _blogPosts = [
     serviceSlug: "furnaces",
     serviceName: "Furnaces",
     image: "/blog/furnace-wont-start.jpg",
+    imageAlt: "Homeowner wrapped in a thick sweater in a cold house, with frost on the window",
     date: "2026-07-12",
     readTime: "4 min read",
     excerpt:
@@ -914,6 +2114,7 @@ const _blogPosts = [
     serviceSlug: "furnaces",
     serviceName: "Furnaces",
     image: "/blog/hvac-tune-up.jpg",
+    imageAlt: "Technician tuning up a furnace with tools laid out on the basement floor",
     date: "2026-07-11",
     readTime: "4 min read",
     excerpt:
@@ -979,6 +2180,7 @@ const _blogPosts = [
     serviceSlug: "furnaces",
     serviceName: "Furnaces",
     image: "/blog/smart-thermostat.jpg",
+    imageAlt: "Round smart thermostat on a living room wall showing 21°C",
     date: "2026-07-10",
     readTime: "4 min read",
     excerpt:
@@ -1044,6 +2246,7 @@ const _blogPosts = [
     serviceSlug: "ductless-systems",
     serviceName: "Ductless Systems",
     image: "/blog/heat-pump-rebates.jpg",
+    imageAlt: "Outdoor heat pump unit mounted on a wall bracket outside a modern house",
     date: "2026-07-13",
     readTime: "5 min read",
     excerpt:
@@ -1115,6 +2318,7 @@ const _blogPosts = [
     serviceSlug: "furnaces",
     serviceName: "Furnaces",
     image: "/blog/furnace-replacing.jpg",
+    imageAlt: "Gas furnace and ductwork in an unfinished basement, with a thermal camera on the floor",
     date: "2026-06-10",
     readTime: "5 min read",
     excerpt:
@@ -1198,6 +2402,7 @@ const _blogPosts = [
     serviceSlug: "air-conditioners",
     serviceName: "Air Conditioners",
     image: "/blog/ac-replacing.jpg",
+    imageAlt: "Outdoor central air conditioner condenser on a concrete pad",
     date: "2026-06-15",
     readTime: "5 min read",
     excerpt:
@@ -1277,6 +2482,7 @@ const _blogPosts = [
     serviceSlug: "ductless-systems",
     serviceName: "Ductless Systems",
     image: "/blog/ductless-systems.jpg",
+    imageAlt: "Wall-mounted ductless mini-split indoor unit",
     date: "2026-06-21",
     readTime: "5 min read",
     excerpt:
@@ -1358,7 +2564,8 @@ const _blogPosts = [
       "Most tanks last 8-12 years. The warning signs yours is failing and what replacement involves. Call Tom: 905-732-2791.",
     serviceSlug: "hot-water-heaters",
     serviceName: "Hot Water Heaters",
-    image: "/blog/hot-water-heater.jpg",
+    image: "/blog/water-heater-tank.jpg",
+    imageAlt: "Tank water heater with its access panels open in a clean basement utility room",
     date: "2026-06-27",
     readTime: "4 min read",
     excerpt:
@@ -1437,7 +2644,8 @@ const _blogPosts = [
       "How boiler systems work, their advantages, and what installation or replacement involves in Niagara. Call Tom: 905-732-2791.",
     serviceSlug: "boilers",
     serviceName: "Boilers",
-    image: "/blog/boilers.jpg",
+    image: "/blog/boiler-wall.jpg",
+    imageAlt: "Wall-mounted combi boiler with copper heating pipes and shut-off valves",
     date: "2026-07-03",
     readTime: "5 min read",
     excerpt:
@@ -1526,6 +2734,7 @@ const _blogPosts = [
     serviceSlug: "duct-cleaning",
     serviceName: "Air Ducts",
     image: "/blog/duct-cleaning.jpg",
+    imageAlt: "Galvanized ductwork running beneath the floor joists of a basement",
     date: "2026-07-08",
     readTime: "4 min read",
     excerpt:
@@ -1601,6 +2810,47 @@ const _blogPosts = [
   },
 ]
 
+// Every post, newest first, including ones scheduled for a future date. Only
+// prerender and the schedule should see this list; pages go through
+// getPublishedPosts() so a scheduled post never leaks early.
 export const blogPosts = [..._blogPosts].sort(
   (a, b) => new Date(b.date) - new Date(a.date)
 )
+
+// The build date in America/Toronto, injected by vite.config.js.
+export const BUILD_TODAY = typeof __BUILD_TODAY__ === 'string' ? __BUILD_TODAY__ : '1970-01-01'
+
+// Stand-in "today" on staging (BLOG_SHOW_FUTURE=1, or RAILWAY_ENVIRONMENT_NAME
+// "staging"): every scheduled post counts as published.
+export const PREVIEW_TODAY = '9999-12-31'
+
+const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/
+
+// The date the current render is for. server.js stamps the real Toronto date
+// into window.__TODAY__ on every HTML response, and prerender sets it per
+// render; anywhere else (vite preview, unit use) it falls back to the build date.
+export function todayForRender() {
+  const t = globalThis.__TODAY__
+  return typeof t === 'string' && ISO_DATE.test(t) ? t : BUILD_TODAY
+}
+
+// Posts live on or before `today` (YYYY-MM-DD strings compare correctly as text).
+export function getPublishedPosts(today) {
+  return blogPosts.filter(p => p.date <= today)
+}
+
+// Preview only: a post that production would still be hiding.
+export function isScheduledPreview(post) {
+  return todayForRender() === PREVIEW_TODAY && post.date > BUILD_TODAY
+}
+
+// Post dates are calendar days, not instants. Formatting in UTC keeps
+// "2026-09-02" from rendering as September 1 west of Greenwich.
+export function formatPostDate(dateStr) {
+  return new Date(dateStr + 'T00:00:00Z').toLocaleDateString('en-CA', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    timeZone: 'UTC',
+  })
+}
