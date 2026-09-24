@@ -14,9 +14,10 @@ export function torontoToday(now = new Date()) {
   return `${get('year')}-${get('month')}-${get('day')}`
 }
 
-// Staging and previews show scheduled posts; production never does.
+// Staging shows scheduled posts; everything else hides them. This is an
+// allowlist on purpose: an unset, renamed or unexpected environment name
+// must fail closed, never publish early.
 export function showFuturePosts(env = process.env) {
   if (env.BLOG_SHOW_FUTURE === '1') return true
-  const railwayEnv = env.RAILWAY_ENVIRONMENT_NAME
-  return Boolean(railwayEnv) && railwayEnv !== 'production'
+  return (env.RAILWAY_ENVIRONMENT_NAME || '').trim().toLowerCase() === 'staging'
 }

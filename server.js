@@ -101,8 +101,9 @@ app.use((req, res, next) => {
 // Niagara and serve the newest variant whose date has arrived. A post goes
 // live at midnight Eastern on its date with no cron job and no rebuild.
 //
-// Staging and previews (BLOG_SHOW_FUTURE=1, or any Railway environment other
-// than production) treat today as 9999-12-31, so every scheduled post shows.
+// Staging (BLOG_SHOW_FUTURE=1, or RAILWAY_ENVIRONMENT_NAME "staging", any case)
+// treats today as 9999-12-31, so every scheduled post shows. Any other value,
+// including unset, hides scheduled posts. See scripts/today.js.
 
 const distDir = join(__dirname, 'dist')
 const PREVIEW_TODAY = '9999-12-31'

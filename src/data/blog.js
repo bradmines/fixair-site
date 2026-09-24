@@ -2820,8 +2820,8 @@ export const blogPosts = [..._blogPosts].sort(
 // The build date in America/Toronto, injected by vite.config.js.
 export const BUILD_TODAY = typeof __BUILD_TODAY__ === 'string' ? __BUILD_TODAY__ : '1970-01-01'
 
-// Stand-in "today" on staging and previews (BLOG_SHOW_FUTURE=1 or a non-production
-// Railway environment): every scheduled post counts as published.
+// Stand-in "today" on staging (BLOG_SHOW_FUTURE=1, or RAILWAY_ENVIRONMENT_NAME
+// "staging"): every scheduled post counts as published.
 export const PREVIEW_TODAY = '9999-12-31'
 
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/

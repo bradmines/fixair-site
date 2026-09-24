@@ -297,3 +297,23 @@ instantly if any reference does not match how locals describe an area.
 
 Nothing else in the brief was skipped. Task 6 was completed as specified, with
 the effectiveness caveat noted above rather than left implied.
+
+---
+
+## Scheduled posts and on-page SEO (branch `scheduled-posts`, 2026-09-24)
+
+- **Build fix:** `prerender.js` imports the SSR bundle through `pathToFileURL`, so `npm run build` works on Windows.
+- **Scheduled publishing, no cron, no rebuild:** posts dated in the future are prerendered but hidden. `server.js` works out today in America/Toronto per request, serves the newest dated variant of listing pages and `sitemap.xml`, and returns 404 for a post until its date. Details are in `prerender.js`, `server.js` and `scripts/today.js`.
+- **Preview mode** shows every scheduled post, with a "Scheduled for" badge. It is on only when `BLOG_SHOW_FUTURE=1` or `RAILWAY_ENVIRONMENT_NAME` is `staging` (any case). Any other value, including unset, hides future posts.
+- **SEO pass:**
+  - One `<h1>` on the home page.
+  - Descriptive alt text on blog header images, plus `twitter:image:alt`.
+  - Article and Blog publisher linked to the `/#business` entity.
+  - A real boiler image on the hydronic post.
+  - 16 unused SVGs removed.
+  - Post dates no longer render a day early.
+- **Content:** eight furnace posts, one each Tuesday from 2026-09-29 to 2026-11-17 (ending with a Thorold town post), with 1280x720 header images.
+- **Open:**
+  - The hot water heater post's header shows a boiler.
+  - `public/blog/boilers.jpg` is now unused.
+  - The oldest post has no "More Articles" box, because related links only point to earlier posts.
