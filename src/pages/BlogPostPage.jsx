@@ -4,16 +4,9 @@ import MobileCallBar from '../components/MobileCallBar'
 import Breadcrumbs from '../components/Breadcrumbs'
 import VentStrip from '../components/VentStrip'
 import Contact from '../components/Contact'
-import { blogPosts } from '../data/blog'
+import ScheduledBadge from '../components/ScheduledBadge'
+import { getPublishedPosts, formatPostDate } from '../data/blog'
 import { PHONE, PHONE_HREF } from '../constants'
-
-function formatDate(dateStr) {
-  return new Date(dateStr).toLocaleDateString('en-CA', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  })
-}
 
 // Turn the first occurrence of each configured phrase into a real in-body
 // link. Each target is linked once, at its earliest mention, so the article
@@ -47,6 +40,12 @@ function linkify(text, pending) {
   if (!nodes.length) return text
   nodes.push(rest)
   return nodes
+}
+
+// Drop in-body links to blog posts that weren't published by this post's date.
+function liveContextLinks(links = [], published) {
+  const live = new Set(published.map(p => `/blog/${p.slug}/`))
+  return links.filter(l => !l.href.startsWith('/blog/') || l.href === '/blog/' || live.has(l.href))
 }
 
 function renderBody(body, contextLinks = []) {
@@ -89,13 +88,19 @@ export default function BlogPostPage({ post }) {
   // every "More Articles" link on the site and posts 4+ collected none, which
   // is why most of the blog sat on one or two inbound links. Rotating gives
   // every post exactly three inbound sibling links and costs nothing.
-  const idx = blogPosts.findIndex(p => p.slug === post.slug)
+  //
+  // Only posts dated on or before this one are candidates. A post page is
+  // prerendered once and must never link to an article that wasn't live yet
+  // on its own publish date, so its own date stands in for "today" here.
+  const published = getPublishedPosts(post.date)
+  const idx = published.findIndex(p => p.slug === post.slug)
   const others =
     idx === -1
-      ? blogPosts.slice(0, 3)
-      : Array.from({ length: Math.min(3, blogPosts.length - 1) }, (_, k) =>
-          blogPosts[(idx + 1 + k) % blogPosts.length]
+      ? published.slice(0, 3)
+      : Array.from({ length: Math.min(3, published.length - 1) }, (_, k) =>
+          published[(idx + 1 + k) % published.length]
         )
+  const contextLinks = liveContextLinks(post.contextLinks, published)
 
   return (
     <>
@@ -118,7 +123,8 @@ export default function BlogPostPage({ post }) {
                 {post.serviceName}
               </span>
               <span className="text-blue-100/50 text-sm">{post.readTime}</span>
-              <span className="text-blue-100/50 text-sm">{formatDate(post.date)}</span>
+              <span className="text-blue-100/50 text-sm">{formatPostDate(post.date)}</span>
+              <ScheduledBadge post={post} />
             </div>
             <h1 className="mt-5 text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight">
               {post.title}
@@ -135,7 +141,7 @@ export default function BlogPostPage({ post }) {
             <div className="overflow-hidden rounded-2xl shadow-sm mb-10 md:mb-14">
               <img
                 src={post.image}
-                alt={post.title}
+                alt={post.imageAlt}
                 width={1280}
                 height={720}
                 className="w-full"
@@ -147,7 +153,7 @@ export default function BlogPostPage({ post }) {
 
               {/* Main content */}
               <article className="prose-custom">
-                {renderBody(post.body, post.contextLinks)}
+                {renderBody(post.body, contextLinks)}
 
                 {/* CTA at end of article */}
                 <div className="mt-12 rounded-2xl bg-brand-blue p-8 text-white">
@@ -192,7 +198,7 @@ export default function BlogPostPage({ post }) {
                     </div>
                   </div>
                   <p className="text-sm text-gray-600 leading-relaxed">
-                    Tom is the owner and technician behind FixAir — a residential-only HVAC company serving Niagara homeowners.
+                    Tom is the owner and technician behind FixAir, a residential-only HVAC company serving Niagara homeowners.
                   </p>
                   <a href={PHONE_HREF} className="mt-4 flex items-center justify-center gap-2 bg-brand-orange text-white font-bold text-sm px-4 py-2.5 rounded-lg hover:bg-brand-orange-dark transition-colors">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -215,7 +221,7 @@ export default function BlogPostPage({ post }) {
                         >
                           <img
                             src={p.image}
-                            alt={p.title}
+                            alt={p.imageAlt}
                             width={1280}
                             height={720}
                             className="w-16 h-12 rounded-lg object-cover flex-shrink-0"

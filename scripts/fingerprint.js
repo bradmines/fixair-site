@@ -36,7 +36,9 @@ const HASHABLE = new Set([
 // exact name, so a hash would simply make them unreachable.
 const PINNED = new Set(['robots.txt', 'sitemap.xml', 'favicon.svg', 'favicon.ico'])
 
-// Files whose contents get rewritten to point at the new names.
+// Files whose contents get rewritten to point at the new names. This includes
+// the scheduled-post variants (index@YYYY-MM-DD.html, sitemap@YYYY-MM-DD.xml),
+// since every file under dist/ is walked and matched by extension.
 const REWRITABLE = new Set(['.html', '.css', '.js', '.json', '.xml'])
 
 function walk(dir, out = []) {

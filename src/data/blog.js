@@ -13,6 +13,7 @@ const _blogPosts = [
     serviceSlug: "furnaces",
     serviceName: "Furnaces",
     image: "/blog/furnace-blowing-cold-air.jpg",
+    imageAlt: "High-efficiency gas furnace connected to sheet-metal ductwork in an unfinished basement",
     date: "2026-09-02",
     readTime: "6 min read",
     excerpt:
@@ -179,6 +180,7 @@ const _blogPosts = [
     serviceSlug: "furnaces",
     serviceName: "Furnaces",
     image: "/blog/hvac-port-colborne.jpg",
+    imageAlt: "Grey gas furnace beside a water heater in a tidy basement utility room",
     date: "2026-08-28",
     readTime: "5 min read",
     excerpt:
@@ -313,6 +315,7 @@ const _blogPosts = [
     serviceSlug: "furnaces",
     serviceName: "Furnaces",
     image: "/blog/hvac-st-catharines.jpg",
+    imageAlt: "Gas furnace and water heater in a basement utility room",
     date: "2026-08-18",
     readTime: "6 min read",
     excerpt:
@@ -427,6 +430,7 @@ const _blogPosts = [
     serviceSlug: "air-conditioners",
     serviceName: "Air Conditioners",
     image: "/blog/ac-not-cooling.jpg",
+    imageAlt: "Man wiping his forehead in a warm living room with the thermostat reading 32°C",
     date: "2026-07-19",
     readTime: "5 min read",
     excerpt:
@@ -502,6 +506,7 @@ const _blogPosts = [
     serviceSlug: "air-conditioners",
     serviceName: "Air Conditioners",
     image: "/blog/ac-repair-niagara-falls.jpg",
+    imageAlt: "HVAC technician testing an outdoor air conditioner beside a brick house",
     date: "2026-07-18",
     readTime: "5 min read",
     excerpt:
@@ -569,6 +574,7 @@ const _blogPosts = [
     serviceSlug: "air-conditioners",
     serviceName: "Air Conditioners",
     image: "/blog/ac-welland.jpg",
+    imageAlt: "Technician servicing a side-yard air conditioner at a house with vinyl siding",
     date: "2026-07-17",
     readTime: "5 min read",
     excerpt:
@@ -643,6 +649,7 @@ const _blogPosts = [
     serviceSlug: "furnaces",
     serviceName: "Furnaces",
     image: "/blog/furnace-wainfleet.jpg",
+    imageAlt: "Technician inspecting a furnace with a flashlight in a stone-walled basement",
     date: "2026-07-16",
     readTime: "4 min read",
     excerpt:
@@ -710,6 +717,7 @@ const _blogPosts = [
     serviceSlug: "air-conditioners",
     serviceName: "Air Conditioners",
     image: "/blog/hvac-haldimand.jpg",
+    imageAlt: "Brick farmhouse with an outdoor heat pump unit, surrounded by open farmland",
     date: "2026-07-14",
     readTime: "4 min read",
     excerpt:
@@ -771,6 +779,7 @@ const _blogPosts = [
     serviceSlug: "furnaces",
     serviceName: "Furnaces",
     image: "/blog/hvac-cost.jpg",
+    imageAlt: "Technician going over a written estimate with a homeowner on a front porch",
     date: "2026-07-15",
     readTime: "5 min read",
     excerpt:
@@ -840,6 +849,7 @@ const _blogPosts = [
     serviceSlug: "furnaces",
     serviceName: "Furnaces",
     image: "/blog/furnace-wont-start.jpg",
+    imageAlt: "Homeowner wrapped in a thick sweater in a cold house, with frost on the window",
     date: "2026-07-12",
     readTime: "4 min read",
     excerpt:
@@ -914,6 +924,7 @@ const _blogPosts = [
     serviceSlug: "furnaces",
     serviceName: "Furnaces",
     image: "/blog/hvac-tune-up.jpg",
+    imageAlt: "Technician tuning up a furnace with tools laid out on the basement floor",
     date: "2026-07-11",
     readTime: "4 min read",
     excerpt:
@@ -979,6 +990,7 @@ const _blogPosts = [
     serviceSlug: "furnaces",
     serviceName: "Furnaces",
     image: "/blog/smart-thermostat.jpg",
+    imageAlt: "Round smart thermostat on a living room wall showing 21°C",
     date: "2026-07-10",
     readTime: "4 min read",
     excerpt:
@@ -1044,6 +1056,7 @@ const _blogPosts = [
     serviceSlug: "ductless-systems",
     serviceName: "Ductless Systems",
     image: "/blog/heat-pump-rebates.jpg",
+    imageAlt: "Outdoor heat pump unit mounted on a wall bracket outside a modern house",
     date: "2026-07-13",
     readTime: "5 min read",
     excerpt:
@@ -1115,6 +1128,7 @@ const _blogPosts = [
     serviceSlug: "furnaces",
     serviceName: "Furnaces",
     image: "/blog/furnace-replacing.jpg",
+    imageAlt: "Gas furnace and ductwork in an unfinished basement, with a thermal camera on the floor",
     date: "2026-06-10",
     readTime: "5 min read",
     excerpt:
@@ -1198,6 +1212,7 @@ const _blogPosts = [
     serviceSlug: "air-conditioners",
     serviceName: "Air Conditioners",
     image: "/blog/ac-replacing.jpg",
+    imageAlt: "Outdoor central air conditioner condenser on a concrete pad",
     date: "2026-06-15",
     readTime: "5 min read",
     excerpt:
@@ -1277,6 +1292,7 @@ const _blogPosts = [
     serviceSlug: "ductless-systems",
     serviceName: "Ductless Systems",
     image: "/blog/ductless-systems.jpg",
+    imageAlt: "Wall-mounted ductless mini-split indoor unit",
     date: "2026-06-21",
     readTime: "5 min read",
     excerpt:
@@ -1359,6 +1375,7 @@ const _blogPosts = [
     serviceSlug: "hot-water-heaters",
     serviceName: "Hot Water Heaters",
     image: "/blog/hot-water-heater.jpg",
+    imageAlt: "Wall-mounted tankless water heater with copper supply lines",
     date: "2026-06-27",
     readTime: "4 min read",
     excerpt:
@@ -1437,7 +1454,8 @@ const _blogPosts = [
       "How boiler systems work, their advantages, and what installation or replacement involves in Niagara. Call Tom: 905-732-2791.",
     serviceSlug: "boilers",
     serviceName: "Boilers",
-    image: "/blog/boilers.jpg",
+    image: "/blog/boiler-wall.jpg",
+    imageAlt: "Wall-mounted combi boiler with copper heating pipes and shut-off valves",
     date: "2026-07-03",
     readTime: "5 min read",
     excerpt:
@@ -1526,6 +1544,7 @@ const _blogPosts = [
     serviceSlug: "duct-cleaning",
     serviceName: "Air Ducts",
     image: "/blog/duct-cleaning.jpg",
+    imageAlt: "Galvanized ductwork running beneath the floor joists of a basement",
     date: "2026-07-08",
     readTime: "4 min read",
     excerpt:
@@ -1601,6 +1620,47 @@ const _blogPosts = [
   },
 ]
 
+// Every post, newest first, including ones scheduled for a future date. Only
+// prerender and the schedule should see this list; pages go through
+// getPublishedPosts() so a scheduled post never leaks early.
 export const blogPosts = [..._blogPosts].sort(
   (a, b) => new Date(b.date) - new Date(a.date)
 )
+
+// The build date in America/Toronto, injected by vite.config.js.
+export const BUILD_TODAY = typeof __BUILD_TODAY__ === 'string' ? __BUILD_TODAY__ : '1970-01-01'
+
+// Stand-in "today" on staging and previews (BLOG_SHOW_FUTURE=1 or a non-production
+// Railway environment): every scheduled post counts as published.
+export const PREVIEW_TODAY = '9999-12-31'
+
+const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/
+
+// The date the current render is for. server.js stamps the real Toronto date
+// into window.__TODAY__ on every HTML response, and prerender sets it per
+// render; anywhere else (vite preview, unit use) it falls back to the build date.
+export function todayForRender() {
+  const t = globalThis.__TODAY__
+  return typeof t === 'string' && ISO_DATE.test(t) ? t : BUILD_TODAY
+}
+
+// Posts live on or before `today` (YYYY-MM-DD strings compare correctly as text).
+export function getPublishedPosts(today) {
+  return blogPosts.filter(p => p.date <= today)
+}
+
+// Preview only: a post that production would still be hiding.
+export function isScheduledPreview(post) {
+  return todayForRender() === PREVIEW_TODAY && post.date > BUILD_TODAY
+}
+
+// Post dates are calendar days, not instants. Formatting in UTC keeps
+// "2026-09-02" from rendering as September 1 west of Greenwich.
+export function formatPostDate(dateStr) {
+  return new Date(dateStr + 'T00:00:00Z').toLocaleDateString('en-CA', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    timeZone: 'UTC',
+  })
+}

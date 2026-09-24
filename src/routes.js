@@ -1,13 +1,13 @@
 import { services } from './data/services'
 import { locations } from './data/locations'
-import { blogPosts } from './data/blog'
+import { blogPosts, getPublishedPosts, todayForRender } from './data/blog'
 import { cityServices } from './data/cityServices'
 
 // Central route registry. Shared by the server (prerender) and the client
 // (hydration) so both resolve the same component + data for a given path.
 // No react-router: every page is its own prerendered HTML document and
 // navigation is plain full-page loads.
-export const routes = [
+const pageRoutes = [
   { path: '/', kind: 'home', data: null },
   ...services.map(s => ({ path: `/services/${s.slug}/`, kind: 'service', data: s })),
   ...locations.map(l => ({ path: `/service-areas/${l.slug}/`, kind: 'location', data: l })),
@@ -18,8 +18,18 @@ export const routes = [
   })),
   { path: '/faq/', kind: 'faq', data: null },
   { path: '/blog/', kind: 'blog', data: null },
-  ...blogPosts.map(p => ({ path: `/blog/${p.slug}/`, kind: 'blog-post', data: p })),
 ]
+
+const postRoute = p => ({ path: `/blog/${p.slug}/`, kind: 'blog-post', data: p })
+
+// Every page that gets prerendered, scheduled posts included. Prerender only.
+export const allRoutes = [...pageRoutes, ...blogPosts.map(postRoute)]
+
+// The pages that exist on `today`: what the sitemap lists and what a URL
+// resolves to. A scheduled post is a 404 until its date.
+export function routesFor(today) {
+  return [...pageRoutes, ...getPublishedPosts(today).map(postRoute)]
+}
 
 // Normalize a pathname to a canonical, trailing-slash form.
 function normalize(pathname) {
@@ -34,9 +44,9 @@ function normalize(pathname) {
 
 // Resolve a pathname to a route. Unknown paths resolve to a 404 route so the
 // server (prerender) and client (hydration) render the same thing — avoiding a
-// hydration mismatch. The `routes` array is unchanged, so 404 stays out of the
+// hydration mismatch. 404 is never in the route list, so it stays out of the
 // sitemap; prerender writes dist/404.html separately.
-export function matchRoute(pathname) {
+export function matchRoute(pathname, today = todayForRender()) {
   const p = normalize(pathname)
-  return routes.find(r => r.path === p) || { path: p, kind: '404', data: null }
+  return routesFor(today).find(r => r.path === p) || { path: p, kind: '404', data: null }
 }

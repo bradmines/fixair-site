@@ -1,6 +1,8 @@
 import express from 'express'
+import { readFileSync, existsSync } from 'fs'
 import { fileURLToPath } from 'url'
-import { dirname, join } from 'path'
+import { dirname, join, resolve, sep } from 'path'
+import { torontoToday, showFuturePosts } from './scripts/today.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const app = express()
@@ -91,6 +93,96 @@ app.use((req, res, next) => {
   next()
 })
 
+// --- Scheduled blog posts ---------------------------------------------------
+//
+// prerender.js writes every page as of the build date, plus a dated variant
+// (index@YYYY-MM-DD.html, sitemap@YYYY-MM-DD.xml) for each future post date on
+// which that page changes. Here, per request, we work out today's date in
+// Niagara and serve the newest variant whose date has arrived. A post goes
+// live at midnight Eastern on its date with no cron job and no rebuild.
+//
+// Staging and previews (BLOG_SHOW_FUTURE=1, or any Railway environment other
+// than production) treat today as 9999-12-31, so every scheduled post shows.
+
+const distDir = join(__dirname, 'dist')
+const PREVIEW_TODAY = '9999-12-31'
+const SHOW_FUTURE = showFuturePosts()
+
+let schedule = { dates: [], posts: {}, pages: {}, sitemap: [] }
+try {
+  schedule = JSON.parse(readFileSync(join(distDir, 'schedule.json'), 'utf-8'))
+} catch {
+  console.warn('dist/schedule.json missing: serving base files only')
+}
+
+function requestToday() {
+  return SHOW_FUTURE ? PREVIEW_TODAY : torontoToday()
+}
+
+// Newest variant date on or before today, or '' for the base file. Dates are
+// YYYY-MM-DD, sorted ascending by prerender.js.
+function variantFor(dates = [], today) {
+  let pick = ''
+  for (const d of dates) if (d <= today) pick = d
+  return pick
+}
+
+// Built files never change while the process runs, so read each one once.
+const fileCache = new Map()
+function readDist(relPath) {
+  const file = resolve(distDir, '.' + relPath)
+  if (!file.startsWith(distDir + sep)) return null
+  if (!fileCache.has(file)) fileCache.set(file, existsSync(file) ? readFileSync(file, 'utf-8') : null)
+  return fileCache.get(file)
+}
+
+// Prerendered HTML carries window.__TODAY__='%%TODAY%%' so the client hydrates
+// against the same date the server chose the file for.
+function sendHtml(res, relPath, today, status = 200) {
+  const html = readDist(relPath)
+  if (html == null) return false
+  res
+    .status(status)
+    .set('Cache-Control', 'no-cache')
+    .type('html')
+    .send(html.replaceAll('%%TODAY%%', today))
+  return true
+}
+
+function sendNotFound(res, today) {
+  if (!sendHtml(res, '/404.html', today, 404)) res.sendStatus(404)
+}
+
+app.use((req, res, next) => {
+  if (req.method !== 'GET' && req.method !== 'HEAD') return next()
+  const p = req.path
+  const today = requestToday()
+
+  // The dated variants and the schedule are build internals, never URLs.
+  if (p.includes('@') || p === '/schedule.json') return sendNotFound(res, today)
+
+  if (p === '/sitemap.xml') {
+    const d = variantFor(schedule.sitemap, today)
+    const xml = readDist(d ? `/sitemap@${d}.xml` : '/sitemap.xml')
+    if (xml == null) return next()
+    // no-cache: this is what Google re-fetches to find a post on its date.
+    return res.set('Cache-Control', 'no-cache').type('application/xml').send(xml)
+  }
+
+  if (p.endsWith('/')) {
+    // A scheduled post is a 404 until its date.
+    const post = p.match(/^\/blog\/([^/]+)\/$/)
+    const postDate = post && schedule.posts[post[1]]
+    if (postDate && postDate > today) return sendNotFound(res, today)
+    const d = variantFor(schedule.pages[p], today)
+    if (sendHtml(res, p + (d ? `index@${d}.html` : 'index.html'), today)) return
+    return next()
+  }
+
+  if (p.endsWith('.html') && sendHtml(res, p, today)) return
+  next()
+})
+
 const YEAR = 60 * 60 * 24 * 365
 const WEEK = 60 * 60 * 24 * 7
 
@@ -98,18 +190,14 @@ const WEEK = 60 * 60 * 24 * 7
 const FINGERPRINTED = /\.[0-9a-f]{8}\.[a-z0-9]+$/i
 
 app.use(
-  express.static(join(__dirname, 'dist'), {
+  express.static(distDir, {
     // The middleware above is the single source of truth for path shape.
     redirect: false,
     setHeaders(res, path) {
-      if (path.endsWith('.html')) {
-        // Prerendered HTML must revalidate, or a deploy won't reach visitors
-        // who already have the page cached.
-        res.setHeader('Cache-Control', 'no-cache')
-      } else if (path.endsWith('sitemap.xml') || path.endsWith('robots.txt')) {
-        // Crawler control files. These must not sit in an intermediary cache
-        // for a week — sitemap.xml is exactly what Google re-fetches to find
-        // newly published pages, so a stale copy delays indexing.
+      // HTML and sitemap.xml never reach here: the scheduled-posts handler
+      // above answers them, with no-cache.
+      if (path.endsWith('robots.txt')) {
+        // Crawler control file. Must not sit in an intermediary cache for a week.
         res.setHeader('Cache-Control', 'public, max-age=3600, must-revalidate')
       } else if (path.includes('/assets/') || FINGERPRINTED.test(path)) {
         // Fingerprinted by Vite (/assets/) or by scripts/fingerprint.js. The
@@ -129,7 +217,7 @@ app.use(
 
 // Anything not matched by a prerendered static file is a real 404.
 app.get('/{*path}', (_req, res) => {
-  res.status(404).sendFile(join(__dirname, 'dist', '404.html'))
+  sendNotFound(res, requestToday())
 })
 
 app.listen(port, () => {

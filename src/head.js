@@ -6,7 +6,7 @@ import {
   PROVIDER,
 } from './data/business'
 import { generalFaqs, allFaqs } from './data/faqs'
-import { blogPosts } from './data/blog'
+import { getPublishedPosts, todayForRender } from './data/blog'
 
 // Builds the per-page <head> markup (title, meta, OG/Twitter, canonical,
 // JSON-LD) that prerender.js injects into each page. Server/build-time only —
@@ -51,7 +51,19 @@ function ogAndTwitter({ title, description, canonical, image, imageAlt, type = '
     `<meta name="twitter:title" content="${esc(title)}" />`,
     `<meta name="twitter:description" content="${esc(description)}" />`,
     `<meta name="twitter:image" content="${esc(img)}" />`,
+    `<meta name="twitter:image:alt" content="${esc(alt)}" />`,
   ]
+}
+
+// The FixAir business as publisher. The @id is the homepage's
+// HVACBusiness/Organization node, so every article and the blog resolve to
+// that one entity; name, url and logo are repeated so each page stands alone.
+const PUBLISHER = {
+  '@type': 'Organization',
+  '@id': BUSINESS.url + '/#business',
+  name: BUSINESS.name,
+  url: BUSINESS.url,
+  logo: { '@type': 'ImageObject', url: BUSINESS.logo },
 }
 
 function breadcrumb(items) {
@@ -382,8 +394,8 @@ function blogIndexSchema(canonical) {
       'Residential heating and cooling advice for Niagara homeowners from Tom Guitard, a licensed HVAC technician with 25+ years of experience.',
     url: canonical,
     inLanguage: 'en-CA',
-    publisher: { '@type': 'HVACBusiness', name: BUSINESS.name, url: BUSINESS.url },
-    blogPost: blogPosts.map(p => ({
+    publisher: PUBLISHER,
+    blogPost: getPublishedPosts(todayForRender()).map(p => ({
       '@type': 'BlogPosting',
       headline: p.title,
       description: p.metaDescription,
@@ -417,18 +429,15 @@ function headForBlogPost(route) {
       '@type': 'Person',
       name: BUSINESS.founder,
       jobTitle: 'Licensed HVAC Technician',
-      worksFor: { '@type': 'HVACBusiness', name: BUSINESS.name, url: BUSINESS.url },
+      worksFor: { '@id': BUSINESS.url + '/#business' },
     },
-    publisher: {
-      '@type': 'Organization',
-      name: BUSINESS.name,
-      logo: { '@type': 'ImageObject', url: BUSINESS.logo },
-    },
+    publisher: PUBLISHER,
     image: {
       '@type': 'ImageObject',
       url: BUSINESS.url + p.image,
       width: 1280,
       height: 720,
+      caption: p.imageAlt,
     },
     articleSection: p.serviceName,
     inLanguage: 'en-CA',
@@ -446,7 +455,7 @@ function headForBlogPost(route) {
       `<meta name="description" content="${esc(description)}" />`,
       `<meta name="robots" content="index, follow" />`,
       `<link rel="canonical" href="${esc(canonical)}" />`,
-      ...ogAndTwitter({ title, description, canonical, image: BUSINESS.url + p.image, imageAlt: p.title, type: 'article' }),
+      ...ogAndTwitter({ title, description, canonical, image: BUSINESS.url + p.image, imageAlt: p.imageAlt, type: 'article' }),
       jsonLd(articleSchema),
       jsonLd(crumbs),
     ],

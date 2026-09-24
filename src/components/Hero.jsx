@@ -126,11 +126,14 @@ export default function Hero() {
 
       {/* ── Mobile text section ── */}
       <div className="sm:hidden bg-brand-blue px-6 pt-8 pb-10">
-        <h1 className="text-3xl font-extrabold text-white leading-tight">
+        {/* Mobile twin of the desktop <h1>. Only one is ever displayed, but both
+            are in the HTML, so this one is a heading by role only: one <h1> per
+            page for crawlers, still a level-1 heading for screen readers. */}
+        <p role="heading" aria-level="1" className="text-3xl font-extrabold text-white leading-tight">
           FixAir Keeps Your Niagara Home{' '}
           <span className="text-brand-orange">Comfortable</span>{' '}
           All Year Round
-        </h1>
+        </p>
         <p className="mt-4 text-base text-blue-100 leading-relaxed">
           Honest, expert HVAC service from Tom, a licensed technician. FixAir is a{' '}
           <strong className="text-white">residential only</strong> company, focused entirely on
