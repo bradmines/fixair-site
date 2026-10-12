@@ -61,14 +61,24 @@
   }
 }
 
-/* Horizontal review scroller — clean single box, touch-friendly */
-.reviews-scroll {
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;        /* Firefox */
-  -ms-overflow-style: none;     /* IE/Edge */
+/* Testimonials marquee. Two identical card groups sit side by side; each
+   group travels exactly its own width plus the 1.25rem flex gap per cycle,
+   so the second copy lands where the first started and the loop is seamless.
+   The 1.25rem here must match the gap-5 on the track and groups. */
+@keyframes marquee-scroll {
+  to { transform: translateX(calc(-100% - 1.25rem)); }
 }
-.reviews-scroll::-webkit-scrollbar {
-  display: none;                /* Chrome/Safari */
+.marquee-group {
+  animation: marquee-scroll 70s linear infinite;
+}
+.marquee:hover .marquee-group,
+.marquee:focus-within .marquee-group {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-group {
+    animation: none;
+  }
 }
 
 @keyframes subtle-pulse {

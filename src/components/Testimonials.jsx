@@ -1,5 +1,3 @@
-import { useRef } from 'react'
-
 const testimonials = [
   {
     name: 'Angie Masterson',
@@ -76,9 +74,9 @@ function Avatar({ name }) {
   )
 }
 
-function ReviewCard({ t, large = false }) {
+function ReviewCard({ t }) {
   return (
-    <div className={`w-full bg-white/[0.08] rounded-2xl border border-white/10 flex flex-col gap-4 ${large ? 'p-7' : 'p-6'}`}>
+    <div className="w-full bg-white/[0.08] rounded-2xl border border-white/10 flex flex-col gap-4 p-6">
       <div className="flex items-center gap-3">
         <Avatar name={t.name} />
         <div className="min-w-0">
@@ -103,11 +101,6 @@ function ReviewCard({ t, large = false }) {
 }
 
 export default function Testimonials() {
-  const scroller = useRef(null)
-  const scrollByCard = (dir) => {
-    const el = scroller.current
-    if (el) el.scrollBy({ left: dir * el.clientWidth, behavior: 'smooth' })
-  }
   return (
     <section id="testimonials" className="relative py-20 md:py-28 bg-brand-blue overflow-hidden">
 
@@ -133,46 +126,32 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* Review carousel */}
-        <div className="relative max-w-2xl mx-auto">
-          <div
-            ref={scroller}
-            className="flex overflow-x-auto snap-x snap-mandatory reviews-scroll rounded-2xl"
-          >
-            {testimonials.map((t, i) => (
-              <div key={i} className="snap-center shrink-0 w-full">
-                <ReviewCard t={t} />
+        {/* Review marquee — pauses on hover; falls back to a static grid
+            when the visitor prefers reduced motion */}
+        <div className="marquee relative overflow-hidden">
+          <div className="flex w-max gap-5 motion-reduce:block motion-reduce:w-full">
+            {[0, 1].map(copy => (
+              <div
+                key={copy}
+                aria-hidden={copy === 1 || undefined}
+                className={`marquee-group flex items-start motion-reduce:items-stretch gap-5 ${
+                  copy === 1
+                    ? 'motion-reduce:hidden'
+                    : 'motion-reduce:grid motion-reduce:grid-cols-1 md:motion-reduce:grid-cols-2 lg:motion-reduce:grid-cols-3'
+                }`}
+              >
+                {testimonials.map((t, i) => (
+                  <div key={i} className="flex w-[300px] shrink-0 sm:w-[380px] motion-reduce:w-auto">
+                    <ReviewCard t={t} />
+                  </div>
+                ))}
               </div>
             ))}
           </div>
 
-          {/* Desktop arrows */}
-          <button
-            onClick={() => scrollByCard(-1)}
-            aria-label="Previous review"
-            className="hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-white/10 border border-white/20 items-center justify-center text-blue-100/70 hover:text-white hover:border-white/40 transition-colors"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"/>
-            </svg>
-          </button>
-          <button
-            onClick={() => scrollByCard(1)}
-            aria-label="Next review"
-            className="hidden sm:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-10 h-10 rounded-full bg-white/10 border border-white/20 items-center justify-center text-blue-100/70 hover:text-white hover:border-white/40 transition-colors"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/>
-            </svg>
-          </button>
-        </div>
-
-        <div className="mt-4 flex items-center justify-center gap-2 text-xs font-medium text-gray-400">
-          <svg className="w-4 h-4 sm:hidden" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M8 7l-4 5 4 5M16 7l4 5-4 5"/>
-          </svg>
-          <span className="sm:hidden">Swipe through more reviews</span>
-          <span className="hidden sm:inline">Use the arrows to read more reviews</span>
+          {/* Edge fades so cards slide in from the section background */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-10 sm:w-24 bg-gradient-to-r from-brand-blue to-transparent motion-reduce:hidden" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-10 sm:w-24 bg-gradient-to-l from-brand-blue to-transparent motion-reduce:hidden" />
         </div>
 
         <div className="mt-8 text-center space-y-3">
