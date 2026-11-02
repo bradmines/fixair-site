@@ -45,7 +45,7 @@
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-brand-orange text-white font-semibold rounded-lg shadow-md hover:bg-brand-orange-dark active:scale-95 transition-all duration-200;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#c2410c] text-white font-semibold rounded-lg shadow-md hover:bg-[#9a3412] active:scale-95 transition-all duration-200;
   }
   .btn-secondary {
     @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-brand-blue font-semibold rounded-lg shadow-md hover:bg-gray-50 active:scale-95 transition-all duration-200 border border-white;
@@ -97,7 +97,7 @@
 }
 
 /* Hero poster. Declared per breakpoint so a phone never downloads the desktop
-   image (and vice versa) — a <video poster> attribute cannot do this, because
+   image (and vice versa). A <video poster> attribute cannot do this, because
    both video elements exist in the DOM regardless of which one is displayed. */
 .hero-poster {
   background-image: url('/hero-poster-mobile.jpg');
@@ -107,5 +107,45 @@
 @media (min-width: 640px) {
   .hero-poster {
     background-image: url('/hero-poster-newnew.jpg');
+  }
+}
+
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes hero-ken {
+  from { transform: scale(1.1); }
+  to { transform: scale(1); }
+}
+
+.hero-enter {
+  animation: hero-fade-up 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.hero-enter-delay-1 { animation-delay: 0.12s; }
+.hero-enter-delay-2 { animation-delay: 0.24s; }
+.hero-enter-delay-3 { animation-delay: 0.36s; }
+
+.hero-video {
+  transform-origin: center center;
+  animation: hero-ken 14s ease-out forwards;
+}
+
+.hero-panel {
+  animation: hero-fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-enter,
+  .hero-panel,
+  .hero-video {
+    animation: none !important;
   }
 }
