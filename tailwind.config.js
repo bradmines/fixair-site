@@ -11,8 +11,8 @@ export default {
           blue:       '#1a3a5c',
           'blue-mid': '#1e5799',
           'blue-light':'#2d7dd2',
-          orange:     '#f97316',
-          'orange-dark':'#ea6c0a',
+          orange:     '#c2410c',
+          'orange-dark':'#9a3412',
         },
       },
       fontFamily: {
